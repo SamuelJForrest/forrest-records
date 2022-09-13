@@ -19,6 +19,15 @@
 ### Design Choices
 
 #### Colours
+For this project, I used the pre-made ['Red at Night'](https://colorhub.vercel.app/select-palette/enviro) colour palette from [Daniel Cranney](https://twitter.com/danielcranney)'s ['ColorHub'](https://colorhub.vercel.app/). I decided that to use this colour palette as it is largely monochromatic (using black, grey, and white), but also has a striking red; I believe this colour will attract users' attention toward any calls to action on the site.
+
+![Devhub Colour Pallete](/docs/readme/color-palette.png)
+
+The colours used were:
+- `#EF4444`: This colour was used as the brand colour, used mostly on call to action buttons/links, or anything else that I wanted to focus the user's attention to.
+- `#18181B`: This colour was used as the primary colour for text (on a white background), and to give a contrasting background to some sections. Also, an opaque version of this colour is used on image overlays.
+- `#D4D4D8`: This colour was used sparingly either as text decoration or borders - I chose this colour as I felt it is fairly subtle/understated.
+- `#F8FAFC`: This colour is used as the primary background colour, and text colour on dark backgrounds.
 
 #### Fonts
 
