@@ -25,8 +25,30 @@
 ### Wireframes
 
 #### Desktop
+- [Landing page](/docs/wireframes/landing-page.png)
+- [Product listing](/docs/wireframes/product-listing.png)
+- [Product item](/docs/wireframes/product-single.png)
+- [Basket](/docs/wireframes/basket.png)
+- [Checkout](/docs/wireframes/checkout.png)
+- [Profile](/docs/wireframes/profile.png)
+- [Blog listing](/docs/wireframes/blog-listing.png)
+- [Blog item](/docs/wireframes/blog-single.png)
+- [Edit blog](/docs/wireframes/blog-edit.png)
+- [Login/register](/docs/wireframes/register.png)
+- [Contact](/docs/wireframes/contact.png)
 
 #### Mobile
+- [Landing page](/docs/wireframes/landing-page-mobile.png)
+- [Product listing](/docs/wireframes/product-listing-mobile.png)
+- [Product item](/docs/wireframes/product-single-mobile.png)
+- [Basket](/docs/wireframes/basket-mobile.png)
+- [Checkout](/docs/wireframes/checkout-mobile.png)
+- [Profile](/docs/wireframes/profile-mobile.png)
+- [Blog](/docs/wireframes/blog-mobile.png)
+- [Blog item](/docs/wireframes/blog-single-mobile.png)
+- [Edit blog](/docs/wireframes/edit-blog-mobile.png)
+- [Login/register](/docs/wireframes/login-register-mobile.png)
+- [Contact](/docs/wireframes/contact-mobile.png)
 
 ### UX/UI Flowchart
 
