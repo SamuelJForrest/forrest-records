@@ -1,0 +1,58 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@400;600;700&display=swap');
+@import url(modules/reset.css);
+
+/* variables */
+:root {
+    --color-black: #18181b;
+    --color-grey: #d4d4d8;
+    --color-white: #f8fafc;
+    --color-red: #ef4444;
+    --title-font: 'DM sans';
+    --text-font: 'Montserrat';
+}
+
+/* body stylings */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--text-font);
+    font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--title-font);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 6.4rem;
+}
+
+h2 {
+    font-size: 4.8rem;
+}
+
+h3 {
+    font-size: 4rem;
+}
+
+h4 {
+    font-size: 3.2rem;
+}
+
+h5 {
+    font-size: 2.4rem;
+}
+
+h6 {
+    font-size: 2rem;
+}
