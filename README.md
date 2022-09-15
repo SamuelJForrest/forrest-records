@@ -51,6 +51,8 @@ The colours used were:
 
 ##### Fonts
 
+I used two [Google fonts]() for this project: [DM Sans](https://fonts.google.com/specimen/DM+Sans) for the headings, and [Montserrat](https://fonts.google.com/specimen/Montserrat) for main body text.
+
 #### Wireframes (add page urls to table)
 
 | Page | Desktop | Tablet | Mobile |
@@ -79,13 +81,33 @@ The colours used were:
 
 ##### Models
 
+###### Product
+
+###### Product Types
+
+###### Albums
+
+###### Merchandise
+
+###### Blogs
+
+###### Artists
+
+###### Users
+
+###### User Profiles
+
+###### Order
+
+###### Order Line Item
+
 ### UX/UI Flowchart
 
 ## Features
 
 ### Page
 
-**Feature title**
+#### Feature title
 
 ### Features to be Implemented
 
@@ -130,6 +152,8 @@ Test description
 - **Bug**: 
 - **Fix**: 
 - **Verdict**: 
+
+### Unfixed bugs
 
 ## Deployment
 
