@@ -6,11 +6,33 @@
 
 ### Target audience
 
+The target audience for this site is primarily fans of punk/hardcore music, particularly:
+1. People who collect vinyl albums; including rare editions.
+2. Bargain hunters looking for a good deal on albums/merchandise.
+3. People looking to keep up to date with the latest releases in the music scene.
+4. Younger people/students looking for discounts on their favourite music.
+5. People looking for both current, as well as vintage/collectable, band merchandise.
+
 ### User Stories
 
-#### First-time users
-
-#### Regular users
+#### Site users (break this up into themes, e.g. browsing, checkout, etc)
+1. As a user, I want the site's navigation to be simple and intuitive.
+2. As a user, I want to be able to be able to checkout without an account.
+3. As a user, I want to be able to search for products, to reduce the amount of time it takes to locate a particular product.
+4. As a user, I want to be able to sort/filter products based on the following criteria:
+    1. Price: low/high (or vice versa)
+    2. Alphabetically
+    3. Rating: low/high (or vice versa)
+    4. Gender
+    5. Item type: Vinyl, CD, clothing, etc.
+5. As a user, I would like to be able to create an account to save/update my delivery information.
+6. As a user, I would like to be directed to an error page that is inkeeping with the sites design/aesthetic if there is any error.
+7. As a user, I would like to be able to add products to a 'wishlist' to view them later.
+8. As a user, I want clear feedback on what is in my shopping bag, including when it is empty.
+9. As a user, I want to be able to easily update my shopping bag, including removing items from it.
+10. As a user, I want clear confirmation when an order has been completed.
+11. As a user, I want feedback that my order is being processed.
+12.  
 
 #### Site owners
 
@@ -44,11 +66,12 @@ The colours used were:
 | Edit blog | [Desktop wireframe](/docs/wireframes/blog-edit.png) | Add tablet wireframes | [Mobile wireframe](/docs/wireframes/edit-blog-mobile.png) |
 | Login/Register | [Desktop wireframe](/docs/wireframes/register.png) | Add tablet wireframes | [Mobile wireframe](/docs/wireframes/login-register-mobile.png) |
 | Contact | [Desktop wireframe](/docs/wireframes/contact.png) | Add tablet wireframes | [Mobile wireframe](/docs/wireframes/contact-mobile.png) |
-| Pages left to add |
+| **Pages** | **left** | **to** | **add** |
 | Checkout success | Add desktop wireframe | Add tablet wireframe | Add mobile wireframe |
 | Add product | Add desktop wireframe | Add tablet wireframe | Add mobile wireframe |
 | Edit product | Add desktop wireframe | Add tablet wireframe | Add mobile wireframe |
-
+| Artists | Add desktop wireframe | Add tablet wireframe | Add mobile wireframe |
+| Error pages (400, 500, etc) | Add desktop wireframe | Add tablet wireframe | Add mobile wireframe |
 
 #### Database
 
@@ -121,4 +144,5 @@ Test description
 ### Media
 
 ### General Thanks
+- I would like to thank my parter, Laura Gilbert, for helping me test the site from a user's perspective.
 - I would like to thank my mentor [Simen](https://github.com/Eventyret) for all of his feedback and support with this project.
