@@ -25,6 +25,7 @@ The target audience for this site is primarily fans of punk/hardcore music, part
     3. Rating: low/high (or vice versa)
     4. Gender
     5. Item type: Vinyl, CD, clothing, etc.
+    6. Artist
 5. As a user, I would like to be able to create an account to save/update my delivery information.
 6. As a user, I would like to be directed to an error page that is inkeeping with the sites design/aesthetic if there is any error.
 7. As a user, I would like to be able to add products to a 'wishlist' to view them later.
@@ -32,9 +33,25 @@ The target audience for this site is primarily fans of punk/hardcore music, part
 9. As a user, I want to be able to easily update my shopping bag, including removing items from it.
 10. As a user, I want clear confirmation when an order has been completed.
 11. As a user, I want feedback that my order is being processed.
-12.  
+12. As a user, I would like a page that shows a list of all the artists, so I am able to find relevant products easily.
+13. As a user, I would like to be able to rate items on the site.
+14. As a user, I want to be able to reset my passowrd if I forget it.
+15. As a user, I want the ability to easily log out of my account.
 
 #### Site owners
+1. As a store owner, I want the ability to add products to the store.
+2. As a store owner, I want the ability to edit products easily.
+3. As a store owner, I want the ability to delete products from the store.
+4. As a store owner, I want the ability to add new artists to the store.
+5. As a store owner, I want the ability to edit information about artists.
+6. As a store owner, I want the ability to delete artists from the store.
+7. As a store owner, I want the ability to add new product types, to allow for future expansion into new markets.
+8. As a store owner, I want to see orders that have been placed.
+9. As a store owner, I want to be able to edit orders when a customer informs us of any mistakes made.
+10. As a store owner, I want to see a list of users to determine how popular the site is.
+11. As a store owner, I would like to be able to manage the accounts of users: changing their permissions, deleting accounts, etc.
+12. As a store owner, I want to be able to see which products have sold the most units, to guage the popularity of different products.
+13. As a store owner, I want a list of email addresses for each user, so that I can create a mailing list of all customers, if permission is given by users.
 
 ### Design
 
