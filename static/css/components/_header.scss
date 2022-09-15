@@ -1,0 +1,151 @@
+// header
+.header {
+    background: $color-black;
+    
+    @media screen and (min-width: $lg) {
+        margin-bottom: 4rem;
+    }
+
+    &-logo {
+        @extend .h2;
+        color: $color-white;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: $color-white;
+        }
+    }
+}
+
+// nav
+.nav {
+    &-list {
+        &-item {
+            @extend .h5;
+            position: relative;
+
+            a {
+                color: $color-white;
+                text-decoration: none;
+                display: inline-block;
+
+                @media screen and (min-width: $lg) {
+                    padding: 4rem 0rem 4rem 4rem;
+                }
+
+                &:hover,
+                &:focus {
+                    color: $color-white;
+                }
+            }
+
+            &:first-of-type {
+                >a {
+                    padding-left: 0;
+                }
+            }
+
+            >ul {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transform: translateY(100%);
+                background: $color-white;
+                display: none;
+                box-shadow: 0 1.6rem 2.4rem 0 rgb(0 0 0 / 20%);
+                border-radius: 4px;
+
+                @media screen and (min-width: $lg) {
+                    width: 30rem;
+                }
+
+                &.__basket {
+                    left: auto;
+                    right: 0;
+                    padding: 1rem;
+                    width: 35rem;
+                    max-height: 40rem;
+                    overflow: auto;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                    a {
+                        padding: 0;
+                        background: none;
+                        color: $color-black;
+                    }
+
+                    h2 {
+                       font-size: 1.6rem;
+                       margin-bottom: 0.6rem;
+                    }
+
+                    p {
+                       font-size: 1rem; 
+                    }
+
+                    .scroll {
+                        position: fixed;
+                        right: 15px;
+                        bottom: 15px;
+                        background: $color-red;
+                        color: $color-white;
+                        height: 5rem;
+                        width: 5rem;
+                        border-radius: 50%;
+                        justify-content: center;
+                        align-items: center;
+                        display: inline-flex;
+                        animation-name: bounce;
+                        animation-timing-function: ease;
+                        animation-duration: 2s;
+                        animation-iteration-count: infinite;
+                    }
+
+                    .basket {
+                        &-menu {
+                            &-item {
+                                border-radius: 4px;
+                                
+                                .row {
+                                    border-bottom: 1px solid $color-grey;
+                                    padding: 1.6rem 1rem;
+
+                                    &.__first {
+                                        padding-top: 0.6rem;
+                                    }
+    
+                                    &.__last {
+                                        padding-bottom: 0.6rem;
+                                        border-bottom: none;
+                                    } 
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.__submenu {
+                    >li {
+                        a {
+                            padding: 1.8rem 2.4rem;
+                            color: $color-black;
+                            width: 100%;
+                            font-size: 2rem;
+                            font-weight: 400;
+    
+                            &:hover,
+                            &:focus {
+                                color: $color-white;
+                                background: $color-red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

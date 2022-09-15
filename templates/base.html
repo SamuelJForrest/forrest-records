@@ -29,11 +29,45 @@
     <title>Forrest Records {% block extra_title %}{% endblock %}</title>
 </head>
 <body>
+    <!-- header -->
+    {% include 'includes/nav/navigation.html' %}
 
     {% block content %}
     {% endblock %}
 
     {% block scripts %}
+    <script>
+        $(document).ready(function() {
+
+            // header menu dropdowns (desktop)
+            const windowWidth = $(window).width();
+
+            if (windowWidth > 992) {
+                $('.nav-list-item').each(function() {
+                    const subMenu = $(this).find('ul');
+                    const subMenuHeight = subMenu.outerHeight();
+                    const basket = $(this).find('.__basket');
+                    const scrollBtn = '<span class="scroll"><i class="fa-solid fa-chevron-down"></i></span>';
+                
+                    if (subMenu.length) {
+                        $(this).hover(function() {
+                            subMenu.slideDown(function() {
+                                if (subMenuHeight >= 400) {
+                                    basket.append(scrollBtn);
+                                }
+                            });
+                        }, function() {
+                            subMenu.slideUp();
+                        })
+                    }
+                });
+
+                $('.__basket').scroll(function() {
+                    $('.scroll').fadeOut(300);
+                });
+            }
+        })
+    </script>
     {% endblock %}
     
 </body>

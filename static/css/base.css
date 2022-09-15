@@ -1,58 +1,254 @@
 /* imports */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@400;600;700&display=swap');
-@import url(modules/reset.css);
-
-/* variables */
-:root {
-    --color-black: #18181b;
-    --color-grey: #d4d4d8;
-    --color-white: #f8fafc;
-    --color-red: #ef4444;
-    --title-font: 'DM sans';
-    --text-font: 'Montserrat';
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@400;600;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-/* body stylings */
-
-html {
-    font-size: 62.5%;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
 body {
-    font-family: var(--text-font);
-    font-size: 1.6rem;
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* VARIABLES */
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.header {
+  background: #18181b;
+}
+@media screen and (min-width: 992px) {
+  .header {
+    margin-bottom: 4rem;
+  }
+}
+.header-logo {
+  color: #f8fafc;
+  text-decoration: none;
+}
+.header-logo:hover, .header-logo:focus {
+  color: #f8fafc;
+}
+
+.nav-list-item {
+  position: relative;
+}
+.nav-list-item a {
+  color: #f8fafc;
+  text-decoration: none;
+  display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .nav-list-item a {
+    padding: 4rem 0rem 4rem 4rem;
+  }
+}
+.nav-list-item a:hover, .nav-list-item a:focus {
+  color: #f8fafc;
+}
+.nav-list-item:first-of-type > a {
+  padding-left: 0;
+}
+.nav-list-item > ul {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  background: #f8fafc;
+  display: none;
+  box-shadow: 0 1.6rem 2.4rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+@media screen and (min-width: 992px) {
+  .nav-list-item > ul {
+    width: 30rem;
+  }
+}
+.nav-list-item > ul.__basket {
+  left: auto;
+  right: 0;
+  padding: 1rem;
+  width: 35rem;
+  max-height: 40rem;
+  overflow: auto;
+}
+.nav-list-item > ul.__basket::-webkit-scrollbar {
+  display: none;
+}
+.nav-list-item > ul.__basket a {
+  padding: 0;
+  background: none;
+  color: #18181b;
+}
+.nav-list-item > ul.__basket h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+.nav-list-item > ul.__basket p {
+  font-size: 1rem;
+}
+.nav-list-item > ul.__basket .scroll {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  background: #ef4444;
+  color: #f8fafc;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.nav-list-item > ul.__basket .basket-menu-item {
+  border-radius: 4px;
+}
+.nav-list-item > ul.__basket .basket-menu-item .row {
+  border-bottom: 1px solid #d4d4d8;
+  padding: 1.6rem 1rem;
+}
+.nav-list-item > ul.__basket .basket-menu-item .row.__first {
+  padding-top: 0.6rem;
+}
+.nav-list-item > ul.__basket .basket-menu-item .row.__last {
+  padding-bottom: 0.6rem;
+  border-bottom: none;
+}
+.nav-list-item > ul.__submenu > li a {
+  padding: 1.8rem 2.4rem;
+  color: #18181b;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.nav-list-item > ul.__submenu > li a:hover, .nav-list-item > ul.__submenu > li a:focus {
+  color: #f8fafc;
+  background: #ef4444;
+}
+
+/* body stylings */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat";
+  font-size: 1.6rem;
 }
 
 h1,
+.h1,
 h2,
+.h2,
+.header-logo,
 h3,
+.h3,
 h4,
+.h4,
 h5,
-h6 {
-    font-family: var(--title-font);
-    font-weight: 700;
+.h5,
+.nav-list-item,
+h6,
+.h6 {
+  font-family: "DM sans";
+  font-weight: 700;
 }
 
-h1 {
-    font-size: 6.4rem;
+h1,
+.h1 {
+  font-size: 6.4rem;
 }
 
-h2 {
-    font-size: 4.8rem;
+h2,
+.h2,
+.header-logo {
+  font-size: 4.8rem;
 }
 
-h3 {
-    font-size: 4rem;
+h3,
+.h3 {
+  font-size: 4rem;
 }
 
-h4 {
-    font-size: 3.2rem;
+h4,
+.h4 {
+  font-size: 3.2rem;
 }
 
-h5 {
-    font-size: 2.4rem;
+h5,
+.h5,
+.nav-list-item {
+  font-size: 2.4rem;
 }
 
-h6 {
-    font-size: 2rem;
-}
+h6,
+.h6 {
+  font-size: 2rem;
+}/*# sourceMappingURL=base.css.map */
