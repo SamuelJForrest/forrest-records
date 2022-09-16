@@ -128,7 +128,7 @@ I used two [Google fonts]() for this project: [DM Sans](https://fonts.google.com
 
 ![Navigation bar](/docs/readme/features/feature-nav.png)
 
-Allows the user to navigate between the following pages:
+Allows the user to navigate between the following sections:
 - Home
 - Shop
 - Blog
