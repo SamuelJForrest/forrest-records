@@ -16,10 +16,32 @@
             color: $color-white;
         }
     }
+
+    .burger {
+        height: 4.8rem;
+        width: 4.8rem;
+        background: $color-red;
+        position: fixed;
+        z-index: 5;
+        left: 50%;
+        bottom: 5rem;
+        transform: translateX(-50%);
+        display: block;
+
+        @media screen and (min-width: $lg) {
+            display: none;
+        }
+    }
 }
 
 // nav
 .nav {
+    display: none;
+
+    @media screen and (min-width: $lg) {
+        display: block;
+    }
+
     &-list {
         &-item {
             @extend .h5;
@@ -47,17 +69,19 @@
             }
 
             >ul {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                transform: translateY(100%);
                 background: $color-white;
                 display: none;
                 box-shadow: 0 1.6rem 2.4rem 0 rgb(0 0 0 / 20%);
                 border-radius: 4px;
-
+                margin-top: 1.6rem;
+                
                 @media screen and (min-width: $lg) {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    transform: translateY(100%);
                     width: 30rem;
+                    margin-top: 0;
                 }
 
                 &.__basket {
@@ -66,7 +90,7 @@
                     padding: 1rem;
                     width: 35rem;
                     max-height: 40rem;
-                    overflow: auto;
+                    overflow: scroll;
 
                     &::-webkit-scrollbar {
                         display: none;
@@ -146,6 +170,47 @@
                     }
                 }
             }
+
+            @media screen and (min-width: $lg) {
+                &:hover,
+                &:focus {
+                    >ul {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    &.__mobile {
+        $nav-width: 80vw;
+
+        display: block;
+        position: fixed;
+        background: $color-black;
+        height: 100vh;
+        width: $nav-width;
+        top: 0;
+        right: 0;
+        padding: 6rem 4rem;
+        transition: all .3s;
+        transform: translateX($nav-width);
+
+        &.__active {
+            transform: translateX(0);
+        }
+        
+        >ul {
+            flex-direction: column;
+            display: flex;
+
+            >li {
+                margin-bottom: 3.2rem;
+            }
+        }
+
+        @media screen and (min-width: $lg) {
+            display: none;
         }
     }
 }
