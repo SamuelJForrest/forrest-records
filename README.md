@@ -138,19 +138,19 @@ Allows the user to navigate between the following pages:
 
 The "Shop", "Login/Register" and "Basket" also have submenus that display on hover:
 
-Shop submenu
+**Shop submenu**
 ![Shop menu](/docs/readme/features/feature-nav-menu.png)
 
-Login submenu
+**Login submenu**
 ![Login menu](/docs/readme/features/feature-nav-login.png)
 
-Basket dropdown
+**Basket dropdown**
 ![Basket dropdown](/docs/readme/features/feature-nav-basket.png)
 
 **Note**: The basket dropdown also contains a scroll icon which displays if the dropdown is scrollable.
 
 <video width="320" height="240" controls>
-  <source src="/docs/readme/features/feature-nav-basket-scroll.mp4" type="video/mp4">
+  <source src="docs/readme/features/feature-nav-basket-scroll.mp4" type="video/mp4">
 </video>
 
 #### Feature 2: 
