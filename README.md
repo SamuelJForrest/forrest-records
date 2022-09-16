@@ -147,9 +147,15 @@ The "Shop", "Login/Register" and "Basket" also have submenus that display on hov
 **Basket dropdown**
 ![Basket dropdown](/docs/readme/features/feature-nav-basket.png)
 
-**Note**: The basket dropdown also contains a scroll icon which displays if the dropdown is scrollable.
+The basket dropdown also contains:
+
+1. A scroll icon which displays if the dropdown is scrollable.
 
 https://user-images.githubusercontent.com/94783808/190649667-eb4d6353-266e-42ad-bd5e-24b55e01170c.mp4
+
+2. A small quantity icon to show how many items are current in the user's basket.
+
+![Basket quantity](/docs/readme/features/feature-nav-basket-quantity.png)
 
 #### Feature 2: 
 
