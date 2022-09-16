@@ -149,7 +149,9 @@ Basket dropdown
 
 **Note**: The basket dropdown also contains a scroll icon which displays if the dropdown is scrollable.
 
-![Basket scroll down](/docs/readme/features/feature-nav-basket-scroll.mp4)
+<video width="320" height="240" controls>
+  <source src="/docs/readme/features/feature-nav-basket-scroll.mp4" type="video/mp4">
+</video>
 
 #### Feature 2: 
 
