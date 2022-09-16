@@ -15,9 +15,15 @@
                         </li>
                         <li class="nav-list-item"><a href="#">Blog</a></li>
                         <li class="nav-list-item"><a href="#">Contact</a></li>
-                        <li class="nav-list-item"><a href="#"><i class="fa-solid fa-user"></i></a></li>
                         <li class="nav-list-item">
-                            <a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
+                            <a href="#"><i class="fa-solid fa-user"></i></a>
+                            <ul class="__submenu __right">
+                                <li><a href="#">Login/logout</a></li>
+                                <li><a href="#">View profile</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-list-item">
+                            <a href="#"><i class="fa-solid fa-basket-shopping position-relative"><span class="basket-quantity">1</span></i></a>
                             <ul class="__basket">
                                 {% for i in '012345'|make_list %}
                                     {% include 'includes/nav/basket-menu-item.html' %}

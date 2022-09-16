@@ -58,7 +58,7 @@ The target audience for this site is primarily fans of punk/hardcore music, part
 #### Visuals
 For this project, I used the pre-made ['Red at Night'](https://colorhub.vercel.app/select-palette/enviro) colour palette from [Daniel Cranney](https://twitter.com/danielcranney)'s ['ColorHub'](https://colorhub.vercel.app/). I decided that to use this colour palette as it is largely monochromatic (using black, grey, and white), but also has a striking red; I believe this colour will attract users' attention toward any calls to action on the site.
 
-![Devhub Colour Pallete](/docs/readme/color-palette.png)
+![Devhub Colour Pallete](/docs/readme//design/color-palette.png)
 
 The colours used were:
 - `#EF4444`: This colour was used as the brand colour, used mostly on call to action buttons/links, or anything else that I wanted to focus the user's attention to.
@@ -122,9 +122,36 @@ I used two [Google fonts]() for this project: [DM Sans](https://fonts.google.com
 
 ## Features
 
-### Page
+### Current Features
 
-#### Feature title
+#### Feature 1: Navigation Bar
+
+![Navigation bar](/docs/readme/features/feature-nav.png)
+
+Allows the user to navigate between the following pages:
+- Home
+- Shop
+- Blog
+- Contact
+- Login/Register
+- Basket
+
+The "Shop", "Login/Register" and "Basket" also have submenus that display on hover:
+
+Shop submenu
+![Shop menu](/docs/readme/features/feature-nav-menu.png)
+
+Login submenu
+![Login menu](/docs/readme/features/feature-nav-login.png)
+
+Basket dropdown
+![Basket dropdown](/docs/readme/features/feature-nav-basket.png)
+
+**Note**: The basket dropdown also contains a scroll icon which displays if the dropdown is scrollable.
+
+![Basket scroll down](/docs/readme/features/feature-nav-basket-scroll.mp4)
+
+#### Feature 2: 
 
 ### Features to be Implemented
 
