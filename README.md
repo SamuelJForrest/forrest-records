@@ -149,7 +149,7 @@ The "Shop", "Login/Register" and "Basket" also have submenus that display on hov
 
 **Note**: The basket dropdown also contains a scroll icon which displays if the dropdown is scrollable.
 
-https://user-images.githubusercontent.com/94783808/190649419-39ed158c-b764-4b19-b43a-87ded0b0cf2e.mp4
+https://user-images.githubusercontent.com/94783808/190649667-eb4d6353-266e-42ad-bd5e-24b55e01170c.mp4
 
 #### Feature 2: 
 
