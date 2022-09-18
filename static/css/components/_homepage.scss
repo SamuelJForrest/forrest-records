@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: flex-start;
     color: $color-white;
+    overflow: hidden;
 
     &-bg {
         position: absolute;
@@ -37,7 +38,42 @@
     }
 
     &-text {
-        opacity: 0.8;
+        opacity: 0.6;
         margin-bottom: 1.6rem;
+    }
+
+    &-icons {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 1.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        a {
+            color: $color-white;
+            font-size: 3.2rem;
+            margin: 0 1.6rem;
+            color: rgba($color-white, 0.8);
+            display: inline-block;
+            transform: translateY(200px);
+            animation-name: slideup;
+            animation-timing-function: ease;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+
+            &:hover,
+            &:focus {
+                color: $color-white;
+            }
+        }
+    }
+}
+
+@for $i from 1 to 5 {
+    .homepage-icons a:nth-child(#{$i}) {
+        animation-delay: calc(#{$i * 0.25}s);
     }
 }
