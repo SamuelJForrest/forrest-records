@@ -75,15 +75,15 @@ I used two [Google fonts]() for this project: [DM Sans](https://fonts.google.com
 | Page | Desktop | Tablet | Mobile |
 | ---- | -------------- | ---- | ------ |
 | Landing | [Desktop wireframe](/docs/wireframes/landing-page.png) | [Tablet wireframe](/docs/wireframes/landing-page-tablet.png) | [Mobile wireframe](/docs/wireframes/landing-page-mobile.png) |
+| Artists | [Desktop wireframe](/docs/wireframes/artists.png) | [Tablet wireframe](/docs/wireframes/artists-tablet.png) | [Mobile wireframe](/docs/wireframes/artists-mobile.png) |
 | Product list | [Desktop wireframe](/docs/wireframes/product-listing.png) | [Tablet wireframe](/docs/wireframes/product-listing-tablet.png) | [Mobile wireframe](/docs/wireframes/product-listing-mobile.png) |
 | Product single | [Desktop wireframe](/docs/wireframes/product-single.png) | [Tablet wireframe](/docs/wireframes/product-single-tablet.png) | [Mobile wireframe](/docs/wireframes/product-single-mobile.png) |
-| Basket | [Desktop wireframe](/docs/wireframes/basket.png) | [Tablet wireframe](/docs/wireframes/basket-tablet.png) | [Mobile wireframe](/docs/wireframes/basket-mobile.png) |
 | Add/Edit product | [Desktop wireframe](/docs/wireframes/add-edit-product.png) | [Tablet wireframe](/docs/wireframes/add-product-tablet.png) | [Mobile wireframe](/docs/wireframes/add-edit-product-mobile.png) |
+| Basket | [Desktop wireframe](/docs/wireframes/basket.png) | [Tablet wireframe](/docs/wireframes/basket-tablet.png) | [Mobile wireframe](/docs/wireframes/basket-mobile.png) |
 | Checkout | [Desktop wireframe](/docs/wireframes/checkout.png) | [Tablet wireframe](/docs/wireframes/checkout-tablet.png) | [Mobile wireframe](/docs/wireframes/checkout-mobile.png) |
 | Checkout success | [Desktop wireframe](/docs/wireframes/checkout-success.png) | [Tablet wireframe](/docs/wireframes/checkout-success-tablet.png) | [Mobile wireframe](/docs/wireframes/checkout-success-mobile.png) |
 | Profile | [Desktop wireframe](/docs/wireframes/profile.png) | [Tablet wireframe](/docs/wireframes/profile-tablet.png) | [Mobile wireframe](/docs/wireframes/profile-mobile.png) |
 | Blog list | [Desktop wireframe](/docs/wireframes/blog-listing.png) | [Tablet wireframe](/docs/wireframes/blog-tablet.png) | [Mobile wireframe](/docs/wireframes/blog-mobile.png) |
-| Artists | [Desktop wireframe](/docs/wireframes/artists.png) | [Tablet wireframe](/docs/wireframes/artists-tablet.png) | [Mobile wireframe](/docs/wireframes/artists-mobile.png) |
 | Blog single | [Desktop wireframe](/docs/wireframes/blog-single.png) | [Tablet wireframe](/docs/wireframes/blog-single-tablet.png) | [Mobile wireframe](/docs/wireframes/blog-single-mobile.png) |
 | Edit blog | [Desktop wireframe](/docs/wireframes/blog-edit.png) | [Tablet wireframe](/docs/wireframes/edit-blog-tablet.png) | [Mobile wireframe](/docs/wireframes/edit-blog-mobile.png) |
 | Login/Register | [Desktop wireframe](/docs/wireframes/register.png) | [Tablet wireframe](/docs/wireframes/login-register-tablet.png) | [Mobile wireframe](/docs/wireframes/login-register-mobile.png) |
