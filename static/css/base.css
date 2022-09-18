@@ -73,6 +73,48 @@ table {
     transform: translateY(0);
   }
 }
+.homepage-bg-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.homepage-bg-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #18181b;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+.button, .nav-list-item > ul.__basket a.button {
+  background: #ef4444;
+  color: #f8fafc;
+  padding: 1.4rem 2.4rem;
+  border-radius: 4px;
+  border: 2px solid #ef4444;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+.button:hover, .nav-list-item > ul.__basket a.button:hover, .button:focus, .nav-list-item > ul.__basket a.button:focus {
+  color: #f8fafc;
+  background: #eb1515;
+  border-color: #eb1515;
+}
+.button.__slide, .nav-list-item > ul.__basket a.__slide.button {
+  background: right top/210% 100% linear-gradient(to right, #f8fafc 50%, transparent 50%);
+  border: 2px solid #f8fafc;
+}
+.button.__slide:hover, .nav-list-item > ul.__basket a.__slide.button:hover, .button.__slide:focus, .nav-list-item > ul.__basket a.__slide.button:focus {
+  background: left top/210% 100% linear-gradient(to right, #f8fafc 50%, transparent 50%);
+  color: #18181b;
+}
+
 .header {
   background: #18181b;
 }
@@ -81,9 +123,16 @@ table {
     margin-bottom: 4rem;
   }
 }
+.header.__home {
+  position: absolute;
+  width: 100%;
+  margin-bottom: 0;
+  background: transparent;
+}
 .header-logo {
   color: #f8fafc;
   text-decoration: none;
+  padding: 1rem 0;
 }
 .header-logo:hover, .header-logo:focus {
   color: #f8fafc;
@@ -97,12 +146,41 @@ table {
   left: 50%;
   bottom: 5rem;
   transform: translateX(-50%);
-  display: block;
+  display: inline-block;
+  border-radius: 4px;
 }
 @media screen and (min-width: 992px) {
   .header .burger {
     display: none;
   }
+}
+.header .burger-icon {
+  width: 50%;
+  height: 3px;
+  background: #f8fafc;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header .burger-icon::before, .header .burger-icon::after {
+  content: "";
+  background: #f8fafc;
+  width: 100%;
+  height: 3px;
+  display: inline-block;
+  border-radius: 4px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+}
+.header .burger-icon::before {
+  top: -0.6rem;
+}
+.header .burger-icon::after {
+  bottom: -0.9rem;
 }
 
 .nav {
@@ -112,6 +190,16 @@ table {
   .nav {
     display: block;
   }
+}
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(24, 24, 27, 0.8);
+  display: none;
+  z-index: 2;
 }
 .nav-list-item {
   position: relative;
@@ -123,11 +211,11 @@ table {
 }
 @media screen and (min-width: 992px) {
   .nav-list-item a {
-    padding: 4rem 0rem 4rem 4rem;
+    padding: 4rem 3rem;
   }
 }
-.nav-list-item a:hover, .nav-list-item a:focus {
-  color: #f8fafc;
+.nav-list-item:hover > a, .nav-list-item:focus > a {
+  color: #ef4444;
 }
 .nav-list-item:first-of-type > a {
   padding-left: 0;
@@ -165,12 +253,24 @@ table {
   background: none;
   color: #18181b;
 }
+.nav-list-item > ul.__basket a:hover h2:not(.text-center), .nav-list-item > ul.__basket a:focus h2:not(.text-center) {
+  color: #ef4444;
+}
+.nav-list-item > ul.__basket a.button {
+  text-align: center;
+}
 .nav-list-item > ul.__basket h2 {
   font-size: 1.6rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
 }
 .nav-list-item > ul.__basket p {
   font-size: 1rem;
+}
+.nav-list-item > ul.__basket p.text-center {
+  font-size: 2rem;
+}
+.nav-list-item > ul.__basket p.mt-auto {
+  font-size: 1.6rem;
 }
 .nav-list-item > ul.__basket .scroll {
   position: fixed;
@@ -213,10 +313,24 @@ table {
   width: 100%;
   font-size: 2rem;
   font-weight: 400;
+  position: relative;
+}
+.nav-list-item > ul.__submenu > li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  transition: all 0.3s;
 }
 .nav-list-item > ul.__submenu > li a:hover, .nav-list-item > ul.__submenu > li a:focus {
   color: #f8fafc;
   background: #ef4444;
+}
+.nav-list-item > ul.__submenu > li a:hover::before, .nav-list-item > ul.__submenu > li a:focus::before {
+  width: 5px;
+  background: #d41212;
 }
 @media screen and (min-width: 992px) {
   .nav-list-item > ul.__submenu.__right {
@@ -254,9 +368,7 @@ table {
   padding: 6rem 4rem;
   transition: all 0.3s;
   transform: translateX(80vw);
-}
-.nav.__mobile.__active {
-  transform: translateX(0);
+  z-index: 3;
 }
 .nav.__mobile > ul {
   flex-direction: column;
@@ -271,6 +383,44 @@ table {
   }
 }
 
+.homepage {
+  width: 100vw;
+  height: 100vh;
+  min-height: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #f8fafc;
+}
+.homepage-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+}
+.homepage-bg-wrap img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.homepage-title {
+  margin-bottom: 1.6rem;
+}
+.homepage-text {
+  opacity: 0.8;
+  margin-bottom: 1.6rem;
+}
+
 /* body stylings */
 html {
   font-size: 62.5%;
@@ -279,6 +429,29 @@ html {
 body {
   font-family: "Montserrat";
   font-size: 1.6rem;
+}
+body.__mobile {
+  overflow: hidden;
+}
+body.__mobile .burger .burger-icon {
+  background: transparent;
+}
+body.__mobile .burger .burger-icon::before, body.__mobile .burger .burger-icon::after {
+  left: 0;
+}
+body.__mobile .burger .burger-icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+body.__mobile .burger .burger-icon::after {
+  bottom: 0;
+  transform: rotate(225deg);
+}
+body.__mobile .nav-overlay {
+  display: block;
+}
+body.__mobile .nav.__mobile {
+  transform: translateX(0);
 }
 
 h1,
@@ -301,32 +474,70 @@ h6,
 
 h1,
 .h1 {
-  font-size: 6.4rem;
+  font-size: 4.8rem;
+}
+@media screen and (min-width: 992px) {
+  h1,
+.h1 {
+    font-size: 6.4rem;
+  }
 }
 
 h2,
 .h2,
 .header-logo {
-  font-size: 4.8rem;
+  font-size: 4rem;
+}
+@media screen and (min-width: 992px) {
+  h2,
+.h2,
+.header-logo {
+    font-size: 4.8rem;
+  }
 }
 
 h3,
 .h3 {
-  font-size: 4rem;
+  font-size: 3.2rem;
+}
+@media screen and (min-width: 992px) {
+  h3,
+.h3 {
+    font-size: 4rem;
+  }
 }
 
 h4,
 .h4 {
-  font-size: 3.2rem;
+  font-size: 2.4rem;
+}
+@media screen and (min-width: 992px) {
+  h4,
+.h4 {
+    font-size: 3.2rem;
+  }
 }
 
 h5,
 .h5,
 .nav-list-item {
-  font-size: 2.4rem;
+  font-size: 2rem;
+}
+@media screen and (min-width: 992px) {
+  h5,
+.h5,
+.nav-list-item {
+    font-size: 2.4rem;
+  }
 }
 
 h6,
 .h6 {
-  font-size: 2rem;
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 992px) {
+  h6,
+.h6 {
+    font-size: 2rem;
+  }
 }/*# sourceMappingURL=base.css.map */

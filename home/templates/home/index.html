@@ -2,18 +2,25 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h1>Header 1</h1>
-            <h2>Header 2</h2>
-            <h3>Header 3</h3>
-            <h4>Header 4</h4>
-            <h5>Header 5</h5>
-            <h6>Header 6</h6>
-            <p>Paragraph</p>
-            <span class="fa-solid fa-user"></span>
-        </div>
+
+<div class="homepage-bg">
+    <div class="homepage-bg-wrap">
+        <img src="/media/homepage-background.jpg" alt="">
     </div>
 </div>
+
+<section class="homepage">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 class="homepage-title">Welcome to Forrest Records</h1>
+                <p class="homepage-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore qui deserunt repudiandae accusamus exercitationem facere enim? Aliquid quas enim ducimus velit ullam reiciendis sapiente minima quia quam? Mollitia, voluptate blanditiis.</p>
+                <div class="homepage-buttons">
+                    <a href="#" class="button mb-3 me-2 me-lg-3">Button 1</a>
+                    <a href="#" class="button __slide">Button 2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

@@ -6,4 +6,9 @@ def index(request):
     """
     A view to return the index page
     """
-    return render(request, 'home/index.html')
+    modifier = '__home'
+    
+    context = {
+        'modifier': modifier
+    }
+    return render(request, 'home/index.html', context)

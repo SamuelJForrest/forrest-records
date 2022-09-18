@@ -6,10 +6,18 @@
         margin-bottom: 4rem;
     }
 
+    &.__home {
+        position: absolute;
+        width: 100%;
+        margin-bottom: 0;
+        background: transparent;
+    }
+
     &-logo {
         @extend .h2;
         color: $color-white;
         text-decoration: none;
+        padding: 1rem 0;
 
         &:hover,
         &:focus {
@@ -26,10 +34,44 @@
         left: 50%;
         bottom: 5rem;
         transform: translateX(-50%);
-        display: block;
+        display: inline-block;
+        border-radius: 4px;
 
         @media screen and (min-width: $lg) {
             display: none;
+        }
+
+        &-icon {
+            width: 50%;
+            height: 3px;
+            background: $color-white;
+            border-radius: 4px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &::before,
+            &::after {
+                content: '';
+                background: $color-white;
+                width: 100%;
+                height: 3px;
+                display: inline-block;
+                border-radius: 4px;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: all .3s;
+            }
+
+            &::before {
+                top: -.6rem;
+            }
+            
+            &::after {
+                bottom: -.9rem;
+            }
         }
     }
 }
@@ -40,6 +82,17 @@
 
     @media screen and (min-width: $lg) {
         display: block;
+    }
+
+    &-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba($color-black, 0.8);
+        display: none;
+        z-index: 2;
     }
 
     &-list {
@@ -53,12 +106,14 @@
                 display: inline-block;
 
                 @media screen and (min-width: $lg) {
-                    padding: 4rem 0rem 4rem 4rem;
+                    padding: 4rem 3rem;
                 }
+            }
 
-                &:hover,
-                &:focus {
-                    color: $color-white;
+            &:hover,
+            &:focus {
+                >a {
+                    color: $color-red;
                 }
             }
 
@@ -100,15 +155,35 @@
                         padding: 0;
                         background: none;
                         color: $color-black;
+
+                        &:hover,
+                        &:focus {
+                            h2:not(.text-center) {
+                                color: $color-red;
+                            }
+                        }
+
+                        &.button {
+                            @extend .button;
+                            text-align: center;
+                        }
                     }
 
                     h2 {
                        font-size: 1.6rem;
-                       margin-bottom: 0.6rem;
+                       margin-bottom: 0.8rem;
                     }
 
                     p {
-                       font-size: 1rem; 
+                       font-size: 1rem;
+
+                       &.text-center {
+                        font-size: 2rem;
+                       }
+
+                       &.mt-auto {
+                        font-size: 1.6rem;
+                       }
                     }
 
                     .scroll {
@@ -160,11 +235,27 @@
                             width: 100%;
                             font-size: 2rem;
                             font-weight: 400;
+                            position: relative;
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                height: 100%;
+                                width: 0;
+                                transition: all .3s;
+                            }
     
                             &:hover,
                             &:focus {
                                 color: $color-white;
                                 background: $color-red;
+
+                                &::before {
+                                    width: 5px;
+                                    background: darken($color-red, 15%);
+                                }
                             }
                         }
                     }
@@ -218,10 +309,7 @@
         padding: 6rem 4rem;
         transition: all .3s;
         transform: translateX($nav-width);
-
-        &.__active {
-            transform: translateX(0);
-        }
+        z-index: 3;
         
         >ul {
             flex-direction: column;

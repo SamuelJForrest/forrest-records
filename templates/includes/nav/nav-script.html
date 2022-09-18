@@ -34,12 +34,19 @@
         });
 
         $('.burger').click(function() {
-            const mobileNav = $('.__mobile');
-            if (!mobileNav.hasClass('__active')) {
-                mobileNav.addClass('__active');
+            const body = $('body');
+
+            if (!body.hasClass('__mobile')) {
+                body.addClass('__mobile');
             } else {
-                mobileNav.removeClass('__active');
+                body.removeClass('__mobile');
             }
         });
+
+        $('.nav-overlay').click(function() {
+            const body = $('body');
+
+            body.removeClass('__mobile');
+        })
     });
 </script>

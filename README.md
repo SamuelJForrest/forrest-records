@@ -214,6 +214,7 @@ Test description
 ### Code
 
 ### Media
+- Thanks to [Natalie Parham](https://unsplash.com/@natalieparham) for the [homepage image](https://unsplash.com/photos/fPKqpUbTL4Y?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)
 
 ### General Thanks
 - I would like to thank my parter, Laura Gilbert, for helping me test the site from a user's perspective.
