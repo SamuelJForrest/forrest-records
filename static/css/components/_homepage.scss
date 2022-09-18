@@ -67,6 +67,7 @@
             animation-timing-function: ease;
             animation-duration: 1s;
             animation-fill-mode: forwards;
+            transition: color .3s;
 
             &:hover,
             &:focus {

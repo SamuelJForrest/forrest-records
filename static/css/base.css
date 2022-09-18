@@ -471,6 +471,7 @@ table {
           animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  transition: color 0.3s;
 }
 .homepage-icons a:hover, .homepage-icons a:focus {
   color: #f8fafc;
