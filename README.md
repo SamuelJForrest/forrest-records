@@ -178,11 +178,9 @@ The social icons, upon the page loading, have a staggered animation in which eac
 
 It looks like this in the final version of the site:
 
+https://user-images.githubusercontent.com/94783808/190912753-f9f2bdb7-b905-438e-9539-7a35bc4a3a5e.mp4
 
-
-
-
-#### Feature 2: 
+#### Feature 3: 
 
 ### Features to be Implemented
 
