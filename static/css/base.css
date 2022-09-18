@@ -446,10 +446,15 @@ table {
   width: 100%;
   left: 0;
   bottom: 1.6rem;
-  display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .homepage-icons {
+    display: flex;
+  }
 }
 .homepage-icons a {
   color: #f8fafc;

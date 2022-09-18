@@ -47,10 +47,14 @@
         width: 100%;
         left: 0;
         bottom: 1.6rem;
-        display: flex;
         justify-content: center;
         align-items: center;
         overflow: hidden;
+        display: none;
+        
+        @media screen and (min-width: $lg) {
+            display: flex;
+        }
 
         a {
             color: $color-white;
