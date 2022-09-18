@@ -214,6 +214,7 @@ Test description
 ### Code
 
 ### Media
+- Thanks to [Freepik](https://www.freepik.com/) for the vinyl [favicon](https://www.flaticon.com/free-icons/vinyl")
 - Thanks to [Natalie Parham](https://unsplash.com/@natalieparham) for the [homepage image](https://unsplash.com/photos/fPKqpUbTL4Y?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)
 
 ### General Thanks
