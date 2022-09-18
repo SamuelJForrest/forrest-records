@@ -155,6 +155,33 @@ https://user-images.githubusercontent.com/94783808/190649667-eb4d6353-266e-42ad-
 
 ![Basket quantity](/docs/readme/features/feature-nav-basket-quantity.png)
 
+#### Feature 2: Homepage
+
+![Homepage](/docs/readme/features/homepage.png)
+
+This page displays when the user visits the home directory of the site - meaning that it will be the page that most users see for the first time when visiting. It consists of:
+- The navigation bar
+- A title
+- A lead paragraph
+- Two buttons - that lead to the shop and blog
+
+**Social icons**
+The social icons, upon the page loading, have a staggered animation in which each item slides up into view - one after another. I achieved this using a SCSS for loop.
+
+```
+@for $i from 1 to 5 {
+    .homepage-icons a:nth-child(#{$i}) {
+        animation-delay: calc(#{$i * 0.25}s);
+    }
+}
+```
+
+It looks like this in the final version of the site:
+
+
+
+
+
 #### Feature 2: 
 
 ### Features to be Implemented
@@ -212,6 +239,7 @@ Test description
 ## Credits
 
 ### Code
+- [This Stack Overflow thread](https://stackoverflow.com/questions/15146706/each-loop-with-index) showed me how to use for loops in SCSS, which allowed me to add the homepage social icons animation in simply.
 
 ### Media
 - Thanks to [Freepik](https://www.freepik.com/) for the vinyl [favicon](https://www.flaticon.com/free-icons/vinyl")
