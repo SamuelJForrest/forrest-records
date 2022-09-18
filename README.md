@@ -74,23 +74,21 @@ I used two [Google fonts]() for this project: [DM Sans](https://fonts.google.com
 
 | Page | Desktop | Tablet | Mobile |
 | ---- | -------------- | ---- | ------ |
-| Landing | [Desktop wireframe](/docs/wireframes/landing-page.png) | Add tablet wireframes | [Mobile wireframe](/docs/wireframes/landing-page-mobile.png) |
-| Product list | [Desktop wireframe](/docs/wireframes/product-listing.png) | Add tablet wireframes | [Mobile wireframe](/docs/wireframes/product-listing-mobile.png) |
-| Product single | [Desktop wireframe](/docs/wireframes/product-single.png) | Add tablet wireframes | [Mobile wireframe](/docs/wireframes/product-single-mobile.png) |
-| Basket | [Desktop wireframe](/docs/wireframes/basket.png) | Add tablet wireframes | [Mobile wireframe](/docs/wireframes/basket-mobile.png) |
-| Checkout | [Desktop wireframe](/docs/wireframes/checkout.png) | Add tablet wireframes | [Mobile wireframe](/docs/wireframes/checkout-mobile.png) |
-| Profile | [Desktop wireframe](/docs/wireframes/profile.png) | Add tablet wireframes | [Mobile wireframe](/docs/wireframes/profile-mobile.png) |
-| Blog list | [Desktop wireframe](/docs/wireframes/blog-listing.png) | Add tablet wireframes | [Mobile wireframe](/docs/wireframes/blog-mobile.png) |
-| Blog single | [Desktop wireframe](/docs/wireframes/blog-single.png) | Add tablet wireframes | [Mobile wireframe](/docs/wireframes/blog-single-mobile.png) |
-| Edit blog | [Desktop wireframe](/docs/wireframes/blog-edit.png) | Add tablet wireframes | [Mobile wireframe](/docs/wireframes/edit-blog-mobile.png) |
-| Login/Register | [Desktop wireframe](/docs/wireframes/register.png) | Add tablet wireframes | [Mobile wireframe](/docs/wireframes/login-register-mobile.png) |
-| Contact | [Desktop wireframe](/docs/wireframes/contact.png) | Add tablet wireframes | [Mobile wireframe](/docs/wireframes/contact-mobile.png) |
-| **Pages** | **left** | **to** | **add** |
-| Checkout success | Add desktop wireframe | Add tablet wireframe | Add mobile wireframe |
-| Add product | Add desktop wireframe | Add tablet wireframe | Add mobile wireframe |
-| Edit product | Add desktop wireframe | Add tablet wireframe | Add mobile wireframe |
-| Artists | Add desktop wireframe | Add tablet wireframe | Add mobile wireframe |
-| Error pages (400, 500, etc) | Add desktop wireframe | Add tablet wireframe | Add mobile wireframe |
+| Landing | [Desktop wireframe](/docs/wireframes/landing-page.png) | [Tablet wireframe](/docs/wireframes/landing-page-tablet.png) | [Mobile wireframe](/docs/wireframes/landing-page-mobile.png) |
+| Product list | [Desktop wireframe](/docs/wireframes/product-listing.png) | [Tablet wireframe](/docs/wireframes/product-listing-tablet.png) | [Mobile wireframe](/docs/wireframes/product-listing-mobile.png) |
+| Product single | [Desktop wireframe](/docs/wireframes/product-single.png) | [Tablet wireframe](/docs/wireframes/product-single-tablet.png) | [Mobile wireframe](/docs/wireframes/product-single-mobile.png) |
+| Basket | [Desktop wireframe](/docs/wireframes/basket.png) | [Tablet wireframe](/docs/wireframes/basket-tablet.png) | [Mobile wireframe](/docs/wireframes/basket-mobile.png) |
+| Checkout | [Desktop wireframe](/docs/wireframes/checkout.png) | [Tablet wireframe](/docs/wireframes/checkout-tablet.png) | [Mobile wireframe](/docs/wireframes/checkout-mobile.png) |
+| Profile | [Desktop wireframe](/docs/wireframes/profile.png) | [Tablet wireframe](/docs/wireframes/profile-tablet.png) | [Mobile wireframe](/docs/wireframes/profile-mobile.png) |
+| Blog list | [Desktop wireframe](/docs/wireframes/blog-listing.png) | [Tablet wireframe](/docs/wireframes/blog-tablet.png) | [Mobile wireframe](/docs/wireframes/blog-mobile.png) |
+| Blog single | [Desktop wireframe](/docs/wireframes/blog-single.png) | [Tablet wireframe](/docs/wireframes/blog-single-tablet.png) | [Mobile wireframe](/docs/wireframes/blog-single-mobile.png) |
+| Edit blog | [Desktop wireframe](/docs/wireframes/blog-edit.png) | [Tablet wireframe](/docs/wireframes/edit-blog-tablet.png) | [Mobile wireframe](/docs/wireframes/edit-blog-mobile.png) |
+| Login/Register | [Desktop wireframe](/docs/wireframes/register.png) | [Tablet wireframe](/docs/wireframes/login-register-tablet.png) | [Mobile wireframe](/docs/wireframes/login-register-mobile.png) |
+| Contact | [Desktop wireframe](/docs/wireframes/contact.png) | [Tablet wireframe](/docs/wireframes/contact-tablet.png) | [Mobile wireframe](/docs/wireframes/contact-mobile.png) |
+| Checkout success | [Desktop wireframe](/docs/wireframes/checkout-success.png) | [Tablet wireframe](/docs/wireframes/checkout-success-tablet.png) | [Mobile wireframe](/docs/wireframes/checkout-success-mobile.png) |
+| Add/Edit product | [Desktop wireframe](/docs/wireframes/add-edit-product.png) | [Tablet wireframe](/docs/wireframes/add-product-tablet.png) | [Mobile wireframe](/docs/wireframes/add-edit-product-mobile.png) |
+| Artists | [Desktop wireframe](/docs/wireframes/artists.png) | [Tablet wireframe](/docs/wireframes/artists-tablet.png) | [Mobile wireframe](/docs/wireframes/artists-mobile.png) |
+| Error pages (400, 500, etc) | [Desktop wireframe](/docs/wireframes/error-pages.png) | [Tablet wireframe](/docs/wireframes/error-pages-tablet.png) | [Mobile wireframe](/docs/wireframes/error-pages-mobile.png) |
 
 #### Database
 
