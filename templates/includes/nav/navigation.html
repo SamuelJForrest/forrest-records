@@ -15,7 +15,7 @@
                             </ul>
                         </li>
                         <li class="nav-list-item"><a href="{% url 'blog' %}">Blog</a></li>
-                        <li class="nav-list-item"><a href="#">Contact</a></li>
+                        <li class="nav-list-item"><a href="{% url 'contact' %}">Contact</a></li>
                         <li class="nav-list-item">
                             <a href="#"><i class="fa-solid fa-user"></i></a>
                             <ul class="__submenu __right">
@@ -26,9 +26,10 @@
                         <li class="nav-list-item">
                             <a href="#"><i class="fa-solid fa-basket-shopping position-relative"><span class="basket-quantity">1</span></i></a>
                             <ul class="__basket">
-                                {% for i in '012345'|make_list %}
+                                {% for i in '012'|make_list %}
                                     {% include 'includes/nav/basket-menu-item.html' %}
                                 {% endfor %}
+                                <a href="#" class="button w-100 mt-3">View basket</a>
                                 <a href="#" class="button w-100 mt-3">Proceed to checkout</a>
                             </ul>
                         </li>
