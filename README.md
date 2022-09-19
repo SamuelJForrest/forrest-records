@@ -205,7 +205,7 @@ https://user-images.githubusercontent.com/94783808/190912753-f9f2bdb7-b905-438e-
 - [Google Fonts](https://fonts.google.com/)
 
 ### Other tools
-- 
+- [TinyPNG](https://tinypng.com/)
 
 ## Testing
 
