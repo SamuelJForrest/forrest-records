@@ -98,14 +98,19 @@ margin-bottom: 2rem;
 
     &-list {
         &-item {
-            @extend .h6;
             position: relative;
+            font-weight: 700;
+            font-size: 2.4rem;
+
+            @media screen and (min-width: $lg) {
+                font-size: 2rem;
+            }
 
             a,
             span:not(.basket-quantity, .scroll) {
                 color: $color-white;
                 text-decoration: none;
-                display: inline-block;
+                display: block;
                 cursor: pointer;
 
                 @media screen and (min-width: $lg) {
@@ -133,7 +138,7 @@ margin-bottom: 2rem;
                 display: none;
                 box-shadow: 0 1.6rem 2.4rem 0 rgb(0 0 0 / 20%);
                 border-radius: 4px;
-                margin-top: 1.6rem;
+                margin-top: 3rem;
                 
                 @media screen and (min-width: $lg) {
                     position: absolute;

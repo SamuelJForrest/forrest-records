@@ -224,12 +224,19 @@ table {
 }
 .nav-list-item {
   position: relative;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+@media screen and (min-width: 992px) {
+  .nav-list-item {
+    font-size: 2rem;
+  }
 }
 .nav-list-item a,
 .nav-list-item span:not(.basket-quantity, .scroll) {
   color: #f8fafc;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   cursor: pointer;
 }
 @media screen and (min-width: 992px) {
@@ -252,7 +259,7 @@ table {
   display: none;
   box-shadow: 0 1.6rem 2.4rem 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  margin-top: 1.6rem;
+  margin-top: 3rem;
 }
 @media screen and (min-width: 992px) {
   .nav-list-item > ul {
@@ -550,8 +557,7 @@ h4,
 h5,
 .h5,
 h6,
-.h6,
-.nav-list-item {
+.h6 {
   font-family: "DM sans";
   font-weight: 700;
 }
@@ -614,14 +620,12 @@ h5,
 }
 
 h6,
-.h6,
-.nav-list-item {
+.h6 {
   font-size: 1.6rem;
 }
 @media screen and (min-width: 992px) {
   h6,
-.h6,
-.nav-list-item {
+.h6 {
     font-size: 2rem;
   }
 }
