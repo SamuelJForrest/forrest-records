@@ -215,13 +215,6 @@ Tests can be found [here](/docs/readme/testing.md) in a separate file.
 
 Bugs can be found [here](/docs/readme/bugs.md) in a separate file.
 
-### Bug title
-- **Bug**: 
-- **Fix**: 
-- **Verdict**: 
-
-### Unfixed bugs
-
 ## Deployment
 
 ### Local Development
