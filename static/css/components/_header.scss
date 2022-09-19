@@ -98,19 +98,14 @@ margin-bottom: 2rem;
 
     &-list {
         &-item {
+            @extend .h5;
             position: relative;
-            font-weight: 700;
-            font-size: 2.4rem;
-
-            @media screen and (min-width: $lg) {
-                font-size: 2rem;
-            }
 
             a,
             span:not(.basket-quantity, .scroll) {
                 color: $color-white;
                 text-decoration: none;
-                display: block;
+                display: inline-block;
                 cursor: pointer;
 
                 @media screen and (min-width: $lg) {
@@ -187,14 +182,20 @@ margin-bottom: 2rem;
 
                     p {
                        font-size: 1rem;
+                       font-weight: 400;
 
-                       &.text-center {
-                        font-size: 2rem;
-                       }
+                        &.text-center,
+                        &.mt-auto {
+                            font-weight: 600;
+                        }
 
-                       &.mt-auto {
-                        font-size: 1.6rem;
-                       }
+                        &.text-center {
+                            font-size: 2rem;
+                        }
+
+                        &.mt-auto {
+                            font-size: 1.6rem;
+                        }
                     }
 
                     .scroll {
