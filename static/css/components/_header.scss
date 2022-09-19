@@ -15,7 +15,7 @@ margin-bottom: 2rem;
     }
 
     &-logo {
-        @extend .h2;
+        @extend .h3;
         color: $color-white;
         text-decoration: none;
         padding: 1rem 0;
@@ -98,7 +98,7 @@ margin-bottom: 2rem;
 
     &-list {
         &-item {
-            @extend .h5;
+            @extend .h6;
             position: relative;
 
             a {

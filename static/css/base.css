@@ -536,16 +536,16 @@ h1,
 .h1,
 h2,
 .h2,
-.header-logo,
 h3,
 .h3,
+.header-logo,
 h4,
 .h4,
 h5,
 .h5,
-.nav-list-item,
 h6,
-.h6 {
+.h6,
+.nav-list-item {
   font-family: "DM sans";
   font-weight: 700;
 }
@@ -562,25 +562,25 @@ h1,
 }
 
 h2,
-.h2,
-.header-logo {
+.h2 {
   font-size: 4rem;
 }
 @media screen and (min-width: 992px) {
   h2,
-.h2,
-.header-logo {
+.h2 {
     font-size: 4.8rem;
   }
 }
 
 h3,
-.h3 {
+.h3,
+.header-logo {
   font-size: 3.2rem;
 }
 @media screen and (min-width: 992px) {
   h3,
-.h3 {
+.h3,
+.header-logo {
     font-size: 4rem;
   }
 }
@@ -597,25 +597,25 @@ h4,
 }
 
 h5,
-.h5,
-.nav-list-item {
+.h5 {
   font-size: 2rem;
 }
 @media screen and (min-width: 992px) {
   h5,
-.h5,
-.nav-list-item {
+.h5 {
     font-size: 2.4rem;
   }
 }
 
 h6,
-.h6 {
+.h6,
+.nav-list-item {
   font-size: 1.6rem;
 }
 @media screen and (min-width: 992px) {
   h6,
-.h6 {
+.h6,
+.nav-list-item {
     font-size: 2rem;
   }
 }
