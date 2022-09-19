@@ -1,6 +1,7 @@
 // header
 .header {
     background: $color-black;
+margin-bottom: 2rem;
     
     @media screen and (min-width: $lg) {
         margin-bottom: 4rem;
@@ -137,6 +138,7 @@
                     transform: translateY(100%);
                     width: 30rem;
                     margin-top: 0;
+                    z-index: 2;
                 }
 
                 &.__basket {
@@ -153,7 +155,7 @@
 
                     a {
                         padding: 0;
-                        background: none;
+                        background: $color-white;
                         color: $color-black;
 
                         &:hover,

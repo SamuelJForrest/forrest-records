@@ -7,5 +7,9 @@ def all_products(request):
     """
     A view to show all products, including sorting and search queries
     """
-    return render(request, 'products/products.html')
+    page_title = 'Shop'
+    context = {
+        'page_title': page_title
+    }
+    return render(request, 'products/products.html', context)
 

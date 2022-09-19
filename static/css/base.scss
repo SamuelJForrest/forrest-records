@@ -118,3 +118,29 @@ h6,
         font-size: 2rem;
     }
 }
+
+.page {
+    &-header {
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid $color-grey;
+
+        @media screen and (min-width: $lg) {
+            margin-bottom: 4rem;
+        }
+
+
+        h1 {
+            margin-bottom: 1.6rem;
+
+            @media screen and (min-width: $lg) {
+                margin-bottom: 0;
+            }
+        }
+
+        span {
+            opacity: 0.6;
+            display: inline-block;
+        }
+    }
+}

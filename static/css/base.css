@@ -137,6 +137,7 @@ table {
 
 .header {
   background: #18181b;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 992px) {
   .header {
@@ -255,6 +256,7 @@ table {
     transform: translateY(100%);
     width: 30rem;
     margin-top: 0;
+    z-index: 2;
   }
 }
 .nav-list-item > ul.__basket {
@@ -270,7 +272,7 @@ table {
 }
 .nav-list-item > ul.__basket a {
   padding: 0;
-  background: none;
+  background: #f8fafc;
   color: #18181b;
 }
 .nav-list-item > ul.__basket a:hover h2:not(.text-center), .nav-list-item > ul.__basket a:focus h2:not(.text-center) {
@@ -616,4 +618,27 @@ h6,
 .h6 {
     font-size: 2rem;
   }
+}
+
+.page-header {
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #d4d4d8;
+}
+@media screen and (min-width: 992px) {
+  .page-header {
+    margin-bottom: 4rem;
+  }
+}
+.page-header h1 {
+  margin-bottom: 1.6rem;
+}
+@media screen and (min-width: 992px) {
+  .page-header h1 {
+    margin-bottom: 0;
+  }
+}
+.page-header span {
+  opacity: 0.6;
+  display: inline-block;
 }/*# sourceMappingURL=base.css.map */
