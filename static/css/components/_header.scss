@@ -101,10 +101,12 @@ margin-bottom: 2rem;
             @extend .h6;
             position: relative;
 
-            a {
+            a,
+            span:not(.basket-quantity, .scroll) {
                 color: $color-white;
                 text-decoration: none;
                 display: inline-block;
+                cursor: pointer;
 
                 @media screen and (min-width: $lg) {
                     padding: 4rem 3rem;
@@ -113,13 +115,15 @@ margin-bottom: 2rem;
 
             &:hover,
             &:focus {
-                >a {
+                >a,
+                >span {
                     color: $color-red;
                 }
             }
 
             &:first-of-type {
-                >a {
+                >a,
+                >span {
                     padding-left: 0;
                 }
             }

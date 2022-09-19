@@ -225,20 +225,26 @@ table {
 .nav-list-item {
   position: relative;
 }
-.nav-list-item a {
+.nav-list-item a,
+.nav-list-item span:not(.basket-quantity, .scroll) {
   color: #f8fafc;
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
 }
 @media screen and (min-width: 992px) {
-  .nav-list-item a {
+  .nav-list-item a,
+.nav-list-item span:not(.basket-quantity, .scroll) {
     padding: 4rem 3rem;
   }
 }
-.nav-list-item:hover > a, .nav-list-item:focus > a {
+.nav-list-item:hover > a,
+.nav-list-item:hover > span, .nav-list-item:focus > a,
+.nav-list-item:focus > span {
   color: #ef4444;
 }
-.nav-list-item:first-of-type > a {
+.nav-list-item:first-of-type > a,
+.nav-list-item:first-of-type > span {
   padding-left: 0;
 }
 .nav-list-item > ul {
