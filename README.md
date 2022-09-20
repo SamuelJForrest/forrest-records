@@ -224,7 +224,8 @@ Bugs can be found [here](/docs/readme/bugs.md) in a separate file.
 ## Credits
 
 ### Code
-- [This Stack Overflow thread](https://stackoverflow.com/questions/15146706/each-loop-with-index) showed me how to use for loops in SCSS, which allowed me to add the homepage social icons animation in simply.
+- [Wouter J](https://stackoverflow.com/a/15146850) showed me how to use for loops in SCSS, which allowed me to add the homepage social icons animation in simply.
+- [Frost.baka](https://stackoverflow.com/a/4144088): for the code to stop admin adding another model in the admin area for the homepage.
 
 ### Media
 - Thanks to [Freepik](https://www.freepik.com/) for the vinyl [favicon](https://www.flaticon.com/free-icons/vinyl")

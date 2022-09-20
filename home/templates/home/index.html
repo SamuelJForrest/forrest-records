@@ -10,25 +10,35 @@
 </div>
 
 <section class="homepage">
+    {% for item in homepage %}
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h1 class="homepage-title">Welcome to Forrest Records</h1>
-                <p class="homepage-text">All of the greatest punk/hardcore music - all under one roof. Whether you are looking for collectable, vintage vinyls, or the newest releases from your favourite artists, you're in the right place!</p>
+                <h1 class="homepage-title">{{ item.title }}</h1>
+                <p class="homepage-text">{{ item.lead_paragraph }}</p>
                 <div class="homepage-buttons">
-                    <a href="{% url 'products' %}" class="button me-2 me-lg-3" aria-label="Visit our shop">Shop now</a>
-                    <a href="{% url 'blog' %}" class="button __slide" aria-label="Visit our blog">Latest news</a>
+                    <a href="{% url 'products' %}" class="button me-2 me-lg-3" aria-label="Visit our shop">{{ item.shop_button }}</a>
+                    <a href="{% url 'blog' %}" class="button __slide" aria-label="Visit our blog">{{ item.blog_button }}</a>
                 </div>
             </div>
         </div>
     </div>
     
     <div class="homepage-icons">
-        <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Visit our Facebook page"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Visit our Instagram page"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.soundcloud.com" target="_blank" rel="noopener" aria-label="Visit our Soundcloud page"><i class="fa-brands fa-soundcloud"></i></a>
-        <a href="https://www.bandcamp.com" target="_blank" rel="noopener" aria-label="Visit our Bandcamp page"><i class="fa-brands fa-bandcamp"></i></a>
+        {% if item.facebook_link %}
+        <a href="{{ item.facebook_link }}" target="_blank" rel="noopener" aria-label="Visit our Facebook page"><i class="fa-brands fa-square-facebook"></i></a>
+        {% endif %}
+        {% if item.instagram_link %}
+        <a href="{{ item.instagram_link }}" target="_blank" rel="noopener" aria-label="Visit our Instagram page"><i class="fa-brands fa-instagram"></i></a>
+        {% endif %}
+        {% if item.soundcloud_link %}
+        <a href="{{ item.soundcloud_link }}" target="_blank" rel="noopener" aria-label="Visit our Soundcloud page"><i class="fa-brands fa-soundcloud"></i></a>
+        {% endif %}
+        {% if item.bandcamp_link %}
+        <a href="{{ item.bandcamp_link }}" target="_blank" rel="noopener" aria-label="Visit our Bandcamp page"><i class="fa-brands fa-bandcamp"></i></a>
+        {% endif %}
     </div>
+    {% endfor %}
 </section>
 
 {% endblock %}
