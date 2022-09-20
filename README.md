@@ -226,6 +226,7 @@ Bugs can be found [here](/docs/readme/bugs.md) in a separate file.
 ### Code
 - [Wouter J](https://stackoverflow.com/a/15146850) showed me how to use for loops in SCSS, which allowed me to add the homepage social icons animation in simply.
 - [Frost.baka](https://stackoverflow.com/a/4144088): for the code to stop admin adding another model in the admin area for the homepage.
+- [Geeks For Geeks](https://www.geeksforgeeks.org/richtextfield-django-models/) for showing me how to add a rich text field to the Django admin area.
 
 ### Media
 - Thanks to [Freepik](https://www.freepik.com/) for the vinyl [favicon](https://www.flaticon.com/free-icons/vinyl")

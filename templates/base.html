@@ -52,7 +52,15 @@
 </head>
 <body>
     <!-- header -->
-    {% include 'includes/nav/navigation.html' %}
+    <header class="header {{ modifier }}">
+        <div class="header-wrap">
+            {% include 'includes/nav/navigation.html' %}
+        </div>
+
+        {% block breadcrumb %}
+
+        {% endblock %}
+    </header>
 
     <!-- sub page titles -->
     {% if modifier != '__home' %}
@@ -60,10 +68,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
-                        <h1>{{ page_title }}</h1>
-                        {% if page_description %}
-                            <span>{{ page_description }}</span>
-                        {% endif %}
+                        <h1>{% block page_header%}{% endblock %}</h1>
+                        <span>{% block page_subtitle %}{% endblock %}</span>
                     </div>
                 </div>
             </div>

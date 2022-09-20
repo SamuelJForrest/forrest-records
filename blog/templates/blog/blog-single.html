@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block extra_title %}
+- {{ blog.title }}
+{% endblock %}
+
+{% block breadcrumb %}
+<div class="breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="{% url 'blog' %}" class="d-flex align-items-center"><i class="fa-solid fa-chevron-left"></i>
+                    Back to blogs</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_header %}
+    {{ blog.title }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="blog-single-image">
+                <img src="{{ blog.image_url }}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-lg-auto">
+            {{ blog.content|safe }}
+        </div>
+    </div>
+</div>
+{% endblock %}

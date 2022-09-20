@@ -3,7 +3,6 @@ from .models import Homepage
 
 # Register your models here.
 
-
 class HomepageAdmin(admin.ModelAdmin):
     # list_display = (
     #     'title',
@@ -14,5 +13,6 @@ class HomepageAdmin(admin.ModelAdmin):
 
     def has_add_permission(self, request):
         return False
+
 
 admin.site.register(Homepage, HomepageAdmin)
