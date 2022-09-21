@@ -9,11 +9,11 @@ def all_blog_posts(request):
     Returns all blog posts, including sorting
     """
     blogpage = BlogPage.objects.all()
-    blogs = Blogs.objects.all()
+    blogs = Blogs.objects.all().order_by('-blogpage__featured_blog', '-id')
 
     context = {
         'blogpage': blogpage,
-        'blogs': blogs
+        'blogs': blogs,
     }
     
     return render(request, 'blog/blog.html', context)
@@ -21,7 +21,7 @@ def all_blog_posts(request):
 
 def blog_detail(request, blog_id):
     """
-    Redirects to a specific blog
+    Redirects to a specific blog page
     """
     blog = get_object_or_404(Blogs, id=blog_id)
     blog_title = blog.title

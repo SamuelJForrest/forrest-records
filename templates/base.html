@@ -62,19 +62,9 @@
         {% endblock %}
     </header>
 
-    <!-- sub page titles -->
-    {% if modifier != '__home' %}
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
-                        <h1>{% block page_header%}{% endblock %}</h1>
-                        <span>{% block page_subtitle %}{% endblock %}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    {% endif %}
+    {% block page_header %}
+
+    {% endblock %}
 
     {% block content %}
         

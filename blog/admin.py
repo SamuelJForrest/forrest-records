@@ -16,7 +16,7 @@ class BlogsAdmin(admin.ModelAdmin):
     list_display = (
         'title',
     )
-
+    ordering = ['-id']
 
 admin.site.register(BlogPage, BlogPageAdmin)
 admin.site.register(Blogs, BlogsAdmin)
