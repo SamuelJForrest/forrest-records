@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import ContactPage
 
 # Create your views here.
 
@@ -6,12 +7,10 @@ def contact_us(request):
     """
     Renders the contact page, and handles the form submission
     """
-    page_title = "Contact"
-    page_description = "Get in touch"
+    contact_page = ContactPage.objects.all()
 
     context = {
-        'page_title': page_title,
-        'page_description': page_description
+        'contact_page': contact_page
     }
 
     return render(request, 'contact/contact.html', context)

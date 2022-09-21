@@ -180,7 +180,24 @@ It looks like this in the final version of the site:
 
 https://user-images.githubusercontent.com/94783808/190912753-f9f2bdb7-b905-438e-9539-7a35bc4a3a5e.mp4
 
-#### Feature 3: 
+#### Feature 3: Blog Pages
+
+![Blog page](/docs/readme/features/blog-list.png)
+
+When the user visits the blog area of the site, they are initially directed to the blog listing page - which shows the blogs sorted in order from newest to oldest. Also, from the admin, anyone with the correct permissions can set a 'featured' blog, which will be the first blog to show on this page:
+
+**Featured Blog**
+![Featured blog](/docs/readme/features/blog-featured.png)
+
+Once a user clicks the blog of their choice, they are redirected to the page for that individual blog post. This page includes a breadcrumb which allows you to return to the main blog listing page.
+
+**Individual Blog Page**
+![Individual blog](/docs/readme/features/blog-single.png)
+
+I also installed an additional pip package - ckeditor - to allow any admin who is writing a blog to do so using a rich text field. I decided to take this approach as I found this way ensured that any formatting present in the blog post was present on the page; it also allowed for authors to include relevant links, images, tables, etc.
+
+**Edit Blog (Admin Page)**
+![Edit blog](/docs/readme/features/blog-admin.png)
 
 ### Features to be Implemented
 
