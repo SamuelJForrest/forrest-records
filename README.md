@@ -194,7 +194,7 @@ Once a user clicks the blog of their choice, they are redirected to the page for
 **Individual Blog Page**
 ![Individual blog](/docs/readme/features/blog-single.png)
 
-I also installed an additional pip package - ckeditor - to allow any admin who is writing a blog to do so using a rich text field. I decided to take this approach as I found this way ensured that any formatting present in the blog post was present on the page; it also allowed for authors to include relevant links, images, tables, etc.
+I also installed an additional pip package - [ckeditor](https://django-ckeditor.readthedocs.io/en/latest/) - to allow any admin who is writing a blog to do so using a rich text field. I decided to take this approach as I found this way ensured that any formatting present in the blog post was present on the page; it also allowed for authors to include relevant links, images, tables, etc.
 
 **Edit Blog (Admin Page)**
 ![Edit blog](/docs/readme/features/blog-admin.png)
