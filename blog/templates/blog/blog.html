@@ -23,9 +23,8 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-10 mx-lg-auto">
-            
             {% for blog in blogs %}
-            <a href="{% url 'blog_detail' blog.id %}" class="blog-item w-100">
+            <a href="{% url 'blog_detail' blog.id %}" class="blog-item w-100 {% if blog.title|lower == featured_blog|lower %}__featured{% endif %}">
                 <div class="container h-100">
                     <div class="row h-100">
                         <div class="col-lg-4 h-100">

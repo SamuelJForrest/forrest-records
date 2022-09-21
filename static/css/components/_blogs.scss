@@ -4,6 +4,22 @@
         text-decoration: none;
         display: block;
         margin-bottom: 2.6rem;
+        position: relative;
+
+        &.__featured {
+            &::before {
+                content: 'Featured';
+                display: inline-block;
+                position: absolute;
+                top: .8rem;
+                left: 1.5rem;
+                padding: 1rem 1.5rem;
+                background: $color-red;
+                color: $color-white;
+                border-radius: 4px;
+                z-index: 2;
+            }
+        }
 
         @media screen and (min-width: $lg) {
             height: 25rem;

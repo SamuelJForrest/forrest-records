@@ -541,6 +541,19 @@ table {
   text-decoration: none;
   display: block;
   margin-bottom: 2.6rem;
+  position: relative;
+}
+.blog-item.__featured::before {
+  content: "Featured";
+  display: inline-block;
+  position: absolute;
+  top: 0.8rem;
+  left: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: #ef4444;
+  color: #f8fafc;
+  border-radius: 4px;
+  z-index: 2;
 }
 @media screen and (min-width: 992px) {
   .blog-item {
