@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import BlogPage, Blogs
+from .models import BlogPage, Blog
 
 # Create your views here.
 

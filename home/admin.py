@@ -4,12 +4,10 @@ from .models import Homepage
 # Register your models here.
 
 class HomepageAdmin(admin.ModelAdmin):
-    # list_display = (
-    #     'title',
-    #     'lead_paragraph',
-    #     'shop_button',
-    #     'blog_button'
-    # )
+    list_display = (
+        'title',
+        'lead_paragraph',
+    )
 
     def has_add_permission(self, request):
         return False

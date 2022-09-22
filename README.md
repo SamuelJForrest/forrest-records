@@ -94,6 +94,8 @@ I used two [Google fonts]() for this project: [DM Sans](https://fonts.google.com
 
 ##### Physical model
 
+![Database schema](/docs/readme/design/database.png)
+
 ##### Models
 
 ###### Product

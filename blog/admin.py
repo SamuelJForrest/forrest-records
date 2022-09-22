@@ -1,11 +1,12 @@
 from django.contrib import admin
-from .models import BlogPage, Blogs
+from .models import BlogPage, Blog
 
 # Register your models here.
 
 class BlogPageAdmin(admin.ModelAdmin):
     list_display = (
         'title',
+        'subtitle',
     )
 
     def has_add_permission(self, request):
@@ -19,5 +20,5 @@ class BlogsAdmin(admin.ModelAdmin):
     ordering = ['-id']
 
 admin.site.register(BlogPage, BlogPageAdmin)
-admin.site.register(Blogs, BlogsAdmin)
+admin.site.register(Blog, BlogsAdmin)
 
