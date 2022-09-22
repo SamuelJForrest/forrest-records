@@ -202,6 +202,9 @@ I also installed an additional pip package - [ckeditor](https://django-ckeditor.
 ![Edit blog](/docs/readme/features/blog-admin.png)
 
 ### Features to be Implemented
+1. Tours: Add a section to the site which allows user's to search/buy tickets for an artist of their choice's tour.
+2. Membership: Add a means for users to sign up for a paid membership, which gives them access to perks such as pre-release sales and free shipping.
+3. Featured item on homepage: Add a section to the homepage in which admins can set a featured artist/product/blog.
 
 ## Technologies Used
 
