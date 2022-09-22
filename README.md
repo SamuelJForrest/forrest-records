@@ -232,12 +232,13 @@ Tests can be found [here](/docs/readme/testing.md) in a separate file.
 
 ## Bugs
 
-Bugs for this project can be found within the 'Issues' tab - for ease, I have added links to each bug's issue log below.
+Bugs for this project can be found within the project's 'Issues' tab - for ease, I have added links to each bug's issue log below.
 
-| No. | Bug | Link |
-| ---- | -------------- | ---- |
-| #1 | Basket dropdown scroll icon add on every hover | [Link](https://github.com/Samoftheforrest/forrest-records/issues/1) |
-|  |  |  |
+| No. | Bug | Link | Completed |
+| ---- | -------------- | ---- | ---- |
+| #1 | Basket dropdown scroll icon add on every hover | [Link](https://github.com/Samoftheforrest/forrest-records/issues/1) | [x] |
+| #2 | Blog listing page  | [Link]() | [x] |
+| # | Title  | [Link]() | [] |
 
 ## Deployment
 
