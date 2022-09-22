@@ -236,9 +236,9 @@ Bugs for this project can be found within the project's 'Issues' tab - for ease,
 
 | No. | Bug | Link | Completed |
 | ---- | -------------- | ---- | ---- |
-| #1 | Basket dropdown scroll icon add on every hover | [Link](https://github.com/Samoftheforrest/forrest-records/issues/1) | - [x] Complete |
-| #2 | Blog listing page  | [Link]() | - [] Incomplete |
-| # | Title  | [Link]() | - [] Incomplete |
+| #1 | Basket dropdown scroll icon add on every hover | [Link](https://github.com/Samoftheforrest/forrest-records/issues/1) | :white_check_mark: |
+| #2 | Blog listing page  | [Link]() |  |
+| # | Title  | [Link]() |  |
 
 ## Deployment
 
