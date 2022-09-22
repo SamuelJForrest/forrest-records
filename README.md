@@ -1,5 +1,7 @@
 # Forrest Records
 
+![Forrest Records](/docs/readme/homepage.png)
+
 ## Table of Contents
 
 ## UX/UI
