@@ -9,11 +9,10 @@ def all_blog_posts(request):
     Returns all blog posts, including sorting
     """
     blog_page = BlogPage.objects.all()
-    blogs = Blogs.objects.all().order_by('-blogpage__featured_blog', '-id')
+    blogs = Blog.objects.all().order_by('-blogpage__featured_blog', '-id')
 
     for item in blog_page:
-        if item.featured_blog is not None:
-            featured_blog = item.featured_blog
+        featured_blog = item.featured_blog
 
     context = {
         'blog_page': blog_page,

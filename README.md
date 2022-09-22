@@ -237,8 +237,8 @@ Bugs for this project can be found within the project's 'Issues' tab - for ease,
 | No. | Bug | Link | Completed |
 | ---- | -------------- | ---- | :----: |
 | #1 | Basket dropdown scroll icon add on every hover | [Link to issue #1](https://github.com/Samoftheforrest/forrest-records/issues/1) | :white_check_mark: |
-| #2 | Blog listing page  | [Link to issue #2](https://github.com/Samoftheforrest/forrest-records/issues/2) |  |
-| # | Title  | [Link to issue ]() |  |
+| #2 | Blog listing page errors when no featured blog is selected  | [Link to issue #2](https://github.com/Samoftheforrest/forrest-records/issues/2) | :white_check_mark: |
+| #3 | Title  | [Link to issue #3]() |  |
 
 ## Deployment
 
