@@ -241,7 +241,8 @@ Bugs for this project can be found within the project's 'Issues' tab - for ease,
 | ---- | -------------- | ---- | :----: |
 | #1 | Basket dropdown scroll icon add on every hover | [Link to issue #1](https://github.com/Samoftheforrest/forrest-records/issues/1) | :white_check_mark: |
 | #2 | Blog listing page errors when no featured blog is selected  | [Link to issue #2](https://github.com/Samoftheforrest/forrest-records/issues/2) | :white_check_mark: |
-| #3 | Title  | [Link to issue #3]() |  |
+| #3 | Album track listing not sorting by track number | [Link to issue #3](https://github.com/Samoftheforrest/forrest-records/issues/3) | :white_check_mark: |
+| #4 | Title  | [Link to issue #4]() |  |
 
 ## Deployment
 
@@ -252,6 +253,7 @@ Bugs for this project can be found within the project's 'Issues' tab - for ease,
 ## Credits
 
 ### Code
+- [Laffuste & Phoenix](https://stackoverflow.com/a/16909142) for the syntax to iterate through RelatedManager objects.
 - [Wouter J](https://stackoverflow.com/a/15146850) showed me how to use for loops in SCSS, which allowed me to add the homepage social icons animation in simply.
 - [Frost.baka](https://stackoverflow.com/a/4144088), for the code to stop admin adding another model in the admin area for the homepage.
 - [Geeks For Geeks](https://www.geeksforgeeks.org/richtextfield-django-models/), for showing me how to add a rich text field to the Django admin area.
