@@ -77,6 +77,9 @@ class Song(models.Model):
     artist = models.ForeignKey(Artist, default=1, null=True, blank=True, on_delete=models.SET_NULL)
     duration = models.CharField(max_length=6, null=True, blank=True)
 
+    def __str__(self):
+        return self.title
+
 
 class Merch(Product):
     class Meta:

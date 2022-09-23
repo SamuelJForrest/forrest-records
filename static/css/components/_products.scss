@@ -1,0 +1,22 @@
+.product {
+
+    &:hover,
+    &:focus {
+        .product {
+            &-image {
+                img {
+                    transform: scale($scale);
+                }
+            }
+        }
+    }
+
+    &-text {
+        position: relative;
+    }
+
+    &-image {
+        @extend %object-fit;
+        height: 30rem;
+    }
+}

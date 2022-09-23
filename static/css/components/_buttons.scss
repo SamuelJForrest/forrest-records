@@ -27,3 +27,13 @@
         }
     }
 }
+
+.product-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 2px solid $color-black;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    transition: all $mid;
+}
