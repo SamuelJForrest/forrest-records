@@ -27,7 +27,7 @@ def blog_detail(request, blog_id):
     """
     Redirects to a specific blog page
     """
-    blog = get_object_or_404(Blogs, id=blog_id)
+    blog = get_object_or_404(Blog, id=blog_id)
     blog_title = blog.title
     modifier = '__blogsingle'
 
