@@ -1,7 +1,14 @@
 .product {
+    color: $color-black;
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 1.6rem;
+    width: 100%;
 
     &:hover,
     &:focus {
+        color: $color-black;
+
         .product {
             &-image {
                 img {
@@ -9,14 +16,116 @@
                 }
             }
         }
+        
+        .product-btn {
+            color: $color-white;
+            background: $color-black;
+        }
+    }
+
+    &-title {
+        @extend .h4;
+        margin-bottom: 0;
     }
 
     &-text {
         position: relative;
+        height: 12.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-price {
+        @extend .h6;
+        margin-left: .5rem;
     }
 
     &-image {
         @extend %object-fit;
         height: 30rem;
+        margin-bottom: .5rem;
+
+        &.__single {
+            height: 45rem;
+        }
+    }
+
+    &-category {
+        margin-top: auto;
+    }
+
+    &-quantity {
+        button,
+        span {
+            margin-right: 1.6rem;
+        }
+
+        button {
+            border: none;
+            width: 3.6rem;
+            height: 3.6rem;
+            background: $color-red;
+            color: $color-white;
+            border-radius: .4rem;
+            transition: all $fast;
+
+            &:hover,
+            &:focus {
+                background: darken($color-red, 10%);
+            }
+        }
+        
+        span {
+            @extend .h5;
+            margin-bottom: 0;
+        }
+
+        i {            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &-sizes {
+        select {
+            padding: .8rem;
+
+            @media screen and (min-width: $lg) {
+                width: 25%;
+            }
+        }
+    }
+
+    &-info,
+    &-sizes,
+    &-quantity {
+        margin-bottom: 2rem;
+    }
+
+    &-table {
+        width: 100%;
+        border: 1px solid $color-grey;
+
+        th,
+        td {
+            border: 1px solid $color-grey;
+        }
+
+        th {
+            padding: 1rem;
+            font-weight: 600;
+            background: lighten($color-grey, 5%);
+        }
+
+        tr {
+            &:nth-child(odd) {
+                background: lighten($color-grey, 10%);
+            }
+        }
+
+        td {
+            padding: .8rem 1rem;
+        }
     }
 }

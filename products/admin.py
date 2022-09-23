@@ -5,6 +5,7 @@ from .models import Product, ProductType, ProductGroup, Album, Song, Genre, Merc
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         'name',
         'sku',
         'price',

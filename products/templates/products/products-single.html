@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block extra_title %}
+- {{ product.name }}
+{% endblock %}
+
+{% block breadcrumb %}
+<div class="breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="{% url 'products' %}" class="d-flex align-items-center"><i class="fa-solid fa-chevron-left"></i>
+                    Back to products</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_header %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
+                <h1>{{ product.name }}</h1>
+                <p class="h4">£{{ product.price }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-5">
+            <div class="product-image __single">
+                <img src="{{ product.image_url }}" alt="">
+            </div>
+            {% if product.album %}
+            <h2 class="h4 mt-5">Album info</h2>
+                {% if product.album.song_set.all %}
+                <table class="product-table">
+                    <th colspan="1">#</th>
+                    <th colspan="2">Title</th>
+                    <th colspan="1">Duration</th>
+                    {% for song in product.album.song_set.all|dictsort:'track_number' %}
+                        <tr>
+                            <td colspan="1">
+                                {{ song.track_number }}
+                            </td>
+                            <td colspan="2">{{ song.title }}</td>
+                            <td colspan="1">{{ song.duration }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+                {% else %}
+                <p>There is currently no information for this album.</p>
+                {% endif %}
+            {% endif %}
+        </div>
+        <div class="col-lg-7">
+            <div class="product-info">
+                <h2 class="h4">{{ product.name }}</h2>
+                <a href="#">{{ product.artist }}</a>
+                <p>{{ product.description }}</p>
+            </div>
+            {% if product.merch.has_sizes %}
+                <div class="product-sizes">
+                    <h2 class="h4">Sizes</h2>
+                    <select name="sizes" id="sizes">
+                        <option value="xs">XS</option>
+                        <option value="sm">S</option>
+                        <option value="m" selected>M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+                </div>
+            {% endif %}
+            <div class="product-quantity d-flex justify-content-start align-items-center">
+                <button>
+                    <i class="fa-solid fa-minus"></i>
+                </button>
+                <span>1</span>
+                <button>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <a href="#" class="button">Add to basket</a>
+            <a href="#"><i class="fa-regular fa-heart"></i> Add to wishlist</a>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <h2 class="h4">Related products</h2>
+            <p>test</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
