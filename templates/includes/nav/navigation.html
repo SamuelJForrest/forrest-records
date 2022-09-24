@@ -8,8 +8,8 @@
                         <a href="{% url 'products' %}">Shop</a>
                         <ul class="__submenu">
                             <li><a href="{% url 'products' %}">All products</a></li>
-                            <li><a href="#">Albums</a></li>
-                            <li><a href="#">Merchandise</a></li>
+                            <li><a href="{% url 'products' %}?product_type=album">Albums</a></li>
+                            <li><a href="{% url 'products' %}?product_type=merch">Merchandise</a></li>
                             <li><a href="#">Artists</a></li>
                         </ul>
                     </li>

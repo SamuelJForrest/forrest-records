@@ -8,14 +8,24 @@ def all_products(request):
     """
     A view to show all products, including sorting and search queries
     """
+
     page_title = 'Shop'
     products = Product.objects.all()
-    albums = Album.objects.all()
+    product_type = None
+
+    if request.GET:
+        if 'product_type' in request.GET:
+            product_type = request.GET['product_type'].split(',')
+            if 'album' in product_type:
+                page_title = 'Albums'
+            elif 'merch' in product_type:
+                page_title = 'Merchandise'
+            products = products.filter(product_type__name__in=product_type)
+
 
     context = {
         'page_title': page_title,
         'products': products,
-        'albums': albums
     }
     return render(request, 'products/products.html', context)
 
