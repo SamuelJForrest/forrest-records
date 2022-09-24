@@ -89,11 +89,7 @@
 
     &-sizes {
         select {
-            padding: .8rem;
-
-            @media screen and (min-width: $lg) {
-                width: 25%;
-            }
+            @extend %select;
         }
     }
 

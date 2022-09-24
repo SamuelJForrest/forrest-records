@@ -110,11 +110,11 @@ table {
   z-index: 2;
 }
 
-.product-image, .blog-item-image {
+.related-item-image, .product-image, .blog-item-image {
   position: relative;
   overflow: hidden;
 }
-.product-image img, .blog-item-image img {
+.related-item-image img, .product-image img, .blog-item-image img {
   position: absolute;
   top: 0;
   left: 0;
@@ -127,6 +127,15 @@ table {
   width: 100%;
   height: 100%;
   transition: all 0.5s;
+}
+
+.page-header select, .product-sizes select {
+  padding: 0.8rem;
+}
+@media screen and (min-width: 992px) {
+  .page-header select, .product-sizes select {
+    width: 25%;
+  }
 }
 
 .button, .nav-list-item > ul.__basket a.button {
@@ -709,14 +718,6 @@ table {
   justify-content: center;
   align-items: center;
 }
-.product-sizes select {
-  padding: 0.8rem;
-}
-@media screen and (min-width: 992px) {
-  .product-sizes select {
-    width: 25%;
-  }
-}
 .product-info, .product-sizes, .product-quantity {
   margin-bottom: 2rem;
 }
@@ -738,6 +739,44 @@ table {
 }
 .product-table td {
   padding: 0.8rem 1rem;
+}
+
+.related-item:hover .related-item-image::before, .related-item:focus .related-item-image::before {
+  opacity: 1;
+}
+.related-item:hover .related-item-name, .related-item:hover .related-item-price, .related-item:focus .related-item-name, .related-item:focus .related-item-price {
+  transform: translateY(0);
+}
+.related-item-image {
+  height: 20rem;
+}
+.related-item-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: rgba(24, 24, 27, 0.8);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.related-item-name, .related-item-price {
+  position: absolute;
+  color: #f8fafc;
+  z-index: 3;
+  transition: all 0.3s;
+}
+.related-item-name {
+  top: 0.7rem;
+  left: 0.9rem;
+  transform: translateY(-10rem);
+}
+.related-item-price {
+  bottom: 0.7rem;
+  right: 0.9rem;
+  transform: translateY(10rem);
 }
 
 /* body stylings */
@@ -788,9 +827,11 @@ h5,
 .h5,
 .nav-list-item,
 .product-quantity span,
+.related-item-name,
 h6,
 .h6,
-.product-price {
+.product-price,
+.related-item-price {
   font-family: "DM sans";
   font-weight: 700;
 }
@@ -848,27 +889,31 @@ h4,
 h5,
 .h5,
 .nav-list-item,
-.product-quantity span {
+.product-quantity span,
+.related-item-name {
   font-size: 2rem;
 }
 @media screen and (min-width: 992px) {
   h5,
 .h5,
 .nav-list-item,
-.product-quantity span {
+.product-quantity span,
+.related-item-name {
     font-size: 2.4rem;
   }
 }
 
 h6,
 .h6,
-.product-price {
+.product-price,
+.related-item-price {
   font-size: 1.6rem;
 }
 @media screen and (min-width: 992px) {
   h6,
 .h6,
-.product-price {
+.product-price,
+.related-item-price {
     font-size: 2rem;
   }
 }

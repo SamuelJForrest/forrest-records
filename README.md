@@ -253,6 +253,7 @@ Bugs for this project can be found within the project's 'Issues' tab - for ease,
 ## Credits
 
 ### Code
+- [Code Artisan Lab](https://www.youtube.com/watch?v=fqIBA2Vpws0&ab_channel=CodeArtisanLab) for the code to set up the related items list on product pages
 - [Laffuste & Phoenix](https://stackoverflow.com/a/16909142) for the syntax to iterate through RelatedManager objects.
 - [Wouter J](https://stackoverflow.com/a/15146850) showed me how to use for loops in SCSS, which allowed me to add the homepage social icons animation in simply.
 - [Frost.baka](https://stackoverflow.com/a/4144088), for the code to stop admin adding another model in the admin area for the homepage.

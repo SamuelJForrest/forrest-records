@@ -1,0 +1,60 @@
+.related {
+    &-item {
+
+        &:hover,
+        &:focus {
+            .related-item {
+                &-image {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+
+                &-name,
+                &-price {
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        &-image {
+            height: 20rem;
+            @extend %object-fit;  
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 2;
+                background-color: rgba($color-black, 0.8);
+                opacity: 0;
+                transition: all $fast;
+            }
+        }
+
+        &-name,
+        &-price {
+            position: absolute;
+            color: $color-white;
+            z-index: 3;
+            transition: all $fast;
+        }
+
+        &-name {
+            @extend .h5;
+            top: .7rem;
+            left: .9rem;
+            transform: translateY(-10rem);
+        }
+
+        &-price {
+            @extend .h6;
+            bottom: .7rem;
+            right: .9rem;
+            transform: translateY(10rem);
+        }
+    }
+}

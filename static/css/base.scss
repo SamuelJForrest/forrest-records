@@ -142,5 +142,9 @@ h6,
             opacity: 0.6;
             display: inline-block;
         }
+
+        select {
+            @extend %select;
+        }
     }
 }
