@@ -32,27 +32,34 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            {% for product in products %}
-            <div class="col-md-6 col-lg-4">
-                <a href="{% url 'product_detail' product.id %}" class="product">
-                    <div class="product-image">
-                        <img src="{{ product.image_url }}" class="w-100" alt="{{ product.name}}">
-                    </div>
-                    <div class="product-text">
-                        <div class="product-text-top d-flex justify-content-between align-items-start">
-                            <div>
-                                <h2 class="product-title">{{ product.name }}</h2>
-                                {% if product.merch.has_sizes %}
-                                    <span class="product-sizes">X size available</span>
-                                {% endif %}                            </div>
-                            <p class="product-price">£{{ product.price }}</p>
+            {% if products|length > 0 %}
+                {% for product in products %}
+                <div class="col-md-6 col-lg-4">
+                    <a href="{% url 'product_detail' product.id %}" class="product">
+                        <div class="product-image">
+                            <img src="{{ product.image_url }}" class="w-100" alt="{{ product.name}}">
                         </div>
-                        <span class="product-category">{{ product.product_type }}</span>
-                        <span class="product-btn"><i class="fa-solid fa-arrow-right-long"></i></span>
-                    </div>
-                </a>
-            </div>
-            {% endfor %}
+                        <div class="product-text">
+                            <div class="product-text-top d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h2 class="product-title">{{ product.name }}</h2>
+                                    {% if product.merch.has_sizes %}
+                                        <span class="product-sizes">X size available</span>
+                                    {% endif %}                            </div>
+                                <p class="product-price">£{{ product.price }}</p>
+                            </div>
+                            <span class="product-category">{{ product.product_type }}</span>
+                            <span class="product-btn"><i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-md-6 col-lg-4">
+                    <h2 class="h4">No items to show.</h2>
+                    <a href="{% url 'products' %}">Return to products</a>
+                </div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

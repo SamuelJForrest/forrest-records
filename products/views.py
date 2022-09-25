@@ -16,6 +16,7 @@ def all_products(request):
     page_title = 'Shop'
     products = Product.objects.all()
     product_type = None
+    artist = None
     sort = None
     direction = None
 
@@ -28,6 +29,8 @@ def all_products(request):
                 products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'
+            if sortkey == 'artist':
+                sortkey = 'artist__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -42,12 +45,17 @@ def all_products(request):
                 page_title = 'Merchandise'
             products = products.filter(product_type__name__in=product_type)
 
+        if 'artist' in request.GET:
+            artist = request.GET['artist']
+            products = products.filter(artist__name__contains=artist)
+                
     current_sorting = f'{sort}_{direction}'
 
     context = {
         'page_title': page_title,
         'product_type': product_type,
         'products': products,
+        'current_sorting': current_sorting
     }
 
     return render(request, 'products/products.html', context)

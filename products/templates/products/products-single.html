@@ -62,7 +62,7 @@
         <div class="col-lg-7">
             <div class="product-info">
                 <h2 class="h4">{{ product.name }}</h2>
-                <a href="#">{{ product.artist }}</a>
+                <a href="#">{{ product.artist.friendly_name }}</a>
                 <p>{{ product.description }}</p>
             </div>
             {% if product.merch.has_sizes %}

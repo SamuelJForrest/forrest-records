@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block extra_title %}
+ - Artists
+{% endblock %}
+
+{% block page_header %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
+                <h1>Artists</h1>
+            </div>
+        </div>
+    </div>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% regroup artists by name|slice:":1" as artist_list %}
+        {% for artist in artist_list %}
+        <div class="col-lg-4">
+            <h2>{{ artist.grouper|title }}</h2>
+            <ul>
+                {% for artist in artist.list %}
+                <li>
+                    <a href="{% url 'products' %}?artist={{ artist.name }}">{{ artist.friendly_name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
