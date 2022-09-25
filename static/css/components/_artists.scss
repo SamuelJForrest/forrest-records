@@ -1,0 +1,23 @@
+.artists {
+    &-group {
+        &-title {
+            @extend .h4;
+            margin-bottom: .8rem;
+        }
+    }
+    
+    &-list {
+        &-item {
+            a {
+                color: $color-black;
+                text-decoration: none;
+                transition: all $fast;
+
+                &:hover,
+                &:focus {
+                    color: $color-red;
+                }
+            }
+        }
+    }
+}

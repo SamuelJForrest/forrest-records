@@ -779,6 +779,18 @@ table {
   transform: translateY(10rem);
 }
 
+.artists-group-title {
+  margin-bottom: 0.8rem;
+}
+.artists-list-item a {
+  color: #18181b;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.artists-list-item a:hover, .artists-list-item a:focus {
+  color: #ef4444;
+}
+
 /* body stylings */
 html {
   font-size: 62.5%;
@@ -823,6 +835,7 @@ h3,
 h4,
 .h4,
 .product-title,
+.artists-group-title,
 h5,
 .h5,
 .nav-list-item,
@@ -875,13 +888,15 @@ h3,
 
 h4,
 .h4,
-.product-title {
+.product-title,
+.artists-group-title {
   font-size: 2.4rem;
 }
 @media screen and (min-width: 992px) {
   h4,
 .h4,
-.product-title {
+.product-title,
+.artists-group-title {
     font-size: 3.2rem;
   }
 }

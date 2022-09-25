@@ -65,6 +65,8 @@
 {% endblock %}
 
 {% block scripts %}
+    {{ block.super }}
+    
     <script>
         $('#shop_filter').change(function() {
             const selector = $(this);
