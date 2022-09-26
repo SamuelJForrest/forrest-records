@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 from artists.models import Artist
 
@@ -211,8 +212,11 @@ class Song(models.Model):
         null=True,
         blank=True)
 
-    track_number = models.CharField(
-        max_length=3,
+    track_number = models.IntegerField(
+        validators=[
+            MaxValueValidator(100),
+            MinValueValidator(1)
+        ],
         null=False,
         blank=False)
 
