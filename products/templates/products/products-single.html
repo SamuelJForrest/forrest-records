@@ -40,20 +40,7 @@
             {% if product.album %}
             <h2 class="h4 mt-5">Album info</h2>
                 {% if product.album.song_set.all %}
-                <table class="product-table">
-                    <th colspan="1">#</th>
-                    <th colspan="2">Title</th>
-                    <th colspan="1">Duration</th>
-                    {% for song in product.album.song_set.all|dictsort:'track_number' %}
-                        <tr>
-                            <td colspan="1">
-                                {{ song.track_number }}
-                            </td>
-                            <td colspan="2">{{ song.title }}</td>
-                            <td colspan="1">{{ song.duration }}</td>
-                        </tr>
-                    {% endfor %}
-                </table>
+                    {% include 'products/includes/album-info.html' %}
                 {% else %}
                 <p>There is currently no information for this album.</p>
                 {% endif %}
@@ -62,7 +49,7 @@
         <div class="col-lg-7">
             <div class="product-info">
                 <h2 class="h4">{{ product.name }}</h2>
-                <a href="#">{{ product.artist.friendly_name }}</a>
+                <a href="{% url 'products' %}?artist={{ product.artist.name }}" class="product-artist mb-3 d-inline-block">{{ product.artist.friendly_name }}</a>
                 <p>{{ product.description }}</p>
             </div>
             {% if product.merch.has_sizes %}
@@ -86,31 +73,19 @@
                     <i class="fa-solid fa-plus"></i>
                 </button>
             </div>
-            <a href="#" class="button">Add to basket</a>
-            <a href="#"><i class="fa-regular fa-heart"></i> Add to wishlist</a>
+            <a href="#" class="button me-3">Add to basket</a>
+            <a href="#" class="product-wishlist">
+                <i class="fa-regular fa-heart"></i>
+                <!-- @TODO: add logic to show filled heart when item is part of wishlist -->
+                <!-- <i class="fa-solid fa-heart"></i> -->
+                Add to wishlist
+            </a>
         </div>
     </div>
 </div>
 
 {% if related_products|length > 0 %}
-<div class="container my-5">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="h4">More products by this artist</h2>
-        </div>
-        {% for product in related_products %}
-        <div class="col-md-6 col-lg-3">
-            <a href="{% url 'product_detail' product.id %}" class="related-item">
-                <div class="related-item-image">
-                    <img src="{{ product.image_url }}" alt="">
-                    <span class="related-item-name">{{ product.name }}</span>
-                    <span class="related-item-price">£{{ product.price }}</span>
-                </div>
-            </a>
-        </div>
-        {% endfor %}
-    </div>
-</div>
+    {% include 'products/includes/related-products.html' %}
 {% endif %}
 
 {% endblock %}

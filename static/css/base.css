@@ -694,6 +694,29 @@ table {
 .product-category {
   margin-top: auto;
 }
+.product-artist {
+  color: #ef4444;
+  font-weight: 500;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.product-artist:hover, .product-artist:focus {
+  color: #ef4444;
+  text-decoration: underline;
+}
+.product-wishlist {
+  color: #18181b;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.product-wishlist i {
+  font-size: 2rem;
+  color: #ef4444;
+  margin-right: 0.5rem;
+}
+.product-wishlist:hover, .product-wishlist:focus {
+  color: #ef4444;
+}
 .product-quantity button,
 .product-quantity span {
   margin-right: 1.6rem;
