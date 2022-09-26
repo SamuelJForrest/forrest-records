@@ -3,4 +3,7 @@ from .models import Artist
 
 # Register your models here.
 
-admin.site.register(Artist)
+class ArtistAdmin(admin.ModelAdmin):
+    ordering = ('friendly_name',)
+
+admin.site.register(Artist, ArtistAdmin)

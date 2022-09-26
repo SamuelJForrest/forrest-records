@@ -3,11 +3,12 @@ from .models import Artist
 
 # Create your views here.
 
+
 def all_artists(request):
     """
     Returns the page that displays all artists
     """
-    
+
     page_title = 'Artists'
     artists = Artist.objects.all().order_by('name')
 

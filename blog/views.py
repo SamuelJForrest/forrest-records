@@ -10,16 +10,18 @@ def all_blog_posts(request):
     """
     blog_page = BlogPage.objects.all()
     blogs = Blog.objects.all().order_by('-blogpage__featured_blog', '-id')
+    featured_blog = None
 
     for item in blog_page:
-        featured_blog = item.featured_blog
+        if featured_blog:
+            featured_blog = item.featured_blog
 
     context = {
         'blog_page': blog_page,
         'blogs': blogs,
         'featured_blog': featured_blog
     }
-    
+
     return render(request, 'blog/blog.html', context)
 
 

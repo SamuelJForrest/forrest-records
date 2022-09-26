@@ -1,11 +1,22 @@
 from django.db import models
 
-# Create your models here.
 
 class Artist(models.Model):
+    """
+    A class for artist information: name and friendly name. 
+    """
 
-    name = models.CharField(max_length=254, null=False, blank=False, help_text="This name should be all lowercase, and contain no spaces.")
-    friendly_name = models.CharField(max_length=254, null=False, blank=False)
+    name = models.CharField(
+        max_length=254,
+        null=False,
+        blank=False,
+        help_text="This name should be all lowercase, and contain no spaces.")
+
+    friendly_name = models.CharField(
+        max_length=254,
+        null=False,
+        blank=False,
+        help_text="This should be the artist name you want users to see.")
 
     def __str__(self):
-        return self.friendly_name
+        return str(self.friendly_name)

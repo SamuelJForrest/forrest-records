@@ -1,9 +1,14 @@
 from django.db import models
 
-# Create your models here.
 
 class ContactPage(models.Model):
+    """
+    Model for the contact page.
+    """
     class Meta:
+        """
+        Admin settings for contact page.
+        """
         verbose_name_plural = 'Contact Page'
 
     title = models.CharField(max_length=16, null=False, blank=False)

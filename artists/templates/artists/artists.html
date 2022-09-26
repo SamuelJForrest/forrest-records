@@ -10,7 +10,9 @@
         <div class="col-12">
             <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
                 <h1>Artists</h1>
-                <span>{{ artists|length }} Artist{% if artists|length > 1 %}s{% endif %}</span>
+                {% if artists|length > 0 %}
+                    <span>{{ artists|length }} Artist{% if artists|length > 1 %}s{% endif %}</span>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -21,6 +23,7 @@
 <div class="artists">
     <div class="container">
         <div class="row">
+            {% if artists|length > 0 %}
             {% regroup artists by name|slice:":1" as artist_list %}
             {% for artist in artist_list %}
             <div class="col-lg-4 mb-4">
@@ -34,6 +37,12 @@
                 </ul>
             </div>
             {% endfor %}
+            {% else %}
+            <div class="col-12">
+                <h2 class="h4">Nothing to see here.</h2>
+                <a href="{% url 'products' %}">Why don't you try the rest of our products.</a>
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>

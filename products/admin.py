@@ -1,9 +1,11 @@
 from django.contrib import admin
 from .models import Product, ProductType, ProductGroup, Album, Song, Genre, Merch
 
-# Register your models here.
 
 class ProductAdmin(admin.ModelAdmin):
+    """
+    Admin settings for products.
+    """
     list_display = (
         'id',
         'name',
@@ -16,7 +18,11 @@ class ProductAdmin(admin.ModelAdmin):
     def has_add_permission(self, request):
         return False
 
+
 class AlbumAdmin(admin.ModelAdmin):
+    """
+    Admin settings for albums.
+    """
     list_display = (
         'name',
         'sku',
@@ -24,8 +30,12 @@ class AlbumAdmin(admin.ModelAdmin):
         'artist',
         'on_sale'
     )
+
 
 class MerchAdmin(admin.ModelAdmin):
+    """
+    Admin settings for merch.
+    """
     list_display = (
         'name',
         'sku',
@@ -34,13 +44,18 @@ class MerchAdmin(admin.ModelAdmin):
         'on_sale'
     )
 
+
 class SongAdmin(admin.ModelAdmin):
+    """
+    Admin settings for songs.
+    """
     list_display = (
         'title',
         'duration',
         'album',
         'artist',
     )
+
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(ProductType)

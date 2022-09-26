@@ -36,7 +36,9 @@
                             <div class="blog-item-wrap">
                                 <h2 class="blog-item-title d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-end">
                                     {{ blog.title }}
-                                    <span>Written by: Author name</span>
+                                    {% if blog.author.user %}
+                                    <span>Written by: {{ blog.author.user.get_full_name }}</span>
+                                    {% endif %}
                                 </h2>
                                 <p class="d-lg-none">{{ blog.content|striptags|safe|truncatewords:50 }}</p>
                                 <p class="d-none d-lg-block">{{ blog.content|striptags|safe|truncatewords:100 }}</p>

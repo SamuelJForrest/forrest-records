@@ -1,9 +1,11 @@
 from django.contrib import admin
 from .models import Homepage
 
-# Register your models here.
 
 class HomepageAdmin(admin.ModelAdmin):
+    """
+    Admin settings for homepage model.
+    """
     list_display = (
         'title',
         'lead_paragraph',
