@@ -242,7 +242,7 @@ Bugs for this project can be found within the project's 'Issues' tab - for ease,
 | #1 | Basket dropdown scroll icon add on every hover | [Link to issue #1](https://github.com/Samoftheforrest/forrest-records/issues/1) | :white_check_mark: |
 | #2 | Blog listing page errors when no featured blog is selected  | [Link to issue #2](https://github.com/Samoftheforrest/forrest-records/issues/2) | :white_check_mark: |
 | #3 | Album track listing not sorting by track number | [Link to issue #3](https://github.com/Samoftheforrest/forrest-records/issues/3) | :white_check_mark: |
-| #4 |  Album info table not ordering items properly when there are 10 or more items  | [Link to issue #4](https://github.com/Samoftheforrest/forrest-records/issues/4) |  |
+| #4 |  Album info table not ordering items properly when there are 10 or more items  | [Link to issue #4](https://github.com/Samoftheforrest/forrest-records/issues/4) | :white_check_mark: |
 | #5 | Title  | [Link to issue #5]() |  |
 
 ## Deployment

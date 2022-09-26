@@ -7,7 +7,7 @@
             "album": 1,
             "artist": 4,
             "duration": "3:32",
-            "track_number": "1"
+            "track_number": 1
         }
     },
     {
@@ -18,7 +18,7 @@
             "album": 1,
             "artist": 4,
             "duration": "5:10",
-            "track_number": "2"
+            "track_number": 2
         }
     },
     {
@@ -29,7 +29,7 @@
             "album": 1,
             "artist": 4,
             "duration": "1:00",
-            "track_number": "3"
+            "track_number": 3
         }
     },
     {
@@ -40,7 +40,7 @@
             "album": 1,
             "artist": 4,
             "duration": "4:04",
-            "track_number": "4"
+            "track_number": 4
         }
     },
     {
@@ -51,7 +51,7 @@
             "album": 1,
             "artist": 4,
             "duration": "3:10",
-            "track_number": "5"
+            "track_number": 5
         }
     },
     {
@@ -62,7 +62,7 @@
             "album": 1,
             "artist": 4,
             "duration": "2:12",
-            "track_number": "6"
+            "track_number": 6
         }
     },
     {
@@ -73,7 +73,7 @@
             "album": 1,
             "artist": 4,
             "duration": "3:45",
-            "track_number": "7"
+            "track_number": 7
         }
     },
     {
@@ -84,18 +84,18 @@
             "album": 1,
             "artist": 4,
             "duration": "3:45",
-            "track_number": "8"
+            "track_number": 8
         }
     },
     {
         "pk": 9,
         "model": "products.song",
         "fields": {
-            "title": "Endgame: I",
+            "title": "Hi-weigh",
             "album": 1,
             "artist": 4,
             "duration": "4:40",
-            "track_number": "9"
+            "track_number": 9
         }
     },
     {
@@ -106,7 +106,7 @@
             "album": 1,
             "artist": 4,
             "duration": "7:05",
-            "track_number": "10"
+            "track_number": 10
         }
     },
     {
@@ -117,7 +117,7 @@
             "album": 1,
             "artist": 4,
             "duration": "13:51",
-            "track_number": "11"
+            "track_number": 11
         }
     },
     {
@@ -128,7 +128,106 @@
             "album": 1,
             "artist": 4,
             "duration": "3:51",
-            "track_number": "12"
+            "track_number": 12
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.song",
+        "fields": {
+            "title": "Agony",
+            "album": 2,
+            "artist": 4,
+            "duration": "2:01",
+            "track_number": 1
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.song",
+        "fields": {
+            "title": "Holler (If You Want More)",
+            "album": 2,
+            "artist": 4,
+            "duration": "3:34",
+            "track_number": 2
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.song",
+        "fields": {
+            "title": "Greetings",
+            "album": 2,
+            "artist": 4,
+            "duration": "5:10",
+            "track_number": 3
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.song",
+        "fields": {
+            "title": "Nevermore",
+            "album": 2,
+            "artist": 4,
+            "duration": "2:12",
+            "track_number": 4
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.song",
+        "fields": {
+            "title": "Opening",
+            "album": 2,
+            "artist": 4,
+            "duration": "4:11",
+            "track_number": 5
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.song",
+        "fields": {
+            "title": "Upside",
+            "album": 2,
+            "artist": 4,
+            "duration": "2:35",
+            "track_number": 6
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.song",
+        "fields": {
+            "title": "Low",
+            "album": 2,
+            "artist": 4,
+            "duration": "4:40",
+            "track_number": 7
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.song",
+        "fields": {
+            "title": "Start Something",
+            "album": 2,
+            "artist": 4,
+            "duration": "4:05",
+            "track_number": 8
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.song",
+        "fields": {
+            "title": "Finale",
+            "album": 2,
+            "artist": 4,
+            "duration": "13:51",
+            "track_number": 9
         }
     }
 ]

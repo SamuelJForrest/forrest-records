@@ -51,10 +51,13 @@ class SongAdmin(admin.ModelAdmin):
     """
     list_display = (
         'title',
+        'track_number',
         'duration',
         'album',
         'artist',
     )
+
+    ordering = ('album', 'track_number')
 
 
 admin.site.register(Product, ProductAdmin)

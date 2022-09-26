@@ -1,0 +1,42 @@
+[
+    {
+        "pk": 1,
+        "model": "products.genre",
+        "fields": {
+            "name": "punk",
+            "friendly_name": "Punk"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.genre",
+        "fields": {
+            "name": "hardcore",
+            "friendly_name": "Hardcore"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.genre",
+        "fields": {
+            "name": "metal",
+            "friendly_name": "Metal"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.genre",
+        "fields": {
+            "name": "electro_punk",
+            "friendly_name": "Electro Punk"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.genre",
+        "fields": {
+            "name": "post_hardcore",
+            "friendly_name": "Post Hardcore"
+        }
+    }
+]

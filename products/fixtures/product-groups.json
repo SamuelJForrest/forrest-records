@@ -1,0 +1,10 @@
+[
+    {
+        "pk": 1,
+        "model": "products.productgroup",
+        "fields": {
+            "name": "bundle_1",
+            "friendly_name": "Bundle 1"
+        }
+    }
+]
