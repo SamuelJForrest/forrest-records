@@ -1,0 +1,90 @@
+[
+    {
+        "pk":1,
+        "model":"artists.artist",
+        "fields":{
+            "name":"the_initial_commits",
+            "friendly_name":"The Initial Commits"
+        }
+    },
+    {
+        "pk":2,
+        "model":"artists.artist",
+        "fields":{
+            "name":"rage_against_the_compiler",
+            "friendly_name":"Rage Against the Compiler"
+        }
+    },
+    {
+        "pk":3,
+        "model":"artists.artist",
+        "fields":{
+            "name":"boo_lean",
+            "friendly_name":"Boo-lean"
+        }
+    },
+    {
+        "pk":4,
+        "model":"artists.artist",
+        "fields":{
+            "name":"algorhythm",
+            "friendly_name":"Algorhythm"
+        }
+    },
+    {
+        "pk":5,
+        "model":"artists.artist",
+        "fields":{
+            "name":"the_inside_outs",
+            "friendly_name":"The Inside Outs"
+        }
+    },
+    {
+        "pk":6,
+        "model":"artists.artist",
+        "fields":{
+            "name":"panic_at_the_distro",
+            "friendly_name":"Panic at the Distro"
+        }
+    },
+    {
+        "pk":7,
+        "model":"artists.artist",
+        "fields":{
+            "name":"camel_case",
+            "friendly_name":"camelCase"
+        }
+    },
+    {
+        "pk":8,
+        "model":"artists.artist",
+        "fields":{
+            "name":"the_c_sharps",
+            "friendly_name":"The C Sharps"
+        }
+    },
+    {
+        "pk":9,
+        "model":"artists.artist",
+        "fields":{
+            "name":"four_oh_four",
+            "friendly_name":"Four Oh Four"
+        }
+    },
+    {
+        "pk":10,
+        "model":"artists.artist",
+        "fields":{
+            "name":"git_and_the_merge_conflicts",
+            "friendly_name":"Git and the Merge Conflicts"
+        }
+    },
+    {
+        "pk":11,
+        "model":"artists.artist",
+        "fields":{
+            "name":"event_handlers",
+            "friendly_name":"Event Handlers"
+        }
+    }
+]

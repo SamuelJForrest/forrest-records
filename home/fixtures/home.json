@@ -1,0 +1,16 @@
+[
+    {
+        "pk":1,
+        "model":"home.homepage",
+        "fields":{
+            "title":"Welcome to Forrest Records",
+            "lead_paragraph":"All of the greatest punk/hardcore music - all under one roof. Whether you are looking for collectable, vintage vinyls, or the newest releases from your favourite artists, you are in the right place.",
+            "shop_button":"Shop now",
+            "blog_button":"Latest news",
+            "facebook_link":"https://www.facebook.com",
+            "instagram_link":"https://www.instagram.com",
+            "soundcloud_link":"https://www.soundcloud.com",
+            "bandcamp_link":"https://www.bandcamp.com"
+        }
+    }
+]

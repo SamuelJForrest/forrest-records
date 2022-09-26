@@ -1,0 +1,134 @@
+[
+    {
+        "pk": 1,
+        "model": "products.song",
+        "fields": {
+            "title": "Resurgance",
+            "album": 1,
+            "artist": 4,
+            "duration": "3:32",
+            "track_number": "1"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.song",
+        "fields": {
+            "title": "The Great Equaliser (Triple Equals)",
+            "album": 1,
+            "artist": 4,
+            "duration": "5:10",
+            "track_number": "2"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.song",
+        "fields": {
+            "title": "If/Else",
+            "album": 1,
+            "artist": 4,
+            "duration": "1:00",
+            "track_number": "3"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.song",
+        "fields": {
+            "title": "Unshift",
+            "album": 1,
+            "artist": 4,
+            "duration": "4:04",
+            "track_number": "4"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.song",
+        "fields": {
+            "title": "nomore.",
+            "album": 1,
+            "artist": 4,
+            "duration": "3:10",
+            "track_number": "5"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.song",
+        "fields": {
+            "title": "Found Myself Here",
+            "album": 1,
+            "artist": 4,
+            "duration": "2:12",
+            "track_number": "6"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.song",
+        "fields": {
+            "title": "Why Me?",
+            "album": 1,
+            "artist": 4,
+            "duration": "3:45",
+            "track_number": "7"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.song",
+        "fields": {
+            "title": "Wearing Me Down",
+            "album": 1,
+            "artist": 4,
+            "duration": "3:45",
+            "track_number": "8"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.song",
+        "fields": {
+            "title": "Endgame: I",
+            "album": 1,
+            "artist": 4,
+            "duration": "4:40",
+            "track_number": "9"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.song",
+        "fields": {
+            "title": "Endgame I",
+            "album": 1,
+            "artist": 4,
+            "duration": "7:05",
+            "track_number": "10"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.song",
+        "fields": {
+            "title": "Endgame II",
+            "album": 1,
+            "artist": 4,
+            "duration": "13:51",
+            "track_number": "11"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.song",
+        "fields": {
+            "title": "Don't Call (Bonus Track)",
+            "album": 1,
+            "artist": 4,
+            "duration": "3:51",
+            "track_number": "12"
+        }
+    }
+]
