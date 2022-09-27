@@ -240,7 +240,7 @@ Bugs for this project can be found within the project's 'Issues' tab - for ease,
 
 | No. | Bug | Link | Completed |
 | ---- | -------------- | ---- | :----: |
-| #1 | Basket dropdown scroll icon add on every hover | [Link to issue #1](https://github.com/Samoftheforrest/forrest-records/issues/1) | :white_check_mark: |
+| #1 | Basket dropdown scroll icon added on every hover, but not removed | [Link to issue #1](https://github.com/Samoftheforrest/forrest-records/issues/1) | :white_check_mark: |
 | #2 | Blog listing page errors when no featured blog is selected  | [Link to issue #2](https://github.com/Samoftheforrest/forrest-records/issues/2) | :white_check_mark: |
 | #3 | Album track listing not sorting by track number | [Link to issue #3](https://github.com/Samoftheforrest/forrest-records/issues/3) | :white_check_mark: |
 | #4 |  Album info table not ordering items properly when there are 10 or more items  | [Link to issue #4](https://github.com/Samoftheforrest/forrest-records/issues/4) | :white_check_mark: |
@@ -264,6 +264,7 @@ Bugs for this project can be found within the project's 'Issues' tab - for ease,
 - [MaximeK](https://stackoverflow.com/a/44658616), for showing me how to extend Django models - which I used to extend the Product model into the Album/Merch models.
 
 ### Media
+- Thanks to [Unsplash](https://www.unsplash.com) for all the product images.
 - Thanks to [Freepik](https://www.freepik.com/) for the vinyl [favicon](https://www.flaticon.com/free-icons/vinyl")
 - Thanks to [Natalie Parham](https://unsplash.com/@natalieparham) for the [homepage image](https://unsplash.com/photos/fPKqpUbTL4Y?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)
 
