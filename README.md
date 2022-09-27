@@ -574,8 +574,6 @@ class ContactPage(models.Model):
         return 'Contact Page'
 ```
 
-### UX/UI Flowchart
-
 ## Features
 
 ### Current Features
