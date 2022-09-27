@@ -86,5 +86,45 @@
             "name":"event_handlers",
             "friendly_name":"Event Handlers"
         }
+    },
+    {
+        "pk":12,
+        "model":"artists.artist",
+        "fields":{
+            "name":"float",
+            "friendly_name":"Float"
+        }
+    },
+    {
+        "pk":13,
+        "model":"artists.artist",
+        "fields":{
+            "name":"syntax_error",
+            "friendly_name":"Syntax Error"
+        }
+    },
+    {
+        "pk":14,
+        "model":"artists.artist",
+        "fields":{
+            "name":"johnny_cache",
+            "friendly_name":"Johnny Cache"
+        }
+    },
+    {
+        "pk":15,
+        "model":"artists.artist",
+        "fields":{
+            "name":"async",
+            "friendly_name":"Async"
+        }
+    },
+    {
+        "pk":16,
+        "model":"artists.artist",
+        "fields":{
+            "name":"gitpull",
+            "friendly_name":"Gitpull"
+        }
     }
 ]

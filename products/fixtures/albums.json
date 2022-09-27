@@ -1,0 +1,259 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "name": "Unshifted",
+            "sku": "ALB111",
+            "description": "The algorhythm return with their debut LP \"Unshift\". This new release from the Brighton Based electro-punk duo has been called \"seminal\" and \"a return to form\".",
+            "product_type": 1,
+            "artist": 4,
+            "price": 17.99,
+            "rating": 0,
+            "image_url": "https://images.unsplash.com/photo-1515191107209-c28698631303?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YWxidW0lMjBjb3ZlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "False",
+            "product_group": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "products.album",
+        "fields": {
+            "product_ptr_id": 1,
+            "record_label": "Tonedef",
+            "release_year": "2020",
+            "genre": 4,
+            "digital_download": "True",
+            "digital_download_price": 10.99
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "name": "Days Gone",
+            "sku": "ALB112",
+            "description": "The album that truly brought Algorhythm into the spotlight. Featuring soaring synths, along with harsh vocals and downright psychotic lyricism in places - it is easy to see why this album caused such a stir.",
+            "product_type": 1,
+            "artist": 4,
+            "price": 17.99,
+            "rating": 5,
+            "image_url": "https://images.unsplash.com/photo-1608094510969-00a4353cea2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGFsYnVtJTIwYXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "False",
+            "product_group": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.album",
+        "fields": {
+            "product_ptr_id": 2,
+            "record_label": "Tonedef",
+            "release_year": "2017",
+            "genre": 1,
+            "digital_download": "False"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "name": "re:wind",
+            "sku": "ALB113",
+            "description": "While Git and the Merge Conflicts may be new to the scene, their debit album \"re:wind\" has already changed the landscape of punk music itself. The Welsh three-piece combine dazzling guitar lines, heartful lyrics and a rough rhythm section to create what many people are calling the album of the year.",
+            "product_type": 1,
+            "artist": 10,
+            "price": 20.99,
+            "rating": 4,
+            "image_url": "https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGFsYnVtJTIwYXJ0fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "False"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.album",
+        "fields": {
+            "product_ptr_id": 3,
+            "record_label": "Gwd Records",
+            "release_year": "2022",
+            "genre": 1,
+            "digital_download": "True",
+            "digital_download_price": 13.99
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "name": "Peace Sign Tee",
+            "sku": "MER111",
+            "description": "An oversized style tee from scene heroes \"The C Sharps\" - depicting their iconic logo 'the peace sign'. This t-shirt is 100% cotton and machine washable.",
+            "product_type": 2,
+            "artist": 8,
+            "price": 35.99,
+            "rating": 3,
+            "image_url": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmFuZCUyMHRlZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "False"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.merch",
+        "fields": {
+            "product_ptr_id": 4,
+            "has_sizes": "True"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "name": "Lyrics Tee",
+            "sku": "MER112",
+            "description": "Boo-lean's iconic opening line to their 2015 album \"Heart wrenched\" is now available as a tee! The band decided to dive back into their catalogue to create a product for the die hard fans, and as always, they do not disappoint. The shirt is a cotton/wool blend.",
+            "product_type": 2,
+            "artist": 3,
+            "price": 25.99,
+            "rating": 3,
+            "image_url": "https://images.unsplash.com/photo-1564864310852-e1e98eb07010?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHQlMjBzaGlydHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "False"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.merch",
+        "fields": {
+            "product_ptr_id": 5,
+            "has_sizes": "True"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "name": "Midnight Mare Tee",
+            "sku": "MER113",
+            "description": "Four Oh Four's ghoulishly bright tee-shirt, depicting their much beloved mascot \"The Midnight Mare\". This t-shirt is printed in-house by Forrest Records in Cardiff, Wales. Currently on sale, so get yours now while stocks last.",
+            "product_type": 2,
+            "artist": 9,
+            "price": 24.99,
+            "rating": 4,
+            "image_url": "https://images.unsplash.com/photo-1611040027926-4d9dd4b89c8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fHQlMjBzaGlydHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "True"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.merch",
+        "fields": {
+            "product_ptr_id": 6,
+            "has_sizes": "True"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "name": "Untitled",
+            "sku": "ALB114",
+            "description": "A reprint of the classic 1992 album \"Untitled\" by fan favourites Rage Against The Compiler. Includes two unreleased songs: B-sides from the original album, as well as a live rendition of their super hit \"Gitting in the Way\".",
+            "product_type": 1,
+            "artist": 2,
+            "price": 39.99,
+            "rating": 5,
+            "image_url": "https://images.unsplash.com/photo-1561266436-05386f8c5a98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njl8fGFsYnVtJTIwYXJ0fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "False"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.album",
+        "fields": {
+            "product_ptr_id": 7,
+            "record_label": "Gwd Records",
+            "release_year": "1992",
+            "genre": 2,
+            "digital_download": "False"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "name": "Tenfoot",
+            "sku": "ALB115",
+            "description": "Event Handlers, South Wales' post-hardcore wondergroup, are back with their newest album \"Tenfoot\" - an album that takes the listener to soaring highs and crushing lows. It is no mystery why this band has been a staple of the scene for so long.",
+            "product_type": 1,
+            "artist": 11,
+            "price": 19.99,
+            "rating": 5,
+            "image_url": "https://images.unsplash.com/photo-1578301978018-3005759f48f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzd8fGFsYnVtJTIwYXJ0fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "False"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.album",
+        "fields": {
+            "product_ptr_id": 8,
+            "record_label": "Swn Mawr",
+            "release_year": "2022",
+            "genre": 5,
+            "digital_download": "True",
+            "digital_download_price": 8.99
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "name": "First Breath",
+            "sku": "ALB116",
+            "description": "Great things come to those who wait. After taking four years to commuit to the album, The Initial Commits have finally dropped their debut EP \"Frist Breath\". If you are a fan of new-wave, electronic punk - this is the album for you.",
+            "product_type": 1,
+            "artist": 1,
+            "price": 10.99,
+            "rating": 3,
+            "image_url": "https://images.unsplash.com/photo-1588687078517-9fff9c65ba48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTEwfHxhbGJ1bSUyMGFydHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "False"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.album",
+        "fields": {
+            "product_ptr_id": 9,
+            "record_label": "Swn Mawr",
+            "release_year": "2022",
+            "genre": 4,
+            "digital_download": "True",
+            "digital_download_price": 7.99
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "name": "Float",
+            "sku": "ALB117",
+            "description": "The remastered edition of Float's seminal self-titled album, re-printed for it's 15th anniversary. This album is a limited edition collectors item, with only 100 printed, it is an essential on any collector's shelf.",
+            "product_type": 1,
+            "artist": 12,
+            "price": 29.99,
+            "rating": 4,
+            "image_url": "https://images.unsplash.com/photo-1609928890787-a8526fc30ec5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTEzfHxhbGJ1bSUyMGFydHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "False"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.album",
+        "fields": {
+            "product_ptr_id": 10,
+            "record_label": "Gwych Records",
+            "release_year": "2007",
+            "genre": 1,
+            "digital_download": "False"
+        }
+    }
+]

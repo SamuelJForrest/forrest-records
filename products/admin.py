@@ -7,8 +7,8 @@ class ProductAdmin(admin.ModelAdmin):
     Admin settings for products.
     """
     list_display = (
-        'id',
         'name',
+        'id',
         'sku',
         'price',
         'artist',
@@ -25,6 +25,7 @@ class AlbumAdmin(admin.ModelAdmin):
     """
     list_display = (
         'name',
+        'id',
         'sku',
         'price',
         'artist',
@@ -38,6 +39,7 @@ class MerchAdmin(admin.ModelAdmin):
     """
     list_display = (
         'name',
+        'id',
         'sku',
         'price',
         'artist',

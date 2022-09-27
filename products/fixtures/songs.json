@@ -229,5 +229,236 @@
             "duration": "13:51",
             "track_number": 9
         }
+    },
+    {
+        "pk": 22,
+        "model": "products.song",
+        "fields": {
+            "title": "re:vive",
+            "album": 3,
+            "artist": 10,
+            "duration": "3:51",
+            "track_number": 1
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.song",
+        "fields": {
+            "title": "re:wind",
+            "album": 3,
+            "artist": 10,
+            "duration": "4:19",
+            "track_number": 2
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.song",
+        "fields": {
+            "title": "re:veal",
+            "album": 3,
+            "artist": 10,
+            "duration": "3:10",
+            "track_number": 3
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.song",
+        "fields": {
+            "title": "re:ason",
+            "album": 3,
+            "artist": 10,
+            "duration": "2:16",
+            "track_number": 4
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.song",
+        "fields": {
+            "title": "re:peat",
+            "album": 3,
+            "artist": 10,
+            "duration": "4:55",
+            "track_number": 5
+        }
+    },
+    {
+        "pk": 27,
+        "model": "products.song",
+        "fields": {
+            "title": "re:do",
+            "album": 3,
+            "artist": 10,
+            "duration": "5:05",
+            "track_number": 6
+        }
+    },
+    {
+        "pk": 28,
+        "model": "products.song",
+        "fields": {
+            "title": "re:do",
+            "album": 3,
+            "artist": 10,
+            "duration": "1:30",
+            "track_number": 7
+        }
+    },
+    {
+        "pk": 29,
+        "model": "products.song",
+        "fields": {
+            "title": "re:ady",
+            "album": 3,
+            "artist": 10,
+            "duration": "3:22",
+            "track_number": 8
+        }
+    },
+    {
+        "pk": 30,
+        "model": "products.song",
+        "fields": {
+            "title": "re:gain",
+            "album": 3,
+            "artist": 10,
+            "duration": "4:12",
+            "track_number": 9
+        }
+    },
+    {
+        "pk": 31,
+        "model": "products.song",
+        "fields": {
+            "title": "re:write",
+            "album": 3,
+            "artist": 10,
+            "duration": "3:55",
+            "track_number": 10
+        }
+    },
+    {
+        "pk": 32,
+        "model": "products.song",
+        "fields": {
+            "title": "Swansong",
+            "album": 7,
+            "artist": 2,
+            "duration": "3:55",
+            "track_number": 1
+        }
+    },
+    {
+        "pk": 33,
+        "model": "products.song",
+        "fields": {
+            "title": "Underground Railroad",
+            "album": 7,
+            "artist": 2,
+            "duration": "2:53",
+            "track_number": 2
+        }
+    },
+    {
+        "pk": 34,
+        "model": "products.song",
+        "fields": {
+            "title": "Stomp",
+            "album": 7,
+            "artist": 2,
+            "duration": "2:50",
+            "track_number": 3
+        }
+    },
+    {
+        "pk": 35,
+        "model": "products.song",
+        "fields": {
+            "title": "Gitting in the Way",
+            "album": 7,
+            "artist": 2,
+            "duration": "3:23",
+            "track_number": 4
+        }
+    },
+    {
+        "pk": 36,
+        "model": "products.song",
+        "fields": {
+            "title": "Nightfall",
+            "album": 7,
+            "artist": 2,
+            "duration": "2:29",
+            "track_number": 5
+        }
+    },
+    {
+        "pk": 37,
+        "model": "products.song",
+        "fields": {
+            "title": "Daybreak",
+            "album": 7,
+            "artist": 2,
+            "duration": "3:41",
+            "track_number": 6
+        }
+    },
+    {
+        "pk": 38,
+        "model": "products.song",
+        "fields": {
+            "title": "Payback",
+            "album": 7,
+            "artist": 2,
+            "duration": "2:44",
+            "track_number": 7
+        }
+    },
+    {
+        "pk": 39,
+        "model": "products.song",
+        "fields": {
+            "title": "Deton8",
+            "album": 7,
+            "artist": 2,
+            "duration": "3:24",
+            "track_number": 8
+        }
+    },
+    {
+        "pk": 40,
+        "model": "products.song",
+        "fields": {
+            "title": "Now/Never (Bonus Track)",
+            "album": 7,
+            "artist": 2,
+            "duration": "1:22",
+            "track_number": 9
+        }
+    },
+    {
+        "pk": 41,
+        "model": "products.song",
+        "fields": {
+            "title": "Gone (Bonus Track)",
+            "album": 7,
+            "artist": 2,
+            "duration": "2:11",
+            "track_number": 10
+        }
+    },
+    {
+        "pk": 42,
+        "model": "products.song",
+        "fields": {
+            "title": "Gitting in the Way (Live)",
+            "album": 7,
+            "artist": 2,
+            "duration": "3:31",
+            "track_number": 11
+        }
     }
 ]

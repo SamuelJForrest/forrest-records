@@ -43,9 +43,11 @@
                             <div class="product-text-top d-flex justify-content-between align-items-start">
                                 <div>
                                     <h2 class="product-title">{{ product.name }}</h2>
-                                    {% if product.merch.has_sizes %}
-                                        <span class="product-sizes">X size available</span>
-                                    {% endif %}                            </div>
+                                    <span>{{ product.artist.friendly_name }}</span>
+                                    {% if product.merch.has_sizess %}
+                                        <span class="product-sizes">Sizes available</span>
+                                    {% endif %}                            
+                                </div>
                                 <p class="product-price">£{{ product.price }}</p>
                             </div>
                             <span class="product-category">{{ product.product_type }}</span>
