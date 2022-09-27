@@ -269,5 +269,6 @@ Bugs for this project can be found within the project's 'Issues' tab - for ease,
 - Thanks to [Natalie Parham](https://unsplash.com/@natalieparham) for the [homepage image](https://unsplash.com/photos/fPKqpUbTL4Y?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)
 
 ### General Thanks
+- I would like the thank the tech Twitter community for helping me brainstorm artist names for testing.
 - I would like to thank my parter, Laura Gilbert, for helping me test the site from a user's perspective.
 - I would like to thank my mentor [Simen](https://github.com/Eventyret) for all of his feedback and support with this project.
