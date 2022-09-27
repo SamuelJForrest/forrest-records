@@ -23,9 +23,8 @@ The target audience for this site is primarily fans of punk/hardcore music, part
     1. Price: low/high (or vice versa)
     2. Alphabetically
     3. Rating: low/high (or vice versa)
-    4. Gender
-    5. Item type: Vinyl, CD, clothing, etc.
-    6. Artist
+    4. Item type: Vinyl, CD, clothing, etc.
+    5. Artist
 5. As a user, I would like to be able to create an account to save/update my delivery information.
 6. As a user, I would like to be directed to an error page that is inkeeping with the sites design/aesthetic if there is any error.
 7. As a user, I would like to be able to add products to a 'wishlist' to view them later.
