@@ -205,6 +205,7 @@ I also installed an additional pip package - [ckeditor](https://django-ckeditor.
 1. Tours: Add a section to the site which allows user's to search/buy tickets for an artist of their choice's tour.
 2. Membership: Add a means for users to sign up for a paid membership, which gives them access to perks such as pre-release sales and free shipping.
 3. Featured item on homepage: Add a section to the homepage in which admins can set a featured artist/product/blog.
+4. Double albums: Add a double album product type that is similar to an album, but has room for two tracklists.
 
 ## Technologies Used
 
