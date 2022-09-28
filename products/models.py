@@ -1,3 +1,4 @@
+import math
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 
@@ -119,6 +120,9 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    def calculate_sale_percentage(self):
+        return math.floor(float(self.price) * 0.8)
 
 
 class Genre(models.Model):

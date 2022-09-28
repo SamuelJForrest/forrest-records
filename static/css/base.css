@@ -781,6 +781,24 @@ table {
   z-index: 2;
   text-transform: uppercase;
 }
+.product.__sale .product-price {
+  position: relative;
+}
+.product.__sale .product-price:not(.__sale)::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 0.4rem;
+  background: #ef4444;
+}
+.product.__sale .product-price.__sale {
+  color: #ef4444;
+  font-size: 2.4rem;
+}
 
 .related-item:hover .related-item-image::before, .related-item:focus .related-item-image::before {
   opacity: 1;

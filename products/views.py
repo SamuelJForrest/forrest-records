@@ -5,8 +5,6 @@ from django.db.models.functions import Lower
 
 from .models import Product, Album, Song
 
-# Create your views here.
-
 
 def all_products(request):
     """
@@ -55,7 +53,7 @@ def all_products(request):
         'page_title': page_title,
         'product_type': product_type,
         'products': products,
-        'current_sorting': current_sorting
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'products/products.html', context)

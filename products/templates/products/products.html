@@ -48,7 +48,16 @@
                                         <span class="product-sizes">Sizes available</span>
                                     {% endif %}                            
                                 </div>
-                                <p class="product-price">£{{ product.price }}</p>
+                                <div class="d-flex align-items-start">
+                                    <p class="product-price">
+                                        £{{ product.price }} 
+                                    </p>
+                                    {% if product.on_sale %}
+                                    <p class="product-price __sale">
+                                        £{{ product.calculate_sale_percentage }}
+                                    </p>
+                                    {% endif %}
+                                </div>
                             </div>
                             <span class="product-category">{{ product.product_type }}</span>
                             <span class="product-btn"><i class="fa-solid fa-arrow-right-long"></i></span>
