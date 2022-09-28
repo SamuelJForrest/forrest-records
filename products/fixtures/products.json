@@ -255,5 +255,86 @@
             "genre": 1,
             "digital_download": "False"
         }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "name": "debutAlbum",
+            "sku": "ALB118",
+            "description": "Ex-members of The Inside Outs and Four Oh Four come together for the \"hottest hardcore album of the the decade\". A thrill ride from start to finish - certainly a future classic.",
+            "product_type": 1,
+            "artist": 7,
+            "price": 19.99,
+            "rating": 4,
+            "image_url": "https://images.unsplash.com/photo-1598387180485-af1fc300bd43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTMwfHxhbGJ1bXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "True"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.album",
+        "fields": {
+            "product_ptr_id": 11,
+            "record_label": "Sundar Records",
+            "release_year": "2017",
+            "genre": 2,
+            "digital_download": "True",
+            "digital_download_price": 15.99
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "name": "F3V3R",
+            "sku": "ALB119",
+            "description": "A divise album - called a classic but many, but not all. But with only 1,500 vinyls in circulation, no one can doubt that it is a collector's dream.",
+            "product_type": 1,
+            "artist": 6,
+            "price": 15.99,
+            "rating": 2,
+            "image_url": "https://images.unsplash.com/photo-1607496190119-5c909aa33d32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE5fHxhbGJ1bSUyMGFydHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "False"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.album",
+        "fields": {
+            "product_ptr_id": 12,
+            "record_label": "Tonedef",
+            "release_year": "2011",
+            "genre": 5,
+            "digital_download": "True",
+            "digital_download_price": 9.99
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "name": "console.error",
+            "sku": "ALB120",
+            "description": "It is rare for a band's first EP to cause such waves. Filling moshpits up and down the country, Syntax Error's screaming guitar riffs will get even the most staunch wallhugger moving.",
+            "product_type": 1,
+            "artist": 13,
+            "price": 9.99,
+            "rating": 3,
+            "image_url": "https://images.unsplash.com/photo-1524721696987-b9527df9e512?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTkwfHxhbGJ1bSUyMGFydHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "False"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.album",
+        "fields": {
+            "product_ptr_id": 13,
+            "record_label": "Gwd Records",
+            "release_year": "2014",
+            "genre": 1,
+            "digital_download": "True",
+            "digital_download_price": 5.99
+        }
     }
 ]

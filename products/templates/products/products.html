@@ -34,8 +34,8 @@
         <div class="row">
             {% if products|length > 0 %}
                 {% for product in products %}
-                <div class="col-md-6 col-lg-4">
-                    <a href="{% url 'product_detail' product.id %}" class="product">
+                <div class="col-md-6 col-lg-4 mb-3">
+                    <a href="{% url 'product_detail' product.id %}" class="product {% if product.on_sale %}__sale{% endif %}">
                         <div class="product-image">
                             <img src="{{ product.image_url }}" class="w-100" alt="{{ product.name}}">
                         </div>

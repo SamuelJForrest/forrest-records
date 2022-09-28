@@ -154,4 +154,12 @@
             padding: .8rem 1rem;
         }
     }
+
+    &.__sale {
+        .product {
+            &-image {
+                @include productTag(sale);
+            }
+        }
+    }
 }

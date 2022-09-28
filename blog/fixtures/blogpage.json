@@ -1,0 +1,11 @@
+[
+    {
+        "pk": 1,
+        "model": "blog.blogpage",
+        "fields": {
+            "title": "Blog",
+            "subtitle": "All the latest news",
+            "featured_blog": 1
+        }
+    }
+]

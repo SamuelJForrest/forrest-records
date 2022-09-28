@@ -32,6 +32,8 @@ class AlbumAdmin(admin.ModelAdmin):
         'on_sale'
     )
 
+    ordering = ('id',)
+
 
 class MerchAdmin(admin.ModelAdmin):
     """
@@ -45,6 +47,8 @@ class MerchAdmin(admin.ModelAdmin):
         'artist',
         'on_sale'
     )
+
+    ordering = ('id', )
 
 
 class SongAdmin(admin.ModelAdmin):

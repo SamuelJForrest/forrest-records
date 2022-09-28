@@ -582,16 +582,21 @@ table {
   position: relative;
 }
 .blog-item.__featured::before {
-  content: "Featured";
+  content: "featured";
   display: inline-block;
   position: absolute;
-  top: 0.8rem;
-  left: 1.5rem;
+  top: 1rem;
+  left: 1rem;
   padding: 1rem 1.5rem;
   background: #ef4444;
   color: #f8fafc;
   border-radius: 4px;
   z-index: 2;
+  text-transform: uppercase;
+}
+.blog-item.__featured::before {
+  top: 0.8rem;
+  left: 1.5rem;
 }
 @media screen and (min-width: 992px) {
   .blog-item {
@@ -762,6 +767,19 @@ table {
 }
 .product-table td {
   padding: 0.8rem 1rem;
+}
+.product.__sale .product-image::before {
+  content: "sale";
+  display: inline-block;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 1rem 1.5rem;
+  background: #ef4444;
+  color: #f8fafc;
+  border-radius: 4px;
+  z-index: 2;
+  text-transform: uppercase;
 }
 
 .related-item:hover .related-item-image::before, .related-item:focus .related-item-image::before {

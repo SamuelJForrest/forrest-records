@@ -13,7 +13,7 @@ def all_blog_posts(request):
     featured_blog = None
 
     for item in blog_page:
-        if featured_blog:
+        if item.featured_blog:
             featured_blog = item.featured_blog
 
     context = {
