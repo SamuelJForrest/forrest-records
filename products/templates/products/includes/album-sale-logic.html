@@ -1,0 +1,11 @@
+{% if digital_download_enabled %}
+    <p class="product-detail-price">£{{ product.album.digital_download_price }}</p>
+    {% if product.on_sale %}
+        <p class="product-detail-price __sale">£{{ product.album.calculate_download_price }}</p>
+    {% endif %}
+{% else %}
+    <p class="product-detail-price">£{{ product.price }}</p>
+    {% if product.on_sale %}
+        <p class="product-detail-price __sale">£{{ product.album.calculate_sale_price }}</p>
+    {% endif %}
+{% endif %}

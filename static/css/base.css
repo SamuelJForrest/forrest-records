@@ -129,12 +129,12 @@ table {
   transition: all 0.5s;
 }
 
-.page-header select, .product-sizes select {
+.page-header select, .product-sizes select, .product-format select {
   padding: 0.8rem;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .page-header select, .product-sizes select {
+  .page-header select, .product-sizes select, .product-format select {
     width: 25%;
   }
 }
@@ -759,7 +759,7 @@ table {
   justify-content: center;
   align-items: center;
 }
-.product-info, .product-sizes, .product-quantity {
+.product-info, .product-sizes, .product-quantity, .product-format {
   margin-bottom: 2rem;
 }
 .product-table {

@@ -1,0 +1,4 @@
+<p class="product-detail-price">£{{ product.price }}</p>
+{% if product.on_sale %}
+    <p class="product-detail-price __sale">£{{ product.merch.calculate_sale_price }}</p>
+{% endif %}

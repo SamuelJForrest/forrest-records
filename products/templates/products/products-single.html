@@ -25,10 +25,15 @@
                 <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
                     <h1>{{ product.name }}</h1>
                     <div class="d-flex align-items-end">
-                        <p class="product-detail-price">£{{ product.price }}</p>
-                        {% if product.on_sale %}
-                            <p class="product-detail-price __sale">£{{ product.calculate_sale_percentage }}</p>
+
+                        <!-- merch pricing logic -->
+                        {% if product.merch.has_sizes %}
+                            {% include 'products/includes/merch-sale-logic.html' %}
+                        {% else %}
+                            <!-- album pricing logic (including digital download sale )-->
+                            {% include 'products/includes/album-sale-logic.html' %}
                         {% endif %}
+
                     </div>
                 </div>
             </div>
@@ -58,9 +63,19 @@
                     <a href="{% url 'products' %}?artist={{ product.artist.name }}" class="product-artist mb-3 d-inline-block">{{ product.artist.friendly_name }}</a>
                     <p>{{ product.description }}</p>
                 </div>
+                {% if product.album.digital_download %}
+                    <div class="product-format">
+                        <h2 class="h5">Format</h2>
+                        <select name="format" id="format">
+                            <option value="vinyl" {% if not digital_download_enabled %}selected{% endif %}>Vinyl</option>
+                            <option value="digital_download" {% if digital_download_enabled %}selected{% endif %}>Digital Download</option>
+                        </select>
+                    </div>
+                {% endif %}
+
                 {% if product.merch.has_sizes %}
                     <div class="product-sizes">
-                        <h2 class="h4">Sizes</h2>
+                        <h2 class="h5">Sizes</h2>
                         <select name="sizes" id="sizes">
                             <option value="xs">XS</option>
                             <option value="sm">S</option>
@@ -70,15 +85,19 @@
                         </select>
                     </div>
                 {% endif %}
-                <div class="product-quantity d-flex justify-content-start align-items-center">
-                    <button>
-                        <i class="fa-solid fa-minus"></i>
-                    </button>
-                    <span>1</span>
-                    <button>
-                        <i class="fa-solid fa-plus"></i>
-                    </button>
-                </div>
+
+                {% if not digital_download_enabled %}
+                    <div class="product-quantity d-flex justify-content-start align-items-center">
+                        <button>
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <span>1</span>
+                        <button>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                {% endif %}
+
                 <a href="#" class="button me-3">Add to basket</a>
                 <a href="#" class="product-wishlist">
                     <i class="fa-regular fa-heart"></i>
@@ -93,8 +112,31 @@
     {% if related_products|length > 0 %}
         {% include 'products/includes/related-products.html' %}
     {% endif %}
-    
+
 </div>
 
 
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+
+    <script>
+        $('#format').each(function() {
+            const thisElement = $(this);
+            
+            thisElement.change(function() {
+                const currentUrl = new URL(window.location);
+                let selectedVal = $(this).val();
+
+                if (selectedVal != 'vinyl') {
+                    currentUrl.searchParams.set('format', selectedVal);
+                    window.location.replace(currentUrl);
+                } else {
+                    currentUrl.searchParams.delete('format');
+                    window.location.replace(currentUrl);
+                };
+            });
+        });
+    </script>
 {% endblock %}

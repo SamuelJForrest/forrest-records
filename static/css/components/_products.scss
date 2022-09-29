@@ -117,7 +117,8 @@
         }
     }
 
-    &-sizes {
+    &-sizes,
+    &-format {
         select {
             @extend %select;
         }
@@ -125,7 +126,8 @@
 
     &-info,
     &-sizes,
-    &-quantity {
+    &-quantity,
+    &-format {
         margin-bottom: 2rem;
     }
 

@@ -74,10 +74,19 @@ def product_detail(request, product_id):
                        artist=product.artist).exclude(
                        id=product_id)[:4]
 
+    digital_download_enabled = False
+
+    if request.GET:
+        if 'format' in request.GET:
+            format = request.GET['format']
+            if format == 'digital_download':
+                digital_download_enabled = True
+
     context = {
         'product': product,
         'product_name': product_name,
-        'related_products': related_products
+        'related_products': related_products,
+        'digital_download_enabled': digital_download_enabled,
     }
 
     return render(request, 'products/products-single.html', context)

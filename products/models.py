@@ -121,9 +121,6 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-    def calculate_sale_percentage(self):
-        return math.floor(float(self.price) * 0.8)
-
 
 class Genre(models.Model):
     """
@@ -186,6 +183,24 @@ class Album(Product):
     def __str__(self):
         return self.name
 
+    def calculate_sale_price(self):
+        """
+        Calculate the sale price of the product.
+        """
+        if self.on_sale:
+            new_price = math.floor(float(self.price) * 0.8)
+
+        return new_price
+    
+    def calculate_download_price(self):
+        """
+        Calculate the sale price of a digital download.
+        """
+        if self.digital_download:
+            new_price = math.floor(float(self.digital_download_price) * 0.8)
+        
+        return new_price
+
 
 class Song(models.Model):
     """
@@ -245,3 +260,14 @@ class Merch(Product):
 
     def __str__(self):
         return self.name
+
+    def calculate_sale_price(self):
+        """
+        Calculate the sale price of the product.
+        """
+        new_price = None
+
+        if self.on_sale:
+            new_price = math.floor(float(self.price) * 0.8)
+
+        return new_price

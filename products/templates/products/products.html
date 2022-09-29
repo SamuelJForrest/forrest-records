@@ -54,7 +54,13 @@
                                     </p>
                                     {% if product.on_sale %}
                                     <p class="product-price __sale">
-                                        £{{ product.calculate_sale_percentage }}
+                                        {% if product.merch %}
+                                            £{{ product.merch.calculate_sale_price }}
+                                        {% endif %}
+
+                                        {% if product.album %}
+                                            £{{ product.album.calculate_sale_price }}
+                                        {% endif %}
                                     </p>
                                     {% endif %}
                                 </div>
