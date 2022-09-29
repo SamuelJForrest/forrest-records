@@ -1,0 +1,10 @@
+[
+    {
+        "pk": 1,
+        "model": "contact.contactpage",
+        "fields": {
+            "title": "Contact",
+            "subtitle": "Get in touch"
+        }
+    }
+]
