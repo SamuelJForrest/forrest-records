@@ -2,21 +2,8 @@ from django.contrib import admin
 from .models import Product, ProductType, ProductGroup, Album, Song, Genre, Merch
 
 
-class ProductAdmin(admin.ModelAdmin):
-    """
-    Admin settings for products.
-    """
-    list_display = (
-        'name',
-        'id',
-        'sku',
-        'price',
-        'artist',
-        'on_sale'
-    )
-
-    def has_add_permission(self, request):
-        return False
+class AlbumInline(admin.TabularInline):
+    model = Album
 
 
 class AlbumAdmin(admin.ModelAdmin):
@@ -33,6 +20,10 @@ class AlbumAdmin(admin.ModelAdmin):
     )
 
     ordering = ('id',)
+
+
+class MerchInline(admin.TabularInline):
+    model = Merch
 
 
 class MerchAdmin(admin.ModelAdmin):
@@ -64,6 +55,28 @@ class SongAdmin(admin.ModelAdmin):
     )
 
     ordering = ('album', 'track_number')
+
+
+class ProductAdmin(admin.ModelAdmin):
+    """
+    Admin settings for products.
+    """
+    list_display = (
+        'name',
+        'id',
+        'sku',
+        'price',
+        'artist',
+        'on_sale'
+    )
+
+    # inlines = [
+    #     AlbumInline,
+    #     MerchInline
+    # ]
+
+    def has_add_permission(self, request):
+        return False
 
 
 admin.site.register(Product, ProductAdmin)

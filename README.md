@@ -661,6 +661,7 @@ I also installed an additional pip package - [ckeditor](https://django-ckeditor.
 3. Featured item on homepage: Add a section to the homepage in which admins can set a featured artist/product/blog.
 4. Double albums: Add a double album product type that is similar to an album, but has room for two tracklists.
 5. Limited edition tag: Similar to the 'sale' and 'featured' tag - add in another, different colour, tag to show that an album is limited edition/collectable.
+6. Individual song pages: allow users to purchase, and see information about, individual songs.
 
 ## Technologies Used
 
