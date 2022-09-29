@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Album, Song
+from artists.models import Artist
 
 
 def all_products(request):
@@ -46,6 +47,9 @@ def all_products(request):
         if 'artist' in request.GET:
             artist = request.GET['artist']
             products = products.filter(artist__name__contains=artist)
+            artist_set = Artist.objects.filter(name__contains=artist)
+            for item in artist_set:
+                page_title = item.friendly_name
                 
     current_sorting = f'{sort}_{direction}'
 
