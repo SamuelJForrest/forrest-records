@@ -148,3 +148,15 @@ h6,
         }
     }
 }
+
+.backlink {
+    color: $color-red;
+    text-decoration: none;
+    transition: all $fast;
+
+    &:hover,
+    &:focus {
+        color: $color-red;
+        text-decoration: underline;
+    }
+}

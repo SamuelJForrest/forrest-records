@@ -336,5 +336,74 @@
             "digital_download": "True",
             "digital_download_price": 5.99
         }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "name": "The Frontman",
+            "sku": "MER114",
+            "description": "The Inside Outs' new product line: frontmen, on shirts. Our only wish is that it was their frontman and not Alex Turner...",
+            "product_type": 2,
+            "artist": 5,
+            "price": 12.99,
+            "rating": 2,
+            "image_url": "https://images.unsplash.com/photo-1485145782098-4f5fd605a66b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fGJhbmQlMjB0ZWV8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "True"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.merch",
+        "fields": {
+            "product_ptr_id": 14,
+            "has_sizes": "True"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "name": "The Classic Grey",
+            "sku": "MER115",
+            "description": "The classic, the timeless, the plain grey tee. This t-shirt is made by your very own Forrest Records! Heavy duty, quality material; who says you have to pay top dollar for top quality.",
+            "product_type": 2,
+            "artist": 16,
+            "price": 5.99,
+            "rating": 4,
+            "image_url": "https://images.unsplash.com/photo-1485218126466-34e6392ec754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fGJhbmQlMjB0JTIwc2hpcnR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "False"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.merch",
+        "fields": {
+            "product_ptr_id": 15,
+            "has_sizes": "True"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "name": "The Classic White",
+            "sku": "MER116",
+            "description": "The classic, the timeless, the plain white tee. This t-shirt is made by your very own Forrest Records! Heavy duty, quality material; who says you have to pay top dollar for top quality.",
+            "product_type": 2,
+            "artist": 16,
+            "price": 5.99,
+            "rating": 4,
+            "image_url": "https://images.unsplash.com/photo-1576417677573-8454350443ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHdoaXRlJTIwdCUyMHNoaXJ0fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "False"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.merch",
+        "fields": {
+            "product_ptr_id": 16,
+            "has_sizes": "True"
+        }
     }
 ]

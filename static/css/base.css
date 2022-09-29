@@ -317,7 +317,7 @@ table {
     transform: translateY(100%);
     width: 30rem;
     margin-top: 0;
-    z-index: 2;
+    z-index: 5;
   }
 }
 .nav-list-item > ul.__basket {
@@ -1047,4 +1047,13 @@ h6,
 .page-header span {
   opacity: 0.6;
   display: inline-block;
+}
+.backlink {
+  color: #ef4444;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.backlink:hover, .backlink:focus {
+  color: #ef4444;
+  text-decoration: underline;
 }/*# sourceMappingURL=base.css.map */

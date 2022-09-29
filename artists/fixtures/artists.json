@@ -123,8 +123,8 @@
         "pk":16,
         "model":"artists.artist",
         "fields":{
-            "name":"gitpull",
-            "friendly_name":"Gitpull"
+            "name":"forrest_records",
+            "friendly_name":"Forrest Records"
         }
     }
 ]
