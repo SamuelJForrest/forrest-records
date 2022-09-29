@@ -179,6 +179,12 @@
     // product detail
 
     &-detail {
+        padding-bottom: 15rem;
+
+        @media screen and (min-width: $lg) {
+            padding-bottom: 5rem;
+        }
+
         &-price {
             @extend .h4;
             position: relative;

@@ -89,10 +89,12 @@
             </div>
         </div>
     </div>
+
+    {% if related_products|length > 0 %}
+        {% include 'products/includes/related-products.html' %}
+    {% endif %}
+    
 </div>
 
-{% if related_products|length > 0 %}
-    {% include 'products/includes/related-products.html' %}
-{% endif %}
 
 {% endblock %}
