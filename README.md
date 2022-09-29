@@ -660,6 +660,7 @@ I also installed an additional pip package - [ckeditor](https://django-ckeditor.
 2. Membership: Add a means for users to sign up for a paid membership, which gives them access to perks such as pre-release sales and free shipping.
 3. Featured item on homepage: Add a section to the homepage in which admins can set a featured artist/product/blog.
 4. Double albums: Add a double album product type that is similar to an album, but has room for two tracklists.
+5. Limited edition tag: Similar to the 'sale' and 'featured' tag - add in another, different colour, tag to show that an album is limited edition/collectable.
 
 ## Technologies Used
 

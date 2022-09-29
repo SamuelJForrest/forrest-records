@@ -366,12 +366,12 @@
         "fields": {
             "name": "The Classic Grey",
             "sku": "MER115",
-            "description": "The classic, the timeless, the plain grey tee. This t-shirt is made by your very own Forrest Records! Heavy duty, quality material; who says you have to pay top dollar for top quality.",
+            "description": "The classic, the timeless, the plain grey tee. This t-shirt is made by your very own Forrest Records! Heavy duty, quality material; who says you have to pay top dollar for top quality. All Forrest records clothing are unisex.",
             "product_type": 2,
             "artist": 16,
             "price": 5.99,
             "rating": 4,
-            "image_url": "https://images.unsplash.com/photo-1485218126466-34e6392ec754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fGJhbmQlMjB0JTIwc2hpcnR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+            "image_url": "https://images.unsplash.com/photo-1484887603430-371459454eed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGdyYXBoaWMlMjB0JTIwc2hpcnR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
             "on_sale": "False"
         }
     },
@@ -389,7 +389,7 @@
         "fields": {
             "name": "The Classic White",
             "sku": "MER116",
-            "description": "The classic, the timeless, the plain white tee. This t-shirt is made by your very own Forrest Records! Heavy duty, quality material; who says you have to pay top dollar for top quality.",
+            "description": "The classic, the timeless, the plain white tee. This t-shirt is made by your very own Forrest Records! Heavy duty, quality material; who says you have to pay top dollar for top quality. All Forrest records clothing are unisex.",
             "product_type": 2,
             "artist": 16,
             "price": 5.99,
@@ -403,6 +403,98 @@
         "model": "products.merch",
         "fields": {
             "product_ptr_id": 16,
+            "has_sizes": "True"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "name": "Don't Fear the Reaper (Pink)",
+            "sku": "MER117",
+            "description": "ASYNC bring us a colourful number, incorporating their fan-favourite mascot \"Grimmy\". This pink edition is a rare, limited time product. Sale of this product will cease on the 01/12/2022.",
+            "product_type": 2,
+            "artist": 15,
+            "price": 14.99,
+            "rating": 3,
+            "image_url": "https://images.unsplash.com/photo-1468283268201-f31115a19e2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JhcGhpYyUyMHQlMjBzaGlydHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "False"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.merch",
+        "fields": {
+            "product_ptr_id": 17,
+            "has_sizes": "True"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "name": "Caching Checks",
+            "sku": "MER118",
+            "description": "Everyone knows Johnny Cache's signature check shirt - a legendary icon in the scene. Well, now you have the chance to make this signature staple your own!",
+            "product_type": 2,
+            "artist": 14,
+            "price": 25.99,
+            "rating": 4,
+            "image_url": "https://images.unsplash.com/photo-1601935033900-059813f9abfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGdyYXBoaWMlMjB0JTIwc2hpcnR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "False"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.merch",
+        "fields": {
+            "product_ptr_id": 18,
+            "has_sizes": "True"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "name": "The Classic Black (Vest)",
+            "sku": "MER119",
+            "description": "The classic, the timeless, the plain black vest. This t-shirt is made by your very own Forrest Records! Heavy duty, quality material; who says you have to pay top dollar for top quality. All Forrest records clothing are unisex.",
+            "product_type": 2,
+            "artist": 14,
+            "price": 4.99,
+            "rating": 4,
+            "image_url": "https://images.unsplash.com/photo-1470441623172-c47235e287ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTIyfHxncmFwaGljJTIwdCUyMHNoaXJ0fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "True"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.merch",
+        "fields": {
+            "product_ptr_id": 19,
+            "has_sizes": "True"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "name": "Neo Tokyo Tee",
+            "sku": "MER120",
+            "description": "A Rage Against the Compiler t-shirt from their legendary, sold-out, 1995 tour: \"Neo Tokyo\". With only 10 of these t-shirts available - this is the ultimate collectors' item.",
+            "product_type": 2,
+            "artist": 2,
+            "price": 50.99,
+            "rating": 3,
+            "image_url": "https://images.unsplash.com/photo-1621446511130-0ed6519bfeb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGdyYXBoaWMlMjBzaGlydHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+            "on_sale": "False"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.merch",
+        "fields": {
+            "product_ptr_id": 20,
             "has_sizes": "True"
         }
     }
