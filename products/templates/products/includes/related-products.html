@@ -9,7 +9,13 @@
                 <div class="related-item-image">
                     <img src="{{ product.image_url }}" alt="">
                     <span class="related-item-name">{{ product.name }}</span>
-                    <span class="related-item-price">£{{ product.price }}</span>
+                    <span class="related-item-price">
+                        {% if not product.on_sale %}
+                            £{{ product.price }}
+                        {% else %}
+                            £{{ product.calculate_sale_percentage }}
+                        {% endif %}
+                    </span>
                 </div>
             </a>
         </div>
