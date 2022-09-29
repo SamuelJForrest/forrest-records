@@ -865,7 +865,11 @@ table {
 .artists-group-title {
   margin-bottom: 0.8rem;
 }
+.artists-list-item {
+  margin-bottom: 0.5rem;
+}
 .artists-list-item a {
+  font-size: 2rem;
   color: #18181b;
   text-decoration: none;
   transition: all 0.3s;
@@ -911,6 +915,7 @@ h1,
 .h1,
 h2,
 .h2,
+.artists-group-title,
 h3,
 .h3,
 .header-logo,
@@ -920,7 +925,6 @@ h4,
 .h4,
 .product-title,
 .product-detail-price,
-.artists-group-title,
 h5,
 .h5,
 .nav-list-item,
@@ -946,12 +950,14 @@ h1,
 }
 
 h2,
-.h2 {
+.h2,
+.artists-group-title {
   font-size: 4rem;
 }
 @media screen and (min-width: 992px) {
   h2,
-.h2 {
+.h2,
+.artists-group-title {
     font-size: 4.8rem;
   }
 }
@@ -976,16 +982,14 @@ h3,
 h4,
 .h4,
 .product-title,
-.product-detail-price,
-.artists-group-title {
+.product-detail-price {
   font-size: 2.4rem;
 }
 @media screen and (min-width: 992px) {
   h4,
 .h4,
 .product-title,
-.product-detail-price,
-.artists-group-title {
+.product-detail-price {
     font-size: 3.2rem;
   }
 }
