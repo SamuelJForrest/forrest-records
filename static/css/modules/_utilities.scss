@@ -57,3 +57,17 @@
         width: 25%;
     }
 }
+
+%strikethrough {
+    &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 105%;
+        height: .3rem;
+        background: $color-red;
+    }
+}

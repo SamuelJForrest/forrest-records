@@ -18,68 +18,75 @@
 {% endblock %}
 
 {% block page_header %}
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
-                <h1>{{ product.name }}</h1>
-                <p class="h4">£{{ product.price }}</p>
+<div class="product-detail {% if product.on_sale %}__sale{% endif %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
+                    <h1>{{ product.name }}</h1>
+                    <div class="d-flex align-items-end">
+                        <p class="product-detail-price">£{{ product.price }}</p>
+                        {% if product.on_sale %}
+                            <p class="product-detail-price __sale">£{{ product.calculate_sale_percentage }}</p>
+                        {% endif %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-{% endblock %}
+    {% endblock %}
 
-{% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-lg-5">
-            <div class="product-image __single">
-                <img src="{{ product.image_url }}" alt="">
-            </div>
-            {% if product.album %}
-            <h2 class="h4 mt-5">Album info</h2>
-                {% if product.album.song_set.all %}
-                    {% include 'products/includes/album-info.html' %}
-                {% else %}
-                <p>There is currently no information for this album.</p>
-                {% endif %}
-            {% endif %}
-        </div>
-        <div class="col-lg-7">
-            <div class="product-info">
-                <h2 class="h4">{{ product.name }}</h2>
-                <a href="{% url 'products' %}?artist={{ product.artist.name }}" class="product-artist mb-3 d-inline-block">{{ product.artist.friendly_name }}</a>
-                <p>{{ product.description }}</p>
-            </div>
-            {% if product.merch.has_sizes %}
-                <div class="product-sizes">
-                    <h2 class="h4">Sizes</h2>
-                    <select name="sizes" id="sizes">
-                        <option value="xs">XS</option>
-                        <option value="sm">S</option>
-                        <option value="m" selected>M</option>
-                        <option value="l">L</option>
-                        <option value="xl">XL</option>
-                    </select>
+    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="product-detail-image {% if product.on_sale %}__sale{% endif %}">
+                    <img src="{{ product.image_url }}" alt="">
                 </div>
-            {% endif %}
-            <div class="product-quantity d-flex justify-content-start align-items-center">
-                <button>
-                    <i class="fa-solid fa-minus"></i>
-                </button>
-                <span>1</span>
-                <button>
-                    <i class="fa-solid fa-plus"></i>
-                </button>
+                {% if product.album %}
+                <h2 class="h4 mt-5">Album info</h2>
+                    {% if product.album.song_set.all %}
+                        {% include 'products/includes/album-info.html' %}
+                    {% else %}
+                    <p>There is currently no information for this album.</p>
+                    {% endif %}
+                {% endif %}
             </div>
-            <a href="#" class="button me-3">Add to basket</a>
-            <a href="#" class="product-wishlist">
-                <i class="fa-regular fa-heart"></i>
-                <!-- @TODO: add logic to show filled heart when item is part of wishlist -->
-                <!-- <i class="fa-solid fa-heart"></i> -->
-                Add to wishlist
-            </a>
+            <div class="col-lg-7">
+                <div class="product-info">
+                    <h2 class="h4">{{ product.name }}</h2>
+                    <a href="{% url 'products' %}?artist={{ product.artist.name }}" class="product-artist mb-3 d-inline-block">{{ product.artist.friendly_name }}</a>
+                    <p>{{ product.description }}</p>
+                </div>
+                {% if product.merch.has_sizes %}
+                    <div class="product-sizes">
+                        <h2 class="h4">Sizes</h2>
+                        <select name="sizes" id="sizes">
+                            <option value="xs">XS</option>
+                            <option value="sm">S</option>
+                            <option value="m" selected>M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                        </select>
+                    </div>
+                {% endif %}
+                <div class="product-quantity d-flex justify-content-start align-items-center">
+                    <button>
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <span>1</span>
+                    <button>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+                <a href="#" class="button me-3">Add to basket</a>
+                <a href="#" class="product-wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <!-- @TODO: add logic to show filled heart when item is part of wishlist -->
+                    <!-- <i class="fa-solid fa-heart"></i> -->
+                    Add to wishlist
+                </a>
+            </div>
         </div>
     </div>
 </div>

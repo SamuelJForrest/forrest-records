@@ -165,22 +165,46 @@
                 position: relative;
 
                 &:not(.__sale) {
-                    &::before {
-                        content: '';
-                        display: inline-block;
-                        position: absolute;
-                        left: 0;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        width: 100%;
-                        height: .4rem;
-                        background: $color-red;
-                    }
+                    @extend %strikethrough;
                 }
 
                 &.__sale {
                     color: $color-red;
                     font-size: 2.4rem;
+                }
+            }
+        }
+    }
+    
+    // product detail
+
+    &-detail {
+        &-price {
+            @extend .h4;
+            position: relative;
+
+            &.__sale {
+                @extend .h3;
+                margin-left: 1rem;
+                color: $color-red;
+            }
+        }
+
+        &-image {
+            @extend .product-image;
+            height: 45rem;
+        }
+
+        &.__sale {
+            .product-detail {
+                &-price {
+                    &:not(.__sale) {
+                        @extend %strikethrough;
+                    }
+                }
+
+                &-image {
+                    @include productTag(sale);
                 }
             }
         }
