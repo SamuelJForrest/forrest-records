@@ -65,7 +65,12 @@
                                     {% endif %}
                                 </div>
                             </div>
-                            <span class="product-category">{{ product.product_type }}</span>
+                            <span class="product-category d-flex justify-content-start align-items-center">
+                                {{ product.product_type }}
+                                {% if product.album.digital_download %}
+                                    <span class="product-download">- Digital download available</span>
+                                {% endif %}
+                            </span>
                             <span class="product-btn"><i class="fa-solid fa-arrow-right-long"></i></span>
                         </div>
                     </a>

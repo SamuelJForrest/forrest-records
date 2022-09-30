@@ -650,7 +650,10 @@ table {
   margin-bottom: 1.2rem;
 }
 .blog-item-preview {
-  opacity: 0.6;
+  opacity: 0.8;
+}
+.blog-item-author span {
+  font-weight: 600;
 }
 .blog-single-image {
   position: relative;
@@ -713,6 +716,10 @@ table {
 }
 .product-category {
   margin-top: auto;
+}
+.product-download {
+  font-size: 1rem;
+  margin-left: 0.3rem;
 }
 .product-artist {
   color: #ef4444;

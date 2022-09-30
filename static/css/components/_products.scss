@@ -54,6 +54,11 @@
         margin-top: auto;
     }
 
+    &-download {
+        font-size: 1rem;
+        margin-left: .3rem;
+    }
+
     &-artist {
         color: $color-red;
         font-weight: 500;

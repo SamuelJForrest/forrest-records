@@ -64,18 +64,18 @@
         }
 
         &-preview {
-            opacity: 0.6;
+            opacity: 0.8;
         }
 
         &-icon {
             @extend .product-btn;
         }
 
-        // &-author {
-        //     span {
-        //         opacity: 0.6;
-        //     }
-        // }
+        &-author {
+            span {
+                font-weight: 600;
+            }
+        }
     }
 
     &-single {
