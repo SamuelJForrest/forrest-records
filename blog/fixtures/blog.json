@@ -1,0 +1,57 @@
+[
+    {
+        "pk": 1,
+        "model": "blog.blog",
+        "fields": {
+            "title": "Welcome to Forrest Records!",
+            "author": 1,
+            "content": "Override this with richtext data.",
+            "image_url": "https://images.unsplash.com/photo-1575672913784-11a7cd4f25f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHVuayUyMGdpZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            "date_published": "2022-09-30"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "blog.blog",
+        "fields": {
+            "title": "Rage Against the Compiler Announce 2023 Tour",
+            "author": 1,
+            "content": "Override this with richtext data.",
+            "image_url": "https://images.unsplash.com/photo-1526480450270-7fe59f99fcad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGdpZ3xlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+            "date_published": "2022-09-30"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "blog.blog",
+        "fields": {
+            "title": "Forrest Records Charity Event: Dec 2nd 2022.",
+            "author": 1,
+            "content": "Override this with richtext data.",
+            "image_url": "https://images.unsplash.com/photo-1508979822114-db019a20d576?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGdpZ3xlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+            "date_published": "2022-09-30"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "blog.blog",
+        "fields": {
+            "title": "Four Oh Four and Event Handlers Joint EP in the Works.",
+            "author": 1,
+            "content": "Override this with richtext data.",
+            "image_url": "https://images.unsplash.com/photo-1601066525716-3cca33c6d4c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YWxidW18ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+            "date_published": "2022-09-30"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "blog.blog",
+        "fields": {
+            "title": "Algorhythm Sign to Tonedef Records.",
+            "author": 1,
+            "content": "Override this with richtext data.",
+            "image_url": "https://images.unsplash.com/photo-1414839246800-1ed50eb905e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFuZCUyMHNpZ258ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+            "date_published": "2022-09-30"
+        }
+    }
+]

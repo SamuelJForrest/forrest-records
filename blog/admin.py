@@ -16,6 +16,8 @@ class BlogPageAdmin(admin.ModelAdmin):
 class BlogsAdmin(admin.ModelAdmin):
     list_display = (
         'title',
+        'date_published',
+        'author'
     )
     ordering = ['-id']
 

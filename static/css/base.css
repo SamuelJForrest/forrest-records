@@ -649,9 +649,7 @@ table {
 .blog-item-title {
   margin-bottom: 1.2rem;
 }
-.blog-item-title span {
-  font-size: 1.6rem;
-  font-weight: 400;
+.blog-item-preview {
   opacity: 0.6;
 }
 .blog-single-image {
@@ -671,6 +669,10 @@ table {
   width: 100%;
   height: 100%;
   transition: all 0.5s;
+}
+.blog-single-author {
+  font-weight: 600;
+  margin-top: 7.5rem;
 }
 
 .product {

@@ -19,7 +19,7 @@ def all_blog_posts(request):
     context = {
         'blog_page': blog_page,
         'blogs': blogs,
-        'featured_blog': featured_blog
+        'featured_blog': featured_blog,
     }
 
     return render(request, 'blog/blog.html', context)

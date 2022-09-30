@@ -33,15 +33,21 @@
                             </div>
                         </div>
                         <div class="col-lg-8">
-                            <div class="blog-item-wrap">
-                                <h2 class="blog-item-title d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-end">
-                                    {{ blog.title }}
-                                    {% if blog.author.user %}
-                                    <span>Written by: {{ blog.author.user.get_full_name }}</span>
-                                    {% endif %}
-                                </h2>
-                                <p class="d-lg-none">{{ blog.content|striptags|safe|truncatewords:50 }}</p>
-                                <p class="d-none d-lg-block">{{ blog.content|striptags|safe|truncatewords:100 }}</p>
+                            <div class="blog-item-wrap d-flex flex-column">
+                                <div class="blog-title-wrap d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-end">
+                                    <h2 class="blog-item-title h5">
+                                        {{ blog.title }}
+                                    </h2>
+                                    </div>
+                                    <p class="d-lg-none">{{ blog.content|striptags|safe|truncatewords:50 }}</p>
+                                <p class="blog-item-preview d-none d-lg-block">{{ blog.content|striptags|safe|truncatewords:100 }}</p>
+                                {% if blog.author.user %}
+                                    <div class="mt-auto blog-item-author">
+                                        <span>Written by: 
+                                            {{ blog.author.user.get_full_name }}, {{ blog.date_published|date:"M d, Y" }}
+                                        </span>
+                                    </div>
+                                {% endif %}
                                 <span class="blog-item-icon"><i class="fa-solid fa-arrow-right-long"></i></span>
                             </div>
                         </div>

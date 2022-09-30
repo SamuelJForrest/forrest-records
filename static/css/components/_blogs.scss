@@ -61,17 +61,21 @@
         &-title {
             @extend .h3;
             margin-bottom: 1.2rem;
+        }
 
-            span {
-                font-size: 1.6rem;
-                font-weight: 400;
-                opacity: 0.6;
-            }
+        &-preview {
+            opacity: 0.6;
         }
 
         &-icon {
             @extend .product-btn;
         }
+
+        // &-author {
+        //     span {
+        //         opacity: 0.6;
+        //     }
+        // }
     }
 
     &-single {
@@ -92,6 +96,11 @@
                 height: 100%;
                 transition: all $mid;
             }
+        }
+
+        &-author {
+            font-weight: 600;
+            margin-top: 7.5rem;
         }
     }
 }
