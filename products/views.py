@@ -18,6 +18,7 @@ def all_products(request):
     artist = None
     sort = None
     direction = None
+    query = None
 
     if request.GET:
         if 'sort' in request.GET:
@@ -50,6 +51,15 @@ def all_products(request):
             artist_set = Artist.objects.filter(name__contains=artist)
             for item in artist_set:
                 page_title = item.friendly_name
+
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "You didn't enter any search criteria!")
+                return redirect(reverse('products'))
+
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            products = products.filter(queries)
                 
     current_sorting = f'{sort}_{direction}'
 

@@ -162,6 +162,71 @@
         }
     }
 
+    &-search {
+        position: fixed;
+        z-index: 2;
+        bottom: 3rem;
+        right: 3rem;
+        background: $color-red;
+        border-radius: 4.8rem;
+        max-width: 7.5rem;
+        transition: all $mid;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        
+        
+        i {
+            font-size: 3rem;
+            color: $color-white;
+            position: absolute;
+            left: 2.2rem;
+            top: 50%;
+            transform: translate(0, -50%);
+            z-index: -1;
+        }
+
+        label {
+            position: absolute;
+            height: 0;
+            width: 0;
+            font-size: 0;
+        }
+
+        input {
+            background: transparent;
+            border: none;
+            padding: 2rem 0rem 2rem 7.5rem;
+            font-size: 3rem;
+            color: $color-white;
+
+            &:hover,
+            &:focus {
+                cursor: pointer;
+
+                outline: none;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            
+            background: darken($color-red, 5%);
+        }
+
+        &.__active {
+            max-width: 43rem;
+
+            input {
+                &:hover,
+                &:focus {
+                    cursor: text;
+                }
+            }
+        }
+    }
+
     &.__sale {
         .product {
             &-image {

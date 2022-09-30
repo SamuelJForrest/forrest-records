@@ -137,6 +137,14 @@ h6,
         select {
             @extend %select;
         }
+
+        #shop_filter {
+            margin-top: 1rem;
+
+            @media screen and (min-width: $lg) {
+                margin-top: 0;
+            }
+        }
     }
 }
 

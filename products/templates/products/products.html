@@ -10,6 +10,13 @@
             <div class="col-12">
                 <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
                     <h1>{{ page_title }}</h1>
+                    <div class="product-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <form action="">
+                            <label for="q">Search for a product</label>
+                            <input type="text" name="q" id="q" autocomplete="off">
+                        </form>
+                    </div>
                     <select name="shop_filter" id="shop_filter">
                         <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                         <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
@@ -90,6 +97,7 @@
     {{ block.super }}
     
     <script>
+        // update shop filters
         $('#shop_filter').change(function() {
             const selector = $(this);
             const currentUrl = new URL(window.location);
@@ -108,6 +116,21 @@
                 currentUrl.searchParams.delete('direction');
 
                 window.location.replace(currentUrl);
+            }
+        });
+
+        // open search bar
+        $(document).click(function(e) {
+            let target = $(e.target).attr('id');
+            let searchInput = $('#q');
+            let searchParent = $('.product-search');
+
+            if (target == 'q') {
+                searchParent.addClass('__active');
+            } else {
+                searchParent.removeClass('__active')
+                searchInput.val('');
+                searchInput.text('');
             }
         })
     </script>
