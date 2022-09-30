@@ -52,13 +52,17 @@ def all_products(request):
             for item in artist_set:
                 page_title = item.friendly_name
 
+        # search functionality
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request,
+                               "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(
+                        name__icontains=query) | Q(
+                        description__icontains=query)
             products = products.filter(queries)
                 
     current_sorting = f'{sort}_{direction}'

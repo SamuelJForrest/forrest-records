@@ -21,5 +21,14 @@
         <li class="nav-list-item">
             <a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
         </li>
+        <li class="nav-list-item mt-5">
+            <div class="product-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <form method="GET" action="{% url 'products' %}">
+                    <label for="q">Search for a product</label>
+                    <input type="text" name="q" id="q" autocomplete="off">
+                </form>
+            </div>
+        </li>
     </ul>
 </div>
