@@ -50,7 +50,7 @@
         &-wrap {
             position: relative;
             height: 100%;
-            padding-bottom: 5rem;
+            padding-bottom: 7.5rem;
 
             @media screen and (min-width: $lg) {
                 padding-left: 1rem;
@@ -74,11 +74,38 @@
         &-author {
             span {
                 font-weight: 600;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                font-size: 1.2rem;
+
+                @media screen and (min-width: $lg) {
+                    position: static;
+                    font-size: 1.6rem;
+                }
             }
         }
     }
 
+    // individual blog pages
     &-single {
+        font-size: 2rem;
+        padding-bottom: 15rem;
+
+        @media screen and (min-width: $lg) {
+            padding-bottom: 5rem;
+        }
+
+        a {
+            color: $color-red;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+
         &-image {
             position: relative;
             overflow: hidden;
@@ -101,26 +128,6 @@
         &-author {
             font-weight: 600;
             margin-top: 7.5rem;
-        }
-    }
-
-    // individual blog pages
-    &-single {
-        font-size: 2rem;
-        padding-bottom: 15rem;
-
-        @media screen and (min-width: $lg) {
-            padding-bottom: 5rem;
-        }
-
-        a {
-            color: $color-red;
-            text-decoration: none;
-
-            &:hover,
-            &:focus {
-                text-decoration: underline;
-            }
         }
     }
 }
