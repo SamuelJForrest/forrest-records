@@ -67,15 +67,6 @@
                     <a href="{% url 'products' %}?artist={{ product.artist.name }}" class="product-artist mb-3 d-inline-block">{{ product.artist.friendly_name }}</a>
                     <p>{{ product.description }}</p>
                 </div>
-                {% if product.album.digital_download %}
-                    <div class="product-format">
-                        <h2 class="h5">Format</h2>
-                        <select name="format" id="format">
-                            <option value="vinyl" {% if not digital_download_enabled %}selected{% endif %}>Vinyl</option>
-                            <option value="digital_download" {% if digital_download_enabled %}selected{% endif %}>Digital Download</option>
-                        </select>
-                    </div>
-                {% endif %}
 
                 {% if product.merch.has_sizes %}
                     <div class="product-sizes">
@@ -109,7 +100,7 @@
                         <!-- <i class="fa-solid fa-heart"></i> -->
                         Add to wishlist
                     </a>
-                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}{% if digital_download_enabled %}?format=digital_download{% endif %}">
                 </form>
             </div>
         </div>

@@ -722,10 +722,6 @@ Example of quantity buttons - including minus button being disabled when quantit
 
 https://user-images.githubusercontent.com/94783808/193417216-dadbc24b-03eb-4289-951e-ef7a96cd49bc.mp4
 
-Example of digital download changing pricing
-
-https://user-images.githubusercontent.com/94783808/193417184-39d894cb-5fe2-42e5-8290-d66b9f6489db.mp4
-
 **Track listing**
 
 ![Track listing example](/docs/readme/features/shop-track-listing.png)
@@ -797,8 +793,7 @@ Bugs for this project can be found within the project's 'Issues' tab - for ease,
 | #4 |  Album info table not ordering items properly when there are 10 or more items  | [Link to issue #4](https://github.com/Samoftheforrest/forrest-records/issues/4) | :white_check_mark: |
 | #5 | 'Sale' tag displays above dropdown menus  | [Link to issue #5](https://github.com/Samoftheforrest/forrest-records/issues/5) | :white_check_mark: |
 | #6 | Quantity buttons' disabled state  | [Link to issue #6](https://github.com/Samoftheforrest/forrest-records/issues/6) | :white_check_mark: |
-| #7 | Page error when trying to add digital download item to basket  | [Link to issue #7](https://github.com/Samoftheforrest/forrest-records/issues/7) | :white_check_mark: |
-| #8 | Title  | [Link to issue #8]() |  |
+| #7 | Title  | [Link to issue #7]() |  |
 
 ## Deployment
 

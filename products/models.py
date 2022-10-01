@@ -175,12 +175,6 @@ class Album(Product):
         null=True,
         blank=True)
 
-    digital_download_price = models.DecimalField(
-        max_digits=6,
-        decimal_places=2,
-        null=True,
-        blank=True)
-
     def __str__(self):
         return self.name
 
@@ -193,17 +187,6 @@ class Album(Product):
                 (float(self.price) * settings.SALE_PERCENTAGE), 2)
 
         return self.price
-    
-    def calculate_download_price(self):
-        """
-        Calculate the sale price of a digital download.
-        """
-        if self.digital_download:
-            new_price = round(
-                (float(
-                    self.digital_download_price) * settings.SALE_PERCENTAGE), 2)
-        
-        return new_price
 
 
 class Song(models.Model):
