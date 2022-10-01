@@ -103,4 +103,24 @@
             margin-top: 7.5rem;
         }
     }
+
+    // individual blog pages
+    &-single {
+        font-size: 2rem;
+        padding-bottom: 15rem;
+
+        @media screen and (min-width: $lg) {
+            padding-bottom: 5rem;
+        }
+
+        a {
+            color: $color-red;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
 }

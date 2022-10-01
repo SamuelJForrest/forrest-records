@@ -677,6 +677,22 @@ table {
   font-weight: 600;
   margin-top: 7.5rem;
 }
+.blog-single {
+  font-size: 2rem;
+  padding-bottom: 15rem;
+}
+@media screen and (min-width: 992px) {
+  .blog-single {
+    padding-bottom: 5rem;
+  }
+}
+.blog-single a {
+  color: #ef4444;
+  text-decoration: none;
+}
+.blog-single a:hover, .blog-single a:focus {
+  text-decoration: underline;
+}
 
 .product {
   color: #18181b;
