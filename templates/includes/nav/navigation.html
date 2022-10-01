@@ -25,7 +25,7 @@
                     <li class="nav-list-item">
                         <span>
                             <i class="fa-solid fa-basket-shopping position-relative">
-                                <span class="basket-quantity">
+                                <span class="basket-quantity {% if product_count < 1 %}d-none{% endif %}">
                                     {% if product_count > 9 %}
                                         9+
                                     {% else %}
@@ -35,11 +35,25 @@
                             </i>
                         </span>
                         <ul class="__basket">
-                            {% for item in bag_items %}
-                                {% include 'includes/nav/basket-menu-item.html' %}
-                            {% endfor %}
-                            <a href="{% url 'view_bag' %}" class="button w-100 mt-3">View basket</a>
-                            <a href="#" class="button w-100 mt-3">Proceed to checkout</a>
+                            {% if product_count > 0 %}
+                                {% for item in bag_items %}
+                                    {% include 'includes/nav/basket-menu-item.html' %}
+                                {% endfor %}
+                                <div class="total d-flex justify-content-between">
+                                    <p>Total:</p>
+                                    <span>£{{ total }}</span>
+                                </div>
+                                <!-- @TODO: update delivery logic -->
+                                <!-- <div class="delivery d-flex justify-content-between">
+                                    <p>Delivery:</p>
+                                    <span>£{{ delivery }}</span>
+                                </div> -->
+                                <a href="{% url 'view_bag' %}" class="button w-100 mt-3">View basket</a>
+                                <a href="#" class="button w-100 mt-3">Proceed to checkout</a>
+                            {% else %}
+                                <p class="empty-basket">Your basket is currently empty</p>
+                                <a href="{% url 'products' %}" class="button w-100 mt-3">See products</a>
+                            {% endif %}
                         </ul>
                     </li>
                 </ul>

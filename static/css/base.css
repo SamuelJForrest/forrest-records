@@ -360,6 +360,25 @@ table {
 .nav-list-item > ul.__basket p.mt-auto {
   font-size: 1.6rem;
 }
+.nav-list-item > ul.__basket p.empty-basket {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+.nav-list-item > ul.__basket .total,
+.nav-list-item > ul.__basket .delivery {
+  padding: 1rem 1rem;
+}
+.nav-list-item > ul.__basket .total p,
+.nav-list-item > ul.__basket .delivery p {
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+.nav-list-item > ul.__basket .total span,
+.nav-list-item > ul.__basket .delivery span {
+  padding: 0;
+  color: #18181b;
+}
 .nav-list-item > ul.__basket .scroll {
   position: fixed;
   right: 15px;

@@ -203,6 +203,27 @@
                         &.mt-auto {
                             font-size: 1.6rem;
                         }
+
+                        &.empty-basket {
+                            text-align: center;
+                            font-size: 2rem;
+                            padding: 1rem 0;
+                        }
+                    }
+
+                    .total,
+                    .delivery {
+                        padding: 1rem 1rem;
+
+                        p {
+                            font-weight: 700;
+                            font-size: 2.4rem;
+                        }
+
+                        span {
+                            padding: 0;
+                            color: $color-black;
+                        }
                     }
 
                     .scroll {
