@@ -26,12 +26,16 @@
                     <h1>{{ product.name }}</h1>
                     <div class="d-flex align-items-end">
 
-                        <!-- merch pricing logic -->
                         {% if product.merch.has_sizes %}
+                            
+                            <!-- merch pricing logic -->
                             {% include 'products/includes/merch-sale-logic.html' %}
+
                         {% else %}
+                            
                             <!-- album pricing logic (including digital download sale )-->
                             {% include 'products/includes/album-sale-logic.html' %}
+
                         {% endif %}
 
                     </div>
@@ -86,25 +90,36 @@
                     </div>
                 {% endif %}
 
-                {% if not digital_download_enabled %}
-                    <div class="product-quantity d-flex justify-content-start align-items-center">
-                        <button>
-                            <i class="fa-solid fa-minus"></i>
-                        </button>
-                        <span>1</span>
-                        <button>
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
-                    </div>
-                {% endif %}
+                <form action="">
+                    {% if not digital_download_enabled %}
+                        <div class="product-quantity d-flex justify-content-start align-items-center">
+                            <button class="qty-btn minus-btn">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <input type="number" id="quantity" name="quantity" value="1" min="1" max="99">
+                            <button class="qty-btn plus-btn">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="product-quantity d-flex justify-content-start align-items-center">
+                            <button class="qty-btn minus-btn">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <input type="number" id="quantity" name="quantity" value="1" min="1" max="99">
+                            <button class="qty-btn plus-btn">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    {% endif %}
 
-                <a href="#" class="button me-3">Add to basket</a>
-                <a href="#" class="product-wishlist">
-                    <i class="fa-regular fa-heart"></i>
-                    <!-- @TODO: add logic to show filled heart when item is part of wishlist -->
-                    <!-- <i class="fa-solid fa-heart"></i> -->
-                    Add to wishlist
-                </a>
+                    <input type="submit" class="button me-3" value="Add to basket">
+                    <a href="#" class="product-wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                        <!-- @TODO: add logic to show filled heart when item is part of wishlist -->
+                        <!-- <i class="fa-solid fa-heart"></i> -->
+                        Add to wishlist
+                    </a>
+                </form>
             </div>
         </div>
     </div>
@@ -139,4 +154,6 @@
             });
         });
     </script>
+
+    {% include 'products/includes/quantity-input-script.html' %}
 {% endblock %}

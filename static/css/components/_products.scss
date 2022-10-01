@@ -90,11 +90,6 @@
     }
 
     &-quantity {
-        button,
-        span {
-            margin-right: 1.6rem;
-        }
-
         button {
             border: none;
             width: 3.6rem;
@@ -108,11 +103,27 @@
             &:focus {
                 background: darken($color-red, 10%);
             }
+
+            &[disabled] {
+                opacity: 0.5;
+
+                &:hover {
+                    cursor: not-allowed;
+                }
+            }
         }
         
-        span {
+        input {
             @extend .h5;
             margin-bottom: 0;
+            text-align: center;
+            border: none;
+            -moz-appearance: textfield;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
         }
 
         i {            
