@@ -99,9 +99,11 @@
             border-radius: .4rem;
             transition: all $fast;
 
-            &:hover,
-            &:focus {
-                background: darken($color-red, 10%);
+            &:not([disabled]) {
+                &:hover,
+                &:focus {
+                    background: darken($color-red, 10%);
+                }
             }
 
             &[disabled] {

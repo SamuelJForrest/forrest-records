@@ -23,12 +23,22 @@
                         </ul>
                     </li>
                     <li class="nav-list-item">
-                        <a href="#"><i class="fa-solid fa-basket-shopping position-relative"><span class="basket-quantity">1</span></i></a>
+                        <span>
+                            <i class="fa-solid fa-basket-shopping position-relative">
+                                <span class="basket-quantity">
+                                    {% if product_count > 9 %}
+                                        9+
+                                    {% else %}
+                                        {{ product_count }}
+                                    {% endif %}
+                                </span>
+                            </i>
+                        </span>
                         <ul class="__basket">
-                            {% for i in '012345'|make_list %}
+                            {% for item in bag_items %}
                                 {% include 'includes/nav/basket-menu-item.html' %}
                             {% endfor %}
-                            <a href="#" class="button w-100 mt-3">View basket</a>
+                            <a href="{% url 'view_bag' %}" class="button w-100 mt-3">View basket</a>
                             <a href="#" class="button w-100 mt-3">Proceed to checkout</a>
                         </ul>
                     </li>

@@ -1,17 +1,17 @@
-<a href="#" class="basket-menu-item">
+<a href="{% url 'product_detail' item.product.id %}" class="basket-menu-item">
     <div class="container px-0">
         <div class="row {% if forloop.first %} __first {% endif %}">
-            <div class="col-4 __border">
-                <img src="https://via.placeholder.com/150" alt="" class="w-100 h-100">
+            <div class="col-4 basket-menu-item-image">
+                <img src="{{ item.product.image_url }}" alt="" class="">
             </div>
             <div class="col-lg-6 d-flex flex-column">
-                <h2>Name (size)</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.</p>
-                <p class="mt-auto">£99</p>
+                <h2>{{ item.product.name }}</h2>
+                <p>{{ item.product.description|truncatewords:10 }}</p>
+                <p class="mt-auto">{{ item.product.price }}</p>
             </div>
             <div class="col-lg-2">
                 <h2 class="text-center">Qty</h2>
-                <p class="text-center">1</p>
+                <p class="text-center">{{ item.quantity }}</p>
             </div>
         </div>
     </div>

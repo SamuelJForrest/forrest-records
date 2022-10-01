@@ -345,7 +345,7 @@ table {
 }
 .nav-list-item > ul.__basket h2 {
   font-size: 1.6rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.4rem;
 }
 .nav-list-item > ul.__basket p {
   font-size: 1rem;
@@ -383,6 +383,13 @@ table {
 }
 .nav-list-item > ul.__basket .basket-menu-item {
   border-radius: 4px;
+}
+.nav-list-item > ul.__basket .basket-menu-item-image {
+  height: 7.5rem;
+}
+.nav-list-item > ul.__basket .basket-menu-item-image img {
+  width: 100%;
+  height: 100%;
 }
 .nav-list-item > ul.__basket .basket-menu-item .row {
   border-bottom: 1px solid #d4d4d8;
@@ -779,7 +786,7 @@ table {
   border-radius: 0.4rem;
   transition: all 0.3s;
 }
-.product-quantity button:hover, .product-quantity button:focus {
+.product-quantity button:not([disabled]):hover, .product-quantity button:not([disabled]):focus {
   background: #eb1515;
 }
 .product-quantity button[disabled] {

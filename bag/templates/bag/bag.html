@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block extra_title %}
+ - Basket
+{% endblock %}
+
+{% block page_header %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
+                    <h1>{{ page_title }}</h1>
+                </div>
+            </div>
+        </div>
+    </div> 
+{% endblock %}
+
+{% block content %}
+<div class="basket">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+            <h2 class="h4">Your order</h2>
+            {% for item in bag_items %}
+                {% include 'bag/includes/bag-item.html' %}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+
+    {% include 'products/includes/quantity-input-script.html' %}
+
+{% endblock %}
