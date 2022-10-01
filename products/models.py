@@ -1,4 +1,5 @@
 import math
+from django.conf import settings
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 
@@ -188,7 +189,8 @@ class Album(Product):
         Calculate the sale price of the product.
         """
         if self.on_sale:
-            new_price = math.floor(float(self.price) * 0.8)
+            new_price = round(
+                (float(self.price) * settings.SALE_PERCENTAGE), 2)
 
         return new_price
     
@@ -197,7 +199,9 @@ class Album(Product):
         Calculate the sale price of a digital download.
         """
         if self.digital_download:
-            new_price = math.floor(float(self.digital_download_price) * 0.8)
+            new_price = round(
+                (float(
+                    self.digital_download_price) * settings.SALE_PERCENTAGE), 2)
         
         return new_price
 
@@ -268,6 +272,7 @@ class Merch(Product):
         new_price = None
 
         if self.on_sale:
-            new_price = math.floor(float(self.price) * 0.8)
+            new_price = round(
+                (float(self.price) * settings.SALE_PERCENTAGE), 2)
 
         return new_price
