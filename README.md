@@ -647,13 +647,78 @@ When the user visits the blog area of the site, they are initially directed to t
 
 Once a user clicks the blog of their choice, they are redirected to the page for that individual blog post. This page includes a breadcrumb which allows you to return to the main blog listing page.
 
-**Individual Blog Page**
+##### Individual Blog Page
 ![Individual blog](/docs/readme/features/blog-single.png)
 
 I also installed an additional pip package - [ckeditor](https://django-ckeditor.readthedocs.io/en/latest/) - to allow any admin who is writing a blog to do so using a rich text field. I decided to take this approach as I found this way ensured that any formatting present in the blog post was present on the page; it also allowed for authors to include relevant links, images, tables, etc.
 
 **Edit Blog (Admin Page)**
 ![Edit blog](/docs/readme/features/blog-admin.png)
+
+#### Feature 4: Shop pages
+
+![Shop page](/docs/readme/features/shop-page.png)
+
+When the user visits the shop area of the site, they are directed to a list of all products - although it is also possible to navigate to album/merchandise-only pages through the navigation.
+
+**Sale tag**
+
+![Sale tag](/docs/readme/features/shop-sale-item.png)
+
+If an item is on sale (meaning `on_sale=True` in the backend), a red flag displays on the item to reflect this. Also, the new price is shown next to the original price to show the user the deal they are getting.
+
+**Digital download tag**
+
+![Digital download tag](/docs/readme/features/shop-digital-download.png)
+
+If an album is also available for digital download, this is reflected in the products list by the 'digital download available' tag at the bottom of the item - next to the product type.
+
+**Filter**
+
+![Shop filter](/docs/readme/features/shop-filter.png)
+
+On the main shop page, there are options to sort the products based upon certain criteria (e.g. price, name, etc).
+
+**Search**
+
+The user is also given the ability to search for items within the shop by clicking the floating search icon in the bottom-right corner of the page. However, on mobile - to free up screen real estate - the search bar is included within the main mobile menu.
+
+##### Individual Product Pages
+
+Once a user has found the product they wish to view on the main shop page, they can click through into the individual pages, which have the following features:
+
+**Product information**
+
+Merch version
+
+![Merch information](/docs/readme/features/shop-merch-info.png)
+
+Album version
+
+![Album information](/docs/readme/features/shop-album-info.png)
+
+This section shows the following information about the product:
+- Name
+- Image
+- Artist
+- Description
+- Sizes (if product type is merch)
+- Digital download (if product type is album)
+- Quantity selector
+
+This section also includes the 'Add to wishlist button'
+
+**Track listing**
+
+![Track listing example](/docs/readme/features/shop-track-listing.png)
+
+On the album pages, the user is also shown the track listing of the album they are currently viewing - ordered by track number. However, if there is no tracklist for this album, the following displays:
+
+![Empty track list example](/docs/readme//features/shop-track-listing-empty.png)
+
+**Related items**
+
+If there are any other products available from the same artist the user is viewing, they will be shown as related products at the bottom of the page. However, this list is limited to four items.
 
 ### Features to be Implemented
 1. Tours: Add a section to the site which allows user's to search/buy tickets for an artist of their choice's tour.
