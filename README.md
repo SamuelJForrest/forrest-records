@@ -742,6 +742,12 @@ Example
 
 https://user-images.githubusercontent.com/94783808/193417227-3881e82b-cbb9-4a43-9eb8-1691eaaece4a.mp4
 
+#### Feature 5: Artists Page
+
+![Artists Page](/docs/readme/features/artists-page.png)
+
+From the "Shop" menu in the navigation, the user can also navigate to the Artists page. This page shows a list of all artists on the site, arranged alphabetically. Each artist name is a link that leads the user to a filtered version of the shop page that shows products by the artists they have selected only.
+
 ### Features to be Implemented
 1. Tours: Add a section to the site which allows user's to search/buy tickets for an artist of their choice's tour.
 2. Membership: Add a means for users to sign up for a paid membership, which gives them access to perks such as pre-release sales and free shipping.
