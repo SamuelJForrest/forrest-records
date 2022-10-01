@@ -679,9 +679,19 @@ If an album is also available for digital download, this is reflected in the pro
 
 On the main shop page, there are options to sort the products based upon certain criteria (e.g. price, name, etc).
 
+Example
+
+https://user-images.githubusercontent.com/94783808/193417101-ccf8aca8-5f3e-4402-8ae3-7c708a45f6f3.mp4
+
 **Search**
 
 The user is also given the ability to search for items within the shop by clicking the floating search icon in the bottom-right corner of the page. However, on mobile - to free up screen real estate - the search bar is included within the main mobile menu.
+
+Examples
+
+https://user-images.githubusercontent.com/94783808/193417155-2ab2ad6f-1aa0-4579-9395-8d3299d55a61.mp4
+
+https://user-images.githubusercontent.com/94783808/193417158-3d08cf78-236e-4223-82dc-1612bfdaa797.mp4
 
 ##### Individual Product Pages
 
@@ -708,6 +718,14 @@ This section shows the following information about the product:
 
 This section also includes the 'Add to wishlist button'
 
+Example of quantity buttons - including minus button being disabled when quantity reaches 1
+
+https://user-images.githubusercontent.com/94783808/193417216-dadbc24b-03eb-4289-951e-ef7a96cd49bc.mp4
+
+Example of digital download changing pricing
+
+https://user-images.githubusercontent.com/94783808/193417184-39d894cb-5fe2-42e5-8290-d66b9f6489db.mp4
+
 **Track listing**
 
 ![Track listing example](/docs/readme/features/shop-track-listing.png)
@@ -719,6 +737,10 @@ On the album pages, the user is also shown the track listing of the album they a
 **Related items**
 
 If there are any other products available from the same artist the user is viewing, they will be shown as related products at the bottom of the page. However, this list is limited to four items.
+
+Example
+
+https://user-images.githubusercontent.com/94783808/193417227-3881e82b-cbb9-4a43-9eb8-1691eaaece4a.mp4
 
 ### Features to be Implemented
 1. Tours: Add a section to the site which allows user's to search/buy tickets for an artist of their choice's tour.
