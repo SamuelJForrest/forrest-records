@@ -421,6 +421,9 @@ table {
   padding-bottom: 0.6rem;
   border-bottom: none;
 }
+.nav-list-item > ul.__basket .basket-menu-item p.__red {
+  color: #ef4444;
+}
 .nav-list-item > ul.__submenu > li a {
   padding: 1.8rem 2.4rem;
   color: #18181b;

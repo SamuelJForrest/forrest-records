@@ -189,10 +189,10 @@ class Album(Product):
         Calculate the sale price of the product.
         """
         if self.on_sale:
-            new_price = round(
+            self.price = round(
                 (float(self.price) * settings.SALE_PERCENTAGE), 2)
 
-        return new_price
+        return self.price
     
     def calculate_download_price(self):
         """
@@ -269,10 +269,9 @@ class Merch(Product):
         """
         Calculate the sale price of the product.
         """
-        new_price = None
 
         if self.on_sale:
-            new_price = round(
+            self.price = round(
                 (float(self.price) * settings.SALE_PERCENTAGE), 2)
 
-        return new_price
+        return self.price

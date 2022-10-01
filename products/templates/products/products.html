@@ -29,6 +29,7 @@
                             <option value="genre_asc">Genre (A-Z)</option>
                             <option value="genre_desc">Genre (Z-A)</option>
                         {% endif %}
+                        <option value="sale_desc" {% if current_sorting == 'sale_desc'%}selected{% endif %}>Sales</option>
                     </select>
                 </div>
             </div>

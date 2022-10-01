@@ -25,11 +25,11 @@
                     <li class="nav-list-item">
                         <span>
                             <i class="fa-solid fa-basket-shopping position-relative">
-                                <span class="basket-quantity {% if product_count < 1 %}d-none{% endif %}">
-                                    {% if product_count > 9 %}
+                                <span class="basket-quantity {% if not bag_items %}d-none{% endif %}">
+                                    {% if bag_items|length > 9 %}
                                         9+
                                     {% else %}
-                                        {{ product_count }}
+                                        {{ bag_items|length }}
                                     {% endif %}
                                 </span>
                             </i>

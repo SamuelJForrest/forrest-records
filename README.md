@@ -756,6 +756,7 @@ From the "Shop" menu in the navigation, the user can also navigate to the Artist
 5. Limited edition tag: Similar to the 'sale' and 'featured' tag - add in another, different colour, tag to show that an album is limited edition/collectable.
 6. Individual song pages: allow users to purchase, and see information about, individual songs.
 7. Product comments: allow users to add comments on product pages, to leave their feedback.
+8. Low stock tag: Add a tag - similar to the 'sale' and 'featured' tags - that let the user know that an item has low stock; this may encourage more sales if the user doesn't wish to miss the chance to purchase the item.
 
 ## Technologies Used
 

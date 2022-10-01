@@ -31,6 +31,8 @@ def all_products(request):
                 sortkey = 'category__name'
             if sortkey == 'artist':
                 sortkey = 'artist__name'
+            if sortkey == 'sale':
+                sortkey = 'on_sale'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -88,19 +90,10 @@ def product_detail(request, product_id):
                        artist=product.artist).exclude(
                        id=product_id)[:4]
 
-    digital_download_enabled = False
-
-    if request.GET:
-        if 'format' in request.GET:
-            format = request.GET['format']
-            if format == 'digital_download':
-                digital_download_enabled = True
-
     context = {
         'product': product,
         'product_name': product_name,
         'related_products': related_products,
-        'digital_download_enabled': digital_download_enabled,
     }
 
     return render(request, 'products/products-single.html', context)

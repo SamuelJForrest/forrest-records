@@ -7,7 +7,21 @@
             <div class="col-lg-6 d-flex flex-column">
                 <h2>{{ item.product.name }}</h2>
                 <p>{{ item.product.description|truncatewords:10 }}</p>
-                <p class="mt-auto">{{ item.product.price }}</p>
+                {% if item.product.on_sale %}
+                    {% if item.product.merch %}
+                        <p class="mt-auto __red">
+                            £{{ item.product.merch.calculate_sale_price }}
+                        </p>
+                    {% else %}
+                        <p class="mt-auto __red">
+                            £{{ item.product.album.calculate_sale_price }}
+                        </p>
+                    {% endif %}
+                {% else %}
+                    <p class="mt-auto">
+                        £{{ item.product.price }}
+                    </p>
+                {% endif %}
             </div>
             <div class="col-lg-2">
                 <h2 class="text-center">Qty</h2>

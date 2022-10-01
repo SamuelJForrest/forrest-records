@@ -271,6 +271,12 @@
                                         border-bottom: none;
                                     } 
                                 }
+
+                                p {
+                                    &.__red {
+                                        color: $color-red;
+                                    }
+                                }
                             }
                         }
                     }
