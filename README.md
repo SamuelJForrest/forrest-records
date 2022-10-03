@@ -793,7 +793,7 @@ Bugs for this project can be found within the project's 'Issues' tab - for ease,
 | #4 |  Album info table not ordering items properly when there are 10 or more items  | [Link to issue #4](https://github.com/Samoftheforrest/forrest-records/issues/4) | :white_check_mark: |
 | #5 | 'Sale' tag displays above dropdown menus  | [Link to issue #5](https://github.com/Samoftheforrest/forrest-records/issues/5) | :white_check_mark: |
 | #6 | Quantity buttons' disabled state  | [Link to issue #6](https://github.com/Samoftheforrest/forrest-records/issues/6) | :white_check_mark: |
-| > | <strong>Issues 7 and 8 removed as they are no longer relevant</strong> |
+| <strong>Issues 7 and 8 removed as they are no longer relevant</strong> | | | |
 | #9 | Sales prices displaying incorrectly when more than one size added to basket | [Link to issue #9](https://github.com/Samoftheforrest/forrest-records/issues/9) | :white_check_mark: |
 
 ## Deployment
