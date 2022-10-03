@@ -795,6 +795,7 @@ Bugs for this project can be found within the project's 'Issues' tab - for ease,
 | #6 | Quantity buttons' disabled state  | [Link to issue #6](https://github.com/Samoftheforrest/forrest-records/issues/6) | :white_check_mark: |
 | | <strong>Issues 7 and 8 removed as they are no longer relevant</strong> | | |
 | #9 | Sales prices displaying incorrectly when more than one size added to basket | [Link to issue #9](https://github.com/Samoftheforrest/forrest-records/issues/9) | :white_check_mark: |
+| #10 | Basket remove button removing all sizes of same item | [Link to issue #10](https://github.com/Samoftheforrest/forrest-records/issues/10) | :white_check_mark: |
 
 ## Deployment
 
