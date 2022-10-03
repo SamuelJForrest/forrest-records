@@ -1,26 +1,41 @@
-<div class="basketitem mb-5">
+<div class="basket-item mb-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <div class="basketimage">
+                <div class="basket-item-image mb-3 mb-lg-0">
                     <img src="{{ item.product.image_url }}" alt="" class="w-100">
                 </div>
             </div>
-            <div class="col-lg-8 d-flex flex-column align-items-start">
-                <h3>{{ item.product.name }}</h3>
-                <a href="{% url 'products' %}?artist={{ item.product.artist.name }}">{{ item.product.artist.friendly_name }}</a>
-                <div class="product-quantity d-flex justify-content-start align-items-center mt-auto">
-                    <button class="qty-btn minus-btn">
-                        <i class="fa-solid fa-minus"></i>
-                    </button>
-                    <input type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
-                    <button class="qty-btn plus-btn">
-                        <i class="fa-solid fa-plus"></i>
-                    </button>
+            <div class="col-lg-8">
+                <div class="basket-item-wrap d-flex flex-column align-items-start">
+
+                    <h3 class="basket-item-title">{{ item.product.name }}</h3>
+
+                    <span class="basket-item-price">£{{ item.product.price }}</span>
+
+                    <a href="{% url 'products' %}?artist={{ item.product.artist.name }}" class="basket-item-artist">{{ item.product.artist.friendly_name }}</a>
+
+                    {% if item.product.merch.has_sizes %}
+                        <p class="basket-item-size">
+                            {{ item.size }}
+                        </p>
+                    {% endif %}
+
+                    <p class="basket-item-qty">Quantity:</p>
+                    <div class="product-quantity d-flex justify-content-start align-items-center">
+                        <button class="qty-btn minus-btn">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                        <button class="qty-btn plus-btn">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <input type="submit" value="Update" class="basket-item-update">
+
+                    <button class="basket-item-remove">Remove</button>
                 </div>
-                <input type="submit" value="Update">
-                <span>{{ item.product.price }}</span>
-                <button class="remove-btn">Remove</button>
             </div>
         </div>
     </div>

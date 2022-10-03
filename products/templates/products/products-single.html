@@ -68,21 +68,21 @@
                     <p>{{ product.description }}</p>
                 </div>
 
-                {% if product.merch.has_sizes %}
-                    <div class="product-sizes">
-                        <h2 class="h5">Sizes</h2>
-                        <select name="sizes" id="sizes">
-                            <option value="xs">XS</option>
-                            <option value="sm">S</option>
-                            <option value="m" selected>M</option>
-                            <option value="l">L</option>
-                            <option value="xl">XL</option>
-                        </select>
-                    </div>
-                {% endif %}
-
                 <form action="{% url 'add_to_bag' product.id %}" method="POST">
-                    {% csrf_token %}
+                {% csrf_token %}
+                    {% if product.merch.has_sizes %}
+                        <div class="product-sizes">
+                            <h2 class="h5">Sizes</h2>
+                            <select name="product_size" id="id_product_size">
+                                <option value="xs">XS</option>
+                                <option value="sm">S</option>
+                                <option value="m" selected>M</option>
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                            </select>
+                        </div>
+                    {% endif %}
+
                     <div class="product-quantity d-flex justify-content-start align-items-center {% if digital_download_enabled %}d-none{% endif %}">
                         <button class="qty-btn minus-btn">
                             <i class="fa-solid fa-minus"></i>

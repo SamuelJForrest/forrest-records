@@ -10,20 +10,37 @@ def bag_contents(request):
     product_count = 0
     bag = request.session.get('bag', {})
 
-    for item_id, quantity in bag.items():
-        product = get_object_or_404(Product, pk=item_id)
-        sale_price = round(
+    for item_id, item_data in bag.items():
+        if isinstance(item_data, int):
+            product = get_object_or_404(Product, pk=item_id)
+            sale_price = round(
                 (Decimal(product.price) * Decimal(settings.SALE_PERCENTAGE)), 2)
-        if product.on_sale:
-            total += quantity * sale_price
+            if product.on_sale:
+                total += item_data * sale_price
+            else:
+                total += item_data * product.price
+            product_count += item_data
+            bag_items.append({
+                'item_id': item_id,
+                'quantity': item_data,
+                'product': product,
+            })
         else:
-            total += quantity * product.price
-        product_count += quantity
-        bag_items.append({
-            'item_id': item_id,
-            'quantity': quantity,
-            'product': product,
-        })
+            product = get_object_or_404(Product, pk=item_id)
+            for size, quantity in item_data['items_by_size'].items():
+                sale_price = round(
+                (Decimal(product.price) * Decimal(settings.SALE_PERCENTAGE)), 2)
+                if product.on_sale:
+                    total += quantity * sale_price
+                else:
+                    total += quantity * product.price
+                product_count += quantity
+                bag_items.append({
+                    'item_id': item_id,
+                    'quantity': quantity,
+                    'product': product,
+                    'size': size,
+                })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE/100)
@@ -38,10 +55,10 @@ def bag_contents(request):
         "bag_items": bag_items,
         "total": total,
         "product_count": product_count,
-        "delivery": delivery,
+        "delivery": round(delivery, 2),
         "free_delivery_delta": free_delivery_delta,
         "free_delivery_threshold": settings.FREE_DELIVERY_THRESHOLD,
-        "grand_total": grand_total
+        "grand_total": round(grand_total, 2)
     }
 
     return context

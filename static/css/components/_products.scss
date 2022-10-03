@@ -54,7 +54,8 @@
         margin-top: auto;
     }
 
-    &-download {
+    &-download,
+    &-has-sizes {
         font-size: 1rem;
         margin-left: .3rem;
     }
@@ -135,8 +136,7 @@
         }
     }
 
-    &-sizes,
-    &-format {
+    &-sizes {
         select {
             @extend %select;
         }
@@ -144,8 +144,7 @@
 
     &-info,
     &-sizes,
-    &-quantity,
-    &-format {
+    &-quantity {
         margin-bottom: 2rem;
     }
 

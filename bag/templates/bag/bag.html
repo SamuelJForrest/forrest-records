@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
+                <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end mb-3 mb-lg-5">
                     <h1>{{ page_title }}</h1>
                 </div>
             </div>
@@ -17,17 +17,50 @@
 {% endblock %}
 
 {% block content %}
-<div class="basket">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-            <h2 class="h4">Your order</h2>
-            {% for item in bag_items %}
-                {% include 'bag/includes/bag-item.html' %}
-            {% endfor %}
+<div class="basket {% if product_count < 1 %}__empty{% endif %}">
+    {% if product_count > 0 %}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="h4 mb-3 mb-lg-5">Your order</h2>
+                    {% for item in bag_items %}
+                        {% include 'bag/includes/bag-item.html' %}
+                    {% endfor %}
+                </div>
+
+                <div class="col-lg-3 offset-lg-1">
+                    <h2 class="h4 mb-3 mb-lg-5">Summary</h2>
+                    <div class="basket-summary">
+                        <div class="basket-summary-item">
+                            <h3 class="basket-summary-item-title">Subtotal</h3>
+                            <p>£{{ total }}</p>
+                        </div>
+                        <div class="basket-summary-item">
+                            <h3 class="basket-summary-item-title">Postage</h3>
+                            <p>£{{ delivery }}</p>
+                        </div>
+                        <div class="basket-summary-item __total">
+                            <h3 class="basket-summary-item-title">Total</h3>
+                            <p>£{{ grand_total }}</p>
+                        </div>
+                    </div>
+                    <a href="#" class="button w-100 text-center mt-3">Proceed to checkout</a>
+                </div>
             </div>
         </div>
-    </div>
+    {% else %}
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="basket-icon">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </div>
+                    <h2 class="h5 mb-5">Your basket is currently empty</h2>
+                    <a href="{% url 'products' %}" class="button">Return to products</a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
 </div>
 {% endblock %}
 

@@ -78,6 +78,9 @@
                                 {% if product.album.digital_download %}
                                     <span class="product-download">- Digital download available</span>
                                 {% endif %}
+                                {% if product.merch.has_sizes %}
+                                    <span class="product-has-sizes">- Sizes available</span>
+                                {% endif %}
                             </span>
                             <span class="product-btn"><i class="fa-solid fa-arrow-right-long"></i></span>
                         </div>
