@@ -159,3 +159,31 @@ h6,
         text-decoration: underline;
     }
 }
+
+.message-container {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    
+    .toast {
+
+        &-header {
+            @extend .h5;
+            
+            color: $color-white;
+            background: $color-red;
+            padding: 1.2rem;
+        }
+
+        &-body {
+            font-size: 1.6rem;
+            padding: 1.2rem;
+        }
+
+        .btn-close {
+            height: .5rem;
+            width: .5rem;
+        }
+    }
+}

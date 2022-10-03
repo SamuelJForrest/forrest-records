@@ -1205,6 +1205,7 @@ h4,
 .product-detail-price,
 h5,
 .h5,
+.message-container .toast-header,
 .basket-item-title,
 .nav-list-item,
 .product-quantity input,
@@ -1278,6 +1279,7 @@ h4,
 
 h5,
 .h5,
+.message-container .toast-header,
 .basket-item-title,
 .nav-list-item,
 .product-quantity input,
@@ -1287,6 +1289,7 @@ h5,
 @media screen and (min-width: 992px) {
   h5,
 .h5,
+.message-container .toast-header,
 .basket-item-title,
 .nav-list-item,
 .product-quantity input,
@@ -1347,4 +1350,24 @@ h6,
 .backlink:hover, .backlink:focus {
   color: #ef4444;
   text-decoration: underline;
+}
+
+.message-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+}
+.message-container .toast-header {
+  color: #f8fafc;
+  background: #ef4444;
+  padding: 1.2rem;
+}
+.message-container .toast-body {
+  font-size: 1.6rem;
+  padding: 1.2rem;
+}
+.message-container .toast .btn-close {
+  height: 0.5rem;
+  width: 0.5rem;
 }/*# sourceMappingURL=base.css.map */

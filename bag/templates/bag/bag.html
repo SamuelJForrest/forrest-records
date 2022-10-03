@@ -86,9 +86,7 @@
             let size = $(this).data('product_size');
             let url = `/bag/remove/${itemId}/`;
             let data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
-
-            console.log(url, data)
-
+            
             $.post(url, data)
             .done(function() {
                 location.reload();

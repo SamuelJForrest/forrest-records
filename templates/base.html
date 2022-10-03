@@ -62,16 +62,28 @@
         {% endblock %}
     </header>
 
-    {% block page_header %}
+    {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+                {% include 'includes/toasts/toast.html' %}
+            {% endfor %}
+        </div>
+    {% endif %}
 
+    {% block page_header %}
     {% endblock %}
 
     {% block content %}
-        
     {% endblock %}
 
     {% block scripts %}
         {% include 'includes/nav/nav-script.html' %}
+
+        <script>
+            $('.toast').each(function(i, item){
+                new bootstrap.Toast(item).show();
+            });
+        </script>
     {% endblock %}
     
 </body>

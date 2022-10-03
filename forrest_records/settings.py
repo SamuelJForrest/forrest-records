@@ -82,6 +82,8 @@ TEMPLATES = [
     },
 ]
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
 """
 NOTE: this only needs to be included once allauth has been installed
 """

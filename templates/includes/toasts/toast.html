@@ -1,0 +1,20 @@
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+        {% with message.level as level %}
+            {% if level == 40 %}
+                <strong class="me-auto"><i class="fa-solid fa-circle-exclamation"></i> Error!</strong>
+            {% elif level == 30 %}
+                <strong class="me-auto"><i class="fa-solid fa-triangle-exclamation"></i> Warning!</strong>
+            {% elif level == 25 %}
+                <strong class="me-auto"><i class="fa-regular fa-circle-check"></i> Success!</strong>
+            {% else %}
+                <strong class="me-auto"><i class="fa-solid fa-circle-info"></i> Info</strong>
+            {% endif %}
+        {% endwith %}
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close">
+        </button>
+    </div>
+    <div class="toast-body">
+        {{ message }}
+    </div>
+</div>
