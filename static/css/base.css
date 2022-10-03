@@ -219,14 +219,21 @@ table {
   background: none;
   border: none;
   padding: 0;
+  text-decoration: none;
+  color: #18181b;
+}
+.basket-item-update:hover, .basket-item-update:focus {
+  color: #18181b;
 }
 .basket-item-remove {
   position: absolute;
   bottom: 0;
   right: 0;
   color: #ef4444;
-  background: none;
-  border: none;
+  text-decoration: none;
+}
+.basket-item-remove:hover, .basket-item-remove:focus {
+  color: #ef4444;
 }
 .basket-item-qty {
   margin-top: auto;

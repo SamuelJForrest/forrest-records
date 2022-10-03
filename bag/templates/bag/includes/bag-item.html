@@ -31,20 +31,26 @@
                         </p>
                     {% endif %}
 
-                    <p class="basket-item-qty">Quantity:</p>
-                    <div class="product-quantity d-flex justify-content-start align-items-center">
-                        <button class="qty-btn minus-btn">
-                            <i class="fa-solid fa-minus"></i>
-                        </button>
-                        <input type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
-                        <button class="qty-btn plus-btn">
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
-                    </div>
+                    <form action="{% url 'adjust_bag' item.product.id %}" method="POST" class="basket-item-form mt-auto">
+                        {% csrf_token %}
+                        <p class="basket-item-qty">Quantity:</p>
+                        <div class="product-quantity d-flex justify-content-start align-items-center">
+                            <button class="qty-btn minus-btn">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <input type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                            <button class="qty-btn plus-btn">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                        
+                        {% if item.product.merch.has_sizes %}
+                            <input type="hidden" name="product_size" value="{{ item.size }}">
+                        {% endif %}
 
-                    <input type="submit" value="Update" class="basket-item-update">
-
-                    <button class="basket-item-remove">Remove</button>
+                        <a href="" class="basket-item-update">Update</a>
+                        <a href="" class="basket-item-remove" id="remove_{{ item.product.id }}" data-product-size="{{ item.size }}">Remove</a>
+                    </form>
                 </div>
             </div>
         </div>
