@@ -109,7 +109,7 @@
             position: relative;
 
             a,
-            span:not(.basket-quantity, .scroll) {
+            span:not(.basket-quantity, .scroll, .size) {
                 color: $color-white;
                 text-decoration: none;
                 display: inline-block;
@@ -183,8 +183,15 @@
                     }
 
                     h2 {
-                        font-size: 1.6rem;
+                        font-size: 1.2rem;
                         margin-bottom: 0.4rem;
+
+                        span {
+                            text-transform: uppercase;
+                            color: $color-black;
+                            font-size: 1rem;
+                            font-weight: 400;
+                        }
                     }
 
                     p {

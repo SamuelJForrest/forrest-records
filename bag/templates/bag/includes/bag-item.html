@@ -11,7 +11,17 @@
 
                     <h3 class="basket-item-title">{{ item.product.name }}</h3>
 
-                    <span class="basket-item-price">£{{ item.product.price }}</span>
+                    {% if item.product.on_sale %}
+                        <span class="basket-item-price">
+                            {% if item.product.merch.sale_price %}
+                                {{ item.product.merch.sale_price }}
+                            {% else %}
+                                {{ item.product.album.sale_price }}
+                            {% endif %}
+                        </span>
+                    {% else %}
+                        <span class="basket-item-price">£{{ item.product.price }}</span>
+                    {% endif %}
 
                     <a href="{% url 'products' %}?artist={{ item.product.artist.name }}" class="basket-item-artist">{{ item.product.artist.friendly_name }}</a>
 

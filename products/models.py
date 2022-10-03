@@ -183,10 +183,10 @@ class Album(Product):
         Calculate the sale price of the product.
         """
         if self.on_sale:
-            self.price = round(
+            self.sale_price = round(
                 (float(self.price) * settings.SALE_PERCENTAGE), 2)
 
-        return self.price
+        return self.sale_price
 
 
 class Song(models.Model):
@@ -254,7 +254,7 @@ class Merch(Product):
         """
 
         if self.on_sale:
-            self.price = round(
+            self.sale_price = round(
                 (float(self.price) * settings.SALE_PERCENTAGE), 2)
 
-        return self.price
+        return self.sale_price

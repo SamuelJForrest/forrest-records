@@ -527,7 +527,7 @@ table {
   position: relative;
 }
 .nav-list-item a,
-.nav-list-item span:not(.basket-quantity, .scroll) {
+.nav-list-item span:not(.basket-quantity, .scroll, .size) {
   color: #f8fafc;
   text-decoration: none;
   display: inline-block;
@@ -535,7 +535,7 @@ table {
 }
 @media screen and (min-width: 992px) {
   .nav-list-item a,
-.nav-list-item span:not(.basket-quantity, .scroll) {
+.nav-list-item span:not(.basket-quantity, .scroll, .size) {
     padding: 4rem 3rem;
   }
 }
@@ -589,8 +589,14 @@ table {
   text-align: center;
 }
 .nav-list-item > ul.__basket h2 {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   margin-bottom: 0.4rem;
+}
+.nav-list-item > ul.__basket h2 span {
+  text-transform: uppercase;
+  color: #18181b;
+  font-size: 1rem;
+  font-weight: 400;
 }
 .nav-list-item > ul.__basket p {
   font-size: 1rem;

@@ -5,7 +5,11 @@
                 <img src="{{ item.product.image_url }}" alt="" class="">
             </div>
             <div class="col-lg-6 d-flex flex-column">
-                <h2>{{ item.product.name }}</h2>
+                <h2>{{ item.product.name }}
+                    {% if item.size %}
+                        <span class="size">({{ item.size }})</span>
+                    {% endif %}
+                </h2>
                 <p>{{ item.product.description|truncatewords:10 }}</p>
                 {% if item.product.on_sale %}
                     {% if item.product.merch %}
