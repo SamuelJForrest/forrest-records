@@ -14,9 +14,9 @@
                     {% if item.product.on_sale %}
                         <span class="basket-item-price">
                             {% if item.product.merch.sale_price %}
-                                {{ item.product.merch.sale_price }}
+                                £{{ item.product.merch.sale_price }}
                             {% else %}
-                                {{ item.product.album.sale_price }}
+                                £{{ item.product.album.sale_price }}
                             {% endif %}
                         </span>
                     {% else %}
