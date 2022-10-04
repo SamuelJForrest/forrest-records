@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block extra_title %}
+ - Checkout
+{% endblock %}
+
+{% block page_header %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end mb-3 mb-lg-5">
+                    <h1>{{ page_title }}</h1>
+                </div>
+            </div>
+        </div>
+    </div> 
+{% endblock %}
+
+{% block content %}
+<div class="checkout">
+    <form action="{% url 'checkout' %}" method="POST" id="payment-form" class="checkout-form">
+    <div class="container">
+        <div class="row">
+                {% csrf_token %}
+                <div class="col-lg-8">
+                    <fieldset class="form-details mb-5">
+                        <legend>Details</legend>
+                        {{ order_form.full_name | as_crispy_field }}
+                        {{ order_form.email | as_crispy_field }}
+                    </fieldset>
+                    <fieldset class="form-details">
+                        <legend>Delivery</legend>
+                        {{ order_form.address1 | as_crispy_field }}
+                        {{ order_form.address2 | as_crispy_field }}
+                        {{ order_form.town_or_city | as_crispy_field }}
+                        {{ order_form.postcode | as_crispy_field }}
+                        {{ order_form.county | as_crispy_field }}
+                        {{ order_form.country | as_crispy_field }}
+                        {{ order_form.phone_number | as_crispy_field }}
+                        
+                        {% if user.is_authenticated %}
+                            <div class="checkout-checkbox-wrap">
+                                <div class="checkout-checkbox">
+                                    <input type="checkbox" name="save-info" id="id-save-info" checked>
+                                </div>
+                                <label for="id-save-info">Save this delivery information to my profile</label>
+                            </div>
+                        {% else %}
+                            <label for="id-save-info">
+                                <a href="#">Create an account</a> or
+                                <a href="#">Login</a> to save this information
+                            </label>
+                        {% endif %}
+
+                    </fieldset>
+                </div>
+                <div class="col-lg-4 d-flex flex-column">
+                    <fieldset class="form-payment">
+                        <legend>Payment</legend>
+
+                        <!-- A Stripe card element will go here -->
+                        <div id="card-element"></div>
+
+                        <!-- Used to display form errors -->
+                        <div id="card-errors" role="alert"></div>
+                    </fieldset>
+
+                    <div class="d-flex flex-column align-items-center mt-auto">
+                        <a href="{% url 'view_bag' %}" class="backlink text-center mb-4">
+                            Back to basket
+                        </a>
+                        <button id="submit-button" class="button w-75 mb-4">
+                            Complete order
+                        </button>
+                        <p class="checkout-price">
+                            <span class="icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </span>
+                            <span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{% endblock %}

@@ -275,11 +275,11 @@ table {
   align-items: center;
 }
 .basket.__empty .basket-icon i {
-  font-size: 8.5rem;
-  background: #18181b;
+  font-size: 10rem;
+  background: #ef4444;
   color: #f8fafc;
-  height: 15rem;
-  width: 15rem;
+  height: 20rem;
+  width: 20rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -436,6 +436,86 @@ table {
   padding: 1rem 2rem;
   font-size: 2rem;
   transition: all 0.5s;
+}
+
+.checkout {
+  background-image: linear-gradient(to bottom, #fff 40%, #18181b 40%);
+  padding: 1.6rem 0 15rem 0;
+}
+@media screen and (min-width: 992px) {
+  .checkout {
+    padding: 1.6rem 0 3.2rem 0;
+  }
+}
+.checkout-form fieldset {
+  background: #d4d4d8;
+  border-radius: 0.4rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 992px) {
+  .checkout-form fieldset.form-details {
+    padding: 3rem 5rem;
+    margin-bottom: 0;
+  }
+  .checkout-form fieldset.form-payment {
+    padding: 3rem 4.2rem;
+    margin-bottom: 2.4rem;
+  }
+}
+.checkout-form legend {
+  margin-bottom: 1.6rem;
+}
+.checkout-form label {
+  font-weight: 600;
+}
+.checkout-form input,
+.checkout-form select {
+  font-size: 1.6rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+}
+.checkout-form #card-errors {
+  padding: 2rem 0 0 0;
+  text-align: center;
+  color: #ef4444;
+}
+.checkout-checkbox {
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+}
+.checkout-checkbox-wrap {
+  display: flex;
+  align-items: center;
+  margin-top: 1.6rem;
+}
+.checkout-checkbox input[type=checkbox] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  width: 2rem;
+}
+.checkout-price {
+  color: #f8fafc;
+}
+.checkout-success {
+  font-size: 2rem;
+}
+.checkout-success-icon {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkout-success-icon i {
+  font-size: 16rem;
+  color: #ef4444;
+}
+.checkout-success strong {
+  font-weight: 600;
 }
 
 .header {
@@ -1215,6 +1295,7 @@ h6,
 .basket-item-price,
 .basket-item-update,
 .basket-item-remove,
+.checkout-form legend,
 .product-price,
 .related-item-price {
   font-family: "DM sans";
@@ -1303,6 +1384,7 @@ h6,
 .basket-item-price,
 .basket-item-update,
 .basket-item-remove,
+.checkout-form legend,
 .product-price,
 .related-item-price {
   font-size: 1.6rem;
@@ -1313,6 +1395,7 @@ h6,
 .basket-item-price,
 .basket-item-update,
 .basket-item-remove,
+.checkout-form legend,
 .product-price,
 .related-item-price {
     font-size: 2rem;

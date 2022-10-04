@@ -49,7 +49,7 @@
                                     <span>£{{ delivery }}</span>
                                 </div> -->
                                 <a href="{% url 'view_bag' %}" class="button w-100 mt-3">View basket</a>
-                                <a href="#" class="button w-100 mt-3">Proceed to checkout</a>
+                                <a href="{% url 'checkout' %}" class="button w-100 mt-3">Proceed to checkout</a>
                             {% else %}
                                 <p class="empty-basket">Your basket is currently empty</p>
                                 <a href="{% url 'products' %}" class="button w-100 mt-3">See products</a>

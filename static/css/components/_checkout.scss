@@ -1,0 +1,99 @@
+.checkout {
+    background-image: linear-gradient(to bottom, #fff 40%, $color-black 40%);
+    padding: 1.6rem 0 15rem 0;
+    
+    @media screen and (min-width: $lg) {
+        padding: 1.6rem 0 3.2rem 0;
+    }
+
+    &-form {
+
+        fieldset {
+            background: $color-grey;
+            border-radius: .4rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+
+            @media screen and (min-width: $lg) {
+                &.form-details {
+                    padding: 3rem 5rem;
+                    margin-bottom: 0;
+                }
+                
+                &.form-payment {
+                    padding: 3rem 4.2rem;
+                    margin-bottom: 2.4rem;
+                }
+            }
+        }
+
+        legend {
+            @extend .h6;
+
+            margin-bottom: 1.6rem;
+        }
+
+        label {
+            font-weight: 600;
+        }
+
+        input,
+        select {
+            font-size: 1.6rem;
+            padding: .5rem 1rem;
+            border-radius: .4rem;
+        }
+
+        #card-errors {
+            padding: 2rem 0 0 0;
+            text-align: center;
+            color: $color-red;
+        }
+    }
+
+    &-checkbox {
+        position: relative;
+        height: 2rem;
+        width: 2rem;
+        margin-right: 1rem;
+
+        &-wrap {
+            display: flex;
+            align-items: center;
+            margin-top: 1.6rem;
+        }
+        
+        input[type=checkbox] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 2rem;
+            width: 2rem;
+        }
+    }
+
+    &-price {
+        color: $color-white;
+    }
+
+    // checkout success page
+    &-success {
+        font-size: 2rem;
+        
+        &-icon {
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                font-size: 16rem;
+                color: $color-red;
+            }
+        }
+
+        strong {
+            font-weight: 600;
+        }
+    }
+}

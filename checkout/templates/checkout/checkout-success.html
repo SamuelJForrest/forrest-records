@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block extra_title %}
+ - Basket
+{% endblock %}
+
+{% block page_header %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end mb-3 mb-lg-5">
+                    <h1>{{ page_title }}</h1>
+                </div>
+            </div>
+        </div>
+    </div> 
+{% endblock %}
+
+{% block content %}
+<div class="checkout-success">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-md-auto text-center">
+                <div class="checkout-success-icon">
+                    <i class="fa-regular fa-circle-check"></i>
+                </div>
+                <p class="mb-3">Thank you for shopping with Forrest records <strong>{{ order.full_name }}</strong>!</p>
+                <p class="mb-5">Your order (<strong>{{ order.order_number }}</strong>) is currently being processed, you will receive an email (sent to <strong>{{ order.email }}</strong>) shortly.</p>
+                <a href="{% url 'home' %}" class="button">Back to home</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+{% endblock %}

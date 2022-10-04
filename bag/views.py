@@ -3,6 +3,7 @@ from django.contrib import messages
 
 from products.models import Product
 
+
 def view_bag(request):
     """
     A view that redners the bag contents page.
