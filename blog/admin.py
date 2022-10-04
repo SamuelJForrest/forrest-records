@@ -1,9 +1,11 @@
 from django.contrib import admin
 from .models import BlogPage, Blog
 
-# Register your models here.
 
 class BlogPageAdmin(admin.ModelAdmin):
+    """
+    Blog page admin setup
+    """
     list_display = (
         'title',
         'subtitle',
@@ -14,6 +16,9 @@ class BlogPageAdmin(admin.ModelAdmin):
 
 
 class BlogsAdmin(admin.ModelAdmin):
+    """
+    Individual blogs admin setup
+    """
     list_display = (
         'title',
         'date_published',
@@ -21,6 +26,6 @@ class BlogsAdmin(admin.ModelAdmin):
     )
     ordering = ['-id']
 
+
 admin.site.register(BlogPage, BlogPageAdmin)
 admin.site.register(Blog, BlogsAdmin)
-

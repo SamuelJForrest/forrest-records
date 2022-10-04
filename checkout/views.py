@@ -11,6 +11,9 @@ import stripe
 
 
 def checkout(request):
+    """
+    Handles checkout.
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -61,14 +64,22 @@ def checkout(request):
                     return redirect(reverse('view_bag'))
             
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(
+                reverse('checkout_success', args=[order.order_number])
+            )
         else:
-            messages.error(request, 'There was an error with your form. \
-                Please double check your information.')
+            messages.error(
+                request,
+                'There was an error with your form. \
+                Please double check your information.'
+            )
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(
+                request,
+                "There's nothing in your bag at the moment"
+            )
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
@@ -85,7 +96,8 @@ def checkout(request):
     if not stripe_public_key:
         messages.warning(
             request,
-            'Stripe public key is missing. Did you forget to set it in your environment?')
+            'Stripe public key is missing. \
+            Did you forget to set it in your environment?')
 
     template = 'checkout/checkout.html'
     page_title = 'Checkout'

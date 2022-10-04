@@ -3,7 +3,11 @@ from django.shortcuts import get_object_or_404
 from django.conf import settings
 from products.models import Product
 
+
 def bag_contents(request):
+    """
+    Lists the items that are currently in the bag.
+    """
 
     bag_items = []
     total = 0
@@ -29,7 +33,7 @@ def bag_contents(request):
             product = get_object_or_404(Product, pk=item_id)
             for size, quantity in item_data['items_by_size'].items():
                 sale_price = round(
-                (Decimal(product.price) * Decimal(settings.SALE_PERCENTAGE)), 2)
+                    (Decimal(product.price) * Decimal(settings.SALE_PERCENTAGE)), 2)
                 if product.on_sale:
                     total += quantity * sale_price
                 else:
