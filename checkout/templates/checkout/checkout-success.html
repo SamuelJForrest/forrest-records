@@ -24,8 +24,8 @@
                 <div class="checkout-success-icon">
                     <i class="fa-regular fa-circle-check"></i>
                 </div>
-                <p class="mb-3">Thank you for shopping with Forrest records <strong>{{ order.full_name }}</strong>!</p>
-                <p class="mb-5">Your order (<strong>{{ order.order_number }}</strong>) is currently being processed, you will receive an email (sent to <strong>{{ order.email }}</strong>) shortly.</p>
+                <p class="mb-3">Thank you for shopping with Forrest records, <strong>{{ order.full_name }}</strong>!</p>
+                <p class="mb-5">Your order (<strong class="word-break">{{ order.order_number }}</strong>) is currently being processed, you will receive an email (sent to <strong>{{ order.email }}</strong>) shortly.</p>
                 <a href="{% url 'home' %}" class="button">Back to home</a>
             </div>
         </div>

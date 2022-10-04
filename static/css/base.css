@@ -93,6 +93,10 @@ table {
     opacity: 1;
   }
 }
+.word-break {
+  word-break: break-all;
+}
+
 .homepage-bg-wrap {
   position: relative;
   width: 100%;
@@ -503,6 +507,7 @@ table {
 }
 .checkout-success {
   font-size: 2rem;
+  padding: 2rem 0;
 }
 .checkout-success-icon {
   margin-bottom: 3rem;
