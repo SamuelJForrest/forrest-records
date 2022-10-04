@@ -30,6 +30,9 @@ def add_to_bag(request, item_id):
         size = request.POST['product_size']
     bag = request.session.get('bag', {})
 
+    if quantity > 99:
+        quantity = 99
+
     if size:
         if item_id in list(bag.keys()):
             if size in bag[item_id]['items_by_size'].keys():
@@ -78,6 +81,9 @@ def adjust_bag(request, item_id):
     if 'product_size' in request.POST:
         size = request.POST['product_size']
     bag = request.session.get('bag', {})
+
+    if quantity > 99:
+        quantity = 99
 
     if size:
         if quantity > 0:
