@@ -18,8 +18,14 @@
                     <li class="nav-list-item">
                         <a href="{% url 'profile' %}"><i class="fa-solid fa-user"></i></a>
                         <ul class="__submenu __right">
-                            <li><a href="#">Login/logout</a></li>
-                            <li><a href="{% url 'profile' %}">View profile</a></li>
+                            <li>
+                                {% if user.is_authenticated %}
+                                    <a href="/accounts/logout">Logout</a>
+                                    <li><a href="{% url 'profile' %}">View profile</a></li>
+                                {% else %}
+                                    <a href="/accounts/login">Login</a>
+                                {% endif %}
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-list-item">

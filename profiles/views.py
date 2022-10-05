@@ -7,7 +7,7 @@ def profile(request):
     """
     Renders profile page
     """
-    page_title = 'Username'
+    page_title = 'My Profile'
 
     context = {
         'page_title': page_title
