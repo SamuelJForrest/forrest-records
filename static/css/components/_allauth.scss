@@ -1,0 +1,33 @@
+.allauth {
+    &-form {
+        &-inner {
+            &-content {
+                @extend .checkout-form;
+
+                background: $color-grey;
+                border-radius: .4rem;
+                padding: 2rem;
+                margin-bottom: 2rem;
+
+                label {
+                    margin-bottom: .5rem;
+                }
+
+                a {
+                    color: $color-red;
+
+                    &:hover,
+                    &:focus {
+                        color: $color-red;
+                    }
+                }
+
+                input {
+                    &[type=checkbox] {
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

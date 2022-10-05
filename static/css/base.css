@@ -171,6 +171,25 @@ table {
   color: #ef4444;
 }
 
+.allauth-form-inner-content {
+  background: #d4d4d8;
+  border-radius: 0.4rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.allauth-form-inner-content label {
+  margin-bottom: 0.5rem;
+}
+.allauth-form-inner-content a {
+  color: #ef4444;
+}
+.allauth-form-inner-content a:hover, .allauth-form-inner-content a:focus {
+  color: #ef4444;
+}
+.allauth-form-inner-content input[type=checkbox] {
+  padding: 1rem;
+}
+
 .basket {
   padding-bottom: 15rem;
 }
@@ -451,35 +470,36 @@ table {
     padding: 1.6rem 0 3.2rem 0;
   }
 }
-.checkout-form fieldset {
+.checkout-form fieldset, .allauth-form-inner-content fieldset {
   background: #d4d4d8;
   border-radius: 0.4rem;
   padding: 2rem;
   margin-bottom: 2rem;
 }
 @media screen and (min-width: 992px) {
-  .checkout-form fieldset.form-details {
+  .checkout-form fieldset.form-details, .allauth-form-inner-content fieldset.form-details {
     padding: 3rem 5rem;
     margin-bottom: 0;
   }
-  .checkout-form fieldset.form-payment {
+  .checkout-form fieldset.form-payment, .allauth-form-inner-content fieldset.form-payment {
     padding: 3rem 4.2rem;
     margin-bottom: 2.4rem;
   }
 }
-.checkout-form legend {
+.checkout-form legend, .allauth-form-inner-content legend {
   margin-bottom: 1.6rem;
 }
-.checkout-form label {
+.checkout-form label, .allauth-form-inner-content label {
   font-weight: 600;
 }
-.checkout-form input,
-.checkout-form select {
+.checkout-form input, .allauth-form-inner-content input,
+.checkout-form select,
+.allauth-form-inner-content select {
   font-size: 1.6rem;
   padding: 0.5rem 1rem;
   border-radius: 0.4rem;
 }
-.checkout-form #card-errors {
+.checkout-form #card-errors, .allauth-form-inner-content #card-errors {
   padding: 2rem 0 0 0;
   text-align: center;
   color: #ef4444;
@@ -1301,6 +1321,7 @@ h6,
 .basket-item-update,
 .basket-item-remove,
 .checkout-form legend,
+.allauth-form-inner-content legend,
 .product-price,
 .related-item-price {
   font-family: "DM sans";
@@ -1390,6 +1411,7 @@ h6,
 .basket-item-update,
 .basket-item-remove,
 .checkout-form legend,
+.allauth-form-inner-content legend,
 .product-price,
 .related-item-price {
   font-size: 1.6rem;
@@ -1401,6 +1423,7 @@ h6,
 .basket-item-update,
 .basket-item-remove,
 .checkout-form legend,
+.allauth-form-inner-content legend,
 .product-price,
 .related-item-price {
     font-size: 2rem;
