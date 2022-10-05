@@ -177,6 +177,9 @@ table {
   padding: 2rem;
   margin-bottom: 2rem;
 }
+.allauth-form-inner-content input {
+  font-size: 1.6rem;
+}
 .allauth-form-inner-content label {
   margin-bottom: 0.5rem;
 }
@@ -188,6 +191,9 @@ table {
 }
 .allauth-form-inner-content input[type=checkbox] {
   padding: 1rem;
+}
+.allauth-form-inner-content .form-check-label {
+  transform: translate(5px, 50%);
 }
 
 .basket {
@@ -1221,6 +1227,15 @@ table {
   border-radius: 4px;
   z-index: 1;
   text-transform: uppercase;
+}
+
+.profile input,
+.profile select {
+  font-size: 1.6rem;
+  padding: 0.5rem 1rem;
+}
+.profile .order-history a {
+  color: #ef4444;
 }
 
 .related-item:hover .related-item-image::before, .related-item:focus .related-item-image::before {

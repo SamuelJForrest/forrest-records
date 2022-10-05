@@ -9,6 +9,10 @@
                 padding: 2rem;
                 margin-bottom: 2rem;
 
+                input {
+                    font-size: 1.6rem;
+                }
+
                 label {
                     margin-bottom: .5rem;
                 }
@@ -25,6 +29,14 @@
                 input {
                     &[type=checkbox] {
                         padding: 1rem;
+                    }
+                }
+
+                .form {
+                    &-check {
+                        &-label {
+                            transform: translate(5px, 50%);
+                        }
                     }
                 }
             }

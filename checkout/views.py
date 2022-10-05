@@ -155,9 +155,8 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    Handles successful checkouts
+    Handle successful checkouts
     """
-
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
@@ -192,8 +191,8 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout-success.html'
     page_title = 'Success!'
     context = {
+        'page_title': page_title,
         'order': order,
-        'page_title': page_title
     }
 
     return render(request, template, context)

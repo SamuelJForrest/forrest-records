@@ -1,0 +1,13 @@
+.profile {
+    input,
+    select {
+        font-size: 1.6rem;
+        padding: .5rem 1rem;
+    }
+
+    .order-history {
+        a {
+            color: $color-red;
+        }
+    }
+}
