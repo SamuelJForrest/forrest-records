@@ -560,11 +560,11 @@ table {
   font-size: 1.6rem;
 }
 
-.inbox a {
+.inbox a:not(.button) {
   color: #ef4444;
   text-decoration: none;
 }
-.inbox a:hover, .inbox a:focus {
+.inbox a:not(.button):hover, .inbox a:not(.button):focus {
   text-decoration: underline;
 }
 .inbox label {

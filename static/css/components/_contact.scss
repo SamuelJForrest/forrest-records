@@ -14,7 +14,7 @@
 }
 
 .inbox {
-    a {
+    a:not(.button) {
         color: $color-red;
         text-decoration: none;
 

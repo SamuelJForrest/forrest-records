@@ -50,8 +50,11 @@ def inbox(request):
             queries = Q(
                 name__icontains=query) | Q(
                     message__icontains=query)
-            inbox_items = inbox_items.filter(queries)
-
+            if len(inbox_items.filter(queries)) > 0:
+                inbox_items = inbox_items.filter(queries)
+            else:
+                messages.error(request, 'Your search returned no results - please try again.')
+                return redirect(reverse('inbox'))
 
     template = 'contact/inbox.html'
     context = {
