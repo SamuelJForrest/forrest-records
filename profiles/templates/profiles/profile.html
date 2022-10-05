@@ -33,16 +33,16 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
-                <p>Default Delivery Information</p>
+            <div class="col-lg-5">
+                <h3 class="h5">Default Delivery Information</h3>
                 <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
                     <button class="button">Update</button>
                 </form>
             </div>
-            <div class="col-lg-6">
-                <p>Your orders</p>
+            <div class="col-lg-6 offset-lg-1">
+                <h3 class="h5">Your orders</p>
                 <div class="order-history table-responsive">
                     <table class="table table-sm table-borderless">
                         <thead>
