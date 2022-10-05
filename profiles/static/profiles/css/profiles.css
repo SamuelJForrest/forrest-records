@@ -1,0 +1,17 @@
+#profile-update-form input::placeholder {
+    color: grey !important;
+}
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #18181b;
+}
+
+#id_default_country option:first-child {
+    color: grey;
+}
+
+.order-history {
+    max-height: 41.6rem;
+    overflow-y: auto;
+}

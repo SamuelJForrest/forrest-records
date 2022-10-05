@@ -23,7 +23,8 @@
                                     <a href="/accounts/logout">Logout</a>
                                     <li><a href="{% url 'profile' %}">View profile</a></li>
                                 {% else %}
-                                    <a href="/accounts/login">Login</a>
+                                    <a href="{% url 'account_login' %}">Login</a>
+                                    <a href="{% url 'account_signup' %}">Register</a>
                                 {% endif %}
                             </li>
                         </ul>
