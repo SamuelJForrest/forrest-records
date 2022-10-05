@@ -476,36 +476,37 @@ table {
     padding: 1.6rem 0 3.2rem 0;
   }
 }
-.checkout-form fieldset, .allauth-form-inner-content fieldset {
+.checkout-form fieldset, .contact form fieldset, .allauth-form-inner-content fieldset {
   background: #d4d4d8;
   border-radius: 0.4rem;
   padding: 2rem;
   margin-bottom: 2rem;
 }
 @media screen and (min-width: 992px) {
-  .checkout-form fieldset.form-details, .allauth-form-inner-content fieldset.form-details {
+  .checkout-form fieldset.form-details, .contact form fieldset.form-details, .allauth-form-inner-content fieldset.form-details {
     padding: 3rem 5rem;
     margin-bottom: 0;
   }
-  .checkout-form fieldset.form-payment, .allauth-form-inner-content fieldset.form-payment {
+  .checkout-form fieldset.form-payment, .contact form fieldset.form-payment, .allauth-form-inner-content fieldset.form-payment {
     padding: 3rem 4.2rem;
     margin-bottom: 2.4rem;
   }
 }
-.checkout-form legend, .allauth-form-inner-content legend {
+.checkout-form legend, .contact form legend, .allauth-form-inner-content legend {
   margin-bottom: 1.6rem;
 }
-.checkout-form label, .allauth-form-inner-content label {
+.checkout-form label, .contact form label, .allauth-form-inner-content label {
   font-weight: 600;
 }
-.checkout-form input, .allauth-form-inner-content input,
+.checkout-form input, .contact form input, .allauth-form-inner-content input,
 .checkout-form select,
+.contact form select,
 .allauth-form-inner-content select {
   font-size: 1.6rem;
   padding: 0.5rem 1rem;
   border-radius: 0.4rem;
 }
-.checkout-form #card-errors, .allauth-form-inner-content #card-errors {
+.checkout-form #card-errors, .contact form #card-errors, .allauth-form-inner-content #card-errors {
   padding: 2rem 0 0 0;
   text-align: center;
   color: #ef4444;
@@ -547,6 +548,32 @@ table {
 }
 .checkout-success strong {
   font-weight: 600;
+}
+
+.contact form {
+  background: #d4d4d8;
+  border-radius: 0.4rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.contact form textarea {
+  font-size: 1.6rem;
+}
+
+.inbox a {
+  color: #ef4444;
+  text-decoration: none;
+}
+.inbox a:hover, .inbox a:focus {
+  text-decoration: underline;
+}
+.inbox label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.inbox input {
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
 }
 
 .header {
@@ -1337,6 +1364,7 @@ h6,
 .basket-item-remove,
 .checkout-form legend,
 .allauth-form-inner-content legend,
+.contact form legend,
 .product-price,
 .related-item-price {
   font-family: "DM sans";
@@ -1427,6 +1455,7 @@ h6,
 .basket-item-remove,
 .checkout-form legend,
 .allauth-form-inner-content legend,
+.contact form legend,
 .product-price,
 .related-item-price {
   font-size: 1.6rem;
@@ -1439,6 +1468,7 @@ h6,
 .basket-item-remove,
 .checkout-form legend,
 .allauth-form-inner-content legend,
+.contact form legend,
 .product-price,
 .related-item-price {
     font-size: 2rem;

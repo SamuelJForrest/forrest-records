@@ -1,0 +1,36 @@
+.contact {
+    form {
+        @extend .checkout-form;
+
+        background: $color-grey;
+        border-radius: .4rem;
+        padding: 2rem;
+        margin-bottom: 2rem;
+
+        textarea {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.inbox {
+    a {
+        color: $color-red;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    label {
+        font-weight: 600;
+        margin-bottom: .5rem;
+    }
+
+    input {
+        padding: .5rem 1rem;
+        font-size: 1.6rem;
+    }
+}

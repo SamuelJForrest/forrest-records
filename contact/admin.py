@@ -1,7 +1,5 @@
 from django.contrib import admin
-from .models import ContactPage
-
-# Register your models here.
+from .models import ContactPage, Message
 
 
 class ContactPageAdmin(admin.ModelAdmin):
@@ -17,4 +15,17 @@ class ContactPageAdmin(admin.ModelAdmin):
         return False
 
 
+class MessageAdmin(admin.ModelAdmin):
+    """
+    Admin settings from messages.
+    """
+    list_display = (
+        'name',
+        'id',
+        'email',
+        'message'
+    )
+
+
 admin.site.register(ContactPage, ContactPageAdmin)
+admin.site.register(Message, MessageAdmin)

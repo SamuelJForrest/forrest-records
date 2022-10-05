@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block extra_title %}
+- Message from: {{ inbox_item.name }}
+{% endblock %}
+
+{% block breadcrumb %}
+<div class="breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="{% url 'inbox' %}" class="d-flex align-items-center"><i class="fa-solid fa-chevron-left"></i>
+                    Back to inbox</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_header %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
+                    <h1>{{ inbox_item.name }}</h1>
+                    <span>Received: {{ inbox_item.date_sent }}</span>
+                </div>
+            </div>
+        </div>
+    </div> 
+{% endblock %}
+
+{% block content %}
+    <section class="message">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="message-email mb-4">
+                        <h2 class="h6">Sent from:</h2>
+                        <p>{{ inbox_item.email }}</p>
+                    </div>
+                    <div class="message-text">
+                        <h2 class="h6">Message:</h2>
+                        <p>{{ inbox_item.message }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

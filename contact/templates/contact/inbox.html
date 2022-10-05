@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block extra_title %}
+- Contact
+{% endblock %}
+
+{% block page_header %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
+                    <h1>Inbox</h1>
+                    <span>Showing {{ inbox_items|length }} messages</span>
+                </div>
+            </div>
+        </div>
+    </div> 
+{% endblock %}
+
+{% block content %}
+    <section class="inbox">
+        <div class="container">
+            <div class="row">
+                {% if inbox_items %}
+                    <div class="col-lg-10 mx-lg-auto d-flex justify-content-between align-items-center">
+                        <form action="{% url 'inbox' %}" method="GET" class="d-flex flex-column align-items-start mb-5">
+                            <label for="message-search">Search messages</label>
+                            <input type="text" name="message-search" id="message-search">
+                        </form>
+                        <a href="{% url 'inbox' %}" class="backlink">Reset</a>
+                    </div>
+                    <div class="col-lg-10 mx-lg-auto">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th class="h6">Name</th>
+                                        <th class="h6">Date</th>
+                                        <th class="h6">Email</th>
+                                        <th class="h6">Message</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for item in inbox_items %}
+                                    <tr>
+                                        <td>
+                                            <a href="{% url 'view_single_message' item.id %}">
+                                                {{ item.name }}
+                                            </a>
+                                        </td>
+                                        <td>
+                                            {{ item.date_sent }}
+                                        </td>
+                                        <td>
+                                            {{ item.email }}
+                                        </td>
+                                        <td title="{{ item.message }}">
+                                            {{ item.message|truncatechars:50 }}
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="col text-center">
+                        <p class="h5 mb-3">Your inbox is empty, hooray!</p>
+                        <a href="{% url 'home' %}" class="button">Return to homepage</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
