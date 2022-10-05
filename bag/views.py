@@ -67,7 +67,6 @@ def add_to_bag(request, item_id):
                 f'Added {product.name} to your bag'
             )
 
-    print(bag)
     request.session['bag'] = bag
     return redirect(redirect_url)
 
