@@ -185,6 +185,14 @@ h6,
             height: .5rem;
             width: .5rem;
         }
+
+        &.__success {
+            .toast {
+                &-header {
+                    background: $color-green;
+                }
+            }
+        }
     }
 }
 

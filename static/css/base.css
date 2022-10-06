@@ -544,7 +544,9 @@ table {
 }
 .checkout-success-icon i {
   font-size: 16rem;
-  color: #ef4444;
+  background: #f8fafc;
+  color: #3CB35A;
+  border-radius: 50%;
 }
 .checkout-success strong {
   font-weight: 600;
@@ -1067,7 +1069,7 @@ table {
   margin-top: auto;
 }
 .product-download, .product-has-sizes {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-left: 0.3rem;
 }
 .product-artist {
@@ -1289,6 +1291,14 @@ table {
   text-transform: uppercase;
 }
 
+.adjust-product {
+  padding-bottom: 15rem;
+}
+@media screen and (min-width: 992px) {
+  .adjust-product {
+    padding-bottom: 5rem;
+  }
+}
 .delete-product strong {
   font-weight: 600;
   color: #ef4444;
@@ -1316,6 +1326,11 @@ table {
 }
 .profile .order-history table {
   min-width: 75rem;
+}
+@media screen and (min-width: 992px) {
+  .profile .order-history table {
+    min-width: 0;
+  }
 }
 
 .related-item:hover .related-item-image::before, .related-item:focus .related-item-image::before {
@@ -1579,6 +1594,9 @@ h6,
 .message-container .toast .btn-close {
   height: 0.5rem;
   width: 0.5rem;
+}
+.message-container .toast.__success .toast-header {
+  background: #3CB35A;
 }
 
 .base-form, .adjust-product form, .delete-product {

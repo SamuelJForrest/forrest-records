@@ -18,6 +18,10 @@
 
         table {
             min-width: 75rem;
+
+            @media screen and (min-width: $lg) {
+                min-width: 0;
+            }
         }
     }
 }

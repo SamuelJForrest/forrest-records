@@ -56,8 +56,9 @@
 
     &-download,
     &-has-sizes {
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-left: .3rem;
+        // font-style: italic;
     }
 
     &-artist {
@@ -344,6 +345,12 @@
 
 // adjust product pages
 .adjust-product {
+    padding-bottom: 15rem;
+
+    @media screen and (min-width: $lg) {
+        padding-bottom: 5rem;
+    }
+
     form {
         @extend .base-form;
     }
