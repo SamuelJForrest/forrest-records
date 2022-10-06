@@ -94,7 +94,7 @@ def artist_warning(request, artist_id):
 
     page_title = 'Warning!'
     artist = get_object_or_404(Artist, pk=artist_id)
-    template = 'products/warning.html'
+    template = 'includes/warning/warning.html'
     context = {
         'page_title': page_title,
         'artist': artist

@@ -243,7 +243,7 @@ def album_warning(request, album_id):
 
     page_title = 'Warning!'
     album = get_object_or_404(Album, pk=album_id)
-    template = 'products/warning.html'
+    template = 'includes/warning/warning.html'
     context = {
         'page_title': page_title,
         'album': album,
@@ -275,7 +275,7 @@ def merch_warning(request, merch_id):
 
     page_title = 'Warning!'
     merch = get_object_or_404(Merch, pk=merch_id)
-    template = 'products/warning.html'
+    template = 'includes/warning/warning.html'
     context = {
         'page_title': page_title,
         'merch': merch,

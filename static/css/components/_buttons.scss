@@ -37,3 +37,24 @@
     font-size: 2rem;
     transition: all $mid;
 }
+
+.crud-btn {
+    height: 3rem;
+    width: 3rem;
+    background: $color-red;
+    color: $color-white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-left: 1.2rem;
+    text-decoration: none;
+    transition: all $fast;
+
+    &:hover,
+    &:focus {
+        color: $color-white;
+        background: darken($color-red, 5%);
+    }
+}

@@ -131,3 +131,21 @@
         }
     }
 }
+
+.add,
+.edit {
+    &-blog {
+        form {
+            @extend .base-form;
+            
+            >div {
+                display: flex;
+                flex-direction: column;
+
+                &#div_id_content {
+                    overflow-x: auto;
+                }
+            }
+        }
+    }
+}

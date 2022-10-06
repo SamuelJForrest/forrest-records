@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block extra_title %}
+ - {{ page_title }}
+{% endblock %}
+
+{% block breadcrumb %}
+<div class="breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="{% url 'blog' %}" class="d-flex align-items-center"><i class="fa-solid fa-chevron-left"></i>
+                    Back to blog</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_header %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
+                <div class="d-flex align-items-center">
+                    <h1>{{ page_title }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="edit-blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-lg-auto">
+                <form action="{% url 'edit_blog' blog.id %}" method="POST">
+                    {% csrf_token %}
+                    {{ form.media }}
+                    {{ form|crispy }}
+                    <button class="button mt-3">{{ page_title }}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,13 +1,13 @@
 from django import forms
-from .models import Artist
+from .models import Blog
 
 
-class ArtistForm(forms.ModelForm):
+class BlogForm(forms.ModelForm):
     """
-    Creates an artist form
+    Creates a blog form
     """
     class Meta:
-        model = Artist
+        model = Blog
         fields = '__all__'
 
     def __init__(self, *args, **kwargs):

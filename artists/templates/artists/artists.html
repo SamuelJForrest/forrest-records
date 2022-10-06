@@ -12,7 +12,7 @@
                 <div class="d-flex align-items-center">
                     <h1>Artists</h1>
                     {% if user.is_superuser %}
-                        <a href="{% url 'add_artist' %}" class="product-add" title="Add an artist">
+                        <a href="{% url 'add_artist' %}" class="crud-btn" title="Add an artist">
                             <i class="fa-solid fa-plus"></i>
                         </a>
                     {% endif %}

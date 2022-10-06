@@ -458,6 +458,16 @@ table {
   margin-top: 7.5rem;
 }
 
+.add-blog form > div,
+.edit-blog form > div {
+  display: flex;
+  flex-direction: column;
+}
+.add-blog form > div#div_id_content,
+.edit-blog form > div#div_id_content {
+  overflow-x: auto;
+}
+
 .button, .nav-list-item > ul.__basket a.button {
   background: #ef4444;
   color: #f8fafc;
@@ -491,6 +501,25 @@ table {
   padding: 1rem 2rem;
   font-size: 2rem;
   transition: all 0.5s;
+}
+
+.crud-btn {
+  height: 3rem;
+  width: 3rem;
+  background: #ef4444;
+  color: #f8fafc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-left: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.crud-btn:hover, .crud-btn:focus {
+  color: #f8fafc;
+  background: #ed2d2d;
 }
 
 .checkout {
@@ -1175,24 +1204,6 @@ table {
 .product-table td {
   padding: 0.8rem 1rem;
 }
-.product-add, .product-edit, .product-delete {
-  height: 3rem;
-  width: 3rem;
-  background: #ef4444;
-  color: #f8fafc;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  margin-left: 1.2rem;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-.product-add:hover, .product-add:focus, .product-edit:hover, .product-edit:focus, .product-delete:hover, .product-delete:focus {
-  color: #f8fafc;
-  background: #ed2d2d;
-}
 .product-search {
   position: relative;
   border-radius: 4.8rem;
@@ -1569,6 +1580,10 @@ h6,
   }
 }
 
+strong {
+  font-weight: 600;
+}
+
 .page-header {
   padding-bottom: 1rem;
   margin-bottom: 2.3rem;
@@ -1625,34 +1640,46 @@ h6,
   background: #3CB35A;
 }
 
-.base-form, .add-artist form, .adjust-product form, .delete-product {
+.base-form, .add-artist form, .add-blog form,
+.edit-blog form, .adjust-product form, .delete-product {
   background: #d4d4d8;
   border-radius: 0.4rem;
   padding: 2rem;
   margin-bottom: 2rem;
 }
-.base-form input, .add-artist form input, .adjust-product form input, .delete-product input,
+.base-form input, .add-artist form input, .add-blog form input,
+.edit-blog form input, .adjust-product form input, .delete-product input,
 .base-form select,
 .add-artist form select,
+.add-blog form select,
+.edit-blog form select,
 .adjust-product form select,
 .delete-product select,
 .base-form textarea,
 .add-artist form textarea,
+.add-blog form textarea,
+.edit-blog form textarea,
 .adjust-product form textarea,
 .delete-product textarea {
   font-size: 1.6rem;
 }
-.base-form input[type=checkbox], .add-artist form input[type=checkbox], .adjust-product form input[type=checkbox], .delete-product input[type=checkbox],
+.base-form input[type=checkbox], .add-artist form input[type=checkbox], .add-blog form input[type=checkbox],
+.edit-blog form input[type=checkbox], .adjust-product form input[type=checkbox], .delete-product input[type=checkbox],
 .base-form select[type=checkbox],
 .add-artist form select[type=checkbox],
+.add-blog form select[type=checkbox],
+.edit-blog form select[type=checkbox],
 .adjust-product form select[type=checkbox],
 .delete-product select[type=checkbox],
 .base-form textarea[type=checkbox],
 .add-artist form textarea[type=checkbox],
+.add-blog form textarea[type=checkbox],
+.edit-blog form textarea[type=checkbox],
 .adjust-product form textarea[type=checkbox],
 .delete-product textarea[type=checkbox] {
   padding: 1rem;
 }
-.base-form .form-check-label, .add-artist form .form-check-label, .adjust-product form .form-check-label, .delete-product .form-check-label {
+.base-form .form-check-label, .add-artist form .form-check-label, .add-blog form .form-check-label,
+.edit-blog form .form-check-label, .adjust-product form .form-check-label, .delete-product .form-check-label {
   transform: translate(0.5rem, 50%);
 }/*# sourceMappingURL=base.css.map */
