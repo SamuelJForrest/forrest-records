@@ -112,13 +112,6 @@ class Product(models.Model):
         null=True,
         blank=True)
 
-    product_group = models.ForeignKey(
-        'ProductGroup',
-        default=1,
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL)
-
     def __str__(self):
         return self.name
 
