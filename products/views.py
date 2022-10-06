@@ -233,3 +233,67 @@ def edit_merch(request, merch_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def album_warning(request, album_id):
+    """
+    Renders the warning screen before store owner deletes an album
+    """
+
+    page_title = 'Warning!'
+    album = get_object_or_404(Album, pk=album_id)
+    template = 'products/warning.html'
+    context = {
+        'page_title': page_title,
+        'album': album,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_album(request, album_id):
+    """
+    Delete albums
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    album = get_object_or_404(Album, pk=album_id)
+    album.delete()
+    messages.success(request, f'{album.name} has been deleted!')
+    return redirect(reverse('products'))
+
+
+@login_required
+def merch_warning(request, merch_id):
+    """
+    Renders the warning screen before store owner deletes a merch item
+    """
+
+    page_title = 'Warning!'
+    merch = get_object_or_404(Merch, pk=merch_id)
+    template = 'products/warning.html'
+    context = {
+        'page_title': page_title,
+        'merch': merch,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_merch(request, merch_id):
+    """
+    Delete merch
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    merch = get_object_or_404(Merch, pk=merch_id)
+    merch.delete()
+    messages.success(request, f'{merch.name} has been deleted!')
+    return redirect(reverse('products'))

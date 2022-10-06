@@ -175,7 +175,8 @@
     }
 
     &-add,
-    &-edit {
+    &-edit,
+    &-delete {
         height: 3rem;
         width: 3rem;
         background: $color-red;
@@ -187,10 +188,12 @@
         font-size: 1.2rem;
         margin-left: 1.2rem;
         text-decoration: none;
+        transition: all $fast;
 
         &:hover,
         &:focus {
             color: $color-white;
+            background: darken($color-red, 5%);
         }
     }
 
@@ -343,5 +346,20 @@
 .adjust-product {
     form {
         @extend .base-form;
+    }
+}
+
+// delete product warning page
+.delete-product {
+    @extend .base-form;
+
+    strong {
+        font-weight: 600;
+        color: $color-red;
+    }
+
+    a:not(.button) {
+        color: $color-red;
+        text-decoration: none;
     }
 }

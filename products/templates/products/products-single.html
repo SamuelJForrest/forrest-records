@@ -30,9 +30,15 @@
                                 <a href="{% url 'edit_album' product.id %}" class="product-edit" title="Edit product">
                                     <i class="fa-solid fa-pen"></i>
                                 </a>
+                                <a href="{% url 'album_warning' product.id %}" class="product-delete" title="Delete product">
+                                    <i class="fa-solid fa-trash"></i>                                
+                                </a>
                             {% else %}
                                 <a href="{% url 'edit_merch' product.id %}" class="product-edit" title="Edit product">
                                     <i class="fa-solid fa-pen"></i>
+                                </a>
+                                <a href="{% url 'merch_warning' product.id %}" class="product-delete" title="Delete product">
+                                    <i class="fa-solid fa-trash"></i>                                
                                 </a>
                             {% endif %}
                         {% endif %}

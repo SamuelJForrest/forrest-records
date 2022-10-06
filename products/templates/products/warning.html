@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block extra_title %}
+- Warning
+{% endblock %}
+
+{% block breadcrumb %}
+<div class="breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                {% if album %}
+                    <a href="{% url 'product_detail' album.id %}" class="d-flex align-items-center"><i class="fa-solid fa-chevron-left"></i>
+                    Back to album</a>
+                {% else %}
+                    <a href="{% url 'product_detail' merch.id %}" class="d-flex align-items-center"><i class="fa-solid fa-chevron-left"></i>
+                    Back to merch</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_header %}
+<div class="adjust-product">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
+                    <h1>{{ page_title }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-lg-auto">
+                <div class="delete-product">
+                    {% if album %}
+                        <h2 class="h4 mb-3">You are about to delete "<a href="{% url 'product_detail' album.id %}">{{ album.name }}</a>"</h2>
+                    {% else %}
+                        <h2 class="h4 mb-3">You are about to delete "<a href="{% url 'product_detail' merch.id %}">{{ merch.name }}</a>"</h2>
+                    {% endif %}
+
+                    <p class="mb-5">Are you sure you wish to continue? This <strong>cannot</strong> be undone.</p>
+                    
+                    {% if album %}
+                        <a href="{% url 'delete_album' album.id %}" class="button me-3">Delete</a>
+                        <a href="{% url 'product_detail' album.id %}" class="backlink">Return to product</a>
+                    {% else %}
+                        <a href="{% url 'delete_merch' merch.id %}" class="button me-3">Delete</a>
+                        <a href="{% url 'product_detail' merch.id %}" class="backlink">Return to product</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+    {% include 'products/includes/quantity-input-script.html' %}
+{% endblock %}

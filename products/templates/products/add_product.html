@@ -41,7 +41,6 @@
                         <button class="button mt-3">{{ page_title }}</button>
                     </form>
                 {% else %}
-                    {{ merch }}
                     <form action="{% url 'add_merch' %}" method="POST">
                         {% csrf_token %}
                         {{ form|crispy }}

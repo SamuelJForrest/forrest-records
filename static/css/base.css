@@ -1147,7 +1147,7 @@ table {
 .product-table td {
   padding: 0.8rem 1rem;
 }
-.product-add, .product-edit {
+.product-add, .product-edit, .product-delete {
   height: 3rem;
   width: 3rem;
   background: #ef4444;
@@ -1159,9 +1159,11 @@ table {
   font-size: 1.2rem;
   margin-left: 1.2rem;
   text-decoration: none;
+  transition: all 0.3s;
 }
-.product-add:hover, .product-add:focus, .product-edit:hover, .product-edit:focus {
+.product-add:hover, .product-add:focus, .product-edit:hover, .product-edit:focus, .product-delete:hover, .product-delete:focus {
   color: #f8fafc;
+  background: #ed2d2d;
 }
 .product-search {
   position: relative;
@@ -1285,6 +1287,15 @@ table {
   border-radius: 4px;
   z-index: 1;
   text-transform: uppercase;
+}
+
+.delete-product strong {
+  font-weight: 600;
+  color: #ef4444;
+}
+.delete-product a:not(.button) {
+  color: #ef4444;
+  text-decoration: none;
 }
 
 .profile {
@@ -1570,26 +1581,30 @@ h6,
   width: 0.5rem;
 }
 
-.base-form, .adjust-product form {
+.base-form, .adjust-product form, .delete-product {
   background: #d4d4d8;
   border-radius: 0.4rem;
   padding: 2rem;
   margin-bottom: 2rem;
 }
-.base-form input, .adjust-product form input,
+.base-form input, .adjust-product form input, .delete-product input,
 .base-form select,
 .adjust-product form select,
+.delete-product select,
 .base-form textarea,
-.adjust-product form textarea {
+.adjust-product form textarea,
+.delete-product textarea {
   font-size: 1.6rem;
 }
-.base-form input[type=checkbox], .adjust-product form input[type=checkbox],
+.base-form input[type=checkbox], .adjust-product form input[type=checkbox], .delete-product input[type=checkbox],
 .base-form select[type=checkbox],
 .adjust-product form select[type=checkbox],
+.delete-product select[type=checkbox],
 .base-form textarea[type=checkbox],
-.adjust-product form textarea[type=checkbox] {
+.adjust-product form textarea[type=checkbox],
+.delete-product textarea[type=checkbox] {
   padding: 1rem;
 }
-.base-form .form-check-label, .adjust-product form .form-check-label {
+.base-form .form-check-label, .adjust-product form .form-check-label, .delete-product .form-check-label {
   transform: translate(0.5rem, 50%);
 }/*# sourceMappingURL=base.css.map */
