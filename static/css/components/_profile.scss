@@ -1,4 +1,10 @@
 .profile {
+    padding-bottom: 10rem;
+
+    @media screen and (min-width: $lg) {
+        padding-bottom: 5rem;
+    }
+
     input,
     select {
         font-size: 1.6rem;
@@ -8,6 +14,10 @@
     .order-history {
         a {
             color: $color-red;
+        }
+
+        table {
+            min-width: 75rem;
         }
     }
 }

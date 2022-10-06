@@ -587,6 +587,9 @@ table {
 .inbox input--webkit-autofill {
   background-color: #fefde5 !important;
 }
+.inbox table {
+  min-width: 100rem;
+}
 
 .header {
   margin-bottom: 2rem;
@@ -1268,6 +1271,14 @@ table {
   text-transform: uppercase;
 }
 
+.profile {
+  padding-bottom: 10rem;
+}
+@media screen and (min-width: 992px) {
+  .profile {
+    padding-bottom: 5rem;
+  }
+}
 .profile input,
 .profile select {
   font-size: 1.6rem;
@@ -1275,6 +1286,9 @@ table {
 }
 .profile .order-history a {
   color: #ef4444;
+}
+.profile .order-history table {
+  min-width: 75rem;
 }
 
 .related-item:hover .related-item-image::before, .related-item:focus .related-item-image::before {
