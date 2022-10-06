@@ -140,3 +140,24 @@ def delete_blog(request, blog_id):
     blog.delete()
     messages.success(request, f'{blog.title} has been deleted!')
     return redirect(reverse('blog'))
+
+
+@login_required
+def feature_blog(request, blog_id):
+    """
+    Sets a blog posts' status to featured
+    """
+    blog_page = BlogPage.objects.get(pk=1)
+    
+    if blog_id == 'None':
+        blog_page.featured_blog = None
+        blog_page.save()
+        return redirect(reverse('blog'))
+
+    blog = get_object_or_404(Blog, pk=blog_id)
+    blog_page = BlogPage.objects.get(pk=1)
+    blog_page.featured_blog = blog
+
+    blog_page.save()
+
+    return redirect(reverse('blog'))
