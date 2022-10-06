@@ -13,7 +13,11 @@
                         {% if not product.on_sale %}
                             £{{ product.price }}
                         {% else %}
-                            £{{ product.calculate_sale_price }}
+                            {% if product.album %}
+                                £{{ product.album.calculate_sale_price }}
+                            {% else %}
+                                £{{ product.merch.calculate_sale_price }}
+                            {% endif %}
                         {% endif %}
                     </span>
                 </div>

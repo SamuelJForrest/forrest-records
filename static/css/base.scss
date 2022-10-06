@@ -187,3 +187,28 @@ h6,
         }
     }
 }
+
+.base-form {
+    background: $color-grey;
+    border-radius: .4rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+
+    input,
+    select,
+    textarea {
+        font-size: 1.6rem;
+
+        &[type=checkbox] {
+            padding: 1rem;
+        }
+    }
+
+    .form {
+        &-check {
+            &-label {
+                transform: translate(.5rem, 50%);
+            }
+        }
+    }
+}

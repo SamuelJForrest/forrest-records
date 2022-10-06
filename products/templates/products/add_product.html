@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block extra_title %}
+- {{ page_title }}
+{% endblock %}
+
+{% block breadcrumb %}
+<div class="breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="{% url 'products' %}" class="d-flex align-items-center"><i class="fa-solid fa-chevron-left"></i>
+                    Back to products</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_header %}
+<div class="adjust-product">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
+                    <h1>{{ page_title }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-lg-auto">
+                {% if album %}
+                    <form action="{% url 'add_album' %}" method="POST">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <button class="button mt-3">{{ page_title }}</button>
+                    </form>
+                {% else %}
+                    {{ merch }}
+                    <form action="{% url 'add_merch' %}" method="POST">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <button class="button mt-3">{{ page_title }}</button>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+    {% include 'products/includes/quantity-input-script.html' %}
+{% endblock %}

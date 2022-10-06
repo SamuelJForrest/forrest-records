@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block extra_title %}
+- Add Product
+{% endblock %}
+
+{% block breadcrumb %}
+<div class="breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                {% if album %}
+                    <a href="{% url 'product_detail' album.id %}" class="d-flex align-items-center"><i class="fa-solid fa-chevron-left"></i>
+                    Back to album</a>
+                {% else %}
+                    <a href="{% url 'product_detail' merch.id %}" class="d-flex align-items-center"><i class="fa-solid fa-chevron-left"></i>
+                    Back to merch</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block page_header %}
+<div class="adjust-product">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
+                    <h1>{{ page_title }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-lg-auto">
+                {% if album %}
+                    <form action="{% url 'edit_album' album.id %}" method="POST">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            {% if field.name != 'image' %}
+                                {{ field | as_crispy_field }}
+                            {% else %}
+                                {{ field }}
+                            {% endif %}
+                        {% endfor %}
+                        <button class="button mt-3">{{ page_title }}</button>
+                    </form>
+                {% else %}
+                    <form action="{% url 'edit_merch' merch.id %}" method="POST">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            {% if field.name != 'image' %}
+                                {{ field | as_crispy_field }}
+                            {% else %}
+                                {{ field }}
+                            {% endif %}
+                        {% endfor %}
+                        <button class="button mt-3">{{ page_title }}</button>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+    {% include 'products/includes/quantity-input-script.html' %}
+{% endblock %}

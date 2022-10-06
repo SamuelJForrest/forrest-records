@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Album, Song
+from .models import Product, Album, Song, Merch
+from .forms import AlbumForm, MerchForm
 from artists.models import Artist
 
 
@@ -97,3 +99,137 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/products-single.html', context)
+
+
+@login_required
+def add_album(request):
+    """
+    Add an album to the store
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    page_title = 'Add Album'
+    album = True
+
+    if request.method == 'POST':
+        form = AlbumForm(request.POST)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to add product. ')
+    else:
+        form = AlbumForm()
+
+    template = 'products/add_product.html'
+    context = {
+        'page_title': page_title,
+        'form': form,
+        'album': album,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def add_merch(request):
+    """
+    Add merch to the store
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    page_title = 'Add Merch'
+    merch = True
+
+    if request.method == 'POST':
+        form = MerchForm(request.POST)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to add product.')
+    else:
+        form = MerchForm()
+
+    template = 'products/add_product.html'
+    context = {
+        'page_title': page_title,
+        'form': form,
+        'merch': merch,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_album(request, album_id):
+    """
+    Edit an album in the store
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    page_title = 'Edit Album'
+    album = get_object_or_404(Album, pk=album_id)
+
+    if request.method == 'POST':
+        form = AlbumForm(request.POST, instance=album)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f'Successfully edited {album.name}')
+            return redirect(reverse('product_detail', args=[album.id]))
+        else:
+            messages.error(request, 'Failed to add product. ')
+    else:
+        form = AlbumForm(instance=album)
+        messages.info(request, f'You are editing {album.name}')
+
+    template = 'products/edit_product.html'
+    context = {
+        'page_title': page_title,
+        'form': form,
+        'album': album
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_merch(request, merch_id):
+    """
+    Edit merch in the store
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    page_title = 'Edit Merch'
+    merch = get_object_or_404(Merch, pk=merch_id)
+
+    if request.method == 'POST':
+        form = MerchForm(request.POST, instance=merch)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f'Successfully edited "{merch.name}"')
+            return redirect(reverse('product_detail', args=[merch.id]))
+        else:
+            messages.error(request, 'Failed to add product.')
+    else:
+        form = MerchForm(instance=merch)
+        messages.info(request, f'You are editing "{merch.name}"')
+
+    template = 'products/edit_product.html'
+    context = {
+        'page_title': page_title,
+        'form': form,
+        'merch': merch
+    }
+
+    return render(request, template, context)

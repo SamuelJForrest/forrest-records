@@ -1147,6 +1147,22 @@ table {
 .product-table td {
   padding: 0.8rem 1rem;
 }
+.product-add, .product-edit {
+  height: 3rem;
+  width: 3rem;
+  background: #ef4444;
+  color: #f8fafc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-left: 1.2rem;
+  text-decoration: none;
+}
+.product-add:hover, .product-add:focus, .product-edit:hover, .product-edit:focus {
+  color: #f8fafc;
+}
 .product-search {
   position: relative;
   border-radius: 4.8rem;
@@ -1552,4 +1568,28 @@ h6,
 .message-container .toast .btn-close {
   height: 0.5rem;
   width: 0.5rem;
+}
+
+.base-form, .adjust-product form {
+  background: #d4d4d8;
+  border-radius: 0.4rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.base-form input, .adjust-product form input,
+.base-form select,
+.adjust-product form select,
+.base-form textarea,
+.adjust-product form textarea {
+  font-size: 1.6rem;
+}
+.base-form input[type=checkbox], .adjust-product form input[type=checkbox],
+.base-form select[type=checkbox],
+.adjust-product form select[type=checkbox],
+.base-form textarea[type=checkbox],
+.adjust-product form textarea[type=checkbox] {
+  padding: 1rem;
+}
+.base-form .form-check-label, .adjust-product form .form-check-label {
+  transform: translate(0.5rem, 50%);
 }/*# sourceMappingURL=base.css.map */
