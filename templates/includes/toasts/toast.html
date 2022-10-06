@@ -1,4 +1,10 @@
-<div class="toast {% if message.level == 25 %}__success{% endif %}" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast
+{% if message.level == 25 %}
+__success
+{% elif message.level < 25 %}
+__info
+{% endif %}" 
+role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
         {% with message.level as level %}
             {% if level == 40 %}

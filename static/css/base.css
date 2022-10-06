@@ -1640,6 +1640,9 @@ strong {
 .message-container .toast.__success .toast-header {
   background: #3CB35A;
 }
+.message-container .toast.__info .toast-header {
+  background: #d4d4d8;
+}
 
 .base-form, .add-artist form, .add-blog form,
 .edit-blog form, .adjust-product form, .delete-product {

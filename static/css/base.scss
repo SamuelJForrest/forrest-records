@@ -197,6 +197,14 @@ strong {
                 }
             }
         }
+
+        &.__info {
+            .toast {
+                &-header {
+                    background: $color-grey;
+                }
+            }
+        }
     }
 }
 
