@@ -12,7 +12,7 @@
                 <div class="d-flex align-items-center">
                     <h1>Artists</h1>
                     {% if user.is_superuser %}
-                        <a href="{% url 'add_artist' %}" class="crud-btn" title="Add an artist">
+                        <a href="{% url 'add_artist' %}" class="crud-btn" data-bs-toggle="tooltip" data-bs-title="Add artist">
                             <i class="fa-solid fa-plus"></i>
                         </a>
                     {% endif %}
@@ -39,11 +39,11 @@
                     {% for artist in artist.list %}
                     <li class="artists-list-item d-inline-block align-items-center">
                         <a href="{% url 'products' %}?artist={{ artist.name }}" class="artists-list-item-link">{{ artist.friendly_name }}</a>
-                        {% if user.is_superuser %}
-                        <a href="{% url 'edit_artist' artist.id %}" class="artists-edit">
+                        {% if user.is_staff %}
+                        <a href="{% url 'edit_artist' artist.id %}" class="artists-edit" data-bs-toggle="tooltip" data-bs-title="Edit artist">
                             <i class="fa-solid fa-pen"></i>
                         </a>
-                        <a href="{% url 'artist_warning' artist.id %}" class="artists-delete">
+                        <a href="{% url 'artist_warning' artist.id %}" class="artists-delete" data-bs-toggle="tooltip" data-bs-title="Delete artist">
                             <i class="fa-solid fa-trash"></i>
                         </a>
                         {% endif %}

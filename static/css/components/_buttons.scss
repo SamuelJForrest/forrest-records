@@ -58,3 +58,10 @@
         background: darken($color-red, 5%);
     }
 }
+
+.tooltip {
+    > .tooltip-inner {
+        font-size: 1.4rem;
+        padding: .6rem;
+    }
+}

@@ -27,17 +27,17 @@
                         {{ product.name }}
                         {% if user.is_superuser %}
                             {% if product.album %}
-                                <a href="{% url 'edit_album' product.id %}" class="crud-btn" title="Edit product">
+                                <a href="{% url 'edit_album' product.id %}" class="crud-btn" data-bs-toggle="tooltip" data-bs-title="Edit product">
                                     <i class="fa-solid fa-pen"></i>
                                 </a>
-                                <a href="{% url 'album_warning' product.id %}" class="crud-btn" title="Delete product">
+                                <a href="{% url 'album_warning' product.id %}" class="crud-btn" data-bs-toggle="tooltip" data-bs-title="Delete product">
                                     <i class="fa-solid fa-trash"></i>                                
                                 </a>
                             {% else %}
-                                <a href="{% url 'edit_merch' product.id %}" class="crud-btn" title="Edit product">
+                                <a href="{% url 'edit_merch' product.id %}" class="crud-btn" data-bs-toggle="tooltip" data-bs-title="Edit product">
                                     <i class="fa-solid fa-pen"></i>
                                 </a>
-                                <a href="{% url 'merch_warning' product.id %}" class="crud-btn" title="Delete product">
+                                <a href="{% url 'merch_warning' product.id %}" class="crud-btn" data-bs-toggle="tooltip" data-bs-title="Delete product">
                                     <i class="fa-solid fa-trash"></i>                                
                                 </a>
                             {% endif %}

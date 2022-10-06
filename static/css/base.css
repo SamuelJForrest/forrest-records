@@ -522,6 +522,11 @@ table {
   background: #ed2d2d;
 }
 
+.tooltip > .tooltip-inner {
+  font-size: 1.4rem;
+  padding: 0.6rem;
+}
+
 .checkout {
   background-image: linear-gradient(to bottom, #fff 40%, #18181b 40%);
   padding: 1.6rem 0 15rem 0;

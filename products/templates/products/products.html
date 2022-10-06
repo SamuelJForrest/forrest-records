@@ -12,10 +12,10 @@
                     <div class="d-flex align-items-center">
                         <h1>{{ page_title }}</h1>
                         {% if user.is_superuser %}
-                            <a href="{% url 'add_album' %}" class="crud-btn" title="Add an album">
+                            <a href="{% url 'add_album' %}" class="crud-btn" data-bs-toggle="tooltip" data-bs-title="Add album">
                                 <i class="fa-solid fa-compact-disc"></i>
                             </a>
-                            <a href="{% url 'add_merch' %}" class="crud-btn" title="Add merch">
+                            <a href="{% url 'add_merch' %}" class="crud-btn" data-bs-toggle="tooltip" data-bs-title="Add merch">
                                 <i class="fa-solid fa-shirt"></i>
                             </a>
                         {% endif %}
