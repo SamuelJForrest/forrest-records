@@ -43,7 +43,7 @@
                         <a href="{% url 'edit_artist' artist.id %}" class="artists-edit">
                             <i class="fa-solid fa-pen"></i>
                         </a>
-                        <a href="{% url 'edit_artist' artist.id %}" class="artists-delete">
+                        <a href="{% url 'artist_warning' artist.id %}" class="artists-delete">
                             <i class="fa-solid fa-trash"></i>
                         </a>
                         {% endif %}

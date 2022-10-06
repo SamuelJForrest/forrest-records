@@ -68,19 +68,51 @@ def edit_artist(request, artist_id):
         form = ArtistForm(request.POST, instance=artist)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Successfully edited {artist.name}')
+            messages.success(request, f'Successfully edited {artist.friendly_name}')
             return redirect(reverse('artists'))
         else:
             messages.error(request, 'Failed to add product. ')
     else:
         form = ArtistForm(instance=artist)
-        messages.info(request, f'You are editing {artist.name}')
+        messages.info(request, f'You are editing {artist.friendly_name}')
 
     template = 'artists/edit-artist.html'
     context = {
         'page_title': page_title,
         'form': form,
+        'artist': artist,
     }
 
     return render(request, template, context)
 
+
+@login_required
+def artist_warning(request, artist_id):
+    """
+    Renders the warning page before a store owner deletes an artist
+    """
+
+    page_title = 'Warning!'
+    artist = get_object_or_404(Artist, pk=artist_id)
+    template = 'products/warning.html'
+    context = {
+        'page_title': page_title,
+        'artist': artist
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_artist(request, artist_id):
+    """
+    Delete an artist
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    artist = get_object_or_404(Artist, pk=artist_id)
+    artist.delete()
+    messages.success(request, f'{artist.friendly_name} has been deleted!')
+    return redirect(reverse('artists'))

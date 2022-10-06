@@ -12,9 +12,12 @@
                 {% if album %}
                     <a href="{% url 'product_detail' album.id %}" class="d-flex align-items-center"><i class="fa-solid fa-chevron-left"></i>
                     Back to album</a>
-                {% else %}
+                {% elif merch %}
                     <a href="{% url 'product_detail' merch.id %}" class="d-flex align-items-center"><i class="fa-solid fa-chevron-left"></i>
                     Back to merch</a>
+                {% elif artist %}
+                    <a href="{% url 'artists' %}" class="d-flex align-items-center"><i class="fa-solid fa-chevron-left"></i>
+                        Back to artists</a>
                 {% endif %}
             </div>
         </div>
@@ -42,8 +45,10 @@
                 <div class="delete-product">
                     {% if album %}
                         <h2 class="h4 mb-3">You are about to delete "<a href="{% url 'product_detail' album.id %}">{{ album.name }}</a>"</h2>
-                    {% else %}
+                    {% elif merch %}
                         <h2 class="h4 mb-3">You are about to delete "<a href="{% url 'product_detail' merch.id %}">{{ merch.name }}</a>"</h2>
+                    {% elif artist %}
+                        <h2 class="h4 mb-3">You are about to delete "<strong>{{ artist.friendly_name }}</strong>"</h2>
                     {% endif %}
 
                     <p class="mb-5">Are you sure you wish to continue? This <strong>cannot</strong> be undone.</p>
@@ -51,9 +56,12 @@
                     {% if album %}
                         <a href="{% url 'delete_album' album.id %}" class="button me-3">Delete</a>
                         <a href="{% url 'product_detail' album.id %}" class="backlink">Return to product</a>
-                    {% else %}
+                    {% elif merch %}
                         <a href="{% url 'delete_merch' merch.id %}" class="button me-3">Delete</a>
                         <a href="{% url 'product_detail' merch.id %}" class="backlink">Return to product</a>
+                    {% elif artist %}
+                        <a href="{% url 'delete_artist' artist.id %}" class="button me-3">Delete</a>
+                        <a href="{% url 'artists' %}" class="backlink">Return to artists</a>
                     {% endif %}
                 </div>
             </div>
