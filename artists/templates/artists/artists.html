@@ -9,7 +9,14 @@
     <div class="row">
         <div class="col-12">
             <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
-                <h1>Artists</h1>
+                <div class="d-flex align-items-center">
+                    <h1>Artists</h1>
+                    {% if user.is_superuser %}
+                        <a href="{% url 'add_artist' %}" class="product-add" title="Add an artist">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    {% endif %}
+                </div>
                 {% if artists|length > 0 %}
                     <span>{{ artists|length }} Artist{% if artists|length > 1 %}s{% endif %}</span>
                 {% endif %}
@@ -28,10 +35,18 @@
             {% for artist in artist_list %}
             <div class="col-lg-4 mb-4">
                 <h2 class="artists-group-title">{{ artist.grouper|title }}</h2>
-                <ul class="artists-list">
+                <ul class="artists-list d-flex flex-column align-items-start">
                     {% for artist in artist.list %}
-                    <li class="artists-list-item">
-                        <a href="{% url 'products' %}?artist={{ artist.name }}">{{ artist.friendly_name }}</a>
+                    <li class="artists-list-item d-inline-block align-items-center">
+                        <a href="{% url 'products' %}?artist={{ artist.name }}" class="artists-list-item-link">{{ artist.friendly_name }}</a>
+                        {% if user.is_superuser %}
+                        <a href="{% url 'edit_artist' artist.id %}" class="artists-edit">
+                            <i class="fa-solid fa-pen"></i>
+                        </a>
+                        <a href="{% url 'edit_artist' artist.id %}" class="artists-delete">
+                            <i class="fa-solid fa-trash"></i>
+                        </a>
+                        {% endif %}
                     </li>
                     {% endfor %}
                 </ul>

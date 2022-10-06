@@ -14,8 +14,6 @@ class AlbumForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'testclass'
 
 
 class MerchForm(forms.ModelForm):
@@ -32,5 +30,3 @@ class MerchForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         # Sets the product type to merch
         self.initial['product_type'] = 2
-        for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'testclass'

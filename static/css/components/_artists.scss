@@ -1,3 +1,5 @@
+$transform-distance: -1.6rem;
+
 .artists {
     &-group {
         &-title {
@@ -10,7 +12,18 @@
         &-item {
             margin-bottom: .5rem;
 
-            a {
+            &:hover,
+            &:focus {
+                .artists {
+                    &-edit,
+                    &-delete {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+            }
+
+            &-link {
                 font-size: 2rem;
                 color: $color-black;
                 text-decoration: none;
@@ -22,5 +35,40 @@
                 }
             }
         }
+    }
+
+    &-edit,
+    &-delete {
+        margin-left: .8rem;
+        transform: translateX($transform-distance);
+        opacity: 0;
+        color: $color-black;
+        text-decoration: none;
+        display: inline-block;
+
+        &:hover,
+        &:focus {
+            color: $color-red;
+        }
+
+        i {
+            font-size: 1.3rem;
+        }
+    }
+
+    &-edit {
+        transition: all $fast;
+    }
+
+    &-delete {
+        transition: all $fast;
+        transition-property: all;
+        transition-delay: ($fast / 3);
+    }
+}
+
+.add-artist {
+    form {
+        @extend .base-form;
     }
 }

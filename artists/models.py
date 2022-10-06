@@ -10,7 +10,7 @@ class Artist(models.Model):
         max_length=254,
         null=False,
         blank=False,
-        help_text="This name should be all lowercase, and contain no spaces.")
+        help_text="This name should be all lowercase, and contain no spaces, e.g. \"forrest_records\".")
 
     friendly_name = models.CharField(
         max_length=254,

@@ -161,14 +161,40 @@ table {
 .artists-list-item {
   margin-bottom: 0.5rem;
 }
-.artists-list-item a {
+.artists-list-item:hover .artists-edit, .artists-list-item:hover .artists-delete, .artists-list-item:focus .artists-edit, .artists-list-item:focus .artists-delete {
+  opacity: 1;
+  transform: translateX(0);
+}
+.artists-list-item-link {
   font-size: 2rem;
   color: #18181b;
   text-decoration: none;
   transition: all 0.3s;
 }
-.artists-list-item a:hover, .artists-list-item a:focus {
+.artists-list-item-link:hover, .artists-list-item-link:focus {
   color: #ef4444;
+}
+.artists-edit, .artists-delete {
+  margin-left: 0.8rem;
+  transform: translateX(-1.6rem);
+  opacity: 0;
+  color: #18181b;
+  text-decoration: none;
+  display: inline-block;
+}
+.artists-edit:hover, .artists-edit:focus, .artists-delete:hover, .artists-delete:focus {
+  color: #ef4444;
+}
+.artists-edit i, .artists-delete i {
+  font-size: 1.3rem;
+}
+.artists-edit {
+  transition: all 0.3s;
+}
+.artists-delete {
+  transition: all 0.3s;
+  transition-property: all;
+  transition-delay: 0.1s;
 }
 
 .allauth-form-inner-content {
@@ -1599,30 +1625,34 @@ h6,
   background: #3CB35A;
 }
 
-.base-form, .adjust-product form, .delete-product {
+.base-form, .add-artist form, .adjust-product form, .delete-product {
   background: #d4d4d8;
   border-radius: 0.4rem;
   padding: 2rem;
   margin-bottom: 2rem;
 }
-.base-form input, .adjust-product form input, .delete-product input,
+.base-form input, .add-artist form input, .adjust-product form input, .delete-product input,
 .base-form select,
+.add-artist form select,
 .adjust-product form select,
 .delete-product select,
 .base-form textarea,
+.add-artist form textarea,
 .adjust-product form textarea,
 .delete-product textarea {
   font-size: 1.6rem;
 }
-.base-form input[type=checkbox], .adjust-product form input[type=checkbox], .delete-product input[type=checkbox],
+.base-form input[type=checkbox], .add-artist form input[type=checkbox], .adjust-product form input[type=checkbox], .delete-product input[type=checkbox],
 .base-form select[type=checkbox],
+.add-artist form select[type=checkbox],
 .adjust-product form select[type=checkbox],
 .delete-product select[type=checkbox],
 .base-form textarea[type=checkbox],
+.add-artist form textarea[type=checkbox],
 .adjust-product form textarea[type=checkbox],
 .delete-product textarea[type=checkbox] {
   padding: 1rem;
 }
-.base-form .form-check-label, .adjust-product form .form-check-label, .delete-product .form-check-label {
+.base-form .form-check-label, .add-artist form .form-check-label, .adjust-product form .form-check-label, .delete-product .form-check-label {
   transform: translate(0.5rem, 50%);
 }/*# sourceMappingURL=base.css.map */

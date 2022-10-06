@@ -120,7 +120,7 @@ def add_album(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. ')
+            messages.error(request, 'Failed to add product.')
     else:
         form = AlbumForm()
 
