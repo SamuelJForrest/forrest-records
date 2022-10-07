@@ -56,7 +56,7 @@ def add_blog(request):
     page_title = 'Add a Blog Post'
 
     if request.method == 'POST':
-        form = BlogForm(request.POST)
+        form = BlogForm(request.POST, request.FILES)
         if form.is_valid():
             blog = form.save()
             messages.success(request, 'Successfully added blog post!')
@@ -88,7 +88,7 @@ def edit_blog(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
 
     if request.method == 'POST':
-        form = BlogForm(request.POST, instance=blog)
+        form = BlogForm(request.POST, request.FILES, instance=blog)
         if form.is_valid():
             form.save()
             messages.success(request, f'Successfully edited {blog.title}')

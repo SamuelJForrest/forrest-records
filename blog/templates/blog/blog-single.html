@@ -48,7 +48,15 @@
         <div class="row">
             <div class="col-12">
                 <div class="blog-single-image">
-                    <img src="{{ blog.image_url }}" alt="">
+                    {% if blog.image %}
+                        <img src="{{ blog.image.url }}" alt="">
+                    {% elif blog.image_url %}
+                        <img src="{{ blog.image_url }}" alt="">
+                    {% else %}
+                        <div class="no-image">
+                            <p>No image</p>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>

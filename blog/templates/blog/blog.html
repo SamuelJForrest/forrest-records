@@ -37,7 +37,15 @@
                     <div class="row h-100">
                         <div class="col-lg-4 h-100">
                             <div class="blog-item-image">
-                                <img src="{{ blog.image_url }}" alt="">
+                                {% if blog.image %}
+                                    <img src="{{ blog.image.url }}" alt="">
+                                {% elif blog.image_url %}
+                                    <img src="{{ blog.image_url }}" alt="">
+                                {% else %}
+                                    <div class="no-image">
+                                        <p>No image</p>
+                                    </div>
+                                {% endif %}
                             </div>
                         </div>
                         <div class="col-lg-8">

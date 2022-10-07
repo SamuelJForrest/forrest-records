@@ -23,10 +23,16 @@ class Blog(models.Model):
 
     content = RichTextField()
 
+    image = models.ImageField(
+        upload_to='images/',
+        null=True,
+        blank=True,
+    )
+
     image_url = models.CharField(
         max_length=254,
-        null=False,
-        blank=False)
+        null=True,
+        blank=True)
 
     date_published = models.DateField(
         auto_now_add=True
