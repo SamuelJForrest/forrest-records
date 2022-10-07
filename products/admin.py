@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, ProductType, ProductGroup, Album, Song, Genre, Merch
+from .models import Product, ProductType, Album, Song, Genre, Merch
 
 
 class AlbumInline(admin.TabularInline):
@@ -81,7 +81,6 @@ class ProductAdmin(admin.ModelAdmin):
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(ProductType)
-admin.site.register(ProductGroup)
 admin.site.register(Genre)
 admin.site.register(Song, SongAdmin)
 admin.site.register(Album, AlbumAdmin)

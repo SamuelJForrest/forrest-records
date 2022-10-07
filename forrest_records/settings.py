@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
     'django.contrib.sites',
     'ckeditor',
     'django_countries',
@@ -71,6 +73,12 @@ ROOT_URLCONF = 'forrest_records.urls'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 CRISPY_ALLOWED_TEMPLATE_PACK = 'bootstrap5'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'samforrest',
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET')
+}
 
 TEMPLATES = [
     {
@@ -173,6 +181,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10

@@ -5,6 +5,8 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
+import cloudinary
+
 from .models import Product, Album, Song, Merch
 from .forms import AlbumForm, MerchForm
 from artists.models import Artist
@@ -191,7 +193,7 @@ def edit_album(request, album_id):
     album = get_object_or_404(Album, pk=album_id)
 
     if request.method == 'POST':
-        form = AlbumForm(request.POST, instance=album)
+        form = AlbumForm(request.POST, request.FILES, instance=album)
         if form.is_valid():
             form.save()
             messages.success(request, f'Successfully edited {album.name}')
