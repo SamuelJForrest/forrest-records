@@ -48,5 +48,11 @@ class Homepage(models.Model):
         null=True,
         blank=True)
 
+    bg_image = models.ImageField(
+        upload_to="images/",
+        null=True,
+        blank=True,
+    )
+
     def __str__(self):
         return 'Homepage'
