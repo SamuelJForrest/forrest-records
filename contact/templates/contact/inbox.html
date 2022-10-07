@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_title %}
-- Contact
+- Inbox
 {% endblock %}
 
 {% block page_header %}
@@ -19,7 +19,7 @@
 {% endblock %}
 
 {% block content %}
-    <section class="inbox">
+    <div class="inbox">
         <div class="container">
             <div class="row">
                 {% if inbox_items %}
@@ -72,5 +72,5 @@
                 {% endif %}
             </div>
         </div>
-    </section>
+    </div>
 {% endblock %}

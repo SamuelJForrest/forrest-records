@@ -117,7 +117,7 @@ def add_album(request):
     """
     Add an album to the store
     """
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
@@ -150,7 +150,7 @@ def add_merch(request):
     """
     Add merch to the store
     """
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
@@ -183,7 +183,7 @@ def edit_album(request, album_id):
     """
     Edit an album in the store
     """
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
@@ -217,7 +217,7 @@ def edit_merch(request, merch_id):
     """
     Edit merch in the store
     """
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
@@ -268,7 +268,7 @@ def delete_album(request, album_id):
     """
     Delete albums
     """
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
@@ -300,7 +300,7 @@ def delete_merch(request, merch_id):
     """
     Delete merch
     """
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 

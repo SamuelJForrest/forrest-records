@@ -27,7 +27,7 @@ def add_artist(request):
     """
     Adds a new artist to the artist page
     """
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('artists'))
 
@@ -57,7 +57,7 @@ def edit_artist(request, artist_id):
     """
     Renders edit artist form, and updates artist model
     """
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('artists'))
 
@@ -108,7 +108,7 @@ def delete_artist(request, artist_id):
     """
     Delete an artist
     """
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 

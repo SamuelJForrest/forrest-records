@@ -11,7 +11,7 @@
             <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
                 <div class="d-flex align-items-center">
                     <h1>Artists</h1>
-                    {% if user.is_superuser %}
+                    {% if user.is_staff %}
                         <a href="{% url 'add_artist' %}" class="crud-btn" data-bs-toggle="tooltip" data-bs-title="Add artist">
                             <i class="fa-solid fa-plus"></i>
                         </a>

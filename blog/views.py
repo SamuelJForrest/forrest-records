@@ -49,7 +49,7 @@ def add_blog(request):
     """
     Add a new blog post
     """
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('blog')) 
 
@@ -80,7 +80,7 @@ def edit_blog(request, blog_id):
     """
     Edit a blog.
     """
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('blog'))
 
@@ -132,7 +132,7 @@ def delete_blog(request, blog_id):
     Delete blog post
     """
 
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('blog'))
 

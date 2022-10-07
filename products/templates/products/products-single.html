@@ -26,7 +26,7 @@
                 <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
                     <h1 class="d-flex align-items-center">
                         {{ product.name }}
-                        {% if user.is_superuser %}
+                        {% if user.is_staff %}
                             {% if product.album %}
                                 <a href="{% url 'edit_album' product.id %}" class="crud-btn" data-bs-toggle="tooltip" data-bs-title="Edit product">
                                     <i class="fa-solid fa-pen"></i>
