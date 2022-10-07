@@ -1,1 +1,1 @@
-web: gunicorn forrest_records:application
+web: gunicorn forrest_records.wsgi:application
