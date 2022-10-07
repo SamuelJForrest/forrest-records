@@ -93,11 +93,6 @@ class Product(models.Model):
         null=False,
         blank=False)
 
-    rating = models.IntegerField(
-        null=True,
-        blank=True,
-        default=0)
-
     image_url = models.URLField(
         max_length=1024,
         null=True,
