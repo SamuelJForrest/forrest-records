@@ -32,6 +32,7 @@ The target audience for this site is primarily fans of punk/hardcore music, part
 | #12 | As a user, I would like a page that shows a list of all the artists, so I am able to find relevant products easily. | [Link to issue #12](https://github.com/Samoftheforrest/forrest-records/issues/23) |  |
 | #13 | As a user, I want to be able to reset my passowrd if I forget it. | [Link to issue #13](https://github.com/Samoftheforrest/forrest-records/issues/24) |  |
 | #14 | As a user, I want the ability to easily log in and out of my account. | [Link to issue #14](https://github.com/Samoftheforrest/forrest-records/issues/25) |  |
+| #15 | As a user, I want to be able to contact the store owners to provide feedback or query an order. | [Link to issue #15](https://github.com/Samoftheforrest/forrest-records/issues/33) |  |
 |  | **Site owners** |  |  |
 | #1 | As a user, I want the ability to add products to the store. | [Link to issue #1](https://github.com/Samoftheforrest/forrest-records/issues/26) |  |
 | #2 | As a user, I want the ability to edit products easily. | [Link to issue #2](https://github.com/Samoftheforrest/forrest-records/issues/27) |  |
@@ -40,6 +41,7 @@ The target audience for this site is primarily fans of punk/hardcore music, part
 | #5 | As a user, I want the ability to edit information about artists. | [Link to issue #5](https://github.com/Samoftheforrest/forrest-records/issues/30) |  |
 | #6 | As a user, I want the ability to delete artists from the store. | [Link to issue #6](https://github.com/Samoftheforrest/forrest-records/issues/31) |  |
 | #7 | As a user, I want to see orders that have been placed. | [Link to issue #7](https://github.com/Samoftheforrest/forrest-records/issues/32) |  |
+| #8 | As a user, I'd like to be able to see all messages sent in one place. | [Link to issue #8](https://github.com/Samoftheforrest/forrest-records/issues/34) |  |
 
 ### Design
 
