@@ -17,7 +17,7 @@ The target audience for this site is primarily fans of punk/hardcore music, part
 
 | No. | Bug | Link | Completed |
 | ---- | -------------- | ---- | :----: |
-|  | Site users |  |  |
+|  | **Site users** |  |  |
 | #1 | As a user, I want the site's navigation to be simple and intuitive. | [Link to issue #1](https://github.com/Samoftheforrest/forrest-records/issues/12) | :white_check_mark: |
 | #2 | As a user, I want to be able to be able to checkout without an account. | [Link to issue #2](https://github.com/Samoftheforrest/forrest-records/issues/13) |  |
 | #3 | As a user, I want to be able to be able to checkout without an account. | [Link to issue #3](https://github.com/Samoftheforrest/forrest-records/issues/14) |  |
@@ -32,7 +32,7 @@ The target audience for this site is primarily fans of punk/hardcore music, part
 | #12 | As a user, I would like a page that shows a list of all the artists, so I am able to find relevant products easily. | [Link to issue #12](https://github.com/Samoftheforrest/forrest-records/issues/23) |  |
 | #13 | As a user, I want to be able to reset my passowrd if I forget it. | [Link to issue #13](https://github.com/Samoftheforrest/forrest-records/issues/24) |  |
 | #14 | As a user, I want the ability to easily log in and out of my account. | [Link to issue #14](https://github.com/Samoftheforrest/forrest-records/issues/25) |  |
-|  | Site owners |  |  |
+|  | **Site owners** |  |  |
 | #1 | As a user, I want the ability to add products to the store. | [Link to issue #1](https://github.com/Samoftheforrest/forrest-records/issues/26) |  |
 | #2 | As a user, I want the ability to edit products easily. | [Link to issue #2](https://github.com/Samoftheforrest/forrest-records/issues/27) |  |
 | #3 | As a user, I want the ability to delete products from the store. | [Link to issue #3](https://github.com/Samoftheforrest/forrest-records/issues/28) |  |
