@@ -23,7 +23,7 @@
         <div class="container">
             <div class="row">
                 {% if orders %}
-                    <div class="col-lg-10 mx-lg-auto">
+                    <div class="col">
                         <div class="table-responsive">
                             <table class="table table-sm table-borderless">
                                 <thead>
@@ -32,8 +32,8 @@
                                         <th class="h6">Name</th>
                                         <th class="h6">No.</th>
                                         <th class="h6">Date</th>
-                                        <th class="h6">Email</th>
-                                        <th class="h6">Message</th>
+                                        <th class="h6">Items</th>
+                                        <th class="h6">Price</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -85,7 +85,7 @@
                     </div>
                 {% else %}
                     <div class="col text-center">
-                        <p class="h5 mb-3">Your inbox is empty, hooray!</p>
+                        <p class="h5 mb-3">There are currently no orders</p>
                         <a href="{% url 'home' %}" class="button">Return to homepage</a>
                     </div>
                 {% endif %}

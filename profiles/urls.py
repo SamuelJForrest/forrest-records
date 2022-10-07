@@ -18,4 +18,5 @@ urlpatterns = [
         views.remove_from_wishlist,
         name='remove_from_wishlist'
     ),
+    path('all/', views.all_profiles, name='all_profiles')
 ]

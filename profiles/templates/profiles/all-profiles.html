@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}
+- All Users
+{% endblock %}
+
+{% block page_header %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
+                    <h1>All Users</h1>
+                    <span>{{ profiles|length }} users</span>
+                </div>
+            </div>
+        </div>
+    </div> 
+{% endblock %}
+
+{% block content %}
+    <section class="all-orders pb-5">
+        <div class="container">
+            <div class="row">
+                {% if profiles %}
+                    <div class="col">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th class="h6">#</th>
+                                        <th class="h6">Name</th>
+                                        <th class="h6">Date joined</th>
+                                        <th class="h6">Email</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {% for profile in profiles %}
+                                <tr>
+                                    <td>
+                                        {{ forloop.counter }}
+                                    </td>
+                                    <td>
+                                        {% if profile.user.get_full_name %}
+                                            {{ profile.user.get_full_name }}
+                                        {% else %}
+                                            {{ profile.user }}
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        {{ profile.user.date_joined }}
+                                    </td>
+                                    <td>
+                                        {{ profile.user.email }}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="col text-center">
+                        <p class="h5 mb-3">There are no users.</p>
+                        <a href="{% url 'home' %}" class="button">Return to homepage</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

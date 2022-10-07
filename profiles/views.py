@@ -103,3 +103,22 @@ def remove_from_wishlist(request, item_id):
         messages.error(request, 'That product is not in your favourites')
 
     return redirect(reverse('product_detail', args=[item_id]))
+
+
+@login_required
+def all_profiles(request):
+    """
+    Renders all profiles
+    """
+    if not request.user.is_staff:
+        messages.error(request, 'This page is for staff only.')
+        return redirect(reverse('home'))
+
+    profiles = UserProfile.objects.all()
+
+    template = 'profiles/all-profiles.html'
+    context = {
+        'profiles': profiles
+    }
+
+    return render(request, template, context)
