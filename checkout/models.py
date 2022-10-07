@@ -1,4 +1,5 @@
 import uuid
+from decimal import Decimal
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
@@ -197,7 +198,12 @@ class OrderLineItem(models.Model):
         Override the original save method to set the order number
         if it hasn't been set already.
         """
-        self.lineitem_total = self.product.price * self.quantity
+        if self.product.on_sale:
+            sale_price = round(
+                (Decimal(self.product.price) * Decimal(settings.SALE_PERCENTAGE)), 2) 
+            self.lineitem_total = sale_price * self.quantity  
+        else:
+            self.lineitem_total = self.product.price * self.quantity  
         super().save(*args, **kwargs)
 
     def __str__(self):

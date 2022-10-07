@@ -70,10 +70,11 @@
                                     <ul class="list-unstyled">
                                         {% for item in order.lineitems.all %}
                                             <li class="small">
+                                                {{ item.product.name }}
                                                 {% if item.product.merch.has_sizes %}
-                                                    Size {{ item.product.size|upper }}
+                                                    ({{ item.product_size|upper }})
                                                 {% endif %}
-                                                {{ item.product.name }} x {{ item.quantity }}
+                                                x {{ item.quantity }}
                                             </li>
                                         {% endfor %}
                                     </ul>
