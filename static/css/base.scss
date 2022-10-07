@@ -119,6 +119,15 @@ h6,
     }
 }
 
+a {
+    color: $color-red;
+
+    &:hover,
+    &:focus {
+        color: $color-red;
+    }
+}
+
 strong {
     font-weight: 600;
 }

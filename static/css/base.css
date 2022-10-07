@@ -1586,6 +1586,13 @@ h6,
   }
 }
 
+a {
+  color: #ef4444;
+}
+a:hover, a:focus {
+  color: #ef4444;
+}
+
 strong {
   font-weight: 600;
 }

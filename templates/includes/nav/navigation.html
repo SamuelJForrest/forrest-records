@@ -22,6 +22,7 @@
                                 <li><a href="{% url 'profile' %}">View profile</a></li>
                                 {% if user.is_staff %}
                                     <li><a href="{% url 'inbox' %}">Inbox</a></li>
+                                    <li><a href="{% url 'all_orders' %}">Orders</a></li>
                                 {% endif %}
                                 <li><a href="/accounts/logout">Logout</a></li>
                             {% else %}

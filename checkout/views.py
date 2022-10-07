@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.conf import settings
 
 from products.models import Product
@@ -193,6 +194,21 @@ def checkout_success(request, order_number):
     context = {
         'page_title': page_title,
         'order': order,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def all_orders(request):
+    """
+    Renders the page to view all orders
+    """
+
+    orders = Order.objects.all()
+    template = 'checkout/all-orders.html'
+    context = {
+        'orders': orders
     }
 
     return render(request, template, context)

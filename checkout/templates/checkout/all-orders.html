@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}
+- Contact
+{% endblock %}
+
+{% block page_header %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
+                    <h1>Inbox</h1>
+                    <span>{{ orders|length }} orders</span>
+                </div>
+            </div>
+        </div>
+    </div> 
+{% endblock %}
+
+{% block content %}
+    <section class="all-orders pb-5">
+        <div class="container">
+            <div class="row">
+                {% if orders %}
+                    <div class="col-lg-10 mx-lg-auto">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th class="h6">#</th>
+                                        <th class="h6">Name</th>
+                                        <th class="h6">No.</th>
+                                        <th class="h6">Date</th>
+                                        <th class="h6">Email</th>
+                                        <th class="h6">Message</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {% for order in orders %}
+                                <tr>
+                                    <td>
+                                        {{ forloop.counter }}
+                                    </td>
+                                    <td>
+                                        {% if order.user_profile %}
+                                            {% if order.user_profile.user.get_full_name %}
+                                                {{ order.user_profile.user.get_full_name }}
+                                            {% else %}
+                                                {{ order.user_profile }}
+                                            {% endif %}
+                                        {% else %}
+                                            Anonymous
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
+                                            {{ order.order_number|truncatechars:6 }}
+                                        </a>
+                                    </td>
+                                    <td>
+                                        {{ order.date }}
+                                    </td>
+                                    <td>
+                                        <ul class="list-unstyled">
+                                            {% for item in order.lineitems.all %}
+                                                <li class="small">
+                                                    {{ item.product.name }}
+                                                    {% if item.product.merch.has_sizes %}
+                                                        ({{ item.product_size|upper }})
+                                                    {% endif %}
+                                                    x {{ item.quantity }}
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        £{{ order.grand_total }}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="col text-center">
+                        <p class="h5 mb-3">Your inbox is empty, hooray!</p>
+                        <a href="{% url 'home' %}" class="button">Return to homepage</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
