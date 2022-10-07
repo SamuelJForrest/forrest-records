@@ -42,25 +42,13 @@
                 {% if album %}
                     <form action="{% url 'edit_album' album.id %}" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
-                        {% for field in form %}
-                            {% if field.name != 'image' %}
-                                {{ field | as_crispy_field }}
-                            {% else %}
-                                {{ field }}
-                            {% endif %}
-                        {% endfor %}
+                        {{ form|crispy }}
                         <button class="button mt-3">{{ page_title }}</button>
                     </form>
                 {% else %}
                     <form action="{% url 'edit_merch' merch.id %}" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
-                        {% for field in form %}
-                            {% if field.name != 'image' %}
-                                {{ field | as_crispy_field }}
-                            {% else %}
-                                {{ field }}
-                            {% endif %}
-                        {% endfor %}
+                        {{ form|crispy }}
                         <button class="button mt-3">{{ page_title }}</button>
                     </form>
                 {% endif %}
