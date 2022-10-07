@@ -96,7 +96,14 @@
     {% if wishlist.products.all %}
         {% include 'includes/related/related.html' %}
     {% else %}
-        <p>nothing here</p>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4">Your wishlist</h2>
+                    <p>Your wishlist is currently empty</p>
+                </div>
+            </div>
+        </div>
     {% endif %}
 
 </section>

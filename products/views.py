@@ -1,3 +1,4 @@
+from django.http import Http404
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -92,8 +93,14 @@ def product_detail(request, product_id):
     related_products = Product.objects.filter(
                        artist=product.artist).exclude(
                        id=product_id)[:4]
-    user = get_object_or_404(UserProfile, pk=request.user.id)
-    wishlist = get_object_or_404(Wishlist, created_by=user.id)
+    if request.user.is_authenticated:
+        user = get_object_or_404(UserProfile, pk=request.user.id)
+        try:
+            wishlist = get_object_or_404(Wishlist, created_by=user.id)
+        except Http404:
+            wishlist = None
+    else:
+        wishlist = None
 
     context = {
         'product': product,

@@ -16,8 +16,14 @@ def profile(request):
     Renders profile page
     """
     profile = get_object_or_404(UserProfile, user=request.user)
-    user = get_object_or_404(UserProfile, pk=request.user.id)
-    wishlist = get_object_or_404(Wishlist, created_by=user.id)
+    if request.user.is_authenticated:
+        user = get_object_or_404(UserProfile, pk=request.user.id)
+        try:
+            wishlist = get_object_or_404(Wishlist, created_by=user.id)
+        except Http404:
+            wishlist = None
+    else:
+        wishlist = None
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
