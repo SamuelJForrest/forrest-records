@@ -127,7 +127,7 @@ def add_album(request):
     album = True
 
     if request.method == 'POST':
-        form = AlbumForm(request.POST)
+        form = AlbumForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Successfully added product!')
@@ -160,7 +160,7 @@ def add_merch(request):
     merch = True
 
     if request.method == 'POST':
-        form = MerchForm(request.POST)
+        form = MerchForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Successfully added product!')
@@ -227,7 +227,7 @@ def edit_merch(request, merch_id):
     merch = get_object_or_404(Merch, pk=merch_id)
 
     if request.method == 'POST':
-        form = MerchForm(request.POST, instance=merch)
+        form = MerchForm(request.POST, request.FILES, instance=merch)
         if form.is_valid():
             form.save()
             messages.success(request, f'Successfully edited "{merch.name}"')
