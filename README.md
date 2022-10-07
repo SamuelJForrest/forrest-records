@@ -314,6 +314,7 @@ Bugs for this project can be found within the project's 'Issues' tab - for ease,
 | #10 | Basket remove button removing all sizes of same item | [Link to issue #10](https://github.com/Samoftheforrest/forrest-records/issues/10) | :white_check_mark: |
 | #11 | Inbox search returning empty inbox page if no queries are matched | [Link to issue #11](https://github.com/Samoftheforrest/forrest-records/issues/11) | :white_check_mark: |
 | #12 | Pages only showing for superusers. | [Link to issue #12](https://github.com/Samoftheforrest/forrest-records/issues/35) | :white_check_mark |
+| #13 | Non-superusers cannot add items to wishlist | [Link to issue #13](https://github.com/Samoftheforrest/forrest-records/issues/36) | :white_check_mark |
 
 ## Deployment
 

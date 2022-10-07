@@ -75,7 +75,7 @@ def add_to_wishlist(request, item_id):
     try:
         wishlist = get_object_or_404(Wishlist, created_by=user.id)
     except Http404:
-        wishlist = Wishlist.objects.create(created_by=user.id)
+        wishlist = Wishlist.objects.create(created_by=user)
 
     if product in wishlist.products.all():
         messages.info(request, 'This product is already in your wishlist')
