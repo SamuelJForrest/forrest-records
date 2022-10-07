@@ -68,12 +68,10 @@
 {% block scripts %}
     {{ block.super }}
 
-    {% include 'products/includes/quantity-input-script.html' %}
-
     <script>
         let csrfToken = '{{ csrf_token }}';
     </script>
-    
-    <script src="{% static 'bag/js/basket-buttons.js' %}"></script>
 
+    <script src="{% static 'bag/js/basket-buttons.js' %}"></script>
+    <script src="{% static 'js/quantity-input-script.js' %}"></script>
 {% endblock %}

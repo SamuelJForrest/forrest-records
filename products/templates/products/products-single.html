@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block extra_title %}
 - {{ product.name }}
@@ -143,5 +144,5 @@
 
 {% block scripts %}
     {{ block.super }}
-    {% include 'products/includes/quantity-input-script.html' %}
+    <script src="{% static 'js/quantity-input-script.js' %}"></script>
 {% endblock %}
