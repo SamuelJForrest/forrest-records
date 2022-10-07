@@ -1,0 +1,28 @@
+<div class="related">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                {% if related_products %}
+                    <h2 class="h4 mb-4">More products by this artist</h2>
+                {% elif wishlist %}
+                    <h2 class="h4 mb-4">Your wishlist</h2>
+                {% endif %}
+            </div>
+
+            {% if related_products %}
+
+                {% for product in related_products %}
+                    {% include 'includes/related/related-item.html' %}
+                {% endfor %}
+
+            {% elif wishlist %}
+
+                {% for product in wishlist.products.all %}
+                    {% include 'includes/related/related-item.html' %}
+                {% endfor %}
+
+            {% endif %}
+
+        </div>
+    </div>
+</div>

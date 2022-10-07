@@ -5,6 +5,7 @@ from django.dispatch import receiver
 
 from django_countries.fields import CountryField
 
+from products.models import Product
 
 class UserProfile(models.Model):
     """
@@ -52,6 +53,30 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.username
+
+
+class Wishlist(models.Model):
+    class Meta:
+        verbose_name_plural = 'Wishlist'
+
+    products = models.ManyToManyField(
+        Product,
+        blank=True
+    )
+    created_by = models.OneToOneField(
+        UserProfile,
+        on_delete=models.CASCADE
+    )
+
+    def __str__(self):
+        """
+        Return object string
+        Args:
+            self (object): self object.
+        Returns:
+            str: users favourite string
+        """
+        return f'{self.created_by}\'s wishlist'
 
 
 @receiver(post_save, sender=User)

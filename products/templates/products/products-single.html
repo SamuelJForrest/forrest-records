@@ -115,12 +115,17 @@
                     </div>
 
                     <input type="submit" class="button me-3" value="Add to basket">
-                    <a href="#" class="product-wishlist">
-                        <i class="fa-regular fa-heart"></i>
-                        <!-- @TODO: add logic to show filled heart when item is part of wishlist -->
-                        <!-- <i class="fa-solid fa-heart"></i> -->
-                        Add to wishlist
-                    </a>
+                    {% if product in wishlist.products.all %}
+                        <a href="{% url 'remove_from_wishlist' product.id %}" class="product-wishlist">
+                            <i class="fa-solid fa-heart"></i>
+                            Remove from wishlist
+                        </a>
+                    {% else %}
+                        <a href="{% url 'add_to_wishlist' product.id %}" class="product-wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                            Add to wishlist
+                        </a>
+                    {% endif %}
                     <input type="hidden" name="redirect_url" value="{{ request.path }}{% if digital_download_enabled %}?format=digital_download{% endif %}">
                 </form>
             </div>
@@ -128,7 +133,7 @@
     </div>
 
     {% if related_products|length > 0 %}
-        {% include 'products/includes/related-products.html' %}
+        {% include 'includes/related/related.html' %}
     {% endif %}
 
 </div>

@@ -92,13 +92,17 @@
             </div>
         </div>
     </div>
+
+    {% if wishlist.products.all %}
+        {% include 'includes/related/related.html' %}
+    {% else %}
+        <p>nothing here</p>
+    {% endif %}
+
 </section>
 {% endblock %}
 
 {% block scripts %}
-
     {{ block.super }}
-
     <script src="{% static 'profiles/js/countryfield.js' %}"></script>
-    
 {% endblock %}

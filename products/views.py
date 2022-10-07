@@ -7,6 +7,7 @@ from django.db.models.functions import Lower
 from .models import Product, Album, Song, Merch
 from .forms import AlbumForm, MerchForm
 from artists.models import Artist
+from profiles.models import UserProfile, Wishlist
 
 
 def all_products(request):
@@ -91,11 +92,14 @@ def product_detail(request, product_id):
     related_products = Product.objects.filter(
                        artist=product.artist).exclude(
                        id=product_id)[:4]
+    user = get_object_or_404(UserProfile, pk=request.user.id)
+    wishlist = get_object_or_404(Wishlist, created_by=user.id)
 
     context = {
         'product': product,
         'product_name': product_name,
         'related_products': related_products,
+        'wishlist': wishlist,
     }
 
     return render(request, 'products/products-single.html', context)
