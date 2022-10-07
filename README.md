@@ -15,42 +15,31 @@ The target audience for this site is primarily fans of punk/hardcore music, part
 
 ### User Stories
 
-#### Site users (break this up into themes, e.g. browsing, checkout, etc)
-1. As a user, I want the site's navigation to be simple and intuitive.
-2. As a user, I want to be able to be able to checkout without an account.
-3. As a user, I want to be able to search for products, to reduce the amount of time it takes to locate a particular product.
-4. As a user, I want to be able to sort/filter products based on the following criteria:
-    1. Price: low/high (or vice versa)
-    2. Alphabetically
-    3. Rating: low/high (or vice versa)
-    4. Item type: Vinyl, CD, clothing, etc.
-    5. Artist
-5. As a user, I would like to be able to create an account to save/update my delivery information.
-6. As a user, I would like to be directed to an error page that is inkeeping with the sites design/aesthetic if there is any error.
-7. As a user, I would like to be able to add products to a 'wishlist' to view them later.
-8. As a user, I want clear feedback on what is in my shopping bag, including when it is empty.
-9. As a user, I want to be able to easily update my shopping bag, including removing items from it.
-10. As a user, I want clear confirmation when an order has been completed.
-11. As a user, I want feedback that my order is being processed.
-12. As a user, I would like a page that shows a list of all the artists, so I am able to find relevant products easily.
-13. As a user, I would like to be able to rate items on the site.
-14. As a user, I want to be able to reset my passowrd if I forget it.
-15. As a user, I want the ability to easily log out of my account.
-
-#### Site owners
-1. As a store owner, I want the ability to add products to the store.
-2. As a store owner, I want the ability to edit products easily.
-3. As a store owner, I want the ability to delete products from the store.
-4. As a store owner, I want the ability to add new artists to the store.
-5. As a store owner, I want the ability to edit information about artists.
-6. As a store owner, I want the ability to delete artists from the store.
-7. As a store owner, I want the ability to add new product types, to allow for future expansion into new markets.
-8. As a store owner, I want to see orders that have been placed.
-9. As a store owner, I want to be able to edit orders when a customer informs us of any mistakes made.
-10. As a store owner, I want to see a list of users to determine how popular the site is.
-11. As a store owner, I would like to be able to manage the accounts of users: changing their permissions, deleting accounts, etc.
-12. As a store owner, I want to be able to see which products have sold the most units, to guage the popularity of different products.
-13. As a store owner, I want a list of email addresses for each user, so that I can create a mailing list of all customers, if permission is given by users.
+| No. | Bug | Link | Completed |
+| ---- | -------------- | ---- | :----: |
+|  | Site users |  |  |
+| #1 | As a user, I want the site's navigation to be simple and intuitive. | [Link to issue #1](https://github.com/Samoftheforrest/forrest-records/issues/12) | :white_check_mark: |
+| #2 | As a user, I want to be able to be able to checkout without an account. | [Link to issue #2](https://github.com/Samoftheforrest/forrest-records/issues/13) |  |
+| #3 | As a user, I want to be able to be able to checkout without an account. | [Link to issue #3](https://github.com/Samoftheforrest/forrest-records/issues/14) |  |
+| #4 | As a user, I want to be able to sort/filter products based on the following criteria: Price, Alphabetically, Product type, Artist. | [Link to issue #4](https://github.com/Samoftheforrest/forrest-records/issues/15) |  |
+| #5 | As a user, I would like to be able to create an account to save/update my delivery information. | [Link to issue #5](https://github.com/Samoftheforrest/forrest-records/issues/16) |  |
+| #6 | As a user, I would like to be directed to an error page that is inkeeping with the sites design/aesthetic if there is any error. | [Link to issue #6](https://github.com/Samoftheforrest/forrest-records/issues/17) |  |
+| #7 | As a user, I would like to be able to add products to a 'wishlist' to view them later. | [Link to issue #7](https://github.com/Samoftheforrest/forrest-records/issues/18) |  |
+| #8 | As a user, I want clear feedback on what is in my shopping bag, including when it is empty. | [Link to issue #8](https://github.com/Samoftheforrest/forrest-records/issues/19) |  |
+| #9 | As a user, I want to be able to easily update my shopping bag, including removing items from it. | [Link to issue #9](https://github.com/Samoftheforrest/forrest-records/issues/20) |  |
+| #10 | As a user, I want clear confirmation when an order has been completed.| [Link to issue #10](https://github.com/Samoftheforrest/forrest-records/issues/21) |  |
+| #11 | As a user, I want feedback that my order is being processed. | [Link to issue #11](https://github.com/Samoftheforrest/forrest-records/issues/22) |  |
+| #12 | As a user, I would like a page that shows a list of all the artists, so I am able to find relevant products easily. | [Link to issue #12](https://github.com/Samoftheforrest/forrest-records/issues/23) |  |
+| #13 | As a user, I want to be able to reset my passowrd if I forget it. | [Link to issue #13](https://github.com/Samoftheforrest/forrest-records/issues/24) |  |
+| #14 | As a user, I want the ability to easily log in and out of my account. | [Link to issue #14](https://github.com/Samoftheforrest/forrest-records/issues/25) |  |
+|  | Site owners |  |  |
+| #1 | As a user, I want the ability to add products to the store. | [Link to issue #1](https://github.com/Samoftheforrest/forrest-records/issues/26) |  |
+| #2 | As a user, I want the ability to edit products easily. | [Link to issue #2](https://github.com/Samoftheforrest/forrest-records/issues/27) |  |
+| #3 | As a user, I want the ability to delete products from the store. | [Link to issue #3](https://github.com/Samoftheforrest/forrest-records/issues/28) |  |
+| #4 | As a user, I want the ability to add new artists to the store. | [Link to issue #4](https://github.com/Samoftheforrest/forrest-records/issues/29) |  |
+| #5 | As a user, I want the ability to edit information about artists. | [Link to issue #5](https://github.com/Samoftheforrest/forrest-records/issues/30) |  |
+| #6 | As a user, I want the ability to delete artists from the store. | [Link to issue #6](https://github.com/Samoftheforrest/forrest-records/issues/31) |  |
+| #7 | As a user, I want to see orders that have been placed. | [Link to issue #7](https://github.com/Samoftheforrest/forrest-records/issues/32) |  |
 
 ### Design
 
@@ -284,15 +273,15 @@ From the "Shop" menu in the navigation, the user can also navigate to the Artist
 ### Languages
 - [HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [SASS/SCSS](https://sass-lang.com/)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Python](https://www.python.org/)
+- [SQL](https://www.w3schools.com/sql/)
 
 ### Libraries + Frameworks
 - [Django](https://www.djangoproject.com/)
-- [SASS/SCSS](https://sass-lang.com/)
 - [Bootstrap](https://getbootstrap.com/)
 - [jQuery](https://jquery.com/)
-- [SQL](https://www.w3schools.com/sql/)
 
 ### Design
 - [Figma](https://www.figma.com/)
