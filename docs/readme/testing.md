@@ -11,38 +11,36 @@ The following pages were validated using the [Markup Validation Service](https:/
 | File | Result | Report |
 | ---- | --- | ---- |
 | / (home) | 0 errors, 0 warnings | [Report](/docs/readme/testing/homepage-html-report.png) |
-| /accounts/login | 0 errors, 0 warnings | [Report]() |
+| /accounts/login | 0 errors, 0 warnings | [Report](/docs/readme/testing/login-html-report.png) |
 | /accounts/logout | 0 errors, 0 warnings | [Report](/docs/readme/testing/logout-html-report.png) |
-| /accounts/signup | 0 errors, 0 warnings | [Report]() |
-| /artists | 0 errors, 0 warnings | [Report]() |
-| /artists/add/artists | | [Report]() |
-| /artists/edit/artists | | [Report]() |
-| /artists/delete/artists | | [Report]() |
-| /artists/artists/warning | | [Report]() |
-| /bag | 0 errors, 0 warnings | [Report]() |
-| /blog | 0 errors, 0 warnings | [Report]() |
-| /blog/<id> | | [Report]() |
-| /blog/add/blog | | [Report]() |
-| /blog/edit/blog | | [Report]() |
-| /blog/delete/blog | | [Report]() |
-| /blog/blog/warning | | [Report]() |
-| /checkout | 0 errors, 0 warnings | [Report]() |
-| /checkout/checkout/success/<order_number> | 0 errors, 0 warnings | [Report]() |
-| /checkout/orders/all | | [Report]() |
-| /contact | 0 errors, 0 warnings | [Report]() |
-| /contact/inbox | | [Report]() |
-| /products | 0 errors, 0 warnings | [Report]() |
-| /products/? (query) | 0 errors, 0 warnings | [Report]() |
-| /products/<id> | | [Report]() |
-| /products/add/album | 0 errors, 0 warnings | [Report]() |
-| /products/edit/album/<id> | 0 errors, 0 warnings | [Report]() |
-| /products/album/warning<id> | 0 errors, 0 warnings | [Report]() |
-| /products/add/merch | 0 errors, 0 warnings | [Report]() |
-| /products/edit/merch<id> | 0 errors, 0 warnings | [Report]() |
-| /products/merch/warning<id> | 0 errors, 0 warnings | [Report]() |
-| /profile | | [Report]() |
-| /profile/all | | [Report]() |
-| /profile/order/history/<order_number> | | [Report]() |
+| /accounts/signup | 0 errors, 0 warnings | [Report](/docs/readme/testing/register-html-report.png) |
+| /artists | 0 errors, 0 warnings | [Report](/docs/readme/testing/artists-html-report.png) |
+| /artists/add/artists | 0 warnings, 0 errors | [Report](/docs/readme/testing/add-artist-html-report.png) |
+| /artists/edit/artists/<id> | 0 warnings, 0 errors | [Report](/docs/readme/testing/edit-artist-html-report.png) |
+| /artists/artists/warning/<id> | 0 warnings, 0 errors | [Report](/docs/readme/testing/delete-artist-html-report.png) |
+| /bag | 0 errors, 0 warnings | [Report](/docs/readme/testing/bag-html-report.png) |
+| /blog | 0 errors, 0 warnings | [Report](/docs/readme/testing/blog-html-report.png) |
+| /blog/<id> | 0 errors, 0 warnings | [Report](/docs/readme/testing/blog-single-html-report.png) |
+| /blog/add/blog | 0 errors, 0 warnings | [Report](/docs/readme/testing/add-blog-html-report.png) |
+| /blog/edit/blog/<id> | 0 errors, 0 warnings | [Report](/docs/readme/testing/edit-blog-html-report.png) |
+| /blog/blog/warning/<id> | 0 errors, 0 warnings | [Report](/docs/readme/testing/delete-blog-html-report.png) |
+| /checkout | 0 errors, 0 warnings | [Report](/docs/readme/testing/checkout-html-report.png) |
+| /checkout/checkout/success/<order_number> | 0 errors, 0 warnings | [Report](/docs/readme/testing/checkout-success-html-report.png) |
+| /checkout/orders/all | 0 errors, 0 warnings | [Report](/docs/readme/testing/checkout-orders-all-html-report.png) |
+| /contact | 0 errors, 0 warnings | [Report](/docs/readme/testing/contact-html-report.png) |
+| /contact/inbox | 0 errors, 0 warnings | [Report](/docs/readme/testing/contact-inbox-html-reports.png) |
+| /products | 0 errors, 0 warnings | [Report](/docs/readme/testing/products-html-report.png) |
+| /products/? (query) | 0 errors, 0 warnings | [Report](/docs/readme/testing/product-query-html-report.png) |
+| /products/<id> | 0 errors, 0 warnings | [Report](/docs/readme/testing/product-single-html-report.png) |
+| /products/add/album | 0 errors, 0 warnings | [Report](/docs/readme/testing/add-album-html-report.png) |
+| /products/edit/album/<id> | 0 errors, 0 warnings | [Report](/docs/readme/testing/edit-album-html-report.png) |
+| /products/album/warning<id> | 0 errors, 0 warnings | [Report](/docs/readme/testing/delete-album-html-report.png) |
+| /products/add/merch | 0 errors, 0 warnings | [Report](/docs/readme/testing/add-merch-html-report.png) |
+| /products/edit/merch<id> | 0 errors, 0 warnings | [Report](/docs/readme/testing/edit-merch-html-report.png) |
+| /products/merch/warning<id> | 0 errors, 0 warnings | [Report](/docs/readme/testing/delete-merch-html-report.png) |
+| /profile | 0 errors, 0 warnings | [Report](/docs/readme/testing/profile-html-report.png) |
+| /profile/all | 0 errors, 0 warnings | [Report](/docs/readme/testing/profile-all-html-report.png) |
+| /profile/order/history/<order_number> | | [Report](/docs/readme/testing/past-order-html-report.png) |
 
 ### CSS Validation
 

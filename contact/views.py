@@ -44,10 +44,14 @@ def contact_us(request):
     return render(request, 'contact/contact.html', context)
 
 
+@login_required
 def inbox(request):
     """
     Renders messages inbox
     """
+    if not request.user.is_staff:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
 
     inbox_items = Message.objects.all()
 
