@@ -29,7 +29,7 @@ The following pages were validated using the [Markup Validation Service](https:/
 | /checkout | 0 errors, 0 warnings | [Report]() |
 | /checkout/checkout/success/<order_number> | 0 errors, 0 warnings | [Report]() |
 | /checkout/orders/all | | [Report]() |
-| /contact | | [Report]() |
+| /contact | 0 errors, 0 warnings | [Report]() |
 | /contact/inbox | | [Report]() |
 | /products | 0 errors, 0 warnings | [Report]() |
 | /products/? (query) | 0 errors, 0 warnings | [Report]() |
@@ -39,7 +39,7 @@ The following pages were validated using the [Markup Validation Service](https:/
 | /products/album/warning<id> | 0 errors, 0 warnings | [Report]() |
 | /products/add/merch | 0 errors, 0 warnings | [Report]() |
 | /products/edit/merch<id> | 0 errors, 0 warnings | [Report]() |
-| /products/merch/warning<id> | | [Report]() |
+| /products/merch/warning<id> | 0 errors, 0 warnings | [Report]() |
 | /profile | | [Report]() |
 | /profile/all | | [Report]() |
 | /profile/order/history/<order_number> | | [Report]() |
