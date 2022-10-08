@@ -8,8 +8,8 @@
 
 The following pages were validated using the [Markup Validation Service](https://validator.w3.org/)
 
-| ---- | --- | ---- |
 | File | Result | Report |
+| ---- | --- | ---- |
 | / (home) | | [Report]() |
 | /accounts/login | | [Report]() |
 | /accounts/logout | | [Report]() |
@@ -46,8 +46,8 @@ The following pages were validated using the [Markup Validation Service](https:/
 
 The following files were tested using [CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 
-| ---- | --- | ---- |
 | File | Result | Report |
+| ---- | --- | ---- |
 | /static/css/base.css | 0 warnings, 0 errors | [Report](/docs/readme/testing/base-css-report.png) |
 | /checkout/static/checkout/css/checkout.css | 0 warnings, 0 errors | [Report](/docs/readme/testing/checkout-css-report.png) |
 | /profiles/static/profiles/css/profiles.css | 0 warnings, 0 errors | [Report](/docs/readme/testing/profiles-css-report.png) |
@@ -56,8 +56,8 @@ The following files were tested using [CSS Validation Service](https://jigsaw.w3
 
 The following files were tested using [JSHint](https://jshint.com/)
 
-| ---- | --- | ---- |
 | File | Result | Report |
+| ---- | --- | ---- |
 | /static/js/bootstrap.js | 0 warnings, 0 errors | [Report](/docs/readme/testing/bootstrap-js-report.png) |
 | /static/js/navigation.js | 0 warnings, 0 errors | [Report](/docs/readme/testing/navigation-js-report.png) |
 | /static/js/quantity-input-script.js | 0 warnings, 0 errors | [Report](/docs/readme/testing/quantity-input-script-js-report.png) |
