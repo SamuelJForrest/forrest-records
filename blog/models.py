@@ -32,7 +32,9 @@ class Blog(models.Model):
     image_url = models.CharField(
         max_length=254,
         null=True,
-        blank=True)
+        blank=True,
+        help_text='If you have your image hosted anywhere else, add the link here to server as a backup.'
+    )
 
     date_published = models.DateField(
         auto_now_add=True
