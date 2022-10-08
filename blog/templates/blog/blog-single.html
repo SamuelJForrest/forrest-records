@@ -22,18 +22,20 @@
     <div class="row">
         <div class="col-12">
             <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
-                <div class="d-flex align-items-center">
+                <div class="d-flex flex-column flex-md-row align-items-md-center">
                     <h1 class="h3">{{ blog.title }}</h1>
                     {% if user.is_staff %}
-                    <a href="{% url 'edit_blog' blog.id %}" class="crud-btn" data-bs-toggle="tooltip" data-bs-title="Edit this blog post">
-                        <i class="fa-solid fa-pen"></i>
-                    </a>
-                    <a href="{% url 'blog_warning' blog.id %}" class="crud-btn" data-bs-toggle="tooltip" data-bs-title="Delete this blog post">
-                        <i class="fa-solid fa-trash"></i>
-                    </a>
-                    <a href="{% url 'feature_blog' blog.id %}" class="crud-btn" data-bs-toggle="tooltip" data-bs-title="Feature blog">
-                        <i class="fa-solid fa-star"></i>
-                    </a>
+                    <div class="d-flex">
+                        <a href="{% url 'edit_blog' blog.id %}" class="crud-btn __first" data-bs-toggle="tooltip" data-bs-title="Edit this blog post">
+                            <i class="fa-solid fa-pen"></i>
+                        </a>
+                        <a href="{% url 'blog_warning' blog.id %}" class="crud-btn" data-bs-toggle="tooltip" data-bs-title="Delete this blog post">
+                            <i class="fa-solid fa-trash"></i>
+                        </a>
+                        <a href="{% url 'feature_blog' blog.id %}" class="crud-btn" data-bs-toggle="tooltip" data-bs-title="Feature blog">
+                            <i class="fa-solid fa-star"></i>
+                        </a>
+                    </div>
                     {% endif %}
                 </div>
             </div>
@@ -49,9 +51,9 @@
             <div class="col-12">
                 <div class="blog-single-image">
                     {% if blog.image %}
-                        <img src="{{ blog.image.url }}" alt="">
+                        <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
                     {% elif blog.image_url %}
-                        <img src="{{ blog.image_url }}" alt="">
+                        <img src="{{ blog.image_url }}" alt="{{ blog.title }}">
                     {% else %}
                         <div class="no-image">
                             <p>No image</p>

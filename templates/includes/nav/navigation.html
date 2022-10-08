@@ -54,10 +54,15 @@
                                     <span>£{{ total }}</span>
                                 </div>
                                 <!-- @TODO: update delivery logic -->
-                                <!-- <div class="delivery d-flex justify-content-between">
+                                <div class="delivery d-flex justify-content-between">
                                     <p>Delivery:</p>
                                     <span>£{{ delivery }}</span>
-                                </div> -->
+                                </div>
+                                {% if free_delivery_delta %}
+                                    <div class="delivery d-flex justify-content-center">
+                                        <p>Spend <strong>£{{ free_delivery_delta }}</strong> for free shipping</p>
+                                    </div>
+                                {% endif %}
                                 <a href="{% url 'view_bag' %}" class="button w-100 mt-3">View basket</a>
                                 <a href="{% url 'checkout' %}" class="button w-100 mt-3">Proceed to checkout</a>
                             {% else %}

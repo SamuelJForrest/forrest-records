@@ -32,6 +32,10 @@ def add_to_bag(request, item_id):
 
     if quantity > 99:
         quantity = 99
+        messages.error(request, 'You have surpassed maximum quantity (99) - we have set your quantity to this amount')
+    elif quantity < 1:
+        quantity = 1
+        messages.error(request, 'You can not have a quantity less than 1')
 
     if size:
         if item_id in list(bag.keys()):
@@ -83,6 +87,10 @@ def adjust_bag(request, item_id):
 
     if quantity > 99:
         quantity = 99
+        messages.error(request, 'You have surpassed maximum quantity (99) - we have set your quantity to this amount')
+    elif quantity < 1:
+        quantity = 1
+        messages.error(request, 'You can not have a quantity less than 1')
 
     if size:
         if quantity > 0:

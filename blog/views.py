@@ -114,6 +114,9 @@ def blog_warning(request, blog_id):
     """
     Renders the warning page when a store owner tries to delete a blog
     """
+    if not request.user.is_staff:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('blog'))
     
     page_title = 'Warning!'
     blog = get_object_or_404(Blog, pk=blog_id)
@@ -131,7 +134,6 @@ def delete_blog(request, blog_id):
     """
     Delete blog post
     """
-
     if not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('blog'))
@@ -147,8 +149,12 @@ def feature_blog(request, blog_id):
     """
     Sets a blog posts' status to featured
     """
+    if not request.user.is_staff:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('blog'))
+
     blog_page = BlogPage.objects.get(pk=1)
-    
+
     if blog_id == 'None':
         blog_page.featured_blog = None
         blog_page.save()

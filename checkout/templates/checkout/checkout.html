@@ -52,8 +52,8 @@
                             </div>
                         {% else %}
                             <label for="id-save-info">
-                                <a href="#">Create an account</a> or
-                                <a href="#">Login</a> to save this information
+                                <a href="{% url 'account_signup' %}">Create an account</a> or
+                                <a href="{% url 'account_login' %}">Login</a> to save this information
                             </label>
                         {% endif %}
 

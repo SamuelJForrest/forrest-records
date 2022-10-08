@@ -10,15 +10,17 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-header d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex flex-column flex-md-row align-items-md-center">
                         <h1>{{ page_title }}</h1>
                         {% if user.is_staff %}
-                            <a href="{% url 'add_album' %}" class="crud-btn" data-bs-toggle="tooltip" data-bs-title="Add album">
+                        <div class="d-flex mb-2">
+                            <a href="{% url 'add_album' %}" class="crud-btn __first" data-bs-toggle="tooltip" data-bs-title="Add album">
                                 <i class="fa-solid fa-compact-disc"></i>
                             </a>
                             <a href="{% url 'add_merch' %}" class="crud-btn" data-bs-toggle="tooltip" data-bs-title="Add merch">
                                 <i class="fa-solid fa-shirt"></i>
                             </a>
+                        </div>
                         {% endif %}
                     </div>
                     <div class="product-search d-none d-lg-flex align-items-lg-center">
@@ -57,9 +59,9 @@
                     <a href="{% url 'product_detail' product.id %}" class="product {% if product.on_sale %}__sale{% endif %}">
                         <div class="product-image">
                             {% if product.image %}
-                                <img src="{{ product.image.url }}" alt="">
+                                <img src="{{ product.image.url }}" alt="{{ product.name }}">
                             {% elif product.image_url %}
-                                <img src="{{ product.image_url }}" alt="">
+                                <img src="{{ product.image_url }}" alt="{{ product.name }}">
                             {% else %}
                                 <div class="no-image">
                                     <p>No image</p>

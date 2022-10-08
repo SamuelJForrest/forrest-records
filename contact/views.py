@@ -11,11 +11,25 @@ def contact_us(request):
     Renders the contact page, and handles the form submission
     """
     contact_page = ContactPage.objects.all()
-    contact_form = MessageForm(request.POST)
+    contact_form = MessageForm()
 
     if request.method == 'POST':
+        form_data = {
+            'name': request.POST['name'],
+            'email': request.POST['email'],
+            'message': request.POST['message'],
+        }
+
+        # Validate form - ensure no empty strings are entered
+        for key, value in form_data.items():
+            if not value:
+                messages.error(request, 'Please ensure all required forms are completed.')
+                return redirect(reverse('contact'))
+
+        contact_form = MessageForm(form_data)
+
         if contact_form.is_valid():
-            contact_form.save(request.POST)
+            contact_form.save()
             messages.success(request, 'Your message has been sent! We\'ll be in touch soon')
         else:
             messages.error(request, 'Uh oh! Something seems to have gone wrong. Try again later.')

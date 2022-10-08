@@ -7,7 +7,7 @@ def index(request):
     A view to return the index page
     """
     modifier = '__home'
-    homepage = Homepage.objects.all()
+    homepage = Homepage.objects.first()
     
     context = {
         'modifier': modifier,

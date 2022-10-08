@@ -3,9 +3,9 @@
         <div class="row {% if forloop.first %} __first {% endif %}">
             <div class="col-4 basket-menu-item-image">
                 {% if item.product.image %}
-                    <img src="{{ item.product.image.url }}" alt="" class="w-100">
+                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="w-100">
                 {% elif item.product.image_url %}
-                    <img src="{{ item.product.image_url }}" alt="" class="w-100">
+                    <img src="{{ item.product.image_url }}" alt="{{ item.product.name }}" class="w-100">
                 {% else %}
                     <div class="no-image __small">
                         <p>No image</p>

@@ -1,4 +1,10 @@
 .contact {
+    padding-bottom: 15rem;
+
+    @media screen and (min-width: $lg) {
+        padding-bottom: 5rem;
+    }
+    
     form {
         @extend .checkout-form;
 

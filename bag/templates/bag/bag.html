@@ -40,7 +40,12 @@
                             <h3 class="basket-summary-item-title">Postage</h3>
                             <p>£{{ delivery }}</p>
                         </div>
-                        <div class="basket-summary-item __total">
+                        {% if free_delivery_delta %}
+                        <div class="basket-summary-item __delivery">
+                            <p>Spend <strong>£{{ free_delivery_delta }}</strong> for free shipping</p>
+                        </div>
+                        {% endif %}
+                        <div class="basket-summary-item {% if not free_delivery_delta %}__total{% endif %}">
                             <h3 class="basket-summary-item-title">Total</h3>
                             <p>£{{ grand_total }}</p>
                         </div>

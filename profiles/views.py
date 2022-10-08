@@ -68,6 +68,9 @@ def add_to_wishlist(request, item_id):
     """
     Add a product to user's wishlist
     """
+    if not request.user.is_authenticated:
+        messages.error(request, 'Sorry, you need to be logged in to do that.')
+        return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=item_id)
     user = get_object_or_404(UserProfile, pk=request.user.id)
@@ -91,6 +94,9 @@ def remove_from_wishlist(request, item_id):
     """
     Remove a product from user's wishlist
     """
+    if not request.user.is_authenticated:
+        messages.error(request, 'Sorry, you need to be logged in to do that.')
+        return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=item_id)
     user = get_object_or_404(UserProfile, pk=request.user.id)

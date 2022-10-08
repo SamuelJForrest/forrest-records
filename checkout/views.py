@@ -204,6 +204,9 @@ def all_orders(request):
     """
     Renders the page to view all orders
     """
+    if not request.user.is_staff:
+        messages.error(request, 'Sorry, only store owners can view this page.')
+        return redirect(reverse('home'))
 
     orders = Order.objects.all()
     template = 'checkout/all-orders.html'

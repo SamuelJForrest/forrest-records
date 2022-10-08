@@ -5,40 +5,38 @@
 
 <div class="homepage-bg">
     <div class="homepage-bg-wrap">
-        <img src="/media/homepage-background.jpg" alt="">
+        <img src="{{ homepage.bg_image.url }}" alt="">
     </div>
 </div>
 
 <section class="homepage">
-    {% for item in homepage %}
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h1 class="homepage-title">{{ item.title }}</h1>
-                <p class="homepage-text">{{ item.lead_paragraph }}</p>
+                <h1 class="homepage-title">{{ homepage.title }}</h1>
+                <p class="homepage-text">{{ homepage.lead_paragraph }}</p>
                 <div class="homepage-buttons">
-                    <a href="{% url 'products' %}" class="button me-2 me-lg-3" aria-label="Visit our shop">{{ item.shop_button }}</a>
-                    <a href="{% url 'blog' %}" class="button __slide" aria-label="Visit our blog">{{ item.blog_button }}</a>
+                    <a href="{% url 'products' %}" class="button me-2 me-lg-3" aria-label="Visit our shop">{{ homepage.shop_button }}</a>
+                    <a href="{% url 'blog' %}" class="button __slide" aria-label="Visit our blog">{{ homepage.blog_button }}</a>
                 </div>
             </div>
         </div>
     </div>
     
     <div class="homepage-icons">
-        {% if item.facebook_link %}
-        <a href="{{ item.facebook_link }}" target="_blank" rel="noopener" aria-label="Visit our Facebook page"><i class="fa-brands fa-square-facebook"></i></a>
+        {% if homepage.facebook_link %}
+        <a href="{{ homepage.facebook_link }}" target="_blank" rel="noopener" aria-label="Visit our Facebook page"><i class="fa-brands fa-square-facebook"></i></a>
         {% endif %}
-        {% if item.instagram_link %}
-        <a href="{{ item.instagram_link }}" target="_blank" rel="noopener" aria-label="Visit our Instagram page"><i class="fa-brands fa-instagram"></i></a>
+        {% if homepage.instagram_link %}
+        <a href="{{ homepage.instagram_link }}" target="_blank" rel="noopener" aria-label="Visit our Instagram page"><i class="fa-brands fa-instagram"></i></a>
         {% endif %}
-        {% if item.soundcloud_link %}
-        <a href="{{ item.soundcloud_link }}" target="_blank" rel="noopener" aria-label="Visit our Soundcloud page"><i class="fa-brands fa-soundcloud"></i></a>
+        {% if homepage.soundcloud_link %}
+        <a href="{{ homepage.soundcloud_link }}" target="_blank" rel="noopener" aria-label="Visit our Soundcloud page"><i class="fa-brands fa-soundcloud"></i></a>
         {% endif %}
-        {% if item.bandcamp_link %}
-        <a href="{{ item.bandcamp_link }}" target="_blank" rel="noopener" aria-label="Visit our Bandcamp page"><i class="fa-brands fa-bandcamp"></i></a>
+        {% if homepage.bandcamp_link %}
+        <a href="{{ homepage.bandcamp_link }}" target="_blank" rel="noopener" aria-label="Visit our Bandcamp page"><i class="fa-brands fa-bandcamp"></i></a>
         {% endif %}
     </div>
-    {% endfor %}
 </section>
 
 {% endblock %}

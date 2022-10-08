@@ -177,8 +177,15 @@ strong {
 .message-container {
     position: fixed;
     bottom: 2rem;
-    right: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 999;
+
+    @media screen and (min-width: $lg) {
+        left: auto;
+        right: 2rem;
+        transform: none;
+    }
     
     .toast {
 

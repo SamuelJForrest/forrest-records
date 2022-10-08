@@ -1,10 +1,10 @@
 <div class="col-md-6 col-lg-3 {% if wishlist %}mb-4{% endif %}">
     <a href="{% url 'product_detail' product.id %}" class="related-item">
         <div class="related-item-image">
-            {% if item.product.image %}
-                <img src="{{ item.product.image.url }}" alt="" class="w-100">
-            {% elif item.product.image_url %}
-                <img src="{{ item.product.image_url }}" alt="" class="w-100">
+            {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="w-100">
+            {% elif product.image_url %}
+                <img src="{{ product.image_url }}" alt="{{ product.name }}" class="w-100">
             {% else %}
                 <div class="no-image">
                     <p>No image</p>

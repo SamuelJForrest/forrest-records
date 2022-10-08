@@ -13,7 +13,8 @@ $transform-distance: -1.6rem;
             margin-bottom: .5rem;
 
             &:hover,
-            &:focus {
+            &:focus,
+            &:active {
                 .artists {
                     &-edit,
                     &-delete {

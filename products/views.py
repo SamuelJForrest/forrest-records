@@ -253,6 +253,9 @@ def album_warning(request, album_id):
     """
     Renders the warning screen before store owner deletes an album
     """
+    if not request.user.is_staff:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
 
     page_title = 'Warning!'
     album = get_object_or_404(Album, pk=album_id)
@@ -285,6 +288,9 @@ def merch_warning(request, merch_id):
     """
     Renders the warning screen before store owner deletes a merch item
     """
+    if not request.user.is_staff:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
 
     page_title = 'Warning!'
     merch = get_object_or_404(Merch, pk=merch_id)

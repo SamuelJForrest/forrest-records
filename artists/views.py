@@ -91,6 +91,9 @@ def artist_warning(request, artist_id):
     """
     Renders the warning page before a store owner deletes an artist
     """
+    if not request.user.is_staff:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('artists'))
 
     page_title = 'Warning!'
     artist = get_object_or_404(Artist, pk=artist_id)

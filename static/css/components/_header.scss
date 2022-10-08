@@ -38,7 +38,7 @@
         width: 4.8rem;
         background: $color-red;
         position: fixed;
-        z-index: 5;
+        z-index: 20;
         left: 50%;
         bottom: 5rem;
         transform: translateX(-50%);
@@ -100,7 +100,7 @@
         height: 100vh;
         background: rgba($color-black, 0.8);
         display: none;
-        z-index: 2;
+        z-index: 10;
     }
 
     &-list {
@@ -218,8 +218,7 @@
                         }
                     }
 
-                    .total,
-                    .delivery {
+                    .total {
                         padding: 1rem 1rem;
 
                         p {
@@ -230,6 +229,21 @@
                         span {
                             padding: 0;
                             color: $color-black;
+                        }
+                    }
+
+                    .delivery {
+                        padding: .5rem 1rem;
+
+                        p {
+                            font-size: 1.6rem;
+                        }
+
+                        span {
+                            padding: 0;
+                            color: $color-black;
+                            font-size: 1.6rem;
+                            font-weight: 400;
                         }
                     }
 
@@ -372,7 +386,7 @@
         padding: 6rem 4rem;
         transition: all .3s;
         transform: translateX($nav-width);
-        z-index: 3;
+        z-index: 15;
         
         >ul {
             flex-direction: column;
