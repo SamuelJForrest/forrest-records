@@ -47,7 +47,7 @@ class Product(models.Model):
     sku = models.CharField(
         max_length=254,
         null=True,
-        blank=False
+        blank=True
     )
 
     description = models.TextField()

@@ -71,14 +71,20 @@
                 <div class="blog-single-author text-end">
                     <p>
                         Written by:
-                        {% if blog.author.user.get_full_name %}
-                            {{ blog.author.user.get_full_name }}
+                        {% if blog.author %}
+                            {% if blog.author.user.get_full_name %}
+                                {{ blog.author.user.get_full_name }}
+                            {% else %}
+                                {{ blog.author }}
+                            {% endif %}
                         {% else %}
-                            {{ blog.author }}
+                            Anonymous
                         {% endif %}
                     </p>
                     <p>
-                        {{ blog.date_published|date:"M d, Y" }}
+                        {% if blog.date_published %}
+                            Published on: {{ blog.date_published|date:"M d, Y" }}
+                        {% endif %}
                     </p>
                 </div>
             </div>

@@ -56,6 +56,13 @@ def add_blog(request):
     page_title = 'Add a Blog Post'
 
     if request.method == 'POST':
+
+        # Form validation - extra check to ensure no required fields are empty
+        title = request.POST['title']
+        if not title:
+            messages.error(request, 'Please ensure your blog has a title.')
+            return redirect(reverse('add_blog'))
+
         form = BlogForm(request.POST, request.FILES)
         if form.is_valid():
             blog = form.save()
@@ -88,13 +95,20 @@ def edit_blog(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
 
     if request.method == 'POST':
+
+        # Form validation - extra check to ensure no required fields are empty
+        title = request.POST['title']
+        if not title:
+            messages.error(request, 'Please ensure your blog has a title.')
+            return redirect(reverse('edit_blog', args=[blog.id]))
+        
         form = BlogForm(request.POST, request.FILES, instance=blog)
         if form.is_valid():
             form.save()
             messages.success(request, f'Successfully edited {blog.title}')
             return redirect(reverse('blog_detail', args=[blog.id]))
         else:
-            messages.error(request, 'Failed to add product. ')
+            messages.error(request, f'Failed to edit {blog.title}.')
     else:
         form = BlogForm(instance=blog)
         messages.info(request, f'You are editing {blog.title}')

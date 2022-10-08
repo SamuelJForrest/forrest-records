@@ -42,6 +42,21 @@ def checkout(request):
     if request.method == 'POST':
         bag = request.session.get('bag', {})
 
+        # Form validation - extra check against empty fields being saved
+        required_fields = {
+            'full_name': request.POST['full_name'],
+            'email': request.POST['email'],
+            'address1': request.POST['address1'],
+            'town_or_city': request.POST['town_or_city'],
+            'country': request.POST['country'],
+            'phone_number': request.POST['phone_number'],
+        }
+
+        for _, value in required_fields.items():
+            if not value:
+                messages.error(request, 'Please ensure all required fields are completed.')
+                return redirect(reverse('checkout'))
+
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],

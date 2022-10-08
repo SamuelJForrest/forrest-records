@@ -1741,6 +1741,10 @@ strong {
 .edit-blog form .form-check-label, .adjust-product form .form-check-label, .delete-product .form-check-label {
   transform: translate(0.5rem, 50%);
 }
+.base-form label, .add-artist form label, .add-blog form label,
+.edit-blog form label, .adjust-product form label, .delete-product label {
+  font-weight: 600;
+}
 
 .no-image {
   background: #d4d4d8;

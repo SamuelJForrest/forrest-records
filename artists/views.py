@@ -32,9 +32,21 @@ def add_artist(request):
         return redirect(reverse('artists'))
 
     if request.method == 'POST':
+
+        # Form validation - extra check against empty fields
+        required_fields = {
+            'name': request.POST['name'],
+            'friendly_name': request.POST['friendly_name'],
+        }
+
+        for _, value in required_fields.items():
+            if not value:
+                messages.error(request, 'Please ensure all required fields are completed.')
+                return redirect(reverse('add_artist'))
+
         form = ArtistForm(request.POST)
         if form.is_valid():
-            artist = form.save()
+            form.save()
             messages.success(request, 'Successfully added artist!')
             return redirect(reverse('artists'))
         else:
@@ -65,11 +77,23 @@ def edit_artist(request, artist_id):
     artist = get_object_or_404(Artist, pk=artist_id)
 
     if request.method == 'POST':
+
+        # Form validation - extra check against empty fields
+        required_fields = {
+            'name': request.POST['name'],
+            'friendly_name': request.POST['friendly_name'],
+        }
+
+        for _, value in required_fields.items():
+            if not value:
+                messages.error(request, 'Please ensure all required fields are completed.')
+                return redirect(reverse('edit_artist', args=[artist.id]))
+        
         form = ArtistForm(request.POST, instance=artist)
         if form.is_valid():
             form.save()
             messages.success(request, f'Successfully edited {artist.friendly_name}')
-            return redirect(reverse('artists'))
+            return redirect(reverse('edit_artist', args=[artist.id]))
         else:
             messages.error(request, 'Failed to add product. ')
     else:

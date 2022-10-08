@@ -21,9 +21,9 @@ def contact_us(request):
         }
 
         # Validate form - ensure no empty strings are entered
-        for key, value in form_data.items():
+        for _, value in form_data.items():
             if not value:
-                messages.error(request, 'Please ensure all required forms are completed.')
+                messages.error(request, 'Please ensure all required fields are completed.')
                 return redirect(reverse('contact'))
 
         contact_form = MessageForm(form_data)

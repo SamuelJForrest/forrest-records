@@ -73,8 +73,8 @@ class Order(models.Model):
 
     address2 = models.CharField(
         max_length=80,
-        null=False,
-        blank=False
+        null=True,
+        blank=True
     )
 
     county = models.CharField(

@@ -127,6 +127,18 @@ def add_album(request):
     album = True
 
     if request.method == 'POST':
+        # Form validation - extra check against empty fields
+        required_fields = {
+            'name': request.POST['name'],
+            'description': request.POST['description'],
+            'price': request.POST['price'],
+        }
+
+        for _, value in required_fields.items():
+            if not value:
+                messages.error(request, 'Please ensure all required fields are completed.')
+                return redirect(reverse('add_album'))
+
         form = AlbumForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
@@ -160,6 +172,18 @@ def add_merch(request):
     merch = True
 
     if request.method == 'POST':
+        # Form validation - extra check against empty fields
+        required_fields = {
+            'name': request.POST['name'],
+            'description': request.POST['description'],
+            'price': request.POST['price'],
+        }
+
+        for _, value in required_fields.items():
+            if not value:
+                messages.error(request, 'Please ensure all required fields are completed.')
+                return redirect(reverse('add_merch'))
+        
         form = MerchForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
@@ -193,6 +217,18 @@ def edit_album(request, album_id):
     album = get_object_or_404(Album, pk=album_id)
 
     if request.method == 'POST':
+        # Form validation - extra check against empty fields
+        required_fields = {
+            'name': request.POST['name'],
+            'description': request.POST['description'],
+            'price': request.POST['price'],
+        }
+
+        for _, value in required_fields.items():
+            if not value:
+                messages.error(request, 'Please ensure all required fields are completed.')
+                return redirect(reverse('edit_album', args=[album.id]))
+
         form = AlbumForm(request.POST, request.FILES, instance=album)
         if form.is_valid():
             form.save()
@@ -227,6 +263,18 @@ def edit_merch(request, merch_id):
     merch = get_object_or_404(Merch, pk=merch_id)
 
     if request.method == 'POST':
+        # Form validation - extra check against empty fields
+        required_fields = {
+            'name': request.POST['name'],
+            'description': request.POST['description'],
+            'price': request.POST['price'],
+        }
+
+        for _, value in required_fields.items():
+            if not value:
+                messages.error(request, 'Please ensure all required fields are completed.')
+                return redirect(reverse('edit_merch', args=[merch.id]))
+
         form = MerchForm(request.POST, request.FILES, instance=merch)
         if form.is_valid():
             form.save()
