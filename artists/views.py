@@ -1,3 +1,4 @@
+from django.http import Http404
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -44,13 +45,21 @@ def add_artist(request):
                 messages.error(request, 'Please ensure all required fields are completed.')
                 return redirect(reverse('add_artist'))
 
-        form = ArtistForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully added artist!')
-            return redirect(reverse('artists'))
-        else:
-            messages.error(request, 'Failed to add artist.')
+        try:
+            artist_name_exists = get_object_or_404(Artist, name=request.POST['name'])
+            artist_friendly_name_exists = get_object_or_404(Artist, friendly_name=request.POST['friendly_name'])
+        
+            if artist_name_exists or artist_friendly_name_exists:
+                messages.error(request, 'That artist name is already taken - please choose another')
+                return redirect(reverse('add_artist'))
+        except Http404:
+            form = ArtistForm(request.POST)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Successfully added artist!')
+                return redirect(reverse('artists'))
+            else:
+                messages.error(request, 'Failed to add artist.')
     else:
         form = ArtistForm()
 
