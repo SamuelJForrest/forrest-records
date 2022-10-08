@@ -48,5 +48,5 @@ $(document).ready(function() {
         const body = $('body');
 
         body.removeClass('__mobile');
-    })
+    });
 });

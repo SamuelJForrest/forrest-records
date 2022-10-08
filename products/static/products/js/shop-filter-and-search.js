@@ -17,7 +17,7 @@ $('#shop_filter').change(function() {
         currentUrl.searchParams.delete('direction');
 
         window.location.replace(currentUrl);
-    };
+    }
 });
 
 // open search bar
@@ -29,8 +29,8 @@ $(document).click(function(e) {
     if (target == 'q') {
         searchParent.addClass('__active');
     } else {
-        searchParent.removeClass('__active')
+        searchParent.removeClass('__active');
         searchInput.val('');
         searchInput.text('');
-    };
+    }
 });

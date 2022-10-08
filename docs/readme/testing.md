@@ -2,6 +2,76 @@
 
 ## Table of contents
 
+## Code validation
+
+### HTML Validation
+
+The following pages were validated using the [Markup Validation Service](https://validator.w3.org/)
+
+| ---- | --- | ---- |
+| File | Result | Report |
+| / (home) | | [Report]() |
+| /accounts/login | | [Report]() |
+| /accounts/logout | | [Report]() |
+| /accounts/signup | | [Report]() |
+| /artists | | [Report]() |
+| /artists/add/artists | | [Report]() |
+| /artists/edit/artists | | [Report]() |
+| /artists/delete/artists | | [Report]() |
+| /artists/artists/warning | | [Report]() |
+| /bag | | [Report]() |
+| /blog | | [Report]() |
+| /blog/<id> | | [Report]() |
+| /blog/add/blog | | [Report]() |
+| /blog/edit/blog | | [Report]() |
+| /blog/delete/blog | | [Report]() |
+| /blog/blog/warning | | [Report]() |
+| /checkout | | [Report]() |
+| /checkout/checkout/success/<order_number> | | [Report]() |
+| /checkout/orders/all | | [Report]() |
+| /contact | | [Report]() |
+| /contact/inbox | | [Report]() |
+| /products | | [Report]() |
+| /products/? (query) | | [Report]() |
+| /products/<id> | | [Report]() |
+| /products/add/album | | [Report]() |
+| /products/edit/album | | [Report]() |
+| /products/delete/album | | [Report]() |
+| /products/album/warning | | [Report]() |
+| /profile | | [Report]() |
+| /profile/all | | [Report]() |
+| /profile/order/history/<order_number> | | [Report]() |
+
+### CSS Validation
+
+The following files were tested using [CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+
+| ---- | --- | ---- |
+| File | Result | Report |
+| /static/css/base.css | 0 warnings, 0 errors | [Report](/docs/readme/testing/base-css-report.png) |
+| /checkout/static/checkout/css/checkout.css | 0 warnings, 0 errors | [Report](/docs/readme/testing/checkout-css-report.png) |
+| /profiles/static/profiles/css/profiles.css | 0 warnings, 0 errors | [Report](/docs/readme/testing/profiles-css-report.png) |
+
+### JSHints
+
+The following files were tested using [JSHint](https://jshint.com/)
+
+| ---- | --- | ---- |
+| File | Result | Report |
+| /static/js/bootstrap.js | 0 warnings, 0 errors | [Report](/docs/readme/testing/bootstrap-js-report.png) |
+| /static/js/navigation.js | 0 warnings, 0 errors | [Report](/docs/readme/testing/navigation-js-report.png) |
+| /static/js/quantity-input-script.js | 0 warnings, 0 errors | [Report](/docs/readme/testing/quantity-input-script-js-report.png) |
+| /bag/static/bag/js/basket-buttons.js | 0 warnings, 0 errors | [Report](/docs/readme/testing/basket-buttons-js-report.png) |
+| /checkout/static/checkout/js/stripe_elements.js | 0 warnings, 0 errors | [Report](/docs/readme/testing/stripe-js-report.png) |
+| /products/static/products/js/shop-and-filter-search.js | 0 warnings, 0 errors | [Report](/docs/readme/testing/shop-and-filter-search-js.png) |
+| /profiles/static/profiles/js/countryfield.js | 0 warnings, 0 errors | [Report](/docs/readme/testing/countryfield-report.png) |
+
+### Python
+
+The following files were tested using [PEP8Online](http://pep8online.com/)
+
+
+
 ## Testing User Stories
 
 | # | User story | Implementation | Test | Result |

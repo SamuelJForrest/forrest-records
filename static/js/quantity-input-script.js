@@ -6,7 +6,7 @@ function handleDisableEnable(element) {
     
     const minusDisabled = currentValue < 2;
     minusBtn.prop('disabled', minusDisabled);
-};
+}
 
 function checkInitialValue() {
     let quantities = $('.product-quantity');
@@ -34,7 +34,7 @@ function updateQuantityValue(element, direction) {
     } else {
         quantity.val(currentValue - 1);
     }
-};
+}
 
 $('.qty-btn').each(function() {
     const thisElement = $(this);
@@ -46,7 +46,7 @@ $('.qty-btn').each(function() {
             updateQuantityValue(thisElement, 'increment');
         } else {
             updateQuantityValue(thisElement, 'decrement');
-        };
+        }
 
         handleDisableEnable(thisElement);
     });
