@@ -10,17 +10,17 @@ The following pages were validated using the [Markup Validation Service](https:/
 
 | File | Result | Report |
 | ---- | --- | ---- |
-| / (home) | | [Report]() |
-| /accounts/login | | [Report]() |
-| /accounts/logout | | [Report]() |
-| /accounts/signup | | [Report]() |
-| /artists | | [Report]() |
+| / (home) | 0 errors, 0 warnings | [Report](/docs/readme/testing/homepage-html-report.png) |
+| /accounts/login | 0 errors, 0 warnings | [Report]() |
+| /accounts/logout | 0 errors, 0 warnings | [Report](/docs/readme/testing/logout-html-report.png) |
+| /accounts/signup | 0 errors, 0 warnings | [Report]() |
+| /artists | 0 errors, 0 warnings | [Report]() |
 | /artists/add/artists | | [Report]() |
 | /artists/edit/artists | | [Report]() |
 | /artists/delete/artists | | [Report]() |
 | /artists/artists/warning | | [Report]() |
 | /bag | | [Report]() |
-| /blog | | [Report]() |
+| /blog | 0 errors, 0 warnings | [Report]() |
 | /blog/<id> | | [Report]() |
 | /blog/add/blog | | [Report]() |
 | /blog/edit/blog | | [Report]() |
@@ -31,8 +31,8 @@ The following pages were validated using the [Markup Validation Service](https:/
 | /checkout/orders/all | | [Report]() |
 | /contact | | [Report]() |
 | /contact/inbox | | [Report]() |
-| /products | | [Report]() |
-| /products/? (query) | | [Report]() |
+| /products | 0 errors, 0 warnings | [Report]() |
+| /products/? (query) | 0 errors, 0 warnings | [Report]() |
 | /products/<id> | | [Report]() |
 | /products/add/album | | [Report]() |
 | /products/edit/album | | [Report]() |
