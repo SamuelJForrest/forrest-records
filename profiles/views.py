@@ -120,7 +120,7 @@ def all_profiles(request):
         messages.error(request, 'This page is for staff only.')
         return redirect(reverse('home'))
 
-    profiles = UserProfile.objects.all()
+    profiles = UserProfile.objects.all().order_by('-user__date_joined')
 
     template = 'profiles/all-profiles.html'
     context = {

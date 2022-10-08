@@ -11,7 +11,7 @@ def all_blog_posts(request):
     Returns all blog posts, including sorting
     """
     blog_page = BlogPage.objects.all()
-    blogs = Blog.objects.all().order_by('-blogpage__featured_blog', '-id')
+    blogs = Blog.objects.all().order_by('blogpage__featured_blog', '-id')
     featured_blog = None
 
     for item in blog_page:

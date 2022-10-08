@@ -223,7 +223,7 @@ def all_orders(request):
         messages.error(request, 'Sorry, only store owners can view this page.')
         return redirect(reverse('home'))
 
-    orders = Order.objects.all()
+    orders = Order.objects.all().order_by('-date')
     template = 'checkout/all-orders.html'
     context = {
         'orders': orders
