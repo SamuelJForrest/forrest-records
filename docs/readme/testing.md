@@ -19,25 +19,27 @@ The following pages were validated using the [Markup Validation Service](https:/
 | /artists/edit/artists | | [Report]() |
 | /artists/delete/artists | | [Report]() |
 | /artists/artists/warning | | [Report]() |
-| /bag | | [Report]() |
+| /bag | 0 errors, 0 warnings | [Report]() |
 | /blog | 0 errors, 0 warnings | [Report]() |
 | /blog/<id> | | [Report]() |
 | /blog/add/blog | | [Report]() |
 | /blog/edit/blog | | [Report]() |
 | /blog/delete/blog | | [Report]() |
 | /blog/blog/warning | | [Report]() |
-| /checkout | | [Report]() |
-| /checkout/checkout/success/<order_number> | | [Report]() |
+| /checkout | 0 errors, 0 warnings | [Report]() |
+| /checkout/checkout/success/<order_number> | 0 errors, 0 warnings | [Report]() |
 | /checkout/orders/all | | [Report]() |
 | /contact | | [Report]() |
 | /contact/inbox | | [Report]() |
 | /products | 0 errors, 0 warnings | [Report]() |
 | /products/? (query) | 0 errors, 0 warnings | [Report]() |
 | /products/<id> | | [Report]() |
-| /products/add/album | | [Report]() |
-| /products/edit/album | | [Report]() |
-| /products/delete/album | | [Report]() |
-| /products/album/warning | | [Report]() |
+| /products/add/album | 0 errors, 0 warnings | [Report]() |
+| /products/edit/album/<id> | 0 errors, 0 warnings | [Report]() |
+| /products/album/warning<id> | 0 errors, 0 warnings | [Report]() |
+| /products/add/merch | 0 errors, 0 warnings | [Report]() |
+| /products/edit/merch<id> | 0 errors, 0 warnings | [Report]() |
+| /products/merch/warning<id> | | [Report]() |
 | /profile | | [Report]() |
 | /profile/all | | [Report]() |
 | /profile/order/history/<order_number> | | [Report]() |
