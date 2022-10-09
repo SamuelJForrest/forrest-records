@@ -5,7 +5,7 @@
 | ----- | ---- | -------- | -------- |
 | record_label | Char | max_length=254 <br> null=True <br> blank=True | |
 | release_year | Char | max_length=4 <br> null=True <br> blank=True | |
-| genre | ForeignKey | null=True  blank=True  on_delete=models.SET_NULL | default=1 |
+| genre | ForeignKey | null=True <br> blank=True <br> on_delete=models.SET_NULL | default=1 |
 | digital_download | BooleanField |  null=True <br>  blank=True | | 
 
 ## Artist
@@ -129,7 +129,7 @@
 
 ## UserProfiles
 | Field | Type | Settings | Defaults |
-| ----- | ---- | -------- |
+| ----- | ---- | -------- | -------- |
 | user | OnetoOneField | User <br> on_delete=models.CASCADE | |
 | default_phone_number | Char | max_length=20 <br> null=True <br> blank=True | |
 | default_address1 | Char | max_length=80 <br> null=True <br> blank=True | |
