@@ -77,7 +77,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 CRISPY_ALLOWED_TEMPLATE_PACK = 'bootstrap5'
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'samforrest',
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
     'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
     'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET')
 }

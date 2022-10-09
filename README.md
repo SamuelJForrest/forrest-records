@@ -6,6 +6,53 @@ All of the greatest punk/hardcore music - all under one roof. Whether you are lo
 
 ## Table of Contents
 
+- [Forrest Records](#forrest-records)
+  * [Table of Contents](#table-of-contents)
+  * [UX/UI](#ux-ui)
+    + [Target audience](#target-audience)
+    + [User Stories](#user-stories)
+    + [Design](#design)
+      - [Visuals](#visuals)
+        * [Fonts](#fonts)
+      - [Wireframes (add page urls to table)](#wireframes--add-page-urls-to-table-)
+      - [Database](#database)
+        * [Physical model](#physical-model)
+        * [Models](#models)
+  * [Features](#features)
+    + [Current Features](#current-features)
+      - [Feature 1: Navigation Bar](#feature-1--navigation-bar)
+      - [Feature 2: Homepage](#feature-2--homepage)
+      - [Feature 3: Blog Pages](#feature-3--blog-pages)
+        * [Individual Blog Page](#individual-blog-page)
+      - [Feature 4: Shop pages](#feature-4--shop-pages)
+        * [Individual Product Pages](#individual-product-pages)
+      - [Feature 5: Artists Page](#feature-5--artists-page)
+      - [Contact page](#contact-page)
+      - [Login, Register and Logout](#login--register-and-logout)
+      - [Profile pages](#profile-pages)
+      - [Staff only pages](#staff-only-pages)
+      - [Basket](#basket)
+      - [Checkout](#checkout)
+    + [Features to be Implemented](#features-to-be-implemented)
+  * [Technologies Used](#technologies-used)
+    + [Languages](#languages)
+    + [Libraries + Frameworks](#libraries---frameworks)
+    + [Design](#design-1)
+    + [Other tools](#other-tools)
+  * [Testing](#testing)
+  * [Bugs](#bugs)
+  * [Deployment](#deployment)
+    + [Local Development](#local-development)
+    + [AWS Setup](#aws-setup)
+    + [Stripe Setup](#stripe-setup)
+    + [Heroku Deployment](#heroku-deployment)
+  * [Credits](#credits)
+    + [Code](#code)
+    + [Media](#media)
+    + [General Thanks](#general-thanks)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 ## UX/UI
 
 ### Target audience
@@ -311,7 +358,7 @@ I have implemented a simple contact page for customers to contact the store owne
 
 ![Contact form](/docs/readme/features/contact-ft.png)
 
-### Login, Register and Logout
+#### Login, Register and Logout
 
 These pages are modified versions of the templates provided by [AllAuth](https://django-allauth.readthedocs.io/en/latest/installation.html), which seemlessly handle all authorisation.
 
@@ -321,7 +368,7 @@ These pages are modified versions of the templates provided by [AllAuth](https:/
 
 ![Logout](/docs/readme/features/logout-ft.png)
 
-### Profile pages
+#### Profile pages
 
 Once a user has logged in, they are able to see their profile page - this page shows them:
 - Their name
@@ -335,7 +382,7 @@ Staff members also have access to a page that shows all profile pages, to allow 
 
 ![All profiles page](/docs/readme/features/all-users-ft.png)
 
-### Staff only pages
+#### Staff only pages
 
 When a staff member is logged in, they also have access to the following pages:
 - Inbox
@@ -360,13 +407,13 @@ Similarly to all orders, this page shows all the site's users - allowing staff t
 
 ![All users](/docs/readme/features/all-users-ft.png)
 
-### Basket
+#### Basket
 
 Once a user has added an item to their basket, they will be able to navigate to it via the dropdown menu (or by clicking the basket on mobile). Here, they are able to see all of the items currently in their basket, the cost of these items, the delivery cost, how much more they need to spend to qualify for free delivery (where applicable), and their grand total.
 
 ![Bag](/docs/readme/features/basket-ft.png)
 
-### Checkout
+#### Checkout
 
 From the basket, users will be able to continue through into the checkout page. Once they have filled out the checkout form, if they have been successful, they will be redirected to a success page, and an email confirmation will be sent to them.
 
@@ -435,12 +482,144 @@ Bugs for this project can be found within the project's 'Issues' tab - for ease,
 ## Deployment
 
 ### Local Development
+1. Log in to your GitHub account and navigate to this repo
+2. Copy the HTTPS code (highlighted in red below)
+![GitHub Code Dropdown](/docs/readme/deployment/local-step-1.png)
+3. Open your terminal and navigate to the directory you would like to clone this project into
+4. Run the following command in your terminal `git clone` followed by the HTTPS link from step two
+5. Once the project has cloned, open it in your code editor and add an env.py file to the main directory, this file will require the following environment variables:
+- CLOUDINARY_CLOUD_NAME: This can be found on your Cloudinary account.
+- CLOUDINARY_API_KEY: This can be found on your Cloudinary account.
+- CLOUDINARY_API_SECRET: This can be found on your Cloudinary account.
+- DATABASE_URL: Leave this one blank for now, we'll add this during Heroku setup
+- EMAIL_HOST: Your smtp email host - for this project, I used Gmail
+- EMAIL_HOST_USER: Your email
+- EMAIL_HOST_PASS: A password generated by your email provider, to allow access into your account
+- EMAIL_PORT: Your email port
+- SECRET_KEY: A randomly generated key, which can be created using online services, or by running this command in your terminal 
+- STRIPE_PUBLIC_KEY: Leave blank - we'll add this in during the following 'Stripe Setup' step.
+- STRIPE_SECRET_KEY: Leave blank - we'll add this in during the following 'Stripe Setup' step.
+- STRIPE_WH_SECRET: Leave blank - we'll add this in during the following 'Stripe Setup' step.
+- AWS_ACCESS_KEY_ID: Leave blank - we'll add this in during the following 'AWS Setup' step.
+- AWS_SECRET_ACCESS_KEY: Leave blank - we'll add this in during the following 'AWS Setup' step.
+- DEVELOPMENT: If add this variable in with a variable of 1, it will activate debug mode in Django.
+
+### Stripe Setup
+1. Go to the [Stripe website]() and login (create an account if you haven't already).
+2. From the 'Home' tab, copy both the 'Publishable key' and 'Secret key' and add them to your config variables from the previous section.
+![Stripe Variables](/docs/readme/deployment/stripe-step-1.png)
+3. Navigate to the 'Developers' tab, and then the 'Webhooks' in the side menu.
+4. Click '+ Add endpoint', add the url of your site, with /checkout/wh added to the end - i.e. `https://www.yourwebsite.com/checkout/wh`
+- **NOTE:** You will also need to take note of your webhook key here - we will need this for the environment variables.
+5. (**Optional, but recommended**): Trigger a payment to test your webhook.
+- **NOTE**: If you set up a `DEVELOPMENT` variable earlier, you need to get rid of it, or your webhooks will fail.
 
 ### AWS Setup
 
-### Stripe Setup
+#### AWS Bucket
+1. Go to the [AWS website](https://aws.amazon.com/) and login (create a personal account if you haven't already - don't be intimidated about having to enter debit card information, you will not be charged).
+2. Navigate to AWS Management Console, under My Account.
+3. Search for service S3, and create a new bucket; giving it the same name as your website, and selecting the nearest region to you.
+- **NOTE:** Uncheck block all public access and acknowledge that the bucket will be public access.
+- Also, be sure to set 'Object Ownership' to 'ACLs enabled' and 'Bucket owner preferred'
+4. On the following page, click on your newly created bucket.
+5. Navigate to the properties tab, and select 'Static Website Hosting', and use it to host a website.
+- The index and error documents can be filled with default values, as they won't be used.
+6. Next, navigate to the permissions tab, and update the following sections:
+- In the CORS section, paste the following:
+```
+[
+    {
+        "AllowedHeaders": [
+        "Authorization"
+    ],
+        "AllowedMethods": [
+        "GET"
+    ],
+        "AllowedOrigins": [
+        "*"
+    ],
+        "ExposeHeaders": []
+    }
+]
+```
+- In the bucket policy, select a type of 'S3 bucket policy', allow all principles by filling in the field with a star ('*'), select the action will be 'GetObject', and then paste in your arn key from the bucket policy section on the other tab, and paste it into the ARN field at the bottom of the form (keep a note of this ARN value for later). Once this is done, click 'Add Statement', then 'Generate policy', then copy this policy into the bucket policy editor.
+- **NOTE:** Add a '/*' onto the end of the "Resource" key here, to allow it access to everything.
+- Then, click save.
+- In the ACL list tab, click edit and enable List for Everyone (public access) and
+accept the warning box. If the edit button is disabled you need to change the Object Ownership
+section above to ACLs enabled.
+
+#### IAM
+1. Search for 'IAM' via the services search - or locate it in the services menu.
+2. Select 'User Group' from the sidebar, and create a group (it's a good idea to name it 'manage-' followed by your project name).
+- You will need to click through some extra steps to see the 'Create Group' button.
+3. Next, select 'Policies' from the sidebar, followed by 'Create policy'.
+4. From here, click 'Import Managed Policy', search for 'S3', and import 'AmazonS3FullAccess'.
+5. Copy your ARN key into the "Resource" key twice using a list, the first version should be your ARN key, and the second should be your ARN key followed by '/*', i.e.
+```
+"Resource": [
+    'your-arn-key',
+    'your-arn-key/*'
+]
+```
+6. Click through the next pages until you find the 'Review Policy' page. From here you can give it a name and description - related to your project - and click 'Create Policy'
+7. Next, we need to attach the policy to the group we made earlier. To attach the policy, on the sidebar click User Groups. Select your group, go to the permissions tab,
+open the Add permissions dropdown, and click Attach policies. Select the policy and click Add
+permissions at the bottom.
+8. Finally, navigate to 'Users' and create a new user - named after your project name. Give them programmatic access (in the checkboxes), and continue to the next page.
+9. Select your group, which has the policy attached, and click through until you can 'Create User'
+10. **IMPORTANT**: Download the CSV file, which contains essential information, and cannot be downloaded again.
+
+### Connecting Django to S3
+1. Install the following packages: `pip3 install boto3` and `pip3 install django-storages` (and run freeze > requirements.txt)
+2. Add storages to installed apps.
+3. Create an if statement to check if there is an environment variable called 'USE_AWS' in os.environ
+4. Define AWS_STORAGE_BUCKET_NAME (your bucket's name), AWS_S3_REGION_NAME (that you selected earlier on), AWS_ACCESS_KEY (which we can get from the environment - the value of which we can find from the CSV file downloaded earlier), and AWS_SECRET_ACCESS_KEY (again, from the environment, the same as AWS_ACCESS_KEY).
+4. Set up a variable called AWS_S3_CUSTOM_DOMAIN, which should be set up using an f-string as follows: `f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'`
+5. Create a new file called 'custom_storages.py' in the root directory, and import settings and storages (`from storages.backends.s3boto3 import S3Boto3Storage`)
+6. Create a custom class called StaticStorage, and another called MediaStorage, the final result will look like this:
+```
+from django.conf import settings
+from storages.backends.s3boto3 import S3Boto3Storage
+
+
+class StaticStorage(S3Boto3Storage):
+    location = settings.STATICFILES_LOCATION
+
+class MediaStorage(S3Boto3Storage):
+    location = settings.MEDIAFILES_LOCATION
+```
+7. Finally, go back to settings.py and add the following to set the locations of our static files:
+```
+# Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}'
+```
 
 ### Heroku Deployment
+1. Navigate to the [Heroku Website](heroku.com) and login (sign up if you haven't already)
+2. Create a new app, name it, and select the region nearest to you.
+3. From here, in the 'Overview' section, navigate to 'Add-ons' and select Postgres, under the 'Hobby Dev' plan.
+4. Click into your newly created Heroku Postgres database, and take a note of your database URL, and add it to your config variables as `DATABASE_URL`.
+- **NOTE**: At this stage, you should also makemigrations and migrate to your new Postgres database, to ensure you have all your models set up.
+5. Next, under the 'Settings' tab, scroll down and select 'Reveal Config Vars' - here we are going to set all of the required config variables set up earlier:
+- **NOTE:** The 'USE_AWS' variable should only be added to the Heroku config variables, so you can add this in now: `USE_AWS` with a value of `True`
+6. Navigate to the 'Deploy' tab, and under 'Deployment Method' select 'GitHub'.
+7. Connect your account, select your project, and the branch you wish to deploy from.
+8. Enable automatic deploys - as this will deploy your site every time you commit changes to GitHub.
+9. Finally, click 'Deploy Branch'.
+10. Sit back, relax, and let Heroku do the work for you!
+
+**FINAL NOTE**
+
+IF you encounter any problems while deploying - it is a good idea to use the Heroku build logs to find the problem. Also, temporarily enabling the DEVELOPMENT environment variable, thus turning on Django's DEBUG mode, can be very useful; **but make sure you delete the DEVELOPMENT variable when you are finished.**
  
 ## Credits
 
