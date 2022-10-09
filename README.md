@@ -1,5 +1,9 @@
 # Forrest Records
 
+![Forrest Records](/media/homepage-background.jpg)
+
+All of the greatest punk/hardcore music - all under one roof. Whether you are looking for collectable, vintage vinyls, or the newest releases from your favourite artists, you are in the right place.
+
 ## Table of Contents
 
 ## UX/UI
@@ -34,14 +38,14 @@ The target audience for this site is primarily fans of punk/hardcore music, part
 | #14 | As a user, I want the ability to easily log in and out of my account. | [Link to issue #14](https://github.com/Samoftheforrest/forrest-records/issues/25) | :white_check_mark: |
 | #15 | As a user, I want to be able to contact the store owners to provide feedback or query an order. | [Link to issue #15](https://github.com/Samoftheforrest/forrest-records/issues/33) | :white_check_mark: |
 |  | **Site owners** |  |  |
-| #1 | As a user, I want the ability to add products to the store. | [Link to issue #1](https://github.com/Samoftheforrest/forrest-records/issues/26) | :white_check_mark |
-| #2 | As a user, I want the ability to edit products easily. | [Link to issue #2](https://github.com/Samoftheforrest/forrest-records/issues/27) | :white_check_mark |
-| #3 | As a user, I want the ability to delete products from the store. | [Link to issue #3](https://github.com/Samoftheforrest/forrest-records/issues/28) | :white_check_mark |
-| #4 | As a user, I want the ability to add new artists to the store. | [Link to issue #4](https://github.com/Samoftheforrest/forrest-records/issues/29) | :white_check_mark |
-| #5 | As a user, I want the ability to edit information about artists. | [Link to issue #5](https://github.com/Samoftheforrest/forrest-records/issues/30) | :white_check_mark |
-| #6 | As a user, I want the ability to delete artists from the store. | [Link to issue #6](https://github.com/Samoftheforrest/forrest-records/issues/31) | :white_check_mark |
-| #7 | As a user, I want to see orders that have been placed. | [Link to issue #7](https://github.com/Samoftheforrest/forrest-records/issues/32) | :white_check_mark |
-| #8 | As a user, I'd like to be able to see all messages sent in one place. | [Link to issue #8](https://github.com/Samoftheforrest/forrest-records/issues/34) | :white_check_mark |
+| #1 | As a user, I want the ability to add products to the store. | [Link to issue #1](https://github.com/Samoftheforrest/forrest-records/issues/26) | :white_check_mark: |
+| #2 | As a user, I want the ability to edit products easily. | [Link to issue #2](https://github.com/Samoftheforrest/forrest-records/issues/27) | :white_check_mark: |
+| #3 | As a user, I want the ability to delete products from the store. | [Link to issue #3](https://github.com/Samoftheforrest/forrest-records/issues/28) | :white_check_mark: |
+| #4 | As a user, I want the ability to add new artists to the store. | [Link to issue #4](https://github.com/Samoftheforrest/forrest-records/issues/29) | :white_check_mark: |
+| #5 | As a user, I want the ability to edit information about artists. | [Link to issue #5](https://github.com/Samoftheforrest/forrest-records/issues/30) | :white_check_mark: |
+| #6 | As a user, I want the ability to delete artists from the store. | [Link to issue #6](https://github.com/Samoftheforrest/forrest-records/issues/31) | :white_check_mark: |
+| #7 | As a user, I want to see orders that have been placed. | [Link to issue #7](https://github.com/Samoftheforrest/forrest-records/issues/32) | :white_check_mark: |
+| #8 | As a user, I'd like to be able to see all messages sent in one place. | [Link to issue #8](https://github.com/Samoftheforrest/forrest-records/issues/34) | :white_check_mark: |
 
 ### Design
 
@@ -160,18 +164,32 @@ https://user-images.githubusercontent.com/94783808/190912753-f9f2bdb7-b905-438e-
 
 When the user visits the blog area of the site, they are initially directed to the blog listing page - which shows the blogs sorted in order from newest to oldest. Also, from the admin, anyone with the correct permissions can set a 'featured' blog, which will be the first blog to show on this page:
 
+**Add blog**
+When a staff member navigates to the main blog page, they are able to create a new blog by simply clicking the pencil button - which will take them to the following form:
+
+![Add blog form](/docs/readme/features/add-blog-ft.png)
+
+NOTE: this form also includes the ckeditor rich text field - this gives staff more flexibility to format their content.
+
 **Featured Blog**
 ![Featured blog](/docs/readme/features/blog-featured.png)
 
 Once a user clicks the blog of their choice, they are redirected to the page for that individual blog post. This page includes a breadcrumb which allows you to return to the main blog listing page.
+
+Staff members are also able to set the featured blog via the frontend, by simply navigating to the blog they wish to feature, and clicking the star icon in the header section.
+
+![Feature blog](/docs/readme/features/feature-blog-ft.png)
 
 ##### Individual Blog Page
 ![Individual blog](/docs/readme/features/blog-single.png)
 
 I also installed an additional pip package - [ckeditor](https://django-ckeditor.readthedocs.io/en/latest/) - to allow any admin who is writing a blog to do so using a rich text field. I decided to take this approach as I found this way ensured that any formatting present in the blog post was present on the page; it also allowed for authors to include relevant links, images, tables, etc.
 
-**Edit Blog (Admin Page)**
-![Edit blog](/docs/readme/features/blog-admin.png)
+**Edit Blog**
+
+When on an individual blog page, staff members are also able to edit blogs by clicking the pencil in the header section.
+
+![Edit blog](/docs/readme/features/edit-blog-ft.png)
 
 #### Feature 4: Shop pages
 
@@ -252,6 +270,19 @@ On the album pages, the user is also shown the track listing of the album they a
 
 If there are any other products available from the same artist the user is viewing, they will be shown as related products at the bottom of the page. However, this list is limited to four items.
 
+**Edit and delete products**
+
+From these pages, staff members also have the option to edit and delete the product they are currently viewing:
+
+Edit album
+![Edit album](/docs/readme/features/edit-album-ft.png)
+
+Edit merch
+![Edit merch](/docs/readme/features/edit-merch-ft.png)
+
+Similarly to the blog pages, the user is also warned before deleting any product
+![Delete product](/docs/readme/features/delete-album-ft.png)
+
 Example
 
 https://user-images.githubusercontent.com/94783808/193417227-3881e82b-cbb9-4a43-9eb8-1691eaaece4a.mp4
@@ -261,6 +292,89 @@ https://user-images.githubusercontent.com/94783808/193417227-3881e82b-cbb9-4a43-
 ![Artists Page](/docs/readme/features/artists-page.png)
 
 From the "Shop" menu in the navigation, the user can also navigate to the Artists page. This page shows a list of all artists on the site, arranged alphabetically. Each artist name is a link that leads the user to a filtered version of the shop page that shows products by the artists they have selected only.
+
+**Add/Edit/Delete Artists**
+From this page, the user also has the option to add, edit and or delete artists.
+
+Add artist form:
+![Add artist form](/docs/readme/features/add-artist-feature.png)
+
+Edit artist form - same as the add artist form, but pre-populated:
+![Edit artist form](/docs/readme/features//edit-artist.png)
+
+Delete artist - before the artist is deleted, the user is directed to a warning page to ensure they really want to delete the artist in question
+![Delete artist](/docs/readme/features/warning-artist-ft.png)
+
+#### Contact page
+
+I have implemented a simple contact page for customers to contact the store owners. Once this form is filled out, the messages are sent to the inbox (see below).
+
+![Contact form](/docs/readme/features/contact-ft.png)
+
+### Login, Register and Logout
+
+These pages are modified versions of the templates provided by [AllAuth](https://django-allauth.readthedocs.io/en/latest/installation.html), which seemlessly handle all authorisation.
+
+![Login](/docs/readme/features/login-ft.png)
+
+![Register](/docs/readme/features/register-ft.png)
+
+![Logout](/docs/readme/features/logout-ft.png)
+
+### Profile pages
+
+Once a user has logged in, they are able to see their profile page - this page shows them:
+- Their name
+- Their delivery information (which is pre-populated if they have saved their information in the past)
+- Their order history
+- Their wishlist
+
+![Profile page](/docs/readme/features/profile-ft.png)
+
+Staff members also have access to a page that shows all profile pages, to allow them to know how many users the site has.
+
+![All profiles page](/docs/readme/features/all-users-ft.png)
+
+### Staff only pages
+
+When a staff member is logged in, they also have access to the following pages:
+- Inbox
+- All users
+- All orders
+
+**Inbox**
+
+Here, staff members can see all messages submitted by the contact form.
+
+![Inbox](/docs/readme/features/inbox-ft.png)
+
+**All orders**
+
+This view shows staff members all orders, ordered from newest to oldest.
+
+![All orders](/docs/readme/features/all-orders-ft.png)
+
+**All users**
+
+Similarly to all orders, this page shows all the site's users - allowing staff to see how popular the site is
+
+![All users](/docs/readme/features/all-users-ft.png)
+
+### Basket
+
+Once a user has added an item to their basket, they will be able to navigate to it via the dropdown menu (or by clicking the basket on mobile). Here, they are able to see all of the items currently in their basket, the cost of these items, the delivery cost, how much more they need to spend to qualify for free delivery (where applicable), and their grand total.
+
+![Bag](/docs/readme/features/basket-ft.png)
+
+### Checkout
+
+From the basket, users will be able to continue through into the checkout page. Once they have filled out the checkout form, if they have been successful, they will be redirected to a success page, and an email confirmation will be sent to them.
+
+![Checkout](/docs/readme/features/checkout-ft.png)
+
+![Checkout Success](/docs/readme/features/checkout-success-ft.png)
+
+![Checkout Success Email](/docs/readme/features/checkout-success-email-ft.png)
 
 ### Features to be Implemented
 1. Tours: Add a section to the site which allows user's to search/buy tickets for an artist of their choice's tour.
@@ -322,7 +436,11 @@ Bugs for this project can be found within the project's 'Issues' tab - for ease,
 
 ### Local Development
 
-### Deployment
+### AWS Setup
+
+### Stripe Setup
+
+### Heroku Deployment
  
 ## Credits
 
