@@ -19,34 +19,34 @@ The target audience for this site is primarily fans of punk/hardcore music, part
 | ---- | -------------- | ---- | :----: |
 |  | **Site users** |  |  |
 | #1 | As a user, I want the site's navigation to be simple and intuitive. | [Link to issue #1](https://github.com/Samoftheforrest/forrest-records/issues/12) | :white_check_mark: |
-| #2 | As a user, I want to be able to be able to checkout without an account. | [Link to issue #2](https://github.com/Samoftheforrest/forrest-records/issues/13) |  |
-| #3 | As a user, I want to be able to be able to checkout without an account. | [Link to issue #3](https://github.com/Samoftheforrest/forrest-records/issues/14) |  |
-| #4 | As a user, I want to be able to sort/filter products based on the following criteria: Price, Alphabetically, Product type, Artist. | [Link to issue #4](https://github.com/Samoftheforrest/forrest-records/issues/15) |  |
-| #5 | As a user, I would like to be able to create an account to save/update my delivery information. | [Link to issue #5](https://github.com/Samoftheforrest/forrest-records/issues/16) |  |
-| #6 | As a user, I would like to be directed to an error page that is inkeeping with the sites design/aesthetic if there is any error. | [Link to issue #6](https://github.com/Samoftheforrest/forrest-records/issues/17) |  |
-| #7 | As a user, I would like to be able to add products to a 'wishlist' to view them later. | [Link to issue #7](https://github.com/Samoftheforrest/forrest-records/issues/18) |  |
-| #8 | As a user, I want clear feedback on what is in my shopping bag, including when it is empty. | [Link to issue #8](https://github.com/Samoftheforrest/forrest-records/issues/19) |  |
-| #9 | As a user, I want to be able to easily update my shopping bag, including removing items from it. | [Link to issue #9](https://github.com/Samoftheforrest/forrest-records/issues/20) |  |
-| #10 | As a user, I want clear confirmation when an order has been completed.| [Link to issue #10](https://github.com/Samoftheforrest/forrest-records/issues/21) |  |
-| #11 | As a user, I want feedback that my order is being processed. | [Link to issue #11](https://github.com/Samoftheforrest/forrest-records/issues/22) |  |
-| #12 | As a user, I would like a page that shows a list of all the artists, so I am able to find relevant products easily. | [Link to issue #12](https://github.com/Samoftheforrest/forrest-records/issues/23) |  |
-| #13 | As a user, I want to be able to reset my passowrd if I forget it. | [Link to issue #13](https://github.com/Samoftheforrest/forrest-records/issues/24) |  |
-| #14 | As a user, I want the ability to easily log in and out of my account. | [Link to issue #14](https://github.com/Samoftheforrest/forrest-records/issues/25) |  |
-| #15 | As a user, I want to be able to contact the store owners to provide feedback or query an order. | [Link to issue #15](https://github.com/Samoftheforrest/forrest-records/issues/33) |  |
+| #2 | As a user, I want to be able to be able to checkout without an account. | [Link to issue #2](https://github.com/Samoftheforrest/forrest-records/issues/13) | :white_check_mark: |
+| #3 | As a user, I want to be able to be able to checkout without an account. | [Link to issue #3](https://github.com/Samoftheforrest/forrest-records/issues/14) | :white_check_mark: |
+| #4 | As a user, I want to be able to sort/filter products based on the following criteria: Price, Alphabetically, Product type, Artist. | [Link to issue #4](https://github.com/Samoftheforrest/forrest-records/issues/15) | :white_check_mark: |
+| #5 | As a user, I would like to be able to create an account to save/update my delivery information. | [Link to issue #5](https://github.com/Samoftheforrest/forrest-records/issues/16) | :white_check_mark: |
+| #6 | As a user, I would like to be directed to an error page that is inkeeping with the sites design/aesthetic if there is any error. | [Link to issue #6](https://github.com/Samoftheforrest/forrest-records/issues/17) | :white_check_mark: |
+| #7 | As a user, I would like to be able to add products to a 'wishlist' to view them later. | [Link to issue #7](https://github.com/Samoftheforrest/forrest-records/issues/18) | :white_check_mark: |
+| #8 | As a user, I want clear feedback on what is in my shopping bag, including when it is empty. | [Link to issue #8](https://github.com/Samoftheforrest/forrest-records/issues/19) | :white_check_mark: |
+| #9 | As a user, I want to be able to easily update my shopping bag, including removing items from it. | [Link to issue #9](https://github.com/Samoftheforrest/forrest-records/issues/20) | :white_check_mark: |
+| #10 | As a user, I want clear confirmation when an order has been completed.| [Link to issue #10](https://github.com/Samoftheforrest/forrest-records/issues/21) | :white_check_mark: |
+| #11 | As a user, I want feedback that my order is being processed. | [Link to issue #11](https://github.com/Samoftheforrest/forrest-records/issues/22) | :white_check_mark: |
+| #12 | As a user, I would like a page that shows a list of all the artists, so I am able to find relevant products easily. | [Link to issue #12](https://github.com/Samoftheforrest/forrest-records/issues/23) | :white_check_mark: |
+| #13 | As a user, I want to be able to reset my passowrd if I forget it. | [Link to issue #13](https://github.com/Samoftheforrest/forrest-records/issues/24) | :white_check_mark: |
+| #14 | As a user, I want the ability to easily log in and out of my account. | [Link to issue #14](https://github.com/Samoftheforrest/forrest-records/issues/25) | :white_check_mark: |
+| #15 | As a user, I want to be able to contact the store owners to provide feedback or query an order. | [Link to issue #15](https://github.com/Samoftheforrest/forrest-records/issues/33) | :white_check_mark: |
 |  | **Site owners** |  |  |
-| #1 | As a user, I want the ability to add products to the store. | [Link to issue #1](https://github.com/Samoftheforrest/forrest-records/issues/26) |  |
-| #2 | As a user, I want the ability to edit products easily. | [Link to issue #2](https://github.com/Samoftheforrest/forrest-records/issues/27) |  |
-| #3 | As a user, I want the ability to delete products from the store. | [Link to issue #3](https://github.com/Samoftheforrest/forrest-records/issues/28) |  |
-| #4 | As a user, I want the ability to add new artists to the store. | [Link to issue #4](https://github.com/Samoftheforrest/forrest-records/issues/29) |  |
-| #5 | As a user, I want the ability to edit information about artists. | [Link to issue #5](https://github.com/Samoftheforrest/forrest-records/issues/30) |  |
-| #6 | As a user, I want the ability to delete artists from the store. | [Link to issue #6](https://github.com/Samoftheforrest/forrest-records/issues/31) |  |
-| #7 | As a user, I want to see orders that have been placed. | [Link to issue #7](https://github.com/Samoftheforrest/forrest-records/issues/32) |  |
-| #8 | As a user, I'd like to be able to see all messages sent in one place. | [Link to issue #8](https://github.com/Samoftheforrest/forrest-records/issues/34) |  |
+| #1 | As a user, I want the ability to add products to the store. | [Link to issue #1](https://github.com/Samoftheforrest/forrest-records/issues/26) | :white_check_mark |
+| #2 | As a user, I want the ability to edit products easily. | [Link to issue #2](https://github.com/Samoftheforrest/forrest-records/issues/27) | :white_check_mark |
+| #3 | As a user, I want the ability to delete products from the store. | [Link to issue #3](https://github.com/Samoftheforrest/forrest-records/issues/28) | :white_check_mark |
+| #4 | As a user, I want the ability to add new artists to the store. | [Link to issue #4](https://github.com/Samoftheforrest/forrest-records/issues/29) | :white_check_mark |
+| #5 | As a user, I want the ability to edit information about artists. | [Link to issue #5](https://github.com/Samoftheforrest/forrest-records/issues/30) | :white_check_mark |
+| #6 | As a user, I want the ability to delete artists from the store. | [Link to issue #6](https://github.com/Samoftheforrest/forrest-records/issues/31) | :white_check_mark |
+| #7 | As a user, I want to see orders that have been placed. | [Link to issue #7](https://github.com/Samoftheforrest/forrest-records/issues/32) | :white_check_mark |
+| #8 | As a user, I'd like to be able to see all messages sent in one place. | [Link to issue #8](https://github.com/Samoftheforrest/forrest-records/issues/34) | :white_check_mark |
 
 ### Design
 
 #### Visuals
-For this project, I used the pre-made ['Red at Night'](https://colorhub.vercel.app/select-palette/enviro) colour palette from [Daniel Cranney](https://twitter.com/danielcranney)'s ['ColorHub'](https://colorhub.vercel.app/). I decided that to use this colour palette as it is largely monochromatic (using black, grey, and white), but also has a striking red; I believe this colour will attract users' attention toward any calls to action on the site.
+For this project, I used the pre-made [Red at Night](https://colorhub.vercel.app/select-palette/enviro) colour palette from [Daniel Cranney](https://twitter.com/danielcranney)'s ['ColorHub'](https://colorhub.vercel.app/). I decided that to use this colour palette as it is largely monochromatic (using black, grey, and white), but also has a striking red; I believe this colour will attract users' attention toward any calls to action on the site.
 
 ![Devhub Colour Pallete](/docs/readme//design/color-palette.png)
 
@@ -87,6 +87,8 @@ I used two [Google fonts]() for this project: [DM Sans](https://fonts.google.com
 ![Database schema](/docs/readme/design/database.png)
 
 ##### Models
+
+**NOTE**: To meet the demands of the site, more models were required since the creation of the physical model above - all models can be found below:
 
 The individual database models can be found in [this](/docs/readme/database.md) separate markdown file.
 
