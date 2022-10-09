@@ -40,7 +40,7 @@ The following pages were validated using the [Markup Validation Service](https:/
 | /products/merch/warning<id> | 0 errors, 0 warnings | [Report](/docs/readme/testing/delete-merch-html-report.png) |
 | /profile | 0 errors, 0 warnings | [Report](/docs/readme/testing/profile-html-report.png) |
 | /profile/all | 0 errors, 0 warnings | [Report](/docs/readme/testing/profile-all-html-report.png) |
-| /profile/order/history/<order_number> | | [Report](/docs/readme/testing/past-order-html-report.png) |
+| /profile/order/history/<order_number> |0 errors, 0 warnings | [Report](/docs/readme/testing/past-order-html-report.png) |
 
 ### CSS Validation
 
@@ -77,7 +77,7 @@ Due to time constraints, I was unable to run unit tests for all apps. With this 
 | Checkout | 4 tests: 4 successful, 0 failed | [Report](/docs/readme/testing/checkout-unit-tests.png) | [Coverage](/docs/readme/testing/checkout-coverage-report.png) |
 | Products | 17 tests: 17 successful, 0 failed | [Report](/docs/readme/testing/products-unit-tests.png) | [Coverage](/docs/readme/testing/products-coverage-report.png) |
 
-## Device testing
+## Browser testing
 
 This project has been tested in the following browsers
 - Google Chrome

@@ -317,22 +317,25 @@ On the album pages, the user is also shown the track listing of the album they a
 
 If there are any other products available from the same artist the user is viewing, they will be shown as related products at the bottom of the page. However, this list is limited to four items.
 
+Example
+
+https://user-images.githubusercontent.com/94783808/193417227-3881e82b-cbb9-4a43-9eb8-1691eaaece4a.mp4
+
 **Edit and delete products**
 
 From these pages, staff members also have the option to edit and delete the product they are currently viewing:
 
 Edit album
+
 ![Edit album](/docs/readme/features/edit-album-ft.png)
 
 Edit merch
+
 ![Edit merch](/docs/readme/features/edit-merch-ft.png)
 
 Similarly to the blog pages, the user is also warned before deleting any product
+
 ![Delete product](/docs/readme/features/delete-album-ft.png)
-
-Example
-
-https://user-images.githubusercontent.com/94783808/193417227-3881e82b-cbb9-4a43-9eb8-1691eaaece4a.mp4
 
 #### Feature 5: Artists Page
 
@@ -476,8 +479,8 @@ Bugs for this project can be found within the project's 'Issues' tab - for ease,
 | #9 | Sales prices displaying incorrectly when more than one size added to basket | [Link to issue #9](https://github.com/Samoftheforrest/forrest-records/issues/9) | :white_check_mark: |
 | #10 | Basket remove button removing all sizes of same item | [Link to issue #10](https://github.com/Samoftheforrest/forrest-records/issues/10) | :white_check_mark: |
 | #11 | Inbox search returning empty inbox page if no queries are matched | [Link to issue #11](https://github.com/Samoftheforrest/forrest-records/issues/11) | :white_check_mark: |
-| #12 | Pages only showing for superusers. | [Link to issue #12](https://github.com/Samoftheforrest/forrest-records/issues/35) | :white_check_mark |
-| #13 | Non-superusers cannot add items to wishlist | [Link to issue #13](https://github.com/Samoftheforrest/forrest-records/issues/36) | :white_check_mark |
+| #12 | Pages only showing for superusers. | [Link to issue #12](https://github.com/Samoftheforrest/forrest-records/issues/35) | :white_check_mark: |
+| #13 | Non-superusers cannot add items to wishlist | [Link to issue #13](https://github.com/Samoftheforrest/forrest-records/issues/36) | :white_check_mark: |
 
 ## Deployment
 

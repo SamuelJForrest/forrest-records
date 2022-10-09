@@ -3,7 +3,7 @@ from django.db import models
 
 class Artist(models.Model):
     """
-    A class for artist information: name and friendly name. 
+    A class for artist information: name and friendly name.
     """
 
     name = models.CharField(
