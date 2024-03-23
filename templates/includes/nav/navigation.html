@@ -16,7 +16,7 @@
                     <li class="nav-list-item"><a href="{% url 'blog' %}">Blog</a></li>
                     <li class="nav-list-item"><a href="{% url 'contact' %}">Contact</a></li>
                     <li class="nav-list-item">
-                        <a href="{% url 'profile' %}"><i class="fa-solid fa-user"></i></a>
+                        <a href="#"><i class="fa-solid fa-user"></i></a>
                         <ul class="__submenu __right">
                             {% if user.is_authenticated %}
                                 <li><a href="{% url 'profile' %}">View profile</a></li>
