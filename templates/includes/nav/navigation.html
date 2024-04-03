@@ -16,7 +16,7 @@
                     <li class="nav-list-item"><a href="{% url 'blog' %}">Blog</a></li>
                     <li class="nav-list-item"><a href="{% url 'contact' %}">Contact</a></li>
                     <li class="nav-list-item">
-                        <a href="#"><i class="fa-solid fa-user"></i></a>
+                        <button><i class="fa-solid fa-user"></i></button>
                         <ul class="__submenu __right">
                             {% if user.is_authenticated %}
                                 <li><a href="{% url 'profile' %}">View profile</a></li>
@@ -33,7 +33,7 @@
                         </ul>
                     </li>
                     <li class="nav-list-item">
-                        <span>
+                        <button>
                             <i class="fa-solid fa-basket-shopping position-relative">
                                 <span class="basket-quantity {% if not bag_items %}d-none{% endif %}">
                                     {% if bag_items|length > 9 %}
@@ -43,7 +43,7 @@
                                     {% endif %}
                                 </span>
                             </i>
-                        </span>
+                        </button>
                         <ul class="__basket">
                             <li>
                             {% if product_count > 0 %}

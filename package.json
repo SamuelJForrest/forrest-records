@@ -1,0 +1,23 @@
+{
+  "name": "forrest-records",
+  "version": "1.0.0",
+  "description": "![Forrest Records](/media/homepage-background.jpg)",
+  "main": "webpack.mix.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development npx mix",
+    "prod": "cross-env NODE_ENV=production npx mix",
+    "watch": "cross-env NODE_ENV=development npx mix watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "laravel-mix": "^6.0.49",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.72.0",
+    "sass-loader": "^12.6.0"
+  }
+}

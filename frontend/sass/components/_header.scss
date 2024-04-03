@@ -109,11 +109,13 @@
             position: relative;
 
             a,
-            span:not(.basket-quantity, .scroll, .size) {
+            button:not(.basket-quantity, .scroll, .size) {
+                cursor: pointer;
                 color: $color-white;
                 text-decoration: none;
                 display: inline-block;
-                cursor: pointer;
+                background: none;
+                border: none;
 
                 @media screen and (min-width: $lg) {
                     padding: 4rem 3rem;
@@ -123,14 +125,14 @@
             &:hover,
             &:focus {
                 >a,
-                >span {
+                >button {
                     color: $color-red;
                 }
             }
 
             &:first-of-type {
                 >a,
-                >span {
+                >button {
                     padding-left: 0;
                 }
             }

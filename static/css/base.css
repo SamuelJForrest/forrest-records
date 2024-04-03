@@ -1,5 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@400;600;700&display=swap);
 /* imports */
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@400;600;700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -51,17 +51,6 @@ table {
 }
 
 /* VARIABLES */
-@-webkit-keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-1rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 @keyframes bounce {
   0% {
     transform: translateY(0);
@@ -71,16 +60,6 @@ table {
   }
   100% {
     transform: translateY(0);
-  }
-}
-@-webkit-keyframes slideup {
-  0% {
-    transform: translateY(200px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 @keyframes slideup {
@@ -773,25 +752,27 @@ table {
   position: relative;
 }
 .nav-list-item a,
-.nav-list-item span:not(.basket-quantity, .scroll, .size) {
+.nav-list-item button:not(.basket-quantity, .scroll, .size) {
+  cursor: pointer;
   color: #f8fafc;
   text-decoration: none;
   display: inline-block;
-  cursor: pointer;
+  background: none;
+  border: none;
 }
 @media screen and (min-width: 992px) {
   .nav-list-item a,
-.nav-list-item span:not(.basket-quantity, .scroll, .size) {
+  .nav-list-item button:not(.basket-quantity, .scroll, .size) {
     padding: 4rem 3rem;
   }
 }
 .nav-list-item:hover > a,
-.nav-list-item:hover > span, .nav-list-item:focus > a,
-.nav-list-item:focus > span {
+.nav-list-item:hover > button, .nav-list-item:focus > a,
+.nav-list-item:focus > button {
   color: #ef4444;
 }
 .nav-list-item:first-of-type > a,
-.nav-list-item:first-of-type > span {
+.nav-list-item:first-of-type > button {
   padding-left: 0;
 }
 .nav-list-item > ul {
@@ -897,14 +878,10 @@ table {
   justify-content: center;
   align-items: center;
   display: inline-flex;
-  -webkit-animation-name: bounce;
-          animation-name: bounce;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: bounce;
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 .nav-list-item > ul.__basket .basket-menu-item {
   width: 100%;
@@ -1089,14 +1066,10 @@ table {
   color: rgba(248, 250, 252, 0.8);
   display: inline-block;
   transform: translateY(200px);
-  -webkit-animation-name: slideup;
-          animation-name: slideup;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: slideup;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
   transition: color 0.3s;
 }
 .homepage-icons a:hover, .homepage-icons a:focus {
@@ -1104,23 +1077,19 @@ table {
 }
 
 .homepage-icons a:nth-child(1) {
-  -webkit-animation-delay: calc(0.25s);
-          animation-delay: calc(0.25s);
+  animation-delay: calc(0.25s);
 }
 
 .homepage-icons a:nth-child(2) {
-  -webkit-animation-delay: calc(0.5s);
-          animation-delay: calc(0.5s);
+  animation-delay: calc(0.5s);
 }
 
 .homepage-icons a:nth-child(3) {
-  -webkit-animation-delay: calc(0.75s);
-          animation-delay: calc(0.75s);
+  animation-delay: calc(0.75s);
 }
 
 .homepage-icons a:nth-child(4) {
-  -webkit-animation-delay: calc(1s);
-          animation-delay: calc(1s);
+  animation-delay: calc(1s);
 }
 
 .product {
@@ -1521,7 +1490,7 @@ h1,
 }
 @media screen and (min-width: 992px) {
   h1,
-.h1 {
+  .h1 {
     font-size: 6.4rem;
   }
 }
@@ -1533,8 +1502,8 @@ h2,
 }
 @media screen and (min-width: 992px) {
   h2,
-.h2,
-.artists-group-title {
+  .h2,
+  .artists-group-title {
     font-size: 4.8rem;
   }
 }
@@ -1548,10 +1517,10 @@ h3,
 }
 @media screen and (min-width: 992px) {
   h3,
-.h3,
-.blog-item-title,
-.header-logo,
-.product-detail-price.__sale {
+  .h3,
+  .blog-item-title,
+  .header-logo,
+  .product-detail-price.__sale {
     font-size: 4rem;
   }
 }
@@ -1564,9 +1533,9 @@ h4,
 }
 @media screen and (min-width: 992px) {
   h4,
-.h4,
-.product-title,
-.product-detail-price {
+  .h4,
+  .product-title,
+  .product-detail-price {
     font-size: 3.2rem;
   }
 }
@@ -1582,12 +1551,12 @@ h5,
 }
 @media screen and (min-width: 992px) {
   h5,
-.h5,
-.message-container .toast-header,
-.basket-item-title,
-.nav-list-item,
-.product-quantity input,
-.related-item-name {
+  .h5,
+  .message-container .toast-header,
+  .basket-item-title,
+  .nav-list-item,
+  .product-quantity input,
+  .related-item-name {
     font-size: 2.4rem;
   }
 }
@@ -1606,15 +1575,15 @@ h6,
 }
 @media screen and (min-width: 992px) {
   h6,
-.h6,
-.basket-item-price,
-.basket-item-update,
-.basket-item-remove,
-.checkout-form legend,
-.allauth-form-inner-content legend,
-.contact form legend,
-.product-price,
-.related-item-price {
+  .h6,
+  .basket-item-price,
+  .basket-item-update,
+  .basket-item-remove,
+  .checkout-form legend,
+  .allauth-form-inner-content legend,
+  .contact form legend,
+  .product-price,
+  .related-item-price {
     font-size: 2rem;
   }
 }
@@ -1782,4 +1751,4 @@ strong {
 }
 .no-image.__small p {
   padding: 0.5rem;
-}/*# sourceMappingURL=base.css.map */
+}
