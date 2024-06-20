@@ -11,3 +11,6 @@ db.sqlite3
 notes.txt
 .venv
 .env
+*.pyc
+*/*.pyc
+*/*/*.pyc
